@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "ubersreik-adventures-iii:feature:bestiary-expansion",
+      "name": "Bestiary profiles and templates",
+      "status": "adapted",
+      "source": {
+        "book": "ubersreik-adventures-iii",
+        "page": 29
+      },
+      "reason": "10 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+    },
+    {
+      "id": "ubersreik-adventures-iii:feature:bestiary-expansion-forest-goblin-chief",
+      "name": "Forest Goblin Chief",
+      "status": "deferred",
+      "source": {
+        "book": "ubersreik-adventures-iii",
+        "page": 42
+      },
+      "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+    },
+    {
+      "id": "ubersreik-adventures-iii:feature:bestiary-expansion-acrobat-entertainer-variant",
+      "name": "Acrobat entertainer variant",
+      "status": "deferred",
+      "source": {
+        "book": "ubersreik-adventures-iii",
+        "page": 94
+      },
+      "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+    }
+  ]
+}

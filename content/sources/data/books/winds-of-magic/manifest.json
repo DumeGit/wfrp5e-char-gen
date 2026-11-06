@@ -4,7 +4,7 @@
   "title": "Winds of Magic",
   "shortTitle": "Winds of Magic",
   "edition": 4,
-  "version": "1.0.4",
+  "version": "1.0.5",
   "kind": "supplement",
   "dependsOn": [
     "core"
@@ -22,7 +22,8 @@
       "Ritual memorisation uses the printed Learning XP; performance, crafting, familiar creation/progression, NPCs, environmental magic, potions and adventures remain campaign material. No ingredient/manufacturing/sales values become invented retail prices.",
       "User approves Lore (Alchemy) as a selectable specialisation with Savant requiring an Advance, and caps Mundane Alchemist free Petty spells at min(WP Bonus at acquisition, 4) without extra XP or banked spells.",
       "User defers Enchanted Staff commissioning; keep only an acquired-Trapping reference, not an ordinary shop purchase.",
-      "User approves the three printed second-hand illicit-market robe prices with their qualification. Lore-dependent equipment modifiers remain descriptions; promotion does not automatically grant gifts."
+      "User approves the three printed second-hand illicit-market robe prices with their qualification. Lore-dependent equipment modifiers remain descriptions; promotion does not automatically grant gifts.",
+      "Reviewed reusable Bestiary foundations preserve printed tables, with selective Fifth Edition adaptations and documented unresolved legacy mechanics."
     ]
   },
   "files": {

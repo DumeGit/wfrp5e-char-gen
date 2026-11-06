@@ -1,0 +1,913 @@
+{
+  "schemaVersion": 1,
+  "id": "ubersreik-adventures-iii",
+  "source": {
+    "file": "Ubersreik Adventures III.pdf",
+    "sha256": "23f39fae43b5a6c240521440eb07ce919823e93a573e648a746205a4ace63439"
+  },
+  "summary": "10 profiles and 0 templates",
+  "profiles": [
+    {
+      "id": "ubersreik-adventures-iii:creatures:forest-goblin",
+      "name": "Forest Goblin",
+      "page": 43,
+      "source": {
+        "book": "ubersreik-adventures-iii",
+        "page": 43
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 25,
+        "BS": 35,
+        "S": 30,
+        "T": 30,
+        "I": 20,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 20,
+        "Fel": 20,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Animosity",
+          "value": "",
+          "requiresParameter": true
+        },
+        {
+          "name": "Arboreal",
+          "value": ""
+        },
+        {
+          "name": "Afraid",
+          "value": "Elves"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 25,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Distinct generic baseline appears beside named chief Chakk Garglegutz; retain baseline only.",
+        "Printed optional entry for manual review: Ranged +7 (25) for those with bows."
+      ],
+      "species": "Forest Goblin"
+    },
+    {
+      "id": "ubersreik-adventures-iii:creatures:snotling",
+      "name": "Snotling",
+      "page": 64,
+      "source": {
+        "book": "ubersreik-adventures-iii",
+        "page": 64
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Small",
+      "stats": {
+        "M": 4,
+        "WS": 25,
+        "BS": 15,
+        "S": 25,
+        "T": 20,
+        "I": 20,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 15,
+        "WP": 30,
+        "Fel": null,
+        "W": 4
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 25,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "species": "Snotling",
+      "adaptation": "Printed Wounds 7 use the core Small formula (4 Wounds)."
+    },
+    {
+      "id": "ubersreik-adventures-iii:creatures:bandit",
+      "name": "Bandit",
+      "page": 73,
+      "source": {
+        "book": "ubersreik-adventures-iii",
+        "page": 73
+      },
+      "category": "human",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 38,
+        "S": 35,
+        "T": 35,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 27,
+        "WP": 30,
+        "Fel": 30,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Melee (Basic)",
+          "total": 45
+        },
+        {
+          "name": "Perception",
+          "total": 40
+        },
+        {
+          "name": "Ranged (Crossbow)",
+          "total": 48
+        },
+        {
+          "name": "Stealth (Rural)",
+          "total": 35
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Crossbow)",
+          "skill": 48,
+          "damage": 8,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "",
+          "skillName": "Ranged (Crossbow)"
+        },
+        {
+          "name": "Weapon (Sword)",
+          "skill": 45,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour (Body)",
+          "ap": 1,
+          "locations": "Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Generic profile explicitly reused for other bandits in the volume.",
+        "Printed Armour (Body) 1 (4); check hit-location coverage before play."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "ubersreik-adventures-iii:creatures:jungfreud-manor-guard",
+      "name": "Jungfreud Manor Guard",
+      "page": 80,
+      "source": {
+        "book": "ubersreik-adventures-iii",
+        "page": 80
+      },
+      "category": "human",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 45,
+        "BS": 35,
+        "S": 35,
+        "T": 42,
+        "I": 45,
+        "Ag": 40,
+        "Dex": 30,
+        "Int": 35,
+        "WP": 35,
+        "Fel": 30,
+        "W": 14
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Dodge",
+          "total": 45
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 55
+        },
+        {
+          "name": "Intuition",
+          "total": 50
+        },
+        {
+          "name": "Perception",
+          "total": 50
+        },
+        {
+          "name": "Ranged (Crossbow)",
+          "total": 40
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Crossbow)",
+          "skill": 40,
+          "damage": 8,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "",
+          "skillName": "Ranged (Crossbow)"
+        },
+        {
+          "name": "Weapon (Sword)",
+          "skill": 55,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour (Body, Arms)",
+          "ap": 2,
+          "locations": "Body, Arms",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Sleeved Mail Shirt, Longsword; each patrol has one crossbow and silver horn"
+      },
+      "notes": [
+        "Printed Armour (Body, Arms) 2 (6); check hit-location coverage before play."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "ubersreik-adventures-iii:creatures:nurglings",
+      "name": "Nurglings",
+      "page": 96,
+      "source": {
+        "book": "ubersreik-adventures-iii",
+        "page": 96
+      },
+      "category": "daemon",
+      "example": false,
+      "size": "Tiny",
+      "stats": {
+        "M": 4,
+        "WS": 25,
+        "BS": 25,
+        "S": 16,
+        "T": 20,
+        "I": 20,
+        "Ag": 25,
+        "Dex": 35,
+        "Int": 18,
+        "WP": 30,
+        "Fel": 20,
+        "W": 7
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Melee (Brawling)",
+          "total": 35
+        },
+        {
+          "name": "Play (Pipes)",
+          "total": 55
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Daemonic",
+          "value": "9"
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Tiny",
+          "adaptation": "Printed Little uses Fifth Edition Tiny Size. After a change, supply Wounds manually."
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Claws)",
+          "skill": 35,
+          "damage": 3,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Brawling)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Cute little instruments"
+      },
+      "notes": [
+        "Three generic Nurglings accompany the named carnival NPC; profile is reusable.",
+        "Printed Wounds apply to the baseline. Core Tiny Size requires manual Wounds after changes."
+      ],
+      "species": "Nurgling",
+      "adaptation": "Printed Little uses Fifth Edition Tiny Size. After a change, supply Wounds manually."
+    },
+    {
+      "id": "ubersreik-adventures-iii:creatures:pestigor",
+      "name": "Pestigor",
+      "page": 99,
+      "source": {
+        "book": "ubersreik-adventures-iii",
+        "page": 99
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 45,
+        "BS": 30,
+        "S": 35,
+        "T": 48,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 25,
+        "Int": 25,
+        "WP": 30,
+        "Fel": 20,
+        "W": 14
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Horns",
+          "value": "6"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Infestation",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Horns",
+          "skill": 45,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 45,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Rusty axes"
+      },
+      "notes": [
+        "Plural heading in source; normalized singular profile name."
+      ],
+      "species": "Beastman"
+    },
+    {
+      "id": "ubersreik-adventures-iii:creatures:weakened-daemonette",
+      "name": "Weakened Daemonette",
+      "page": 36,
+      "source": {
+        "book": "ubersreik-adventures-iii",
+        "page": 36
+      },
+      "category": "Daemons",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 40,
+        "BS": 25,
+        "S": 20,
+        "T": 15,
+        "I": 35,
+        "Ag": 40,
+        "Dex": 15,
+        "Int": 30,
+        "WP": 60,
+        "Fel": 20,
+        "W": 12
+      },
+      "toughnessBonus": 1,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 44
+        },
+        {
+          "name": "Climb",
+          "total": 28
+        },
+        {
+          "name": "Dodge",
+          "total": 45
+        },
+        {
+          "name": "Melee (Brawling)",
+          "total": 55
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Champion",
+          "value": ""
+        },
+        {
+          "name": "Corruption",
+          "value": "Moderate"
+        },
+        {
+          "name": "Daemonic",
+          "value": "8"
+        },
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 40,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Standalone printed weakened variant. Source extraction spells Athletics as 'Athetics'; normalized obvious typo."
+      ],
+      "species": "Daemonette"
+    },
+    {
+      "id": "ubersreik-adventures-iii:creatures:grunewald-guard",
+      "name": "Grunewald Guard",
+      "page": 29,
+      "source": {
+        "book": "ubersreik-adventures-iii",
+        "page": 29
+      },
+      "category": "Guards",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 30,
+        "S": 30,
+        "T": 30,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 35,
+        "Fel": 35,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 32
+        },
+        {
+          "name": "Cool",
+          "total": 38
+        },
+        {
+          "name": "Dodge",
+          "total": 35
+        },
+        {
+          "name": "Gossip",
+          "total": 42
+        },
+        {
+          "name": "Perception",
+          "total": 40
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Halberd)",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour (Body, Arms)",
+          "ap": 1,
+          "locations": "Body, Arms",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Leather Jack, Sword, Halberd"
+      },
+      "notes": [
+        "Printed Skill without an established Fifth Edition equivalent: Melee(Basic) 40.",
+        "Printed Armour (Body, Arms) 1 (4); check hit-location coverage before play."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "ubersreik-adventures-iii:creatures:geissbach-villager",
+      "name": "Geissbach Villager",
+      "page": 47,
+      "source": {
+        "book": "ubersreik-adventures-iii",
+        "page": 47
+      },
+      "category": "Townsfolk",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 35,
+        "T": 35,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 35,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Animal Care",
+          "total": 35
+        },
+        {
+          "name": "Athletics",
+          "total": 40
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 40
+        },
+        {
+          "name": "Endurance",
+          "total": 45
+        },
+        {
+          "name": "Gossip",
+          "total": 40
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 35
+        },
+        {
+          "name": "Lore (Local)",
+          "total": 32
+        },
+        {
+          "name": "Outdoor Survival",
+          "total": 35
+        },
+        {
+          "name": "Ranged (Bow)",
+          "total": 35
+        }
+      ],
+      "talents": [
+        {
+          "name": "Doomed",
+          "ranks": 1
+        },
+        {
+          "name": "Rover",
+          "ranks": 1
+        },
+        {
+          "name": "Strong-minded",
+          "ranks": 1
+        },
+        {
+          "name": "Suave",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        },
+        {
+          "name": "Ranged (Bow)",
+          "skill": 35,
+          "damage": 6,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "",
+          "skillName": "Ranged (Bow)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Cloak, Clothing, Dagger, Pouch, Bow with 10 Arrows, Sword"
+      },
+      "notes": [],
+      "species": "Human"
+    },
+    {
+      "id": "ubersreik-adventures-iii:creatures:hugeldal-watchman",
+      "name": "Hugeldal Watchman",
+      "page": 90,
+      "source": {
+        "book": "ubersreik-adventures-iii",
+        "page": 90
+      },
+      "category": "Guards",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 30,
+        "S": 30,
+        "T": 30,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 35,
+        "Fel": 35,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Melee (Basic)",
+          "total": 40
+        },
+        {
+          "name": "Perception",
+          "total": 40
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Halberd)",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Leather Jack, Sword, Halberd"
+      },
+      "notes": [],
+      "species": "Human"
+    }
+  ],
+  "templates": [],
+  "training": []
+}

@@ -1,0 +1,1120 @@
+{
+  "schemaVersion": 1,
+  "id": "ubersreik-adventures-i",
+  "source": {
+    "file": "Ubersreik Adventures.pdf",
+    "sha256": "98eb45b7fde1c63989753b09a339e52c9bbafc079d8dc4597cbd0d425d26d6af"
+  },
+  "summary": "12 profiles and 1 templates",
+  "profiles": [
+    {
+      "id": "ubersreik-adventures-i:creatures:maddened-villagers",
+      "name": "Maddened Villagers",
+      "page": 34,
+      "source": {
+        "book": "ubersreik-adventures-i",
+        "page": 34
+      },
+      "category": "human",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 30,
+        "T": 30,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 30,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Frenzy",
+          "value": ""
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 30,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Scavenged tools and sticks"
+      },
+      "notes": [
+        "Generic profile used for the frenzied mob and standard Gotheimers; named exceptions Hugo the blacksmith and Gerd the butcher have WS 40, S 40, T 40, W 15 and are excluded as named NPCs.",
+        "Printed qualifier for Territorial: Gotheim and surrounds."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "ubersreik-adventures-i:creatures:unmarred-flesh-cultists-pugilists",
+      "name": "Unmarred Flesh Cultists – Pugilists",
+      "page": 77,
+      "source": {
+        "book": "ubersreik-adventures-i",
+        "page": 77
+      },
+      "category": "human",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 40,
+        "BS": 30,
+        "S": 30,
+        "T": 35,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 35,
+        "Fel": 30,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Language (Battle)",
+          "total": 35
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 45
+        },
+        {
+          "name": "Melee (Brawling)",
+          "total": 50
+        },
+        {
+          "name": "Ranged (Bow)",
+          "total": 35
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Bow)",
+          "skill": 35,
+          "damage": 8,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "Range 50 yards.",
+          "skillName": "Ranged (Bow)"
+        },
+        {
+          "name": "Weapon (Spear)",
+          "skill": 40,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Polearm)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leather Breastplate",
+          "ap": 2,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Hatred (the Characters) is gained only after the events of We’re Going on a Witch Hunt!; recorded as a conditional template.",
+        "Printed Armour (Leather Breastplate) 2; check hit-location coverage before play."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "ubersreik-adventures-i:creatures:jungfreud-loyalists-watchmen-silver-1",
+      "name": "Jungfreud Loyalists – Watchmen (Silver 1)",
+      "page": 77,
+      "source": {
+        "book": "ubersreik-adventures-i",
+        "page": 77
+      },
+      "category": "human",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 30,
+        "S": 35,
+        "T": 30,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 35,
+        "Fel": 35,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Melee (Basic)",
+          "total": 40
+        },
+        {
+          "name": "Perception",
+          "total": 40
+        }
+      ],
+      "talents": [
+        {
+          "name": "Drilled",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Animosity",
+          "value": "Altdorfers"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Spear)",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Polearm)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leather Jack",
+          "ap": 1,
+          "locations": "Arms, Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "No separate Trappings line is printed; armour and spear are represented by Traits."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "ubersreik-adventures-i:creatures:concerned-citizens-townsfolk-silver-2",
+      "name": "Concerned Citizens – Townsfolk (Silver 2)",
+      "page": 77,
+      "source": {
+        "book": "ubersreik-adventures-i",
+        "page": 77
+      },
+      "category": "human",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 30,
+        "T": 30,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 35,
+        "WP": 30,
+        "Fel": 35,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Dodge",
+          "total": 40
+        },
+        {
+          "name": "Haggle",
+          "total": 40
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Frenzy",
+          "value": "",
+          "adaptation": "Printed Fury uses the core Fifth Edition Frenzy effect."
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Improvised Weapon)",
+          "skill": 30,
+          "damage": 4,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": ""
+        },
+        {
+          "name": "Weapon (Improvised Weapon)",
+          "skill": 30,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Incendiary (1)"
+      },
+      "notes": [],
+      "species": "Human",
+      "adaptation": "Printed Fury uses the core Fifth Edition Frenzy effect.",
+      "unavailableTraits": [
+        {
+          "name": "Prejudice (Altdorfers)",
+          "reason": "Apply this printed prejudice manually. The existing Thin People entry has a different target.",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "id": "ubersreik-adventures-i:creatures:undead-orc",
+      "name": "Undead Orc",
+      "page": 78,
+      "source": {
+        "book": "ubersreik-adventures-i",
+        "page": 78
+      },
+      "category": "undead",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 30,
+        "S": 35,
+        "T": 45,
+        "I": 20,
+        "Ag": 25,
+        "Dex": 20,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 14
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Die Hard",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 35,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        },
+        {
+          "name": "Ranged",
+          "skill": 30,
+          "damage": 8,
+          "optional": true,
+          "ranged": true,
+          "free": false,
+          "text": "Range 50 yards."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 3,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Profile introduced as a new creature for a possible raised half-dozen of Greenskin corpses; optional traits printed explicitly."
+      ],
+      "species": "Orc"
+    },
+    {
+      "id": "ubersreik-adventures-i:creatures:undead-rat-swarm",
+      "name": "Undead Rat Swarm",
+      "page": 94,
+      "source": {
+        "book": "ubersreik-adventures-i",
+        "page": 94
+      },
+      "category": "undead",
+      "example": false,
+      "size": "Tiny",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": null,
+        "S": 30,
+        "T": 25,
+        "I": 25,
+        "Ag": 35,
+        "Dex": null,
+        "Int": 15,
+        "WP": 15,
+        "Fel": null,
+        "W": 5
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Fear",
+          "value": "1"
+        },
+        {
+          "name": "Frenzy",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Tiny"
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Swarm",
+          "value": ""
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Disease",
+          "value": "Spittlefeld Blood Rot"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 35,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Disease (Spittlefeld Blood Rot) is explicitly optional.",
+        "Printed Wounds apply to the baseline. Core Tiny Size requires manual Wounds after changes."
+      ],
+      "species": "Rat swarm",
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+    },
+    {
+      "id": "ubersreik-adventures-i:creatures:ubersreik-watchman-silver-1",
+      "name": "Ubersreik Watchman (Silver 1)",
+      "page": 101,
+      "source": {
+        "book": "ubersreik-adventures-i",
+        "page": 101
+      },
+      "category": "human",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 40,
+        "BS": 30,
+        "S": 40,
+        "T": 30,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 40,
+        "Fel": 40,
+        "W": 14
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 40
+        },
+        {
+          "name": "Climb",
+          "total": 45
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 40
+        },
+        {
+          "name": "Dodge",
+          "total": 35
+        },
+        {
+          "name": "Endurance",
+          "total": 35
+        },
+        {
+          "name": "Gamble",
+          "total": 35
+        },
+        {
+          "name": "Gossip",
+          "total": 50
+        },
+        {
+          "name": "Intimidate",
+          "total": 50
+        },
+        {
+          "name": "Intuition",
+          "total": 40
+        },
+        {
+          "name": "Lore (Local)",
+          "total": 40
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 50
+        },
+        {
+          "name": "Perception",
+          "total": 40
+        }
+      ],
+      "talents": [
+        {
+          "name": "Strike to Stun",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Cudgel)",
+          "skill": 40,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leather Jack",
+          "ap": 1,
+          "locations": "Arms, Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "1 shilling and 1d10 pennies, Copper Badge, Lantern, Leather Jack, Uniform"
+      },
+      "notes": [
+        "Explicitly instructed for any Watchmen encountered."
+      ],
+      "species": "Human",
+      "unavailableTraits": [
+        {
+          "name": "Prejudice (Wise Guys and Hot Shots)",
+          "reason": "Apply this printed prejudice manually. The existing Thin People entry has a different target.",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "id": "ubersreik-adventures-i:creatures:thug",
+      "name": "Thug",
+      "page": 109,
+      "source": {
+        "book": "ubersreik-adventures-i",
+        "page": 109
+      },
+      "category": "human",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 30,
+        "S": 40,
+        "T": 30,
+        "I": 35,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 30,
+        "W": 13
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Cool",
+          "total": 40
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 45
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 35,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Hand weapons, worn tough leathers"
+      },
+      "notes": [
+        "The profile is used for multiple unnamed thugs and the text explicitly reuses it for named Lorbeer Weber; named character excluded.",
+        "Printed entry for manual review: Armour +1."
+      ],
+      "species": "Human",
+      "unavailableTraits": [
+        {
+          "name": "Prejudice (Immigrants)",
+          "reason": "Apply this printed prejudice manually. The existing Thin People entry has a different target.",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "id": "ubersreik-adventures-i:creatures:dwarf-travellers",
+      "name": "Dwarf Travellers",
+      "page": 117,
+      "source": {
+        "book": "ubersreik-adventures-i",
+        "page": 117
+      },
+      "category": "dwarf",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 25,
+        "S": 35,
+        "T": 45,
+        "I": 30,
+        "Ag": 20,
+        "Dex": 30,
+        "Int": 20,
+        "WP": 30,
+        "Fel": 20,
+        "W": 14
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Melee (Basic)",
+          "total": 38
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Animosity",
+          "value": "People who disrespect Dwarfs"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Dusty travelling gear, muddy work boots"
+      },
+      "notes": [
+        "Encounter describes four generic Dwarfs; the printed profile represents having failed a Consume Alcohol Test (Tipsy). One may optionally be Gottri Gurnisson, a named NPC in another book, but none is named here.",
+        "Printed Armour 2 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Dwarf",
+      "unavailableTraits": [
+        {
+          "name": "Prejudice (Elves)",
+          "reason": "Apply this printed prejudice manually. The existing Thin People entry has a different target.",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "id": "ubersreik-adventures-i:creatures:ungor-raiders",
+      "name": "Ungor Raiders",
+      "page": 121,
+      "source": {
+        "book": "ubersreik-adventures-i",
+        "page": 121
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 30,
+        "S": 30,
+        "T": 35,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 25,
+        "Int": 25,
+        "WP": 25,
+        "Fel": 25,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Arboreal",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged",
+          "skill": 30,
+          "damage": 7,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "Range 25 yards."
+        },
+        {
+          "name": "Weapon",
+          "skill": 35,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Generic group of three raiders."
+      ],
+      "species": "Beastman (Ungor)"
+    },
+    {
+      "id": "ubersreik-adventures-i:creatures:twisted-maw-goblin",
+      "name": "Twisted Maw Goblin",
+      "page": 123,
+      "source": {
+        "book": "ubersreik-adventures-i",
+        "page": 123
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 25,
+        "BS": 35,
+        "S": 30,
+        "T": 30,
+        "I": 20,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 20,
+        "Fel": 20,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Animosity",
+          "value": "",
+          "requiresParameter": true
+        },
+        {
+          "name": "Afraid",
+          "value": "Elves"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 25,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Filthy rawhide, tatty pelts, shields"
+      },
+      "notes": [
+        "Printed generic baseline for typical Goblins of the Twisted Maw; separate named Gobrat Yellownail profile excluded.",
+        "Printed optional entry for manual review: Ranged +7 (25) for Goblin archers."
+      ],
+      "species": "Goblin"
+    },
+    {
+      "id": "ubersreik-adventures-i:creatures:giant-wolf",
+      "name": "Giant Wolf",
+      "page": 123,
+      "source": {
+        "book": "ubersreik-adventures-i",
+        "page": 123
+      },
+      "category": "animal",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": null,
+        "S": 35,
+        "T": 30,
+        "I": 35,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 15,
+        "WP": 15,
+        "Fel": 10,
+        "W": 20
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Mount"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 35,
+          "damage": 9,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 6,
+          "adaptation": "Fifth Edition Large Size adds 3 to the primary melee attack."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Generic mount profile for wolves ridden by the Twisted Maw; several instances in the encounter."
+      ],
+      "species": "Wolf",
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect. Fifth Edition Large Size adds 3 to the primary melee attack."
+    }
+  ],
+  "templates": [
+    {
+      "id": "ubersreik-adventures-i:templates:unmarred-flesh-cultist-after-witch-hunt",
+      "name": "Unmarred Flesh Cultist after Witch Hunt",
+      "page": 77,
+      "source": {
+        "book": "ubersreik-adventures-i",
+        "page": 77
+      },
+      "eligibility": "any",
+      "profileIds": [
+        "ubersreik-adventures-i:creatures:unmarred-flesh-cultists-pugilists"
+      ],
+      "foundationLabel": "Unmarred Flesh Cultists – Pugilists",
+      "adjustments": {},
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Hatred",
+          "value": "the Characters"
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": [
+        "Hatred is gained only after the events of We’re Going on a Witch Hunt!"
+      ]
+    }
+  ],
+  "training": []
+}

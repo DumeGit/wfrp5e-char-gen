@@ -114,6 +114,10 @@ Flexible packing is the default each time the print dialog opens. Six and four e
 - Quick Armour replaces detailed armour; shields remain conditional. Listed natural protection remains separate. Printed optional armour is never equipped without selection. Weapon quantity records ownership, not extra attacks.
 - Source spelling/table corrections and documented Fifth Edition core ambiguities do not receive Legacy simply because the user chose an interpretation. Up in Arms mounts have selective Legacy metadata for the actual Size Damage and Stride conversions; unchanged printed scores are not separately tagged.
 
+## Campaign and supplement foundations
+
+The November 2026 review adds 276 profiles and fourteen templates across 17 opt-in books. Use **Profile & template books** in the Bestiary Workshop to enable them. The [generated inventory](GM-CONTENT.md) records each selectable profile and its printed page. Source-specific decisions and outstanding conversions are in the [book review](BESTIARY-BOOK-REVIEW.md).
+
 ## Engineering and future books
 
 | File | Responsibility |

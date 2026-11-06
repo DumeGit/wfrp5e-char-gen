@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "hell-rides-to-hallt",
+  "title": "Hell Rides to Hallt",
+  "shortTitle": "Hell Rides to Hallt",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "Hell Rides to Hallt.pdf",
+    "sha256": "a4b2aba458f2b4357a7fba82ffcadbe1a0cc221ea0adeb1190814b5688a43c63"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Reusable profiles and supported templates for the Bestiary Workshop. Named NPCs remain outside the catalogue.",
+      "Core Fifth Edition rules govern. Selective Legacy notes identify mechanical adaptations. Unsupported printed entries remain for manual review."
+    ]
+  },
+  "files": {
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "empire-in-ruins:feature:bestiary-expansion",
+      "name": "Bestiary profiles and templates",
+      "status": "adapted",
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 18
+      },
+      "reason": "36 reusable profiles and 5 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+    },
+    {
+      "id": "empire-in-ruins:feature:bestiary-expansion-sigmarite-flagellant",
+      "name": "Sigmarite Flagellant",
+      "status": "implemented",
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 18
+      },
+      "reason": "Published in the Bestiary with the printed equipment, traits or foundation instructions."
+    },
+    {
+      "id": "empire-in-ruins:feature:bestiary-expansion-knight-of-the-white-wolf",
+      "name": "Knight of the White Wolf",
+      "status": "implemented",
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 19
+      },
+      "reason": "Published in the Bestiary with the printed equipment, traits or foundation instructions."
+    },
+    {
+      "id": "empire-in-ruins:feature:bestiary-expansion-knight-of-the-fiery-heart",
+      "name": "Knight of the Fiery Heart",
+      "status": "implemented",
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 19
+      },
+      "reason": "Uses the core Sigmar Miracle definitions and the three printed prayers."
+    },
+    {
+      "id": "empire-in-ruins:feature:bestiary-expansion-minor-noble",
+      "name": "Minor Noble",
+      "status": "implemented",
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 19
+      },
+      "reason": "Published in the Bestiary with the printed equipment, traits or foundation instructions."
+    }
+  ]
+}

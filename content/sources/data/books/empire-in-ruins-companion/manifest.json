@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "empire-in-ruins-companion",
+  "title": "Empire in Ruins Companion",
+  "shortTitle": "Empire in Ruins Companion",
+  "edition": 4,
+  "version": "1.0.1",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "Empire In Ruins Companion.pdf",
+    "sha256": "895bc9031060772e97598cbf30ca75e92f2762eaf77eef26e10ff567522fd841"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Reusable profiles and supported templates for the Bestiary Workshop. Named NPCs remain outside the catalogue.",
+      "Core Fifth Edition rules govern. Selective Legacy notes identify mechanical adaptations. Unsupported printed entries remain for manual review."
+    ]
+  },
+  "files": {
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  }
+}

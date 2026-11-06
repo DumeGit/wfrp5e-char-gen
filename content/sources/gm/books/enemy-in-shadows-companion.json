@@ -1,0 +1,1770 @@
+{
+  "schemaVersion": 1,
+  "id": "enemy-in-shadows-companion",
+  "source": {
+    "file": "Enemy in Shadows Companion.pdf",
+    "sha256": "c45fa2152196d3ad951fa369eea8465e1149c3537ace60ae92c481c51cdbaf79"
+  },
+  "summary": "17 profiles and 1 templates",
+  "profiles": [
+    {
+      "id": "enemy-in-shadows-companion:creatures:pony-donkey-or-mule",
+      "name": "Pony, Donkey, or Mule",
+      "page": 22,
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 22
+      },
+      "category": "mount",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 25,
+        "BS": null,
+        "S": 30,
+        "T": 45,
+        "I": 20,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 10,
+        "WP": 10,
+        "Fel": 10,
+        "W": 12
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Trained",
+          "value": "Drive or Mount"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 25,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Donkeys and mules often have optional Stubborn; printed text specifies WP +20 and control test. Combined profile is one shared stat block.",
+        "Printed qualifier for Sprinter: Quadruped."
+      ],
+      "species": "Animal",
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+    },
+    {
+      "id": "enemy-in-shadows-companion:creatures:draught-dog",
+      "name": "Draught Dog",
+      "page": 22,
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 22
+      },
+      "category": "mount",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 25,
+        "BS": null,
+        "S": 20,
+        "T": 20,
+        "I": 35,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 15,
+        "WP": 10,
+        "Fel": 25,
+        "W": 7
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Drive"
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 25,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Profile is the dog used as a draught animal; source notes large dogs pull carts."
+      ],
+      "species": "Animal",
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+    },
+    {
+      "id": "enemy-in-shadows-companion:creatures:draught-horse",
+      "name": "Draught Horse",
+      "page": 23,
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 23
+      },
+      "category": "mount",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 5,
+        "WS": 25,
+        "BS": null,
+        "S": 45,
+        "T": 45,
+        "I": 17,
+        "Ag": 25,
+        "Dex": null,
+        "Int": 10,
+        "WP": 10,
+        "Fel": 20,
+        "W": 26
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Mount, Drive"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 25,
+          "damage": 11,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 7,
+          "adaptation": "Fifth Edition Large Size adds 4 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed qualifier for Sprinter: Quadruped."
+      ],
+      "species": "Animal",
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect. Fifth Edition Large Size adds 4 to the primary melee attack."
+    },
+    {
+      "id": "enemy-in-shadows-companion:creatures:ox",
+      "name": "Ox",
+      "page": 23,
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 23
+      },
+      "category": "mount",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 3,
+        "WS": 25,
+        "BS": null,
+        "S": 55,
+        "T": 55,
+        "I": 15,
+        "Ag": 20,
+        "Dex": null,
+        "Int": 10,
+        "WP": 10,
+        "Fel": 10,
+        "W": 32
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Trained",
+          "value": "Drive"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 25,
+          "damage": 13,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 8,
+          "adaptation": "Fifth Edition Large Size adds 5 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed qualifier for Sprinter: Quadruped."
+      ],
+      "species": "Animal",
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect. Fifth Edition Large Size adds 5 to the primary melee attack."
+    },
+    {
+      "id": "enemy-in-shadows-companion:creatures:heavy-draught-horse",
+      "name": "Heavy Draught Horse",
+      "page": 23,
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 23
+      },
+      "category": "mount",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 4,
+        "WS": 25,
+        "BS": null,
+        "S": 50,
+        "T": 50,
+        "I": 15,
+        "Ag": 20,
+        "Dex": null,
+        "Int": 10,
+        "WP": 10,
+        "Fel": 10,
+        "W": 32
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Drive"
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Trained",
+          "value": "Mount"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 25,
+          "damage": 12,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 7,
+          "adaptation": "Fifth Edition Large Size adds 5 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed qualifier for Sprinter: Quadruped."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Brute",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Animal",
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect. Fifth Edition Large Size adds 5 to the primary melee attack."
+    },
+    {
+      "id": "enemy-in-shadows-companion:creatures:riding-horse",
+      "name": "Riding Horse",
+      "page": 23,
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 23
+      },
+      "category": "mount",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 7,
+        "WS": 25,
+        "BS": null,
+        "S": 30,
+        "T": 45,
+        "I": 20,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 10,
+        "WP": 10,
+        "Fel": 20,
+        "W": 24
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Mount"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 25,
+          "damage": 9,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 6,
+          "adaptation": "Fifth Edition Large Size adds 3 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Palfrey is a contextual name for this profile; rarer pureblood variants add Fast."
+      ],
+      "species": "Animal",
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect. Fifth Edition Large Size adds 3 to the primary melee attack."
+    },
+    {
+      "id": "enemy-in-shadows-companion:creatures:light-warhorse",
+      "name": "Light Warhorse",
+      "page": 24,
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 24
+      },
+      "category": "mount",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 7,
+        "WS": 35,
+        "BS": null,
+        "S": 45,
+        "T": 35,
+        "I": 20,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 10,
+        "WP": 10,
+        "Fel": 30,
+        "W": 22
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Mount, War"
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Champion",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 35,
+          "damage": 11,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 7,
+          "adaptation": "Fifth Edition Large Size adds 4 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "unavailableTraits": [
+        {
+          "name": "Clever",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Elite",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Rear",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Tough",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Animal",
+      "optionalTalents": [
+        {
+          "name": "Hardy",
+          "ranks": 1
+        }
+      ],
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect. Fifth Edition Large Size adds 4 to the primary melee attack."
+    },
+    {
+      "id": "enemy-in-shadows-companion:creatures:heavy-warhorse",
+      "name": "Heavy Warhorse",
+      "page": 24,
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 24
+      },
+      "category": "mount",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": null,
+        "S": 50,
+        "T": 50,
+        "I": 20,
+        "Ag": 20,
+        "Dex": null,
+        "Int": 10,
+        "WP": 10,
+        "Fel": 30,
+        "W": 32
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Mount, War"
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Champion",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 35,
+          "damage": 13,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 8,
+          "adaptation": "Fifth Edition Large Size adds 5 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "unavailableTraits": [
+        {
+          "name": "Clever",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Elite",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Rear",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Tough",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Animal",
+      "optionalTalents": [
+        {
+          "name": "Hardy",
+          "ranks": 1
+        }
+      ],
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect. Fifth Edition Large Size adds 5 to the primary melee attack."
+    },
+    {
+      "id": "enemy-in-shadows-companion:creatures:great-cats",
+      "name": "Great Cats",
+      "page": 87,
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 87
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 45,
+        "BS": 0,
+        "S": 45,
+        "T": 35,
+        "I": 45,
+        "Ag": 45,
+        "Dex": 20,
+        "Int": 25,
+        "WP": 25,
+        "Fel": 5,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Bite",
+          "value": "5"
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Fast uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Stealthy",
+          "value": ""
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 45,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon (Claw)",
+          "skill": 45,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Deathblow applies to all opponents regardless of Size in the printed profile. The distinct Great Cats and Chaos Fury tables print identical Characteristic values."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Big",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Clever",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Animal",
+      "adaptation": "Printed Fast uses the core Fifth Edition Sprinter effect. Printed Stride uses the core Fifth Edition Sprinter effect."
+    },
+    {
+      "id": "enemy-in-shadows-companion:creatures:chaos-fury",
+      "name": "Chaos Fury",
+      "page": 84,
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 84
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 45,
+        "BS": 0,
+        "S": 45,
+        "T": 35,
+        "I": 45,
+        "Ag": 45,
+        "Dex": 20,
+        "Int": 25,
+        "WP": 25,
+        "Fel": 5,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Melee (Brawling)",
+          "total": 50
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bite",
+          "value": "6"
+        },
+        {
+          "name": "Corruption",
+          "value": "Moderate"
+        },
+        {
+          "name": "Daemonic",
+          "value": "8"
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Fly",
+          "value": "90"
+        },
+        {
+          "name": "Horns",
+          "value": "6"
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Afraid",
+          "value": "Daemons and/or Daemonologists"
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Fast uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Mutation",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Tiny"
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 45,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Horns",
+          "skill": 45,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 45,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "unavailableTraits": [
+        {
+          "name": "Brute",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Clever",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Daemon",
+      "adaptation": "Printed Fast uses the core Fifth Edition Sprinter effect."
+    },
+    {
+      "id": "enemy-in-shadows-companion:creatures:pink-horror",
+      "name": "Pink Horror",
+      "page": 85,
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 85
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 50,
+        "BS": 30,
+        "S": 35,
+        "T": 30,
+        "I": 35,
+        "Ag": 30,
+        "Dex": 35,
+        "Int": 25,
+        "WP": 30,
+        "Fel": 10,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Channelling",
+          "total": 65
+        },
+        {
+          "name": "Language (Magick)",
+          "total": 55
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Moderate"
+        },
+        {
+          "name": "Daemonic",
+          "value": "8"
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Mutation",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Spellcaster",
+          "value": "Tzeentch"
+        },
+        {
+          "name": "Tongue",
+          "value": "6"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 50,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        },
+        {
+          "name": "Tongue",
+          "skill": 50,
+          "damage": 6,
+          "optional": true,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Split replaces a destroyed Pink Horror with two unwounded Blue Horrors."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Split",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Tzeentch’s Fire",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Daemon"
+    },
+    {
+      "id": "enemy-in-shadows-companion:creatures:blue-horror",
+      "name": "Blue Horror",
+      "page": 85,
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 85
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Small",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 35,
+        "T": 30,
+        "I": 35,
+        "Ag": 30,
+        "Dex": 35,
+        "Int": 25,
+        "WP": 30,
+        "Fel": 10,
+        "W": 6
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Channelling",
+          "total": 35
+        },
+        {
+          "name": "Language (Magick)",
+          "total": 30
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Moderate"
+        },
+        {
+          "name": "Daemonic",
+          "value": "9"
+        },
+        {
+          "name": "Fear",
+          "value": "1"
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Mutation",
+          "value": ""
+        },
+        {
+          "name": "Spellcaster",
+          "value": "Tzeentch"
+        },
+        {
+          "name": "Tongue",
+          "value": "3"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 30,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        },
+        {
+          "name": "Tongue",
+          "skill": 30,
+          "damage": 3,
+          "optional": true,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "unavailableTraits": [
+        {
+          "name": "Tzeentch’s Fire",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Daemon",
+      "adaptation": "Printed Wounds 12 use the core Small formula (6 Wounds)."
+    },
+    {
+      "id": "enemy-in-shadows-companion:creatures:sentry-bodyguard",
+      "name": "Sentry Bodyguard",
+      "page": 96,
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 96
+      },
+      "category": "Guards",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 30,
+        "S": 30,
+        "T": 35,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 30,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Consume Alcohol",
+          "total": 40
+        },
+        {
+          "name": "Endurance",
+          "total": 40
+        },
+        {
+          "name": "Entertain (Storytelling)",
+          "total": 35
+        },
+        {
+          "name": "Gamble",
+          "total": 35
+        },
+        {
+          "name": "Gossip",
+          "total": 35
+        },
+        {
+          "name": "Intuition",
+          "total": 35
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 40
+        },
+        {
+          "name": "Perception",
+          "total": 35
+        }
+      ],
+      "talents": [
+        {
+          "name": "Drilled",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Short Spear and Shield)",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Helmet, Leather Jerkin and Mail Shirt",
+          "ap": 3,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Helmet, Linen Surcoat with Drakensberg Livery (Red Dragon on a Yellow Field), Leather Jerkin, Mail Shirt, Shield, Spear, 1d10 silver shillings"
+      },
+      "notes": [
+        "Printed Armour (Helmet, Leather Jerkin and Mail Shirt) 3; check hit-location coverage before play."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "enemy-in-shadows-companion:creatures:carnivorous-snapper",
+      "name": "Carnivorous Snapper",
+      "page": 99,
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 99
+      },
+      "category": "River creatures",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 7,
+        "WS": 33,
+        "BS": 0,
+        "S": 40,
+        "T": 50,
+        "I": 10,
+        "Ag": 5,
+        "Dex": 0,
+        "Int": 5,
+        "WP": 25,
+        "Fel": 0,
+        "W": 31
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [
+        {
+          "name": "Hardy",
+          "ranks": 1,
+          "adaptation": "Printed Hardy 3 uses Fifth Edition Hardy, capped at 1 rank(s)."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Bite",
+          "value": "9"
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Tail",
+          "value": "5"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 33,
+          "damage": 9,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Tail",
+          "skill": 33,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon (Claws)",
+          "skill": 33,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Brawling)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "unavailableTraits": [
+        {
+          "name": "Hardy 3",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Cold Blooded",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Snapper",
+      "adaptation": "Printed Hardy 3 uses Fifth Edition Hardy, capped at 1 rank(s)."
+    },
+    {
+      "id": "enemy-in-shadows-companion:creatures:black-arrow-outlaw",
+      "name": "Black Arrow Outlaw",
+      "page": 99,
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 99
+      },
+      "category": "Criminals",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 40,
+        "S": 35,
+        "T": 35,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 30,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 35
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 40
+        },
+        {
+          "name": "Cool",
+          "total": 35
+        },
+        {
+          "name": "Endurance",
+          "total": 40
+        },
+        {
+          "name": "Gamble",
+          "total": 35
+        },
+        {
+          "name": "Intimidate",
+          "total": 40
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 45
+        },
+        {
+          "name": "Outdoor Survival",
+          "total": 35
+        },
+        {
+          "name": "Ranged (Bow)",
+          "total": 50
+        },
+        {
+          "name": "Stealth (Rural)",
+          "total": 35
+        }
+      ],
+      "talents": [
+        {
+          "name": "Strike to Stun",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Bow)",
+          "skill": 50,
+          "damage": 6,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "Range 60 yards.",
+          "skillName": "Ranged (Bow)"
+        },
+        {
+          "name": "Weapon (Axe)",
+          "skill": 45,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leather Jack",
+          "ap": 1,
+          "locations": "Arms, Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Axe, Black Mask, Bow and 2d10 Black Arrows, Leather Jack, 2d10 brass pennies"
+      },
+      "notes": [],
+      "species": "Human"
+    },
+    {
+      "id": "enemy-in-shadows-companion:creatures:khornate-beastman",
+      "name": "Khornate Beastman",
+      "page": 105,
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 105
+      },
+      "category": "Beastmen",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 45,
+        "BS": 30,
+        "S": 35,
+        "T": 45,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 25,
+        "Int": 25,
+        "WP": 30,
+        "Fel": 25,
+        "W": 14
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Afraid",
+          "value": "Fire"
+        },
+        {
+          "name": "Bite",
+          "value": "4"
+        },
+        {
+          "name": "Frenzy",
+          "value": ""
+        },
+        {
+          "name": "Horns",
+          "value": "6"
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 45,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Claws",
+          "skill": 45,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        },
+        {
+          "name": "Horns",
+          "skill": 45,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 45,
+          "damage": 3,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "species": "Beastman",
+      "adaptation": "Printed Fury uses the core Fifth Edition Frenzy effect."
+    },
+    {
+      "id": "enemy-in-shadows-companion:creatures:mutated-farmyard-beast",
+      "name": "Mutated Farmyard Beast",
+      "page": 106,
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 106
+      },
+      "category": "Mutants",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 40,
+        "BS": 45,
+        "S": 30,
+        "T": 40,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 25,
+        "WP": 25,
+        "Fel": 10,
+        "W": 13
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bite",
+          "value": "3"
+        },
+        {
+          "name": "Frenzy",
+          "value": "",
+          "adaptation": "Printed Fury uses the core Fifth Edition Frenzy effect."
+        },
+        {
+          "name": "Hatred",
+          "value": "Keepers"
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Venom",
+          "value": "Challenging"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 40,
+          "damage": 3,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 40,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "species": "Mutant",
+      "adaptation": "Printed Fury uses the core Fifth Edition Frenzy effect. Core Venom applies the Difficulty to recovery from Poisoned."
+    }
+  ],
+  "templates": [
+    {
+      "id": "enemy-in-shadows-companion:templates:purple-hand-cultist",
+      "name": "Purple Hand Cultist",
+      "page": 76,
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 76
+      },
+      "eligibility": "any",
+      "profileIds": [
+        "core:creatures:cultist"
+      ],
+      "foundationLabel": "Cultist",
+      "adjustments": {},
+      "skills": [
+        {
+          "options": [
+            "Lore (Chaos)"
+          ],
+          "bonus": 0,
+          "count": 1
+        },
+        {
+          "options": [
+            "Secret Signs (Purple Hand)"
+          ],
+          "bonus": 0,
+          "count": 1
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Secret Identity"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": [
+        "Printed Skill grants supply no totals. Begin at the governing Characteristics and adjust the totals to suit the NPC.",
+        "Record the day-to-day Career separately. Academics, Burghers and Courtiers are common.",
+        "The source gives a 25% chance of a mutation. Resolve the result manually. Use the Tzeentch column on p. 66 if it is physical."
+      ]
+    }
+  ],
+  "training": []
+}

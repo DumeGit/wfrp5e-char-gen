@@ -1,0 +1,2588 @@
+{
+  "schemaVersion": 1,
+  "id": "empire-in-ruins-companion",
+  "source": {
+    "file": "Empire In Ruins Companion.pdf",
+    "sha256": "895bc9031060772e97598cbf30ca75e92f2762eaf77eef26e10ff567522fd841"
+  },
+  "summary": "26 profiles and 3 templates",
+  "profiles": [
+    {
+      "id": "empire-in-ruins-companion:creatures:flamer-of-tzeentch",
+      "name": "Flamer of Tzeentch",
+      "page": 21,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 21
+      },
+      "category": "Daemons",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 6,
+        "WS": 40,
+        "BS": 65,
+        "S": 40,
+        "T": 40,
+        "I": 40,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 35,
+        "WP": 55,
+        "Fel": 10,
+        "W": 17
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Breath",
+          "value": "Warpfire"
+        },
+        {
+          "name": "Corruption",
+          "value": "Moderate"
+        },
+        {
+          "name": "Daemonic",
+          "value": "9"
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 40,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Warpfire is a source-defined Breath type with no fixed Damage rating given. On failed Dodge, make a Challenging Endurance Test and take Moderate Corruption regardless of result. On failure take normal attack Damage and 1 Ablaze, with Minor Corruption each round while Ablaze persists. On success take no Damage and gain Regeneration for 1d10 rounds with cosmetic changes to healed flesh. Keep source reference manual until Damage is established.",
+        "Font of Flame permits Breath on 8+ on a d10 at the start of a turn if Momentum is insufficient (printed Advantage, Fifth Edition core compatibility p. 364)."
+      ]
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:agitator",
+      "name": "Agitator",
+      "page": 22,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 22
+      },
+      "category": "Humanoids",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 35,
+        "S": 30,
+        "T": 30,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 35,
+        "WP": 30,
+        "Fel": 35,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Charm",
+          "total": 35
+        },
+        {
+          "name": "Cool",
+          "total": 70
+        },
+        {
+          "name": "Dodge",
+          "total": 30
+        },
+        {
+          "name": "Leadership",
+          "total": 35
+        }
+      ],
+      "talents": [
+        {
+          "name": "Alley Cat",
+          "ranks": 1
+        },
+        {
+          "name": "Argumentative",
+          "ranks": 1
+        },
+        {
+          "name": "Blather",
+          "ranks": 1
+        },
+        {
+          "name": "Impassioned Zeal",
+          "ranks": 1
+        },
+        {
+          "name": "Public Speaker",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Club)",
+          "skill": 30,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leather Jerkin",
+          "ap": 1,
+          "locations": "Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Flyer decrying proposed tax on Stirland cheeses, club, leather jerkin, 1d10 brass coins"
+      },
+      "notes": [
+        "Brass 2. Cool 70 applies in the printed mob-leader context with daemonic whispers. No ordinary Cool value is printed."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:murderous-altdorfer",
+      "name": "Murderous Altdorfer",
+      "page": 22,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 22
+      },
+      "category": "Humanoids",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 15,
+        "BS": 25,
+        "S": 38,
+        "T": 37,
+        "I": 30,
+        "Ag": 31,
+        "Dex": 28,
+        "Int": 19,
+        "WP": 47,
+        "Fel": 33,
+        "W": 13
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Frenzy",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Starts already Frenzied. The printed improvised attack is SB − 4, which yields −1 before any contextual modifiers. Preserve that formula and flag the attack for manual review if the engine cannot represent it."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:animated-coach",
+      "name": "Animated Coach",
+      "page": 24,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 24
+      },
+      "category": "Constructs",
+      "example": false,
+      "size": "Enormous",
+      "stats": {
+        "M": 3,
+        "WS": 33,
+        "BS": null,
+        "S": 25,
+        "T": 25,
+        "I": 25,
+        "Ag": 20,
+        "Dex": null,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 40
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 33,
+          "damage": 10,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 8,
+          "adaptation": "Fifth Edition Enormous Size adds 2 to the primary melee attack."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 3,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Two coach poles use Long Reach and SB +6. The printed +8 is consistent with that formula and may already be bespoke. Use core Size Stomp and retain Enemy in Shadows Companion coach hit locations as a source cross-reference.",
+        "The moving coach is stopped with a Very Hard Strength Test with 5 SL in one round, assisted by up to six characters. This is an encounter procedure for manual adjudication."
+      ],
+      "adaptation": "Fifth Edition Enormous Size adds 2 to the primary melee attack."
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:animated-furniture-large",
+      "name": "Animated Furniture, Large",
+      "page": 24,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 24
+      },
+      "category": "Constructs",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 2,
+        "WS": 59,
+        "BS": null,
+        "S": 40,
+        "T": 50,
+        "I": 49,
+        "Ag": 20,
+        "Dex": null,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 28
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 59,
+          "damage": 12,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 8,
+          "adaptation": "Fifth Edition Large Size adds 4 to the primary melee attack."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Long-legged version has +1 or +2 Movement and gains printed Stride, with core Sprinter the established mapping."
+      ],
+      "adaptation": "Fifth Edition Large Size adds 4 to the primary melee attack."
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:animated-furniture-medium",
+      "name": "Animated Furniture, Medium",
+      "page": 24,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 24
+      },
+      "category": "Constructs",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 39,
+        "BS": null,
+        "S": 25,
+        "T": 35,
+        "I": 49,
+        "Ag": 35,
+        "Dex": null,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 10
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 39,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Short legs reduce Movement by 1 and remove Stride. Use core Sprinter for the printed Stride."
+      ],
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:animated-furniture-small",
+      "name": "Animated Furniture, Small",
+      "page": 24,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 24
+      },
+      "category": "Constructs",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": null,
+        "S": 15,
+        "T": 20,
+        "I": 49,
+        "Ag": 35,
+        "Dex": null,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 3
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 35,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Small describes the furniture tier, with no Size Trait printed. The source does not specify a game Size. Use the ordinary unmarked default unless a specific Size is reviewed. Short legs reduce Movement by 1 and remove Stride. Use core Sprinter for Stride."
+      ],
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:cow-carcass",
+      "name": "Cow Carcass",
+      "page": 25,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 25
+      },
+      "category": "Constructs",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 3,
+        "WS": 35,
+        "BS": null,
+        "S": 33,
+        "T": 35,
+        "I": 25,
+        "Ag": 15,
+        "Dex": null,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Immunity",
+          "value": "Arrows/bolts, Blunt Weapons, Criticals, Impale"
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Die Hard",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Magical",
+          "value": ""
+        },
+        {
+          "name": "Regeneration",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Slam",
+          "skill": 35,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "No Size Trait in the source, despite the animal type.",
+        "Use core Sprinter and Regeneration. Die Hard has no approved current equivalent. Retain the exact immunity targets and source-only Psychology immunity."
+      ],
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:pig-carcass",
+      "name": "Pig Carcass",
+      "page": 25,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 25
+      },
+      "category": "Constructs",
+      "example": false,
+      "size": "Small",
+      "stats": {
+        "M": 3,
+        "WS": 32,
+        "BS": null,
+        "S": 30,
+        "T": 30,
+        "I": 30,
+        "Ag": 15,
+        "Dex": null,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 6
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Immunity",
+          "value": "Arrows/bolts, Blunt Weapons, Criticals, Impale"
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Die Hard",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Magical",
+          "value": ""
+        },
+        {
+          "name": "Regeneration",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Slam",
+          "skill": 32,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Head, left arm and left leg hits automatically miss in the printed half-carcass variant.",
+        "Use core Sprinter and Regeneration. Die Hard has no approved current equivalent. Retain the exact immunity targets and source-only Psychology immunity."
+      ],
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect. Printed Wounds 12 use the core Small formula (6 Wounds)."
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:sheep-carcass",
+      "name": "Sheep Carcass",
+      "page": 25,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 25
+      },
+      "category": "Constructs",
+      "example": false,
+      "size": "Small",
+      "stats": {
+        "M": 3,
+        "WS": 33,
+        "BS": null,
+        "S": 25,
+        "T": 25,
+        "I": 25,
+        "Ag": 20,
+        "Dex": null,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 4
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Immunity",
+          "value": "Arrows/bolts, Blunt Weapons, Criticals, Impale"
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Die Hard",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Magical",
+          "value": ""
+        },
+        {
+          "name": "Regeneration",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Slam",
+          "skill": 33,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Use core Sprinter and Regeneration. Die Hard has no approved current equivalent. Retain the exact immunity targets and source-only Psychology immunity."
+      ],
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect. Printed Wounds 8 use the core Small formula (4 Wounds)."
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:the-green-racket",
+      "name": "The Green Racket",
+      "page": 32,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 32
+      },
+      "category": "Greenskins",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 38,
+        "S": 30,
+        "T": 36,
+        "I": 30,
+        "Ag": 39,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 30,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 44
+        },
+        {
+          "name": "Climb",
+          "total": 37
+        },
+        {
+          "name": "Cool",
+          "total": 35
+        },
+        {
+          "name": "Dodge",
+          "total": 44
+        },
+        {
+          "name": "Endurance",
+          "total": 41
+        },
+        {
+          "name": "Melee",
+          "total": 43
+        },
+        {
+          "name": "Play (Instrument)",
+          "total": 35
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Animosity",
+          "value": "",
+          "requiresParameter": true
+        },
+        {
+          "name": "Afraid",
+          "value": "Elves"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Musical instrument, robes, sword"
+      },
+      "notes": [
+        "Shared Night Goblin musician profile. The sound gives one Deafened Condition within 10 yards on failed Difficult Toughness. The source leaves Animosity target, instrument and Melee specialisation unspecified. Sword supports a Basic choice without asserting all Melee uses Basic."
+      ],
+      "species": "Goblin"
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:doom-diver",
+      "name": "Doom Diver",
+      "page": 32,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 32
+      },
+      "category": "Greenskins",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 35,
+        "S": 35,
+        "T": 43,
+        "I": 46,
+        "Ag": 42,
+        "Dex": 31,
+        "Int": 32,
+        "WP": 25,
+        "Fel": 18,
+        "W": 14
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 50
+        },
+        {
+          "name": "Cool",
+          "total": 37
+        },
+        {
+          "name": "Endurance",
+          "total": 40
+        },
+        {
+          "name": "Melee",
+          "total": 38
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Animosity",
+          "value": "",
+          "requiresParameter": true
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Knife)",
+          "skill": 30,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Knife, pointy stick under hood, ramshackle wings"
+      },
+      "notes": [
+        "Endurance 40 is the printed total even though T is 43. Animosity and Melee are unspecified. Knife supports a Basic choice. Gliding gear and catapult scenes do not grant a Fly rating."
+      ],
+      "species": "Goblin"
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:imperial-ostlander-soldier",
+      "name": "Imperial Ostlander Soldier",
+      "page": 42,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 42
+      },
+      "category": "Humanoids",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 40,
+        "BS": 35,
+        "S": 35,
+        "T": 35,
+        "I": 40,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 35,
+        "Fel": 30,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 35
+        },
+        {
+          "name": "Climb",
+          "total": 38
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 37
+        },
+        {
+          "name": "Cool",
+          "total": 38
+        },
+        {
+          "name": "Dodge",
+          "total": 35
+        },
+        {
+          "name": "Endurance",
+          "total": 40
+        },
+        {
+          "name": "Gamble",
+          "total": 33
+        },
+        {
+          "name": "Gossip",
+          "total": 37
+        },
+        {
+          "name": "Haggle",
+          "total": 33
+        },
+        {
+          "name": "Language (Battle Tongue)",
+          "total": 32
+        },
+        {
+          "name": "Lore (Ostland)",
+          "total": 33
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 45
+        },
+        {
+          "name": "Melee (Polearm)",
+          "total": 45
+        },
+        {
+          "name": "Outdoor Survival",
+          "total": 33
+        },
+        {
+          "name": "Perception",
+          "total": 43
+        },
+        {
+          "name": "Ranged (Bow)",
+          "total": 45
+        },
+        {
+          "name": "Stealth (Rural)",
+          "total": 34
+        }
+      ],
+      "talents": [
+        {
+          "name": "Etiquette (Soldiers)",
+          "ranks": 1
+        },
+        {
+          "name": "Warrior Born",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Bow)",
+          "skill": 45,
+          "damage": 6,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "",
+          "skillName": "Ranged (Bow)"
+        },
+        {
+          "name": "Weapon (Sword)",
+          "skill": 45,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        },
+        {
+          "name": "Weapon (Polearm)",
+          "skill": 40,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Mail shirt",
+          "ap": 2,
+          "locations": "Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Sword, bow, halberd, uniform, grey surcoat, cloak"
+      },
+      "notes": [
+        "Source header is Soldier. Three alternative attack forms are printed. No ammunition quantity is printed. Treat Warrior Born as already in the baseline unless an explicit adjustment is reviewed."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:vanguard-soldier",
+      "name": "Vanguard Soldier",
+      "page": 42,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 42
+      },
+      "category": "Humanoids",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 40,
+        "S": 30,
+        "T": 38,
+        "I": 40,
+        "Ag": 38,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 35,
+        "Fel": 28,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [
+        {
+          "name": "Combat Aware",
+          "ranks": 1
+        },
+        {
+          "name": "Striding Gait (Highlands)",
+          "ranks": 1,
+          "adaptation": "Printed Strider (Highlands) uses Fifth Edition Striding Gait (Highlands)."
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Bow)",
+          "skill": 40,
+          "damage": 6,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "",
+          "skillName": "Ranged (Bow)"
+        },
+        {
+          "name": "Weapon (Sword)",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leather",
+          "ap": 1,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "The two listed Traits are Talents in the Fourth Edition. Map Strider (Highlands) to core Striding Gait (Highlands) with an adaptation if accepted.",
+        "Optional Skill totals: Athletics 41, Charm Animal 35, Climb 35, Cool 38, Endurance 44, Gossip 31, Haggle 35, Lore (Ostland) 36, Melee (Basic) 48, Navigation 45, Outdoor Survival 36, Perception 47, Ranged (Bow) 60, Stealth (Rural) 45, Track 44.",
+        "Optional trappings: sword, bow, uniform, grey surcoat, cloak. The optional headings are verified visually. Preserve their optional status.",
+        "Printed Armour (Leather) 1; check hit-location coverage before play."
+      ],
+      "species": "Human",
+      "adaptation": "Printed Strider (Highlands) uses Fifth Edition Striding Gait (Highlands)."
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:mourngul",
+      "name": "Mourngul",
+      "page": 61,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 61
+      },
+      "category": "Monsters",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 6,
+        "WS": 65,
+        "BS": null,
+        "S": 50,
+        "T": 50,
+        "I": 30,
+        "Ag": 40,
+        "Dex": 10,
+        "Int": 25,
+        "WP": 50,
+        "Fel": 10,
+        "W": 60
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bite",
+          "value": "9"
+        },
+        {
+          "name": "Champion",
+          "value": ""
+        },
+        {
+          "name": "Chill Grasp",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Immunity",
+          "value": "Cold"
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Magical",
+          "value": ""
+        },
+        {
+          "name": "Stealthy",
+          "value": ""
+        },
+        {
+          "name": "Terror",
+          "value": "2"
+        },
+        {
+          "name": "Vampiric",
+          "value": ""
+        },
+        {
+          "name": "Ward",
+          "value": "8"
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 65,
+          "damage": 9,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon (Frigid Claws)",
+          "skill": 65,
+          "damage": 18,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 13,
+          "adaptation": "Fifth Edition Large Size adds 5 to the primary melee attack."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 4,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Armour 4 plus TB 5 yields the parenthetical total of 9. The source frames this creature as half-living and omits Undead. +13 is the printed primary Claws attack and appears size-adjusted already."
+      ],
+      "adaptation": "Fifth Edition Large Size adds 5 to the primary melee attack."
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:curs-d-ettin",
+      "name": "Curs'd Ettin",
+      "page": 62,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 62
+      },
+      "category": "Monsters",
+      "example": false,
+      "size": "Enormous",
+      "stats": {
+        "M": 6,
+        "WS": 45,
+        "BS": 35,
+        "S": 65,
+        "T": 65,
+        "I": 20,
+        "Ag": 30,
+        "Dex": 15,
+        "Int": 25,
+        "WP": 40,
+        "Fel": 10,
+        "W": 88
+      },
+      "toughnessBonus": 6,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Melee (Brawl)",
+          "total": 70
+        },
+        {
+          "name": "Perception",
+          "total": 30
+        },
+        {
+          "name": "Ranged (Throwing)",
+          "total": 45
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Hatred",
+          "value": "Everyone"
+        },
+        {
+          "name": "Terror",
+          "value": "1"
+        },
+        {
+          "name": "Regeneration",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Spellcaster",
+          "value": "",
+          "requiresParameter": true
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 45,
+          "damage": 17,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 11,
+          "adaptation": "Fifth Edition Enormous Size adds 6 to the primary melee attack."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 3,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        },
+        {
+          "name": "Armour",
+          "ap": 5,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": true,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Profile prose calls it Enormous and W 88 agrees with that category using printed bonuses. The table has no Size Trait line. Armour 3 and optional 5 replace one another. The parenthetical figures include TB 6.",
+        "Hammer Hand adds +30 to severity rolls for Critical Wounds it inflicts. Retain as a manual reference ability. No Lore, Wind, spells or thrown attack profile are given. Map Brawl to Brawling and Throwing to Throwing or the existing canonical specialisation after validation."
+      ],
+      "adaptation": "Fifth Edition Enormous Size adds 6 to the primary melee attack."
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:colossal-squig",
+      "name": "Colossal Squig",
+      "page": 63,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 63
+      },
+      "category": "Greenskins",
+      "example": false,
+      "size": "Enormous",
+      "stats": {
+        "M": 6,
+        "WS": 65,
+        "BS": null,
+        "S": 70,
+        "T": 50,
+        "I": 10,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 6,
+        "WP": 20,
+        "Fel": null,
+        "W": 76
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Bounce",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Slobbering Mouth)",
+          "skill": 65,
+          "damage": 18,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 11,
+          "adaptation": "Fifth Edition Enormous Size adds 7 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Messy Demise is manual. On death, creatures within 3 yards must pass Challenging Dodge or lose 2d10 Wounds after TB/AP with minimum 1. Keep the Slobbering Mouth as the primary Weapon, distinct from a free Bite."
+      ],
+      "adaptation": "Fifth Edition Enormous Size adds 7 to the primary melee attack."
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:necrofex-colossus",
+      "name": "Necrofex Colossus",
+      "page": 64,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 64
+      },
+      "category": "Undead",
+      "example": false,
+      "size": "Monstrous",
+      "stats": {
+        "M": 6,
+        "WS": 55,
+        "BS": null,
+        "S": 70,
+        "T": 60,
+        "I": 10,
+        "Ag": 20,
+        "Dex": 5,
+        "Int": 15,
+        "WP": 30,
+        "Fel": null,
+        "W": 176
+      },
+      "toughnessBonus": 6,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Magical",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Monstrous"
+        },
+        {
+          "name": "Terror",
+          "value": "2"
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Spellcaster",
+          "value": "",
+          "requiresParameter": true
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 55,
+          "damage": 27,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 13,
+          "adaptation": "Fifth Edition Monstrous Size adds 14 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed Int 15 and WP 30 are unusual on a Construct. Preserve untouched scores and surface the conflict with core Construct.",
+        "Suffused with Death grants +1 SL on successful Death or Necromancy spells within 80 yards and penalises spells from Ghyran, Hysh, or Azyr within that radius (printed −10, core Appendix I mapping is −1 SL). Garden of Corpses releases 3d10 hostile zombies on defeat. These are manual references. Optional Spellcaster does not specify Lore, Wind or spell list."
+      ],
+      "adaptation": "Fifth Edition Monstrous Size adds 14 to the primary melee attack."
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:kenselheim-guard",
+      "name": "Kenselheim Guard",
+      "page": 79,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 79
+      },
+      "category": "Humanoids",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 6,
+        "WS": 35,
+        "BS": 30,
+        "S": 35,
+        "T": 30,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 30,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Melee (Polearm)",
+          "total": 45
+        },
+        {
+          "name": "Perception",
+          "total": 40
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Halberd)",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 3,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Source header is Guards. M 6 is verified in the original table.",
+        "Printed Armour 3 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:kenselheim-guard-sergeant",
+      "name": "Kenselheim Guard Sergeant",
+      "page": 79,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 79
+      },
+      "category": "Humanoids",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 6,
+        "WS": 45,
+        "BS": 30,
+        "S": 45,
+        "T": 30,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 30,
+        "W": 13
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Melee (Basic)",
+          "total": 55
+        },
+        {
+          "name": "Melee (Polearm)",
+          "total": 45
+        },
+        {
+          "name": "Perception",
+          "total": 50
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 55,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 5,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Source header misspells Guard Sergent. M 6 is verified in the original table.",
+        "Printed Armour 5 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:gor-of-the-red-crown",
+      "name": "Gor of the Red Crown",
+      "page": 84,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 84
+      },
+      "category": "Beastmen",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 45,
+        "BS": 30,
+        "S": 35,
+        "T": 45,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 25,
+        "Int": 25,
+        "WP": 30,
+        "Fel": 25,
+        "W": 14
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Dodge",
+          "total": 35
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 55
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Arboreal",
+          "value": ""
+        },
+        {
+          "name": "Frenzy",
+          "value": "",
+          "adaptation": "Printed Fury uses the core Fifth Edition Frenzy effect."
+        },
+        {
+          "name": "Horns",
+          "value": "6"
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Horns",
+          "skill": 45,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon (Crude Axe)",
+          "skill": 45,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Crude axe"
+      },
+      "notes": [
+        "Unbridled Fury appears in the Trappings as colour and is not an equipment item. Fury can use core Frenzy with a reviewed note. Preserve the existing Arboreal source-rule treatment and published Horns rating."
+      ],
+      "adaptation": "Printed Fury uses the core Fifth Edition Frenzy effect."
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:ungor-of-the-red-crown",
+      "name": "Ungor of the Red Crown",
+      "page": 84,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 84
+      },
+      "category": "Beastmen",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 30,
+        "S": 35,
+        "T": 35,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 25,
+        "Int": 25,
+        "WP": 35,
+        "Fel": 25,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Melee (Polearm)",
+          "total": 45
+        },
+        {
+          "name": "Ranged (Bow)",
+          "total": 45
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Arboreal",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Crude Spear)",
+          "skill": 35,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        },
+        {
+          "name": "Ranged (Bow)",
+          "skill": 45,
+          "damage": 6,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "Range 50 yards.",
+          "skillName": "Ranged (Bow)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Bow with 12 arrows, splintered spear, questionable meat"
+      },
+      "notes": [
+        "Preserve printed Bow rating and range on the source attack. Crude Spear and Splintered Spear refer to the same item in this stat block."
+      ]
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:flying-death-skull",
+      "name": "Flying Death Skull",
+      "page": 118,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 118
+      },
+      "category": "Undead",
+      "example": false,
+      "size": "Tiny",
+      "stats": {
+        "M": null,
+        "WS": 41,
+        "BS": null,
+        "S": 35,
+        "T": 37,
+        "I": 41,
+        "Ag": 34,
+        "Dex": 30,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bite",
+          "value": "4"
+        },
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Fly",
+          "value": "100"
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Tiny",
+          "adaptation": "Printed Little uses Fifth Edition Tiny Size. After a change, supply Wounds manually."
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Infected",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 41,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "M is printed as an asterisk and Flight 100 has a matching asterisk, with no explanatory footnote on the page. Represent base Movement as missing, not zero. Map Flight to core Fly 100. Size (Little) has no exact core match. Tiny is a contextual proposal with manual Wounds after changes, and printed W 11 remains untouched.",
+        "A controller can see through the skull but cannot hear through it. Control ends on 0 Wounds or when the controller is distracted. Check Death on the Reik Companion for the earlier profile and any missing footnote.",
+        "Movement is printed as an asterisk. See the profile rule for conditional movement and retain the unspecified characteristic.",
+        "Printed Wounds apply to the baseline. Core Tiny Size requires manual Wounds after changes."
+      ],
+      "adaptation": "Printed Little uses Fifth Edition Tiny Size. After a change, supply Wounds manually."
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:hexwraith",
+      "name": "Hexwraith",
+      "page": 118,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 118
+      },
+      "category": "Undead",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 6,
+        "WS": 65,
+        "BS": null,
+        "S": 35,
+        "T": 30,
+        "I": 20,
+        "Ag": 30,
+        "Dex": 25,
+        "Int": 25,
+        "WP": 70,
+        "Fel": 15,
+        "W": 16
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Champion",
+          "value": ""
+        },
+        {
+          "name": "Chill Grasp",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Ethereal",
+          "value": ""
+        },
+        {
+          "name": "Magical",
+          "value": ""
+        },
+        {
+          "name": "Terror",
+          "value": "3"
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 65,
+          "damage": 9,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "This is the unmounted profile. Scythes are described in prose without a separate attack profile. Do not add a mount or silently replace the printed Weapon rating with core scythe damage."
+      ]
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:winged-nightmare",
+      "name": "Winged Nightmare",
+      "page": 118,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 118
+      },
+      "category": "Undead",
+      "example": false,
+      "size": "Enormous",
+      "stats": {
+        "M": 4,
+        "WS": 55,
+        "BS": null,
+        "S": 60,
+        "T": 55,
+        "I": 15,
+        "Ag": 45,
+        "Dex": null,
+        "Int": 10,
+        "WP": 50,
+        "Fel": null,
+        "W": 84
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Bite",
+          "value": "10"
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Fly",
+          "value": "75"
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Mount, War"
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 55,
+          "damage": 10,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "The source explicitly lists two Claws at +8 each alongside Bite +10. Map Flight 75 to core Fly 75 and preserve printed training without reapplying baseline effects. Abyssal Terror is the heading immediately above this stat block. Check Death on the Reik Companion for the earlier profile and cross-book deduplication."
+      ]
+    },
+    {
+      "id": "empire-in-ruins-companion:creatures:the-gravelord-s-zombie",
+      "name": "The Gravelord's Zombie",
+      "page": 118,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 118
+      },
+      "category": "Undead",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 55,
+        "BS": null,
+        "S": 40,
+        "T": 40,
+        "I": 5,
+        "Ag": 10,
+        "Dex": 15,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 15
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 55,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Distinct faction variant, with WS 55 and Fear 2. The header is plural and describes a group of unnamed creatures. Keep the source qualifier to distinguish it from core Zombie."
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "id": "empire-in-ruins-companion:templates:animated-sign",
+      "name": "Animated Sign",
+      "page": 23,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 23
+      },
+      "eligibility": "any",
+      "adjustments": {},
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Immunity",
+          "value": "Criticals"
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": [
+        "Choose the corresponding depicted creature as the foundation. Adjust Size explicitly if the animation takes the size of the depiction. This sign adds no Armour."
+      ],
+      "setStats": {
+        "Int": 0,
+        "WP": 0,
+        "Fel": 0
+      }
+    },
+    {
+      "id": "empire-in-ruins-companion:templates:animated-metal-statue",
+      "name": "Animated Metal Statue",
+      "page": 23,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 23
+      },
+      "eligibility": "any",
+      "adjustments": {},
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Immunity",
+          "value": "Criticals"
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": [
+        "Choose the depicted creature as the foundation. Adjust Size if it differs from the sculpture. The metal body adds 3 Armour."
+      ],
+      "setStats": {
+        "Int": 0,
+        "WP": 0,
+        "Fel": 0
+      },
+      "armour": 3,
+      "armourName": "Metal statue"
+    },
+    {
+      "id": "empire-in-ruins-companion:templates:animated-stone-statue",
+      "name": "Animated Stone Statue",
+      "page": 23,
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 23
+      },
+      "eligibility": "any",
+      "adjustments": {},
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Immunity",
+          "value": "Criticals"
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": [
+        "Choose the depicted creature as the foundation. Adjust Size if it differs from the sculpture. The stone body adds 4 Armour."
+      ],
+      "setStats": {
+        "Int": 0,
+        "WP": 0,
+        "Fel": 0
+      },
+      "armour": 4,
+      "armourName": "Stone statue"
+    }
+  ],
+  "training": []
+}

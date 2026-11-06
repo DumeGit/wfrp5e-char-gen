@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "id": "hell-rides-to-hallt",
+  "source": {
+    "file": "Hell Rides to Hallt.pdf",
+    "sha256": "a4b2aba458f2b4357a7fba82ffcadbe1a0cc221ea0adeb1190814b5688a43c63"
+  },
+  "summary": "1 profiles and 0 templates",
+  "profiles": [
+    {
+      "id": "hell-rides-to-hallt:creatures:chaos-spawn",
+      "name": "Chaos Spawn",
+      "page": 22,
+      "source": {
+        "book": "hell-rides-to-hallt",
+        "page": 22
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Enormous",
+      "stats": {
+        "M": 5,
+        "WS": 65,
+        "BS": null,
+        "S": 42,
+        "T": 56,
+        "I": 23,
+        "Ag": 24,
+        "Dex": 27,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 56
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Bite",
+          "value": "7"
+        },
+        {
+          "name": "Corruption",
+          "value": "Moderate"
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        },
+        {
+          "name": "Tentacles",
+          "value": "4"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 65,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Tentacles",
+          "skill": 65,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 5,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "The profile is generic; it is described as the spawn summoned by the cult, with no individual name.",
+        "It has four free attacks, one per tentacle. Successful hits may entangle; while entangled, it may spend one Advantage to make a Bite attack against all currently entangled creatures. These attacks do not generate further Advantage.",
+        "The Enormous size note states it inflicts Terror 2 on most average Characters and Terror 3 on Halflings; damage is doubled against average Characters and tripled against Halflings.",
+        "Printed attack multiplicity: 4 Tentacles +5."
+      ],
+      "species": "Chaos Spawn"
+    }
+  ],
+  "templates": [],
+  "training": []
+}

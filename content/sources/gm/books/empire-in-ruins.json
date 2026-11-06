@@ -1,0 +1,3776 @@
+{
+  "schemaVersion": 1,
+  "id": "empire-in-ruins",
+  "source": {
+    "file": "Enemy Within Campaign Volume 5 Empire in Ruins.pdf",
+    "sha256": "69cd659ecfd1406e395ee17eb8e0ee6fc0804cb86c5d0f13b3c4d9d7503955fa"
+  },
+  "summary": "36 profiles and 5 templates",
+  "profiles": [
+    {
+      "id": "empire-in-ruins:creatures:purple-hand-cultist",
+      "name": "Purple Hand Cultist",
+      "page": 18,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 18
+      },
+      "category": "Chaos cultists",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 40,
+        "BS": 40,
+        "S": 35,
+        "T": 35,
+        "I": 34,
+        "Ag": 35,
+        "Dex": 34,
+        "Int": 35,
+        "WP": 41,
+        "Fel": 30,
+        "W": 13
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 45
+        },
+        {
+          "name": "Cool",
+          "total": 51
+        },
+        {
+          "name": "Dodge",
+          "total": 45
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 50
+        },
+        {
+          "name": "Perception",
+          "total": 44
+        },
+        {
+          "name": "Ranged (Crossbow)",
+          "total": 50
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Animosity",
+          "value": "Kastor and Friends"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Crossbow)",
+          "skill": 50,
+          "damage": 9,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "Range 60 yards.",
+          "skillName": "Ranged (Crossbow)"
+        },
+        {
+          "name": "Weapon (Hand Weapon)",
+          "skill": 50,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Leather Jacket, Sword, Crossbow and 12 Bolts, purse containing 2d10 Shillings"
+      },
+      "notes": [
+        "Printed Status Silver 2. The adventure also reuses this profile for Night Vigil cultists.",
+        "Printed Armour 1 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "empire-in-ruins:creatures:religious-fanatic",
+      "name": "Religious Fanatic",
+      "page": 18,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 18
+      },
+      "category": "Imperial civilians",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 45,
+        "BS": 30,
+        "S": 40,
+        "T": 40,
+        "I": 35,
+        "Ag": 35,
+        "Dex": 35,
+        "Int": 30,
+        "WP": 35,
+        "Fel": 30,
+        "W": 15
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 55
+        },
+        {
+          "name": "Cool",
+          "total": 45
+        },
+        {
+          "name": "Dodge",
+          "total": 45
+        },
+        {
+          "name": "Intimidate",
+          "total": 50
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 55
+        }
+      ],
+      "talents": [
+        {
+          "name": "Frenzy",
+          "ranks": 1
+        },
+        {
+          "name": "Implacable",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Hatred",
+          "value": "Enemies of the faith"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Hand Weapon)",
+          "skill": 55,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed Status Brass 1. See separate Son of Ulric and Sigmarite Flagellant adaptations."
+      ],
+      "species": "Human",
+      "unavailableTraits": [
+        {
+          "name": "Prejudice (Those who do not share their faith)",
+          "reason": "Apply this printed prejudice manually. The existing Thin People entry has a different target.",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "id": "empire-in-ruins:creatures:peasant",
+      "name": "Peasant",
+      "page": 18,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 18
+      },
+      "category": "Imperial civilians",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 40,
+        "BS": 30,
+        "S": 40,
+        "T": 40,
+        "I": 30,
+        "Ag": 40,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 30,
+        "W": 15
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 50
+        },
+        {
+          "name": "Haggle",
+          "total": 40
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 45
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Axe)",
+          "skill": 45,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leather Jerkin",
+          "ap": 1,
+          "locations": "Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Leather Jerkin, Axe, purse containing 2d10 Pennies"
+      },
+      "notes": [
+        "Printed Status Brass 2."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "empire-in-ruins:creatures:servant",
+      "name": "Servant",
+      "page": 18,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 18
+      },
+      "category": "Imperial civilians",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 40,
+        "T": 40,
+        "I": 40,
+        "Ag": 40,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 30,
+        "W": 15
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 50
+        },
+        {
+          "name": "Dodge",
+          "total": 50
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 35
+        },
+        {
+          "name": "Perception",
+          "total": 50
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 50
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Dagger)",
+          "skill": 35,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed Status Silver 1. Distinct printed foundation from Taverns of the Old World p. 14."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "empire-in-ruins:creatures:senior-servant",
+      "name": "Senior Servant",
+      "page": 18,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 18
+      },
+      "category": "Imperial civilians",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 30,
+        "S": 45,
+        "T": 45,
+        "I": 45,
+        "Ag": 45,
+        "Dex": 35,
+        "Int": 40,
+        "WP": 40,
+        "Fel": 35,
+        "W": 16
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 55
+        },
+        {
+          "name": "Cool",
+          "total": 45
+        },
+        {
+          "name": "Dodge",
+          "total": 55
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 35
+        },
+        {
+          "name": "Perception",
+          "total": 60
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 60
+        }
+      ],
+      "talents": [
+        {
+          "name": "Strike to Stun",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 35,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leather Jack",
+          "ap": 1,
+          "locations": "Arms, Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Leather Jack, Sword"
+      },
+      "notes": [
+        "Printed Status Silver 3. Printed Melee (Basic) is equal to WS 35."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "empire-in-ruins:creatures:knight",
+      "name": "Knight",
+      "page": 19,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 19
+      },
+      "category": "Imperial soldiers",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 50,
+        "BS": 30,
+        "S": 50,
+        "T": 35,
+        "I": 50,
+        "Ag": 45,
+        "Dex": 35,
+        "Int": 30,
+        "WP": 40,
+        "Fel": 40,
+        "W": 15
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 55
+        },
+        {
+          "name": "Cool",
+          "total": 50
+        },
+        {
+          "name": "Dodge",
+          "total": 55
+        },
+        {
+          "name": "Heal",
+          "total": 40
+        },
+        {
+          "name": "Intimidate",
+          "total": 60
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 60
+        },
+        {
+          "name": "Melee (Cavalry)",
+          "total": 60
+        },
+        {
+          "name": "Ride (Horse)",
+          "total": 60
+        }
+      ],
+      "talents": [
+        {
+          "name": "Roughrider",
+          "ranks": 1
+        },
+        {
+          "name": "Strike Mighty Blow",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 60,
+          "damage": 10,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        },
+        {
+          "name": "Weapon (Lance)",
+          "skill": 60,
+          "damage": 12,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Cavalry)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 4,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Warhorse, suit of Plate Armour, Lance, Sword, purse containing 5d10 Shillings"
+      },
+      "notes": [
+        "Printed Status Silver 5. Warhorse is a listed possession. Source gives four order variants and a minor noble adaptation.",
+        "Printed Armour 4 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "empire-in-ruins:creatures:knight-preceptor",
+      "name": "Knight Preceptor",
+      "page": 19,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 19
+      },
+      "category": "Imperial soldiers",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 55,
+        "BS": 30,
+        "S": 60,
+        "T": 35,
+        "I": 55,
+        "Ag": 55,
+        "Dex": 35,
+        "Int": 30,
+        "WP": 50,
+        "Fel": 40,
+        "W": 17
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 65
+        },
+        {
+          "name": "Cool",
+          "total": 60
+        },
+        {
+          "name": "Dodge",
+          "total": 65
+        },
+        {
+          "name": "Heal",
+          "total": 55
+        },
+        {
+          "name": "Intimidate",
+          "total": 75
+        },
+        {
+          "name": "Leadership",
+          "total": 55
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 70
+        },
+        {
+          "name": "Melee (Cavalry)",
+          "total": 70
+        },
+        {
+          "name": "Ride (Horse)",
+          "total": 70
+        }
+      ],
+      "talents": [
+        {
+          "name": "Roughrider",
+          "ranks": 1
+        },
+        {
+          "name": "Strike Mighty Blow",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 70,
+          "damage": 11,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        },
+        {
+          "name": "Weapon (Lance)",
+          "skill": 70,
+          "damage": 13,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Cavalry)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 4,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed Status Gold 2. This block has no Trappings field. Sword, Lance and armour are explicit in Traits.",
+        "Printed Talent for manual review: Unshakable.",
+        "Printed Armour 4 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "empire-in-ruins:creatures:soldier",
+      "name": "Soldier",
+      "page": 19,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 19
+      },
+      "category": "Imperial soldiers",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 45,
+        "BS": 45,
+        "S": 35,
+        "T": 40,
+        "I": 40,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 40,
+        "Fel": 30,
+        "W": 15
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 40
+        },
+        {
+          "name": "Cool",
+          "total": 50
+        },
+        {
+          "name": "Dodge",
+          "total": 40
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 55
+        },
+        {
+          "name": "Melee (Polearm)",
+          "total": 55
+        },
+        {
+          "name": "Ranged (Crossbow)",
+          "total": 55
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Crossbow)",
+          "skill": 55,
+          "damage": 9,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "Range 60 yards.",
+          "skillName": "Ranged (Crossbow)"
+        },
+        {
+          "name": "Weapon (Sword)",
+          "skill": 55,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        },
+        {
+          "name": "Weapon (Halberd)",
+          "skill": 45,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Mail Shirt",
+          "ap": 2,
+          "locations": "Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Mail Shirt, Sword, Crossbow and 12 Bolts or Halberd, purse containing 3d10 Shillings"
+      },
+      "notes": [
+        "Printed Status Silver 3. Crossbow and 12 Bolts versus Halberd are alternative packages. Do not equip both automatically."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "empire-in-ruins:creatures:sergeant",
+      "name": "Sergeant",
+      "page": 19,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 19
+      },
+      "category": "Imperial soldiers",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 55,
+        "BS": 55,
+        "S": 35,
+        "T": 45,
+        "I": 40,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 50,
+        "Fel": 40,
+        "W": 16
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 40
+        },
+        {
+          "name": "Cool",
+          "total": 60
+        },
+        {
+          "name": "Dodge",
+          "total": 45
+        },
+        {
+          "name": "Intuition",
+          "total": 55
+        },
+        {
+          "name": "Leadership",
+          "total": 60
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 75
+        },
+        {
+          "name": "Perception",
+          "total": 55
+        },
+        {
+          "name": "Ranged (Blackpowder)",
+          "total": 65
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Pistol)",
+          "skill": 65,
+          "damage": 8,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "Range 20 yards.",
+          "skillName": "Ranged (Blackpowder)"
+        },
+        {
+          "name": "Weapon (Sword)",
+          "skill": 75,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 3,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Mail Shirt, Breastplate, Helmet, Sword, brace of 2 Pistols with bullets and powder for 12 shots, symbol of rank, purse containing 5d10 Shillings"
+      },
+      "notes": [
+        "Printed Status Silver 5. Preserve printed Armour 3 without stacking AP from gear.",
+        "Printed Armour 3 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "empire-in-ruins:creatures:great-eagle",
+      "name": "Great Eagle",
+      "page": 41,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 41
+      },
+      "category": "Animals",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 2,
+        "WS": 65,
+        "BS": null,
+        "S": 44,
+        "T": 43,
+        "I": 55,
+        "Ag": 52,
+        "Dex": null,
+        "Int": 38,
+        "WP": 43,
+        "Fel": 25,
+        "W": 32
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [
+        {
+          "name": "Acute Sense (Sight)",
+          "ranks": 1,
+          "adaptation": "Printed Acute Sense (Vision: as the Character Talent) uses Fifth Edition Acute Sense (Sight)."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Fear",
+          "value": "1"
+        },
+        {
+          "name": "Fly",
+          "value": "100"
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Beak and Claws)",
+          "skill": 65,
+          "damage": 12,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 8,
+          "adaptation": "Fifth Edition Large Size adds 4 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Flight (100) and the attack damage are printed values. Territorial has no printed territory parameter."
+      ],
+      "species": "Great Eagle",
+      "adaptation": "Fifth Edition Large Size adds 4 to the primary melee attack. Printed Acute Sense (Vision: as the Character Talent) uses Fifth Edition Acute Sense (Sight)."
+    },
+    {
+      "id": "empire-in-ruins:creatures:drunken-heraldic-pig",
+      "name": "Drunken Heraldic Pig",
+      "page": 81,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 81
+      },
+      "category": "Animals",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 6,
+        "WS": 35,
+        "BS": null,
+        "S": 33,
+        "T": 38,
+        "I": 33,
+        "Ag": 45,
+        "Dex": null,
+        "Int": 10,
+        "WP": 10,
+        "Fel": null,
+        "W": 7
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Frenzy",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Bite)",
+          "skill": 35,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "The printed generic encounter variant is drunken. Size is unstated, and the 7 Wounds are printed."
+      ],
+      "species": "Pig"
+    },
+    {
+      "id": "empire-in-ruins:creatures:madcraw-shaman",
+      "name": "Madcraw Shaman",
+      "page": 143,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 143
+      },
+      "category": "Greenskins",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 35,
+        "S": 30,
+        "T": 35,
+        "I": 27,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 36,
+        "WP": 25,
+        "Fel": 25,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Channelling",
+          "total": 31
+        },
+        {
+          "name": "Cool",
+          "total": 30
+        },
+        {
+          "name": "Endurance",
+          "total": 42
+        },
+        {
+          "name": "Sleight of Hand",
+          "total": 35
+        },
+        {
+          "name": "Stealth (Underground)",
+          "total": 41
+        }
+      ],
+      "talents": [
+        {
+          "name": "Arcane Magic (Little Waaagh!)",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Animosity",
+          "value": "",
+          "requiresParameter": true
+        },
+        {
+          "name": "Afraid",
+          "value": "Elves"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Staff)",
+          "skill": 30,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [
+        "tribes-tribulations:spell:vindictive-glare"
+      ],
+      "sections": {
+        "Trappings": "Hand Weapon (Staff), Robes"
+      },
+      "notes": [
+        "Shared Shamans foundation used by two named members. Gork'll Fix It! is marked Oddblat-only. Vindictive Glare is printed without a name restriction. Preserve 31 as a printed Channelling total and resolve the Fifth Edition specialisation from the existing Waaagh! support. Animosity target is unspecified."
+      ],
+      "species": "Night Goblin"
+    },
+    {
+      "id": "empire-in-ruins:creatures:madcraw-skargobbo",
+      "name": "Madcraw Skargobbo",
+      "page": 143,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 143
+      },
+      "category": "Greenskins",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 37,
+        "BS": 35,
+        "S": 35,
+        "T": 40,
+        "I": 26,
+        "Ag": 45,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 28,
+        "Fel": 20,
+        "W": 13
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 50
+        },
+        {
+          "name": "Climb",
+          "total": 45
+        },
+        {
+          "name": "Cool",
+          "total": 25
+        },
+        {
+          "name": "Dodge",
+          "total": 50
+        },
+        {
+          "name": "Endurance",
+          "total": 45
+        },
+        {
+          "name": "Intimidate",
+          "total": 45
+        },
+        {
+          "name": "Intuition",
+          "total": 31
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 47
+        },
+        {
+          "name": "Melee (Polearm)",
+          "total": 47
+        },
+        {
+          "name": "Perception",
+          "total": 36
+        }
+      ],
+      "talents": [
+        {
+          "name": "Tenacious",
+          "ranks": 1
+        },
+        {
+          "name": "Strike Mighty Blow",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Afraid",
+          "value": "Elves"
+        },
+        {
+          "name": "Animosity",
+          "value": "Everything"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword or Spear)",
+          "skill": 37,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Club or Spear, Shield, Helmet, Robes"
+      },
+      "notes": [
+        "The printed trait says Sword or Spear. The trappings and preceding prose say Club or Spear. Do not silently add a sword; keep the discrepancy visible. Preserve below-WP Cool 25 and printed weapon damage +8."
+      ],
+      "species": "Night Goblin"
+    },
+    {
+      "id": "empire-in-ruins:creatures:madcraw-night-goblin",
+      "name": "Madcraw Night Goblin",
+      "page": 143,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 143
+      },
+      "category": "Greenskins",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 31,
+        "BS": 40,
+        "S": 30,
+        "T": 36,
+        "I": 20,
+        "Ag": 39,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 26,
+        "Fel": 20,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 44
+        },
+        {
+          "name": "Climb",
+          "total": 40
+        },
+        {
+          "name": "Cool",
+          "total": 26
+        },
+        {
+          "name": "Dodge",
+          "total": 44
+        },
+        {
+          "name": "Endurance",
+          "total": 46
+        },
+        {
+          "name": "Melee (Basic or Polearm)",
+          "total": 36
+        },
+        {
+          "name": "Ranged (Bow)",
+          "total": 45
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Afraid",
+          "value": "Elves"
+        },
+        {
+          "name": "Animosity",
+          "value": "Everything"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Shortbow)",
+          "skill": 45,
+          "damage": 5,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "Range 20 yards.",
+          "skillName": "Ranged (Bow)"
+        },
+        {
+          "name": "Weapon (Sword or Spear)",
+          "skill": 31,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Sword, Spear and Shield or Shortbow, Robes"
+      },
+      "notes": [
+        "Preserve the printed Basic/Polearm Skill choice. Source punctuation allows unclear grouping of weapon alternatives, and gives no ammunition count. Use explicit options where supported."
+      ],
+      "species": "Night Goblin"
+    },
+    {
+      "id": "empire-in-ruins:creatures:madcraw-loonie",
+      "name": "Madcraw Loonie",
+      "page": 144,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 144
+      },
+      "category": "Greenskins",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 35,
+        "S": 35,
+        "T": 43,
+        "I": 46,
+        "Ag": 38,
+        "Dex": 31,
+        "Int": 32,
+        "WP": 25,
+        "Fel": 18,
+        "W": 14
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 43
+        },
+        {
+          "name": "Cool",
+          "total": 30
+        },
+        {
+          "name": "Endurance",
+          "total": 48
+        },
+        {
+          "name": "Intimidate",
+          "total": 48
+        },
+        {
+          "name": "Intuition",
+          "total": 56
+        },
+        {
+          "name": "Melee (Goblin Loonie)",
+          "total": 35
+        }
+      ],
+      "talents": [
+        {
+          "name": "Berserk Charge",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Afraid",
+          "value": "Elves"
+        },
+        {
+          "name": "Animosity",
+          "value": "Everything"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Ball and Chain)",
+          "skill": 30,
+          "damage": 9,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Robes, Ball and Chain, 3 doses of Mad Cap Mushrooms"
+      },
+      "notes": [
+        "Ball and Chain is on p. 143, Melee (Goblin Loonie), Long, SB+6, Impact, Wrap, Pummel, Damaging. Review against existing Ball and Chain options and source priority. Page 144 says Loonies attempt to consume Mad Cap Mushrooms before combat and have a 20% chance each round of collapsing after the first turn they use the weapon. This is encounter handling."
+      ],
+      "species": "Night Goblin"
+    },
+    {
+      "id": "empire-in-ruins:creatures:madcraw-runt",
+      "name": "Madcraw Runt",
+      "page": 144,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 144
+      },
+      "category": "Greenskins",
+      "example": false,
+      "size": "Small",
+      "stats": {
+        "M": 4,
+        "WS": 20,
+        "BS": 25,
+        "S": 20,
+        "T": 25,
+        "I": 20,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 25,
+        "WP": 20,
+        "Fel": 20,
+        "W": 4
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Afraid",
+          "value": "Elves"
+        },
+        {
+          "name": "Animosity",
+          "value": "",
+          "requiresParameter": true
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Knife)",
+          "skill": 20,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Knife or sharp bit of rock"
+      },
+      "notes": [
+        "Animosity target is unspecified. This is a Small juvenile profile."
+      ],
+      "species": "Night Goblin",
+      "adaptation": "Printed Wounds 6 use the core Small formula (4 Wounds)."
+    },
+    {
+      "id": "empire-in-ruins:creatures:madcraw-snotling",
+      "name": "Madcraw Snotling",
+      "page": 144,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 144
+      },
+      "category": "Greenskins",
+      "example": false,
+      "size": "Small",
+      "stats": {
+        "M": 4,
+        "WS": 25,
+        "BS": 15,
+        "S": 25,
+        "T": 20,
+        "I": 20,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 15,
+        "WP": 30,
+        "Fel": null,
+        "W": 4
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        },
+        {
+          "name": "Venom",
+          "value": "Average"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Knife)",
+          "skill": 25,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Knife or sharp bit of rock, poisonous mushrooms"
+      },
+      "notes": [
+        "Distinct regional variant. Printed 7 Wounds differs from Fifth Edition core Small calculation and prior Snotling precedent of 4. Preserve source value in provenance and apply established core handling. Dex and Fel are absent."
+      ],
+      "species": "Snotling",
+      "adaptation": "Core Venom applies the Difficulty to recovery from Poisoned. Printed Wounds 7 use the core Small formula (4 Wounds)."
+    },
+    {
+      "id": "empire-in-ruins:creatures:three-headed-chaos-hound",
+      "name": "Three-Headed Chaos Hound",
+      "page": 149,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 149
+      },
+      "category": "Chaos beasts",
+      "example": false,
+      "size": "Enormous",
+      "stats": {
+        "M": 4,
+        "WS": 55,
+        "BS": null,
+        "S": 45,
+        "T": 40,
+        "I": 35,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 15,
+        "WP": 45,
+        "Fel": null,
+        "W": 64
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Dodge",
+          "total": 45
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 65
+        }
+      ],
+      "talents": [
+        {
+          "name": "Ambidextrous",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Champion",
+          "value": ""
+        },
+        {
+          "name": "Frenzy",
+          "value": ""
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Tail",
+          "value": "7"
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        },
+        {
+          "name": "Venom",
+          "value": "",
+          "requiresParameter": true
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Tail",
+          "skill": 55,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 55,
+          "damage": 12,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 8,
+          "adaptation": "Fifth Edition Enormous Size adds 4 to the primary melee attack."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Stride maps to Sprinter by prior reviewed precedent. Venom recovery difficulty is unspecified. Preserve 64 printed Wounds and attack Damage as source values while following established core Size handling. Tail +7 is independent."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Rear",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Chaos Hound",
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect. Fifth Edition Enormous Size adds 4 to the primary melee attack."
+    },
+    {
+      "id": "empire-in-ruins:creatures:caves-of-chaos-ghost",
+      "name": "Caves of Chaos Ghost",
+      "page": 151,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 151
+      },
+      "category": "Undead",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 6,
+        "WS": 30,
+        "BS": null,
+        "S": 30,
+        "T": 30,
+        "I": 10,
+        "Ag": 30,
+        "Dex": 20,
+        "Int": 15,
+        "WP": 15,
+        "Fel": null,
+        "W": 50
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Ethereal",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 30,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Source explicitly cross-references WFRP Fourth Edition p. 331. Distinct encounter variant with visually verified 50 printed Wounds versus Fifth Edition Ghost 10. Keep separate if imported and do not change core Ghost."
+      ],
+      "species": "Ghost"
+    },
+    {
+      "id": "empire-in-ruins:creatures:treacherous-herald",
+      "name": "Treacherous Herald",
+      "page": 152,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 152
+      },
+      "category": "Daemons",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 39,
+        "BS": 49,
+        "S": 49,
+        "T": 39,
+        "I": 39,
+        "Ag": 59,
+        "Dex": 39,
+        "Int": 49,
+        "WP": 99,
+        "Fel": 19,
+        "W": 19
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bite",
+          "value": "8"
+        },
+        {
+          "name": "Corruption",
+          "value": "Moderate"
+        },
+        {
+          "name": "Daemonic",
+          "value": "8"
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        },
+        {
+          "name": "Spellcaster",
+          "value": "Tzeentch"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Bite (Beak)",
+          "skill": 39,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 39,
+          "damage": 9,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed Blues Fire of Tzeentch refers to Blue Fire of Tzeentch by p. 156 wording. Keep territorial and Unstable qualifiers. No Channelling total is printed. No new spell effect without its supplied source.",
+        "Printed spell requires source review: Blue Fire of Tzeentch.",
+        "Printed spell requires source review: Pink Fire of Tzeentch.",
+        "Printed spell requires source review: Tzeentch's Firestorm.",
+        "Printed spell requires source review: Word of Tzeentch.",
+        "Printed qualifier for Territorial: The Island."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Unstable (Beyond the Caves)",
+          "optional": false,
+          "reason": "Conditional printed effect requires manual adjudication."
+        }
+      ],
+      "species": "Herald of Tzeentch"
+    },
+    {
+      "id": "empire-in-ruins:creatures:swarm-of-rainbow-snakes",
+      "name": "Swarm of Rainbow Snakes",
+      "page": 153,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 153
+      },
+      "category": "Chaos beasts",
+      "example": false,
+      "size": "Small",
+      "stats": {
+        "M": 3,
+        "WS": 50,
+        "BS": null,
+        "S": 30,
+        "T": 25,
+        "I": 25,
+        "Ag": 40,
+        "Dex": null,
+        "Int": 5,
+        "WP": 45,
+        "Fel": null,
+        "W": 30
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Cold-blooded",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Fast uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        },
+        {
+          "name": "Swarm",
+          "value": ""
+        },
+        {
+          "name": "Venom",
+          "value": "Difficult"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 50,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Small and Swarm are both explicitly printed, with 30 printed Wounds. Use the existing reviewed Swarm/size rules where supported. Corruption from the pool is an encounter effect."
+      ],
+      "species": "Snake swarm",
+      "adaptation": "Printed Fast uses the core Fifth Edition Sprinter effect. Core Venom applies the Difficulty to recovery from Poisoned."
+    },
+    {
+      "id": "empire-in-ruins:creatures:caves-of-chaos-zombie",
+      "name": "Caves of Chaos Zombie",
+      "page": 155,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 155
+      },
+      "category": "Undead",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 15,
+        "BS": null,
+        "S": 30,
+        "T": 30,
+        "I": 5,
+        "Ag": 10,
+        "Dex": 15,
+        "Int": 10,
+        "WP": null,
+        "Fel": null,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 15,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Distinct from core Zombie. Review Construct against its approved removal in The Night Parade. Preserve explicit Unstable qualifier."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Unstable (Beyond the Caves)",
+          "optional": false,
+          "reason": "Conditional printed effect requires manual adjudication."
+        }
+      ],
+      "species": "Zombie"
+    },
+    {
+      "id": "empire-in-ruins:creatures:pink-horror",
+      "name": "Pink Horror",
+      "page": 156,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 156
+      },
+      "category": "Daemons",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 50,
+        "BS": 30,
+        "S": 35,
+        "T": 30,
+        "I": 35,
+        "Ag": 30,
+        "Dex": 35,
+        "Int": 25,
+        "WP": 30,
+        "Fel": 12,
+        "W": 10
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Channelling",
+          "total": 65
+        },
+        {
+          "name": "Language (Magick)",
+          "total": 55
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Moderate"
+        },
+        {
+          "name": "Daemonic",
+          "value": "8"
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Claws)",
+          "skill": 50,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Brawling)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Tzeentch's Fire pools only same-colour Horrors. One casts their colour's spell on the group's turn with +1 SL per additional same-colour Horror, capped at +9 SL. Keep as a situational ability without automatic casting. Language (Magick) and Channelling specialisation use only reviewed Fifth Edition mappings.",
+        "Split generates two unwounded Blue Horrors on a Critical Wound or when reduced to 8 Wounds. Page 155 also says a killed Pink Horror splits. Keep this rule descriptive.",
+        "Printed spell requires source review: Pink Fire of Tzeentch."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Split",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Tzeentch's Fire",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Unstable (Beyond the Caves)",
+          "optional": false,
+          "reason": "Conditional printed effect requires manual adjudication."
+        }
+      ],
+      "species": "Horror of Tzeentch"
+    },
+    {
+      "id": "empire-in-ruins:creatures:blue-horror",
+      "name": "Blue Horror",
+      "page": 156,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 156
+      },
+      "category": "Daemons",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 35,
+        "T": 30,
+        "I": 35,
+        "Ag": 30,
+        "Dex": 35,
+        "Int": 25,
+        "WP": 30,
+        "Fel": 10,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Channelling",
+          "total": 65
+        },
+        {
+          "name": "Language (Magick)",
+          "total": 55
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Moderate"
+        },
+        {
+          "name": "Daemonic",
+          "value": "8"
+        },
+        {
+          "name": "Fear",
+          "value": "1"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Claws)",
+          "skill": 30,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Brawling)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Tzeentch's Fire pools only same-colour Horrors. One casts their colour's spell on the group's turn with +1 SL per additional same-colour Horror, capped at +9 SL. Keep as a situational ability without automatic casting. Language (Magick) and Channelling specialisation use only reviewed Fifth Edition mappings.",
+        "Split is printed, but p. 156 supplies only the Pink Horror trigger and Blue Horror offspring. Do not invent Blue Horror offspring or a trigger.",
+        "Printed spell requires source review: Blue Fire of Tzeentch."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Split",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Tzeentch's Fire",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Unstable (Beyond the Caves)",
+          "optional": false,
+          "reason": "Conditional printed effect requires manual adjudication."
+        }
+      ],
+      "species": "Horror of Tzeentch"
+    },
+    {
+      "id": "empire-in-ruins:creatures:chaos-minotaur-lord",
+      "name": "Chaos Minotaur Lord",
+      "page": 157,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 157
+      },
+      "category": "Beastmen",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 5,
+        "WS": 45,
+        "BS": 25,
+        "S": 64,
+        "T": 65,
+        "I": 20,
+        "Ag": 20,
+        "Dex": 25,
+        "Int": 20,
+        "WP": 30,
+        "Fel": 15,
+        "W": 42
+      },
+      "toughnessBonus": 6,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Melee (Two-handed)",
+          "total": 65
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Champion",
+          "value": ""
+        },
+        {
+          "name": "Frenzy",
+          "value": ""
+        },
+        {
+          "name": "Horns",
+          "value": "9"
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Horns",
+          "skill": 45,
+          "damage": 9,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 45,
+          "damage": 18,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 12,
+          "adaptation": "Fifth Edition Large Size adds 6 to the primary melee attack."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Bronze Breastplate, Great Axe"
+      },
+      "notes": [
+        "Big and Brute are printed alongside actual scores and Large. Do not reapply baseline characteristic adjustments. Core size governs recalculation and the printed Wounds/attack remain source evidence."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Big",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Brute",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Rear",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Minotaur",
+      "adaptation": "Fifth Edition Large Size adds 6 to the primary melee attack."
+    },
+    {
+      "id": "empire-in-ruins:creatures:fox-head-beastman",
+      "name": "Fox-Head Beastman",
+      "page": 170,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 170
+      },
+      "category": "Beastmen",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 67,
+        "BS": 35,
+        "S": 47,
+        "T": 49,
+        "I": 42,
+        "Ag": 44,
+        "Dex": 26,
+        "Int": 49,
+        "WP": 43,
+        "Fel": 20,
+        "W": 16
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Arboreal",
+          "value": ""
+        },
+        {
+          "name": "Horns",
+          "value": "6"
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Horns",
+          "skill": 67,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon (Axe)",
+          "skill": 67,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Unpersonalised title. Preserve printed Axe and Horns damage. Stride maps to Sprinter by prior reviewed precedent. Leader and Cunning need explicit support or Legacy review."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Cunning",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Leader",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Beastman",
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+    },
+    {
+      "id": "empire-in-ruins:creatures:drexol-horde-gor",
+      "name": "Drexol Horde Gor",
+      "page": 175,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 175
+      },
+      "category": "Beastmen",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 45,
+        "BS": 30,
+        "S": 35,
+        "T": 45,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 25,
+        "Int": 25,
+        "WP": 30,
+        "Fel": 25,
+        "W": 14
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Arboreal",
+          "value": ""
+        },
+        {
+          "name": "Frenzy",
+          "value": "",
+          "adaptation": "Printed Fury uses the core Fifth Edition Frenzy effect."
+        },
+        {
+          "name": "Horns",
+          "value": "6"
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Horns",
+          "skill": 45,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 45,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Distinct from Fifth Edition core Gor. Fury needs explicit review. The group title is contextual and refers to Drexol's followers."
+      ],
+      "species": "Gor",
+      "adaptation": "Printed Fury uses the core Fifth Edition Frenzy effect."
+    },
+    {
+      "id": "empire-in-ruins:creatures:drexol-horde-ungor",
+      "name": "Drexol Horde Ungor",
+      "page": 175,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 175
+      },
+      "category": "Beastmen",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 30,
+        "S": 35,
+        "T": 35,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 25,
+        "Int": 25,
+        "WP": 35,
+        "Fel": 25,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Arboreal",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 35,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        },
+        {
+          "name": "Ranged (Bow or Sling)",
+          "skill": 30,
+          "damage": 7,
+          "optional": true,
+          "ranged": true,
+          "free": false,
+          "text": "Range 25 yards."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Four optional archers have Ranged +7 (25) using bows or slings. No specific model, ammunition count or training is supplied."
+      ],
+      "species": "Ungor"
+    },
+    {
+      "id": "empire-in-ruins:creatures:drexol-horde-mutant",
+      "name": "Drexol Horde Mutant",
+      "page": 175,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 175
+      },
+      "category": "Mutants",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 30,
+        "T": 30,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 25,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Mutation",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Swords and Clubs)",
+          "skill": 30,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "The source points to Death on the Reik Companion p. 97 for Tzeentch mutations. Arrival Fatigued is encounter context. Four worked mutation examples are recorded in the audit and need individual conversion before automation."
+      ],
+      "species": "Mutant"
+    },
+    {
+      "id": "empire-in-ruins:creatures:spionwerber-agent",
+      "name": "Spionwerber Agent",
+      "page": 180,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 180
+      },
+      "category": "Imperial spies",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 55,
+        "BS": 50,
+        "S": 30,
+        "T": 40,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 65,
+        "Fel": 35,
+        "W": 16
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Bribery",
+          "total": 40
+        },
+        {
+          "name": "Charm",
+          "total": 40
+        },
+        {
+          "name": "Climb",
+          "total": 35
+        },
+        {
+          "name": "Cool",
+          "total": 70
+        },
+        {
+          "name": "Entertain (Act)",
+          "total": 40
+        },
+        {
+          "name": "Gamble",
+          "total": 35
+        },
+        {
+          "name": "Gossip",
+          "total": 40
+        },
+        {
+          "name": "Haggle",
+          "total": 40
+        },
+        {
+          "name": "Intuition",
+          "total": 35
+        },
+        {
+          "name": "Perception",
+          "total": 35
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 60
+        },
+        {
+          "name": "Secret Signs (Spies)",
+          "total": 35
+        },
+        {
+          "name": "Sleight of Hand",
+          "total": 35
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 40
+        }
+      ],
+      "talents": [
+        {
+          "name": "Blather",
+          "ranks": 1
+        },
+        {
+          "name": "Carouser",
+          "ranks": 1
+        },
+        {
+          "name": "Etiquette (Students)",
+          "ranks": 1
+        },
+        {
+          "name": "Gregarious",
+          "ranks": 1
+        },
+        {
+          "name": "Lip Reading",
+          "ranks": 1
+        },
+        {
+          "name": "Read/Write",
+          "ranks": 1
+        },
+        {
+          "name": "Secret Identity",
+          "ranks": 1
+        },
+        {
+          "name": "Shadow",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 60,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 3,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Mail Shirt, Leather Jack, Open Helm and Sword"
+      },
+      "notes": [
+        "Printed Status Silver 3. Preserve Armour 3 without automatically stacking the listed armour pieces.",
+        "Printed Armour 3 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "empire-in-ruins:creatures:false-honor-guard",
+      "name": "False Honor Guard",
+      "page": 187,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 187
+      },
+      "category": "Chaos cultists",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 50,
+        "BS": 35,
+        "S": 40,
+        "T": 40,
+        "I": 49,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 55,
+        "Fel": 30,
+        "W": 17
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 45
+        },
+        {
+          "name": "Cool",
+          "total": 70
+        },
+        {
+          "name": "Dodge",
+          "total": 45
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 70
+        },
+        {
+          "name": "Melee (Polearm)",
+          "total": 70
+        },
+        {
+          "name": "Perception",
+          "total": 55
+        }
+      ],
+      "talents": [
+        {
+          "name": "Drilled",
+          "ranks": 1
+        },
+        {
+          "name": "Riposte",
+          "ranks": 1
+        },
+        {
+          "name": "Strike Mighty Blow",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Halberd)",
+          "skill": 50,
+          "damage": 9,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 4,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Suit of full Plate, Halberd, Sword, Purple Hand tattoo"
+      },
+      "notes": [
+        "Group stat block. Nine members is an encounter headcount.",
+        "Printed Armour 4 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "empire-in-ruins:creatures:loyal-cultist",
+      "name": "Loyal Cultist",
+      "page": 192,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 192
+      },
+      "category": "Chaos cultists",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 30,
+        "T": 30,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 30,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Melee (Pole Arm)",
+          "total": 45
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 30,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Leather Jerkin, Halberd"
+      },
+      "notes": [
+        "Preserve source body-only Armour 1 and weapon Damage +7. Encounter count equals number of characters."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "empire-in-ruins:creatures:sigmarite-flagellant",
+      "name": "Sigmarite Flagellant",
+      "page": 18,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 18
+      },
+      "category": "Imperial civilians",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 45,
+        "BS": 30,
+        "S": 40,
+        "T": 40,
+        "I": 35,
+        "Ag": 35,
+        "Dex": 35,
+        "Int": 30,
+        "WP": 35,
+        "Fel": 30,
+        "W": 15
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 55
+        },
+        {
+          "name": "Cool",
+          "total": 45
+        },
+        {
+          "name": "Dodge",
+          "total": 45
+        },
+        {
+          "name": "Intimidate",
+          "total": 50
+        },
+        {
+          "name": "Melee (Flail)",
+          "total": 55
+        }
+      ],
+      "talents": [
+        {
+          "name": "Frenzy",
+          "ranks": 1
+        },
+        {
+          "name": "Implacable",
+          "ranks": 1
+        },
+        {
+          "name": "Berserk Charge",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Hatred",
+          "value": "Enemies of the faith"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Flail)",
+          "skill": 55,
+          "damage": 9,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Flail)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Flail"
+      },
+      "notes": [
+        "Religious Fanatic variant. Replaces Melee (Basic) with Melee (Flail) at the same total. The printed flail attack replaces the hand weapon."
+      ],
+      "species": "Human",
+      "unavailableTraits": [
+        {
+          "name": "Prejudice (Those who do not share their faith)",
+          "reason": "Apply this printed prejudice manually. The existing Thin People entry has a different target.",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "id": "empire-in-ruins:creatures:knight-of-the-white-wolf",
+      "name": "Knight of the White Wolf",
+      "page": 19,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 19
+      },
+      "category": "Imperial soldiers",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 50,
+        "BS": 30,
+        "S": 50,
+        "T": 35,
+        "I": 50,
+        "Ag": 45,
+        "Dex": 35,
+        "Int": 30,
+        "WP": 40,
+        "Fel": 40,
+        "W": 15
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 55
+        },
+        {
+          "name": "Cool",
+          "total": 50
+        },
+        {
+          "name": "Dodge",
+          "total": 55
+        },
+        {
+          "name": "Heal",
+          "total": 40
+        },
+        {
+          "name": "Intimidate",
+          "total": 60
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 60
+        },
+        {
+          "name": "Melee (Cavalry)",
+          "total": 60
+        },
+        {
+          "name": "Ride (Horse)",
+          "total": 60
+        },
+        {
+          "name": "Melee (Two-handed)",
+          "total": 60
+        }
+      ],
+      "talents": [
+        {
+          "name": "Roughrider",
+          "ranks": 1
+        },
+        {
+          "name": "Strike Mighty Blow",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 60,
+          "damage": 10,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        },
+        {
+          "name": "Weapon (Lance)",
+          "skill": 60,
+          "damage": 12,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Cavalry)"
+        },
+        {
+          "name": "Weapon (Two-Handed Warhammer)",
+          "skill": 60,
+          "damage": 12,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Two-handed)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 4,
+          "locations": "Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Warhorse, suit of Plate Armour without helmet, Two-Handed Warhammer, Lance, Sword, purse containing 5d10 Shillings"
+      },
+      "notes": [
+        "Retains the generic Knight's training and adds Melee (Two-handed) 60. The source specifies the warhammer and forbids head protection."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "empire-in-ruins:creatures:minor-noble",
+      "name": "Minor Noble",
+      "page": 19,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 19
+      },
+      "category": "Imperial soldiers",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 50,
+        "BS": 30,
+        "S": 50,
+        "T": 35,
+        "I": 50,
+        "Ag": 45,
+        "Dex": 35,
+        "Int": 30,
+        "WP": 40,
+        "Fel": 40,
+        "W": 15
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 55
+        },
+        {
+          "name": "Cool",
+          "total": 50
+        },
+        {
+          "name": "Dodge",
+          "total": 55
+        },
+        {
+          "name": "Heal",
+          "total": 40
+        },
+        {
+          "name": "Intimidate",
+          "total": 60
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 60
+        },
+        {
+          "name": "Melee (Cavalry)",
+          "total": 60
+        },
+        {
+          "name": "Ride (Horse)",
+          "total": 60
+        }
+      ],
+      "talents": [
+        {
+          "name": "Roughrider",
+          "ranks": 1
+        },
+        {
+          "name": "Strike Mighty Blow",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 60,
+          "damage": 10,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Warhorse, Sword, purse containing 5d10 Shillings"
+      },
+      "notes": [
+        "The source uses the generic Knight without Armour or the Lance attack. Its Characteristics, Skills and other attacks carry over."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "empire-in-ruins:creatures:harpy",
+      "name": "Harpy",
+      "page": 158,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 158
+      },
+      "category": "Monsters",
+      "species": "Harpy",
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 38,
+        "BS": null,
+        "S": 35,
+        "T": 35,
+        "I": 55,
+        "Ag": 45,
+        "Dex": 35,
+        "Int": 25,
+        "WP": 25,
+        "Fel": 15,
+        "W": 11
+      },
+      "example": false,
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "The Characteristics are the printed Harpy row. The traits, Skill and trappings beneath it repeat the Minotaur on p. 157. Size is left at the workshop default. Supply verified Harpy Traits and attacks before using this profile."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Harpy combat and flight rules",
+          "reason": "The printed Harpy block repeats the Minotaur’s secondary fields. Resolve the missing rules manually.",
+          "optional": false
+        }
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "id": "empire-in-ruins:templates:son-of-ulric",
+      "name": "Son of Ulric",
+      "page": 18,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 18
+      },
+      "eligibility": "any",
+      "profileIds": [
+        "empire-in-ruins:creatures:religious-fanatic"
+      ],
+      "foundationLabel": "Religious Fanatic",
+      "adjustments": {},
+      "skills": [
+        {
+          "options": [
+            "Melee (Basic)"
+          ],
+          "bonus": 0,
+          "count": 1,
+          "printedTotal": 60
+        }
+      ],
+      "talents": [
+        {
+          "options": [
+            "Furious Assault"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": []
+    },
+    {
+      "id": "empire-in-ruins:templates:knight-panther",
+      "name": "Knight Panther",
+      "page": 19,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 19
+      },
+      "eligibility": "any",
+      "profileIds": [
+        "empire-in-ruins:creatures:knight"
+      ],
+      "foundationLabel": "Knight",
+      "adjustments": {},
+      "skills": [],
+      "talents": [
+        {
+          "options": [
+            "Implacable"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Supportive"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": [
+        "Only Middenheim-service Knights Panther gain these benefits when defending the Todbringers. Preserve the context with a note or as a conditional source template."
+      ]
+    },
+    {
+      "id": "empire-in-ruins:templates:reiksguard-knight",
+      "name": "Reiksguard Knight",
+      "page": 19,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 19
+      },
+      "eligibility": "any",
+      "profileIds": [
+        "empire-in-ruins:creatures:knight"
+      ],
+      "foundationLabel": "Knight",
+      "adjustments": {},
+      "skills": [],
+      "talents": [
+        {
+          "options": [
+            "Commanding Presence"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Iron Will"
+          ],
+          "ranks": 1
+        },
+        {
+          "options": [
+            "Supportive"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": []
+    },
+    {
+      "id": "empire-in-ruins:templates:guard-or-watchman",
+      "name": "Guard or Watchman",
+      "page": 19,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 19
+      },
+      "eligibility": "any",
+      "profileIds": [
+        "empire-in-ruins:creatures:soldier"
+      ],
+      "foundationLabel": "Soldier",
+      "adjustments": {},
+      "skills": [
+        {
+          "options": [
+            "Perception"
+          ],
+          "bonus": 0,
+          "count": 1,
+          "printedTotal": 55
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": []
+    },
+    {
+      "id": "empire-in-ruins:templates:knight-of-the-fiery-heart",
+      "name": "Knight of the Fiery Heart",
+      "page": 19,
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 19
+      },
+      "eligibility": "any",
+      "adjustments": {},
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Miracles",
+          "value": "Sigmar"
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": [
+        "Former Priest of Sigmar. The source lists these three specific Miracles."
+      ],
+      "profileIds": [
+        "empire-in-ruins:creatures:knight"
+      ],
+      "foundationLabel": "Knight",
+      "fixedSpells": [
+        "core:spells:beacon-of-righteous-virtue",
+        "core:spells:sigmar-s-fiery-hammer",
+        "core:spells:soulfire"
+      ]
+    }
+  ],
+  "training": []
+}

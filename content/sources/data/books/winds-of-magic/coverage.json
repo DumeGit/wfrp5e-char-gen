@@ -88,6 +88,16 @@
         "book": "winds-of-magic"
       },
       "reason": "Core creator rules remain authoritative; live/downtime systems are deferred."
+    },
+    {
+      "id": "winds-of-magic:feature:bestiary-expansion",
+      "name": "Bestiary profiles and templates",
+      "status": "adapted",
+      "source": {
+        "book": "winds-of-magic",
+        "page": 174
+      },
+      "reason": "5 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
     }
   ]
 }

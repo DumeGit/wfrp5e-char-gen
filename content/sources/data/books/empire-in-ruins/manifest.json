@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "empire-in-ruins",
+  "title": "Empire in Ruins",
+  "shortTitle": "Empire in Ruins",
+  "edition": 4,
+  "version": "1.0.1",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "Enemy Within Campaign Volume 5 Empire in Ruins.pdf",
+    "sha256": "69cd659ecfd1406e395ee17eb8e0ee6fc0804cb86c5d0f13b3c4d9d7503955fa"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Reusable profiles and supported templates for the Bestiary Workshop. Named NPCs remain outside the catalogue.",
+      "Core Fifth Edition rules govern. Selective Legacy notes identify mechanical adaptations. Unsupported printed entries remain for manual review."
+    ]
+  },
+  "files": {
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  }
+}

@@ -1,0 +1,456 @@
+{
+  "schemaVersion": 1,
+  "id": "power-behind-the-throne",
+  "source": {
+    "file": "Enemy Within Campaign Volume 3 Power Behind the Throne.pdf",
+    "sha256": "9e87c1a55d37dfd05fa24398ee66459dd51b56faefc6918ffd55672fc68deb6b"
+  },
+  "summary": "5 profiles and 0 templates",
+  "profiles": [
+    {
+      "id": "power-behind-the-throne:creatures:minotaur-pit-fighter",
+      "name": "Minotaur Pit Fighter",
+      "page": 67,
+      "source": {
+        "book": "power-behind-the-throne",
+        "page": 67
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 6,
+        "WS": 65,
+        "BS": 25,
+        "S": 51,
+        "T": 50,
+        "I": 25,
+        "Ag": 35,
+        "Dex": 25,
+        "Int": 20,
+        "WP": 30,
+        "Fel": 15,
+        "W": 36
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Belligerent",
+          "value": ""
+        },
+        {
+          "name": "Frenzy",
+          "value": "",
+          "adaptation": "Printed Fury uses the core Fifth Edition Frenzy effect."
+        },
+        {
+          "name": "Horns",
+          "value": "9"
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Horns",
+          "skill": 65,
+          "damage": 9,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon (Club)",
+          "skill": 65,
+          "damage": 14,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)",
+          "printedDamage": 9,
+          "adaptation": "Fifth Edition Large Size adds 5 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "For the Minotaur’s club, the source notes Damaging against average-sized creatures; against small creatures it also gains Impact and each blow’s damage is doubled.",
+        "The source repeats Minotaur fights in event schedules, but provides this stat profile once."
+      ],
+      "species": "Minotaur",
+      "adaptation": "Printed Fury uses the core Fifth Edition Frenzy effect. Fifth Edition Large Size adds 5 to the primary melee attack."
+    },
+    {
+      "id": "power-behind-the-throne:creatures:middenheim-purple-hand-cultist",
+      "name": "Middenheim Purple Hand Cultist",
+      "page": 28,
+      "source": {
+        "book": "power-behind-the-throne",
+        "page": 28
+      },
+      "category": "Chaos cultists",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 43,
+        "BS": 44,
+        "S": 36,
+        "T": 39,
+        "I": 33,
+        "Ag": 35,
+        "Dex": 29,
+        "Int": 39,
+        "WP": 37,
+        "Fel": 26,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 45
+        },
+        {
+          "name": "Dodge",
+          "total": 45
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 54
+        },
+        {
+          "name": "Ranged (Crossbow)",
+          "total": 54
+        },
+        {
+          "name": "Ranged (Entangling)",
+          "total": 64
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Crossbow)",
+          "skill": 54,
+          "damage": 9,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "",
+          "skillName": "Ranged (Crossbow)"
+        },
+        {
+          "name": "Ranged (Net)",
+          "skill": 64,
+          "damage": 0,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "",
+          "skillName": "Ranged (Entangling)"
+        },
+        {
+          "name": "Weapon (Club or Axe)",
+          "skill": 43,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Barbed Net, Crossbows, Hand Weapons (Axes and Clubs)"
+      },
+      "notes": [],
+      "species": "Human"
+    },
+    {
+      "id": "power-behind-the-throne:creatures:skaven-warriors",
+      "name": "Skaven Warriors",
+      "page": 91,
+      "source": {
+        "book": "power-behind-the-throne",
+        "page": 91
+      },
+      "category": "Skaven",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 30,
+        "BS": 30,
+        "S": 30,
+        "T": 30,
+        "I": 40,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 20,
+        "Fel": 20,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Dodge",
+          "total": 40
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 45
+        },
+        {
+          "name": "Ranged (Sling)",
+          "total": 50
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Hand Weapon)",
+          "skill": 45,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        },
+        {
+          "name": "Ranged (Sling)",
+          "skill": 50,
+          "damage": 7,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "",
+          "skillName": "Ranged (Sling)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Four of the warriors are armed with swords, and two with a club and a dagger each. All carry a sling and six bullets."
+      },
+      "notes": [],
+      "species": "Skaven"
+    },
+    {
+      "id": "power-behind-the-throne:creatures:wasmeiers-warhorse",
+      "name": "Wasmeier’s Warhorse",
+      "page": 110,
+      "source": {
+        "book": "power-behind-the-throne",
+        "page": 110
+      },
+      "category": "Mounts",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 7,
+        "WS": 25,
+        "BS": null,
+        "S": 45,
+        "T": 35,
+        "I": 15,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 10,
+        "WP": 10,
+        "Fel": 10,
+        "W": 22
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Trained",
+          "value": "Mount, War"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 25,
+          "damage": 11,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 7,
+          "adaptation": "Fifth Edition Large Size adds 4 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Generic warhorse profile for the stable’s several mounts."
+      ],
+      "species": "Horse",
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect. Fifth Edition Large Size adds 4 to the primary melee attack."
+    },
+    {
+      "id": "power-behind-the-throne:creatures:doppelganger",
+      "name": "Doppelgänger",
+      "page": 148,
+      "source": {
+        "book": "power-behind-the-throne",
+        "page": 148
+      },
+      "category": "Monsters",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 40,
+        "BS": 35,
+        "S": 40,
+        "T": 30,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 35,
+        "Int": 45,
+        "WP": 30,
+        "Fel": 10,
+        "W": 13
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 40,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "The appendix presents this as a creature type and gives the Shapeshifter effect separately."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Shapeshifter",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Doppelgänger"
+    }
+  ],
+  "templates": [],
+  "training": []
+}

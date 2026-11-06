@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "enemy-in-shadows-companion",
+  "title": "Enemy in Shadows Companion",
+  "shortTitle": "Enemy in Shadows Companion",
+  "edition": 4,
+  "version": "1.0.1",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "Enemy in Shadows Companion.pdf",
+    "sha256": "c45fa2152196d3ad951fa369eea8465e1149c3537ace60ae92c481c51cdbaf79"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Reusable profiles and supported templates for the Bestiary Workshop. Named NPCs remain outside the catalogue.",
+      "Core Fifth Edition rules govern. Selective Legacy notes identify mechanical adaptations. Unsupported printed entries remain for manual review."
+    ]
+  },
+  "files": {
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  }
+}

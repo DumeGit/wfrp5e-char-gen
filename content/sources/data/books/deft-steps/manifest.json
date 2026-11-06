@@ -4,7 +4,7 @@
   "title": "Deft Steps, Light Fingers",
   "shortTitle": "Deft Steps",
   "edition": 4,
-  "version": "1.0.4",
+  "version": "1.0.5",
   "kind": "supplement",
   "dependsOn": [
     "core"
@@ -20,7 +20,8 @@
       "User-reviewed Public Speaking Talent placement, Perform (Acting) → Entertain (Acting), explicit Art/Stealth specialisations and Impassioned Zeal Cause; no extra free Advances or Talents.",
       "Ranald aspects use Invoke (Ranald) and their printed lists. Protector heading corrected; A Suitable Stooge uses A Suitable Sucker. Stay Lucky → Cheat the Odds and the previously approved core Miracle equivalents retain Legacy notes.",
       "Named Test Difficulty modifiers use Appendix I SL; ordinary printed numeric situational modifiers remain text. Old core references keep their Fourth Edition identification.",
-      "Thieving tool naming pairs use their approved table/description equivalences. Animal weights shown as dashes remain unknown; buying an animal does not create a companion."
+      "Thieving tool naming pairs use their approved table/description equivalences. Animal weights shown as dashes remain unknown; buying an animal does not create a companion.",
+      "Reviewed reusable Bestiary foundations preserve printed tables, with selective Fifth Edition adaptations and documented unresolved legacy mechanics."
     ]
   },
   "files": {

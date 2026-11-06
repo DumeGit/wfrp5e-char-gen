@@ -39,7 +39,7 @@ WoM p. 27 explicitly gives XP to memorise rituals, so this is a creator purchase
 
 The ritual's printed fixed XP replaces ordinary spell prices. Cursecraft costs 200 XP generally or 100 for its listed witch/dark Lores. Rituals earn no tracker boxes, cannot be free spell grants, and do not count toward spell price bands, Cants or the eight-spell threshold for an Elf's next Lore. Duplicate learning is prohibited across Lores. Undo refunds the XP and removes the ritual. The full description and its XP source are retained in the folio/review/record and the editable sheet's magic rows.
 
-Absent ordinary spell Range/Target/Duration fields are shown as unlisted, rather than invented. Create Familiar's permanent Resilience sacrifice uses maximum Fortune under core Appendix I; Imbue Staff's printed Fortune-or-Resolve alternative becomes Fortune. These performance costs are reference text, never deductions during memorisation. Construct/familiar profiles are not generated.
+Absent ordinary spell Range/Target/Duration fields are shown as unlisted, rather than invented. Create Familiar's permanent Resilience sacrifice uses maximum Fortune under core Appendix I; Imbue Staff's printed Fortune-or-Resolve alternative becomes Fortune. These performance costs are reference text, never deductions during memorisation. Ritual memorisation grants no creature.
 
 ## Deferred material
 
@@ -48,6 +48,10 @@ Revised Fourth Edition casting/channelling and miscast systems, live Augury read
 Arcane Marks occur through play, including the Minor Miscast table's Marked by Magic result on p. 24. College affiliation does not grant a free starting Mark or require a Mark roll. Marks are referenced through College traditions; no permanent Mark effects are added at creation.
 
 Potion ingredient costs and alchemical market/sales values are not retail prices. No new shop purchase is invented from them. Mòna's six Marsh Magic spells p. 217 belong to the Fimir adversary; no supported player Lore or Species grants them. Skin of Bone and Bark p. 218 is an adventure-acquired combined-Wind spell for two casters; no ordinary single-Lore starting grant or learning cost is specified, so it is deferred with that adventure.
+
+## Bestiary Workshop
+
+Five opt-in profiles use the printed stat blocks for the Incarnate Elementals of Fire, Death and Beasts (pp. 174–176), Fenbeast (p. 179) and Library Disc of Tzeentch (p. 213). Familiar creation, ritual summoning and live control remain deferred. See [the Bestiary review](BESTIARY-BOOK-REVIEW.md) for compatibility boundaries.
 
 ## Extraction and verification
 

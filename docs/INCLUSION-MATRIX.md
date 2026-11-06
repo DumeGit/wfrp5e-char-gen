@@ -8,7 +8,7 @@ Each source inventory remains visible even when another selected book supersedes
 
 | Active catalogue | Count |
 |---|---:|
-| books | 21 |
+| books | 36 |
 | careers | 140 |
 | magicProfiles | 596 |
 | rituals | 17 |
@@ -47,6 +47,21 @@ Each source inventory remains visible even when another selected book supersedes
 | The Corsairs of Captain Flariel | 3 | 3 | 3 | 0 | 1 |
 | Lustria | 17 | 5 | 19 | 0 | 35 |
 | Salzenmund: City of Salt and Silver | 0 | 5 | 13 | 0 | 11 |
+| Empire in Ruins | 0 | 0 | 0 | 0 | 0 |
+| Empire in Ruins Companion | 0 | 0 | 0 | 0 | 0 |
+| Death on the Reik | 0 | 0 | 0 | 0 | 0 |
+| Death on the Reik Companion | 0 | 0 | 0 | 0 | 0 |
+| Power Behind the Throne | 0 | 0 | 0 | 0 | 0 |
+| Enemy in Shadows | 0 | 0 | 0 | 0 | 0 |
+| Enemy in Shadows Companion | 0 | 0 | 0 | 0 | 0 |
+| Ubersreik Adventures III | 0 | 0 | 0 | 0 | 0 |
+| Altdorf: Crown of the Empire | 0 | 0 | 0 | 0 | 0 |
+| Ubersreik Adventures | 0 | 0 | 0 | 0 | 0 |
+| The Horned Rat | 0 | 0 | 0 | 0 | 0 |
+| The Horned Rat Companion | 0 | 0 | 0 | 0 | 0 |
+| Hell Rides to Hallt | 0 | 0 | 0 | 0 | 0 |
+| Skeleton Crew | 0 | 0 | 0 | 0 | 0 |
+| The Emperor’s Wrath | 0 | 0 | 0 | 0 | 0 |
 | The Imperial Zoo | 0 | 0 | 0 | 0 | 0 |
 
 The table above counts catalog records. The feature matrix below includes systems, embedded unavailable Career entries and deliberate exclusions that have no catalog record.
@@ -1391,7 +1406,7 @@ Pack `archives-iii-hedge` · version 1.0.0
 
 ## Winds of Magic
 
-Pack `winds-of-magic` · version 1.0.4
+Pack `winds-of-magic` · version 1.0.5
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -1405,6 +1420,7 @@ Pack `winds-of-magic` · version 1.0.4
 | Feature / scope | Status | Source | Decision |
 |---|---|---|---|
 | Mundane Alchemist Petty Magic grant | adapted | p. 39 | Approved min(acquisition WP Bonus, 4) distinct free spells. |
+| Bestiary profiles and templates | adapted | p. 174 | 5 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review. |
 | Alternate casting, crafting, potions, familiars and environmental magic | deferred | Book-wide scope decision | Core creator rules remain authoritative; live/downtime systems are deferred. |
 | Skin of Bone and Bark ordinary learning | deferred | p. 218 | Adventure-acquired two-caster spell has no ordinary starting grant or learning cost. |
 | College Marks | reference-only | p. 24 | College affiliation does not grant starting Arcane Marks. |
@@ -2312,7 +2328,7 @@ Pack `blood-bramble` · version 1.0.2
 
 ## Deft Steps, Light Fingers
 
-Pack `deft-steps` · version 1.0.4
+Pack `deft-steps` · version 1.0.5
 
 | Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
 |---|---:|---:|---:|---:|---:|
@@ -2324,6 +2340,7 @@ Pack `deft-steps` · version 1.0.4
 
 | Feature / scope | Status | Source | Decision |
 |---|---|---|---|
+| Bestiary profiles and templates | adapted | p. 34 | 17 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review. |
 | Campaign procedures and ongoing play | deferred | p. 15 | Ranald’s Gamble, contacts/organisations, crime/fraud, patrols/bounties, pathfinding/camping, hunting and ongoing training remain outside creation. |
 | NPC/animal profiles and hunting training | deferred | p. 34–134 | Supplement NPC integration is deferred: the fresh GM workshop supports the Fifth Edition core only. Animal shop entries remain PC acquisitions; earlier NPC decisions are not active. |
 | Ranald aspect Miracle access | adapted | p. 13 | Four Careers retain separate printed Miracle lists with approved core Invoke/Miracle equivalents. |
@@ -3110,6 +3127,195 @@ Pack `salzenmund` · version 1.0.0
 | `salzenmund:reference:spites-serving-naiads` — Spites serving Naiads | referenceEntries | deferred | p. 116 | Standalone Rules are excluded from publication; original extraction is retained only for private audit. |
 
 </details>
+
+## Empire in Ruins
+
+Pack `empire-in-ruins` · version 1.0.1
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Bestiary profiles and templates | adapted | p. 18 | 36 reusable profiles and 5 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review. |
+| Knight of the Fiery Heart | implemented | p. 19 | Uses the core Sigmar Miracle definitions and the three printed prayers. |
+| Knight of the White Wolf | implemented | p. 19 | Published in the Bestiary with the printed equipment, traits or foundation instructions. |
+| Minor Noble | implemented | p. 19 | Published in the Bestiary with the printed equipment, traits or foundation instructions. |
+| Sigmarite Flagellant | implemented | p. 18 | Published in the Bestiary with the printed equipment, traits or foundation instructions. |
+
+## Empire in Ruins Companion
+
+Pack `empire-in-ruins-companion` · version 1.0.1
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Bestiary profiles and templates | adapted | p. 21 | 26 reusable profiles and 3 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review. |
+| Animated Sign or Statue | implemented | p. 23 | Published in the Bestiary with the printed equipment, traits or foundation instructions. |
+
+## Death on the Reik
+
+Pack `death-on-the-reik` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Bestiary profiles and templates | adapted | p. 21 | 51 reusable profiles and 1 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review. |
+| Beaked Mutant | implemented | p. 21 | Published as a fixed variant of River Mutant with its own attacks, Armour, Skills and trappings. |
+| Furry Mutant | implemented | p. 21 | Published as a fixed variant of River Mutant with its own attacks, Armour, Skills and trappings. |
+| Winged Mutant | adapted | p. 21 | Published as a fixed variant of River Mutant with its own attacks, Armour, Skills and trappings. |
+
+## Death on the Reik Companion
+
+Pack `death-on-the-reik-companion` · version 1.0.1
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Bestiary profiles and templates | adapted | p. 85 | 20 reusable profiles and 1 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review. |
+| Chaos Spawn | adapted | p. 97 | Selectable on Mutant or Gor with the four printed Traits. Roll 2d10 for mutations and resolve the Tzeentch table results manually. |
+| Transformation of the Beast (Gor form) | deferred | p. 99 | Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically. |
+
+## Power Behind the Throne
+
+Pack `power-behind-the-throne` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Bestiary profiles and templates | adapted | p. 28 | 5 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review. |
+
+## Enemy in Shadows
+
+Pack `enemy-in-shadows` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Bestiary profiles and templates | adapted | p. 42 | 18 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review. |
+
+## Enemy in Shadows Companion
+
+Pack `enemy-in-shadows-companion` · version 1.0.1
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Bestiary profiles and templates | adapted | p. 22 | 17 reusable profiles and 1 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review. |
+| Creature shapeshifter template | deferred | p. 87 | Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically. |
+| Purple Hand Cultist | adapted | p. 76 | Selectable on core Cultist with the named Skills and Talent. Enter the background and resolve the printed mutation chance manually. |
+| Tzeentch’s Fire group casting | deferred | p. 84 | Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically. |
+
+## Ubersreik Adventures III
+
+Pack `ubersreik-adventures-iii` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Bestiary profiles and templates | adapted | p. 29 | 10 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review. |
+| Acrobat entertainer variant | deferred | p. 94 | Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically. |
+| Forest Goblin Chief | deferred | p. 42 | Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically. |
+
+## Altdorf: Crown of the Empire
+
+Pack `altdorf` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Bestiary profiles and templates | adapted | p. 104 | 3 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review. |
+
+## Ubersreik Adventures
+
+Pack `ubersreik-adventures-i` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Bestiary profiles and templates | adapted | p. 34 | 12 reusable profiles and 1 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review. |
+
+## The Horned Rat
+
+Pack `the-horned-rat` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Bestiary profiles and templates | adapted | p. 7 | 31 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review. |
+
+## The Horned Rat Companion
+
+Pack `the-horned-rat-companion` · version 1.0.1
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Bestiary profiles and templates | adapted | p. 14 | 20 reusable profiles and 1 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review. |
+| Brood Horror variants | deferred | p. 51 | Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically. |
+| Carrion variant | deferred | p. 120 | Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically. |
+| Cliff Spider variants | deferred | p. 73 | Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically. |
+| Great Eagle variants | deferred | p. 73 | Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically. |
+| Mountain Cat variants | deferred | p. 73 | Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically. |
+| Plague Rat variants | deferred | p. 50 | Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically. |
+| Wolf Rat variants | deferred | p. 50 | Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically. |
+| Yellow Fang junior cultist | implemented | p. 62 | Published in the Bestiary with the printed equipment, traits or foundation instructions. |
+| Yellow Fang senior cultist | deferred | p. 63 | Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically. |
+
+## Hell Rides to Hallt
+
+Pack `hell-rides-to-hallt` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Bestiary profiles and templates | implemented | p. 22 | 1 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review. |
+
+## Skeleton Crew
+
+Pack `skeleton-crew` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Bestiary profiles and templates | adapted | p. 16 | 1 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review. |
+
+## The Emperor’s Wrath
+
+Pack `emperors-wrath` · version 1.0.0
+
+| Kind | Implemented | Adapted | Reference-only | Unavailable | Deferred |
+|---|---:|---:|---:|---:|---:|
+
+| Feature / scope | Status | Source | Decision |
+|---|---|---|---|
+| Bestiary profiles and templates | adapted | p. 15 | 3 reusable profiles and 1 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review. |
 
 ## The Imperial Zoo
 

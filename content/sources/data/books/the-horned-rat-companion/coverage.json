@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "the-horned-rat-companion:feature:bestiary-expansion",
+      "name": "Bestiary profiles and templates",
+      "status": "adapted",
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 14
+      },
+      "reason": "20 reusable profiles and 1 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+    },
+    {
+      "id": "the-horned-rat-companion:feature:bestiary-expansion-yellow-fang-junior-cultist",
+      "name": "Yellow Fang junior cultist",
+      "status": "implemented",
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 62
+      },
+      "reason": "Published in the Bestiary with the printed equipment, traits or foundation instructions."
+    },
+    {
+      "id": "the-horned-rat-companion:feature:bestiary-expansion-yellow-fang-senior-cultist",
+      "name": "Yellow Fang senior cultist",
+      "status": "deferred",
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 63
+      },
+      "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+    },
+    {
+      "id": "the-horned-rat-companion:feature:bestiary-expansion-wolf-rat-variants",
+      "name": "Wolf Rat variants",
+      "status": "deferred",
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 50
+      },
+      "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+    },
+    {
+      "id": "the-horned-rat-companion:feature:bestiary-expansion-plague-rat-variants",
+      "name": "Plague Rat variants",
+      "status": "deferred",
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 50
+      },
+      "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+    },
+    {
+      "id": "the-horned-rat-companion:feature:bestiary-expansion-brood-horror-variants",
+      "name": "Brood Horror variants",
+      "status": "deferred",
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 51
+      },
+      "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+    },
+    {
+      "id": "the-horned-rat-companion:feature:bestiary-expansion-great-eagle-variants",
+      "name": "Great Eagle variants",
+      "status": "deferred",
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 73
+      },
+      "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+    },
+    {
+      "id": "the-horned-rat-companion:feature:bestiary-expansion-mountain-cat-variants",
+      "name": "Mountain Cat variants",
+      "status": "deferred",
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 73
+      },
+      "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+    },
+    {
+      "id": "the-horned-rat-companion:feature:bestiary-expansion-cliff-spider-variants",
+      "name": "Cliff Spider variants",
+      "status": "deferred",
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 73
+      },
+      "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+    },
+    {
+      "id": "the-horned-rat-companion:feature:bestiary-expansion-carrion-variant",
+      "name": "Carrion variant",
+      "status": "deferred",
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 120
+      },
+      "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+    }
+  ]
+}

@@ -1,0 +1,491 @@
+{
+  "schemaVersion": 1,
+  "id": "emperors-wrath",
+  "source": {
+    "file": "The Emperor's Wrath.pdf",
+    "sha256": "e09246e892f11fec38003ae82003a29cc0f3d57a1dc28a8fb614a8a274ef28ad"
+  },
+  "summary": "3 profiles and 1 templates",
+  "profiles": [
+    {
+      "id": "emperors-wrath:creatures:bog-liche",
+      "name": "Bog Liche",
+      "page": 15,
+      "source": {
+        "book": "emperors-wrath",
+        "page": 15
+      },
+      "category": "Undead",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 35,
+        "S": 25,
+        "T": 55,
+        "I": 25,
+        "Ag": 20,
+        "Dex": 25,
+        "Int": 30,
+        "WP": 45,
+        "Fel": 20,
+        "W": 16
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Channelling",
+          "total": 60
+        },
+        {
+          "name": "Cool",
+          "total": 55
+        },
+        {
+          "name": "Language (Magick)",
+          "total": 60
+        },
+        {
+          "name": "Perception",
+          "total": 45
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Breath",
+          "value": "Poison"
+        },
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "3"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Infestation",
+          "value": ""
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Spellcaster",
+          "value": "Necromancy"
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Breath",
+          "skill": 35,
+          "damage": 1,
+          "optional": false,
+          "ranged": true,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 35,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [
+        "core:spells:marsh-lights",
+        "core:spells:sounds",
+        "core:spells:bolt",
+        "core:spells:entangle"
+      ],
+      "sections": {
+        "Trappings": "Sword"
+      },
+      "notes": [
+        "Petty Magic spells: Marsh Lights, Sounds. Arcane spells: Bolt, Entangle. These are printed as Spells, not Traits/Talents."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Swamp-strider",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Human (reanimated sorcerer; source describes remains of sorcerers)"
+    },
+    {
+      "id": "emperors-wrath:creatures:bog-mummy",
+      "name": "Bog Mummy",
+      "page": 16,
+      "source": {
+        "book": "emperors-wrath",
+        "page": 16
+      },
+      "category": "Undead",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": null,
+        "S": 25,
+        "T": 50,
+        "I": 5,
+        "Ag": 10,
+        "Dex": 15,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 14
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Melee (Basic)",
+          "total": 55
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Breath",
+          "value": "Poison"
+        },
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "3"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Infestation",
+          "value": ""
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Breath",
+          "skill": null,
+          "damage": 1,
+          "optional": false,
+          "ranged": true,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 35,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Sword, Decaying Ancient Bronze Armour"
+      },
+      "notes": [
+        "The four unavailable Characteristics are printed as em dashes; represented as null."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Swamp-strider",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Human (ancient pre-Imperial; source explicitly says Humans)"
+    },
+    {
+      "id": "emperors-wrath:creatures:mercenaries-silver-3",
+      "name": "Mercenaries (Silver 3)",
+      "page": 19,
+      "source": {
+        "book": "emperors-wrath",
+        "page": 19
+      },
+      "category": "Humanoid NPC",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 50,
+        "BS": 40,
+        "S": 35,
+        "T": 40,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 40,
+        "Fel": 30,
+        "W": 15
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 35
+        },
+        {
+          "name": "Climb",
+          "total": 45
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 45
+        },
+        {
+          "name": "Cool",
+          "total": 50
+        },
+        {
+          "name": "Dodge",
+          "total": 40
+        },
+        {
+          "name": "Endurance",
+          "total": 50
+        },
+        {
+          "name": "Gamble",
+          "total": 35
+        },
+        {
+          "name": "Gossip",
+          "total": 35
+        },
+        {
+          "name": "Language (Battle)",
+          "total": 40
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 60
+        },
+        {
+          "name": "Outdoor Survival",
+          "total": 35
+        },
+        {
+          "name": "Play (Fife)",
+          "total": 35
+        },
+        {
+          "name": "Ranged (Blackpowder)",
+          "total": 45
+        },
+        {
+          "name": "Ranged (Crossbow)",
+          "total": 45
+        }
+      ],
+      "talents": [
+        {
+          "name": "Drilled",
+          "ranks": 1
+        },
+        {
+          "name": "Warrior Born",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 60,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        },
+        {
+          "name": "Ranged (Pistol)",
+          "skill": 45,
+          "damage": 8,
+          "optional": true,
+          "ranged": true,
+          "free": false,
+          "text": "Range 20 yards.",
+          "skillName": "Ranged (Blackpowder)"
+        },
+        {
+          "name": "Ranged (Crossbow)",
+          "skill": 45,
+          "damage": 9,
+          "optional": true,
+          "ranged": true,
+          "free": false,
+          "text": "Range 60 yards.",
+          "skillName": "Ranged (Crossbow)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Sword, Leather Jack, Mercenary Contract; half carry a Pistol with Powder and Ammunition for 12 shots, half carry a Crossbow and a Quiver with 10 Bolts"
+      },
+      "notes": [
+        "Generic reusable company profile. Ranged weapon and corresponding carrying kit are alternatives distributed across the company, not a choice to give both to each individual."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Ranged (Pistol) +8 (20) or Ranged (Crossbow) +9 (60)",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Human (inferred from the description of the company as Imperial militia and Tilean hired swords; individual backgrounds vary)"
+    }
+  ],
+  "templates": [
+    {
+      "id": "emperors-wrath:templates:bog-zombie",
+      "name": "Bog Zombie",
+      "page": 14,
+      "source": {
+        "book": "emperors-wrath",
+        "page": 14
+      },
+      "eligibility": "any",
+      "profileIds": [
+        "core:creatures:zombie"
+      ],
+      "foundationLabel": "Zombie",
+      "adjustments": {},
+      "skills": [],
+      "talents": [
+        {
+          "options": [
+            "Striding Gait (Wetland)"
+          ],
+          "ranks": 1,
+          "adaptation": "Printed Strider (Wetland) uses Fifth Edition Striding Gait (Wetland)."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Infestation",
+          "value": ""
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": [
+        "Use core Zombie as the foundation. Printed Swamp-strider uses core Striding Gait (Wetland). The marsh appearance and encounter are source context."
+      ],
+      "adaptation": "Printed Strider (Wetland) uses Fifth Edition Striding Gait (Wetland)."
+    }
+  ],
+  "training": []
+}

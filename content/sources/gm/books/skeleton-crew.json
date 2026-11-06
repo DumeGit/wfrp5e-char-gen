@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "skeleton-crew",
+  "source": {
+    "file": "Skeleton Crew.pdf",
+    "sha256": "eae2822acd0acae8640d74f0e88a9c97eae464cab613a387ad864b7ab6da6e9b"
+  },
+  "summary": "1 profiles and 0 templates",
+  "profiles": [
+    {
+      "id": "skeleton-crew:creatures:grey-barbed-shark",
+      "name": "Grey-Barbed Shark",
+      "page": 16,
+      "source": {
+        "book": "skeleton-crew",
+        "page": 16
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 10,
+        "WS": 55,
+        "BS": null,
+        "S": 60,
+        "T": 55,
+        "I": 30,
+        "Ag": 25,
+        "Dex": 35,
+        "Int": 10,
+        "WP": 30,
+        "Fel": null,
+        "W": 38
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Belligerent",
+          "value": ""
+        },
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Frenzy",
+          "value": ""
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Marine Creature",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Stealthy",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Teeth)",
+          "skill": 55,
+          "damage": 16,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 10,
+          "adaptation": "Fifth Edition Large Size adds 6 to the primary melee attack."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "species": "Shark",
+      "adaptation": "Fifth Edition Large Size adds 6 to the primary melee attack."
+    }
+  ],
+  "templates": [],
+  "training": []
+}

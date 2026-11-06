@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "death-on-the-reik:feature:bestiary-expansion",
+      "name": "Bestiary profiles and templates",
+      "status": "adapted",
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 21
+      },
+      "reason": "51 reusable profiles and 1 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+    },
+    {
+      "id": "death-on-the-reik:feature:bestiary-expansion-winged-mutant",
+      "name": "Winged Mutant",
+      "status": "adapted",
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 21
+      },
+      "reason": "Published as a fixed variant of River Mutant with its own attacks, Armour, Skills and trappings."
+    },
+    {
+      "id": "death-on-the-reik:feature:bestiary-expansion-beaked-mutant",
+      "name": "Beaked Mutant",
+      "status": "implemented",
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 21
+      },
+      "reason": "Published as a fixed variant of River Mutant with its own attacks, Armour, Skills and trappings."
+    },
+    {
+      "id": "death-on-the-reik:feature:bestiary-expansion-furry-mutant",
+      "name": "Furry Mutant",
+      "status": "implemented",
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 21
+      },
+      "reason": "Published as a fixed variant of River Mutant with its own attacks, Armour, Skills and trappings."
+    }
+  ]
+}

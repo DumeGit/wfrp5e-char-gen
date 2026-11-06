@@ -1,0 +1,563 @@
+{
+  "schemaVersion": 1,
+  "id": "winds-of-magic",
+  "source": {
+    "file": "Winds of Magic.pdf",
+    "sha256": "28283188fa70d51b8f1efe3e8c3214da7be885d2a444321744ead66d1ea2a150"
+  },
+  "summary": "5 profiles and 0 templates",
+  "profiles": [
+    {
+      "id": "winds-of-magic:creatures:incarnate-elemental-of-fire",
+      "name": "Incarnate Elemental of Fire",
+      "page": 174,
+      "source": {
+        "book": "winds-of-magic",
+        "page": 174
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Enormous",
+      "stats": {
+        "M": 7,
+        "WS": 55,
+        "BS": null,
+        "S": 55,
+        "T": 55,
+        "I": 55,
+        "Ag": 55,
+        "Dex": 31,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 80
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Melee (Polearm)",
+          "total": 70
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Grim",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        },
+        {
+          "name": "Spellcaster",
+          "value": "Lore of Fire"
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Terror",
+          "value": "3"
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        },
+        {
+          "name": "Ward",
+          "value": "8"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Huge Glaive)",
+          "skill": 55,
+          "damage": 15,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 10,
+          "adaptation": "Fifth Edition Enormous Size adds 5 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed spells: Aethyric Armour; Ygethmor’s Flaming Blizzard (p. 137).",
+        "Special rules: Ashes to Ashes; Gift of Fire; Mindless Spellcaster. See source p. 174."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Immune (All Fire)",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Incarnate Elemental",
+      "adaptation": "Printed Grim 3 uses the unranked core Grim effect. Printed Stride uses the core Fifth Edition Sprinter effect. Fifth Edition Enormous Size adds 5 to the primary melee attack."
+    },
+    {
+      "id": "winds-of-magic:creatures:incarnate-elemental-of-death",
+      "name": "Incarnate Elemental of Death",
+      "page": 175,
+      "source": {
+        "book": "winds-of-magic",
+        "page": 175
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Enormous",
+      "stats": {
+        "M": 6,
+        "WS": 48,
+        "BS": null,
+        "S": 65,
+        "T": 65,
+        "I": 59,
+        "Ag": 55,
+        "Dex": 10,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 96
+      },
+      "toughnessBonus": 6,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bite",
+          "value": "9"
+        },
+        {
+          "name": "Constrictor",
+          "value": ""
+        },
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Grim",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Terror",
+          "value": "3"
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        },
+        {
+          "name": "Ward",
+          "value": "8"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 48,
+          "damage": 9,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon (Teeth and Horns)",
+          "skill": 48,
+          "damage": 16,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 10,
+          "adaptation": "Fifth Edition Enormous Size adds 6 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Special rules: Consume Life; Amethyst Fog; Hourglass of Shyish; Soundless. See source p. 175."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Immune (Shyish)",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Incarnate Elemental",
+      "adaptation": "Printed Grim 3 uses the unranked core Grim effect. Printed Stride uses the core Fifth Edition Sprinter effect. Fifth Edition Enormous Size adds 6 to the primary melee attack."
+    },
+    {
+      "id": "winds-of-magic:creatures:incarnate-elemental-of-beasts",
+      "name": "Incarnate Elemental of Beasts",
+      "page": 176,
+      "source": {
+        "book": "winds-of-magic",
+        "page": 176
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Enormous",
+      "stats": {
+        "M": 7,
+        "WS": 56,
+        "BS": null,
+        "S": 75,
+        "T": 62,
+        "I": 45,
+        "Ag": 49,
+        "Dex": 15,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 104
+      },
+      "toughnessBonus": 6,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Grim",
+          "value": ""
+        },
+        {
+          "name": "Horns",
+          "value": "10"
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Terror",
+          "value": "3"
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        },
+        {
+          "name": "Ward",
+          "value": "8"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Horns",
+          "skill": 56,
+          "damage": 10,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon (Claws)",
+          "skill": 56,
+          "damage": 18,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Brawling)",
+          "printedDamage": 11,
+          "adaptation": "Fifth Edition Enormous Size adds 7 to the primary melee attack."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Also called the Bloody Hidesman, Horned Man, and Faceless Hunter in descriptive text; canonical profile name retained.",
+        "Special rule: Howl of the Great Beast. See source p. 176."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Immune (Ghur)",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Incarnate Elemental",
+      "adaptation": "Printed Grim 3 uses the unranked core Grim effect. Printed Stride uses the core Fifth Edition Sprinter effect. Fifth Edition Enormous Size adds 7 to the primary melee attack."
+    },
+    {
+      "id": "winds-of-magic:creatures:fenbeast",
+      "name": "Fenbeast",
+      "page": 179,
+      "source": {
+        "book": "winds-of-magic",
+        "page": 179
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 5,
+        "WS": 35,
+        "BS": null,
+        "S": 50,
+        "T": 55,
+        "I": 10,
+        "Ag": 15,
+        "Dex": 10,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 40
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Regeneration",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Stupid",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Frenzy",
+          "value": ""
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Infestation",
+          "value": ""
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 35,
+          "damage": 13,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 8,
+          "adaptation": "Fifth Edition Large Size adds 5 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "One published example among construct types. Do not treat this as a general construct-generation template; the Create Construct ritual and its generated constructs remain deferred.",
+        "Die Hard remains a printed rule to apply manually (p. 179)."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Swamp-strider",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Construct",
+      "adaptation": "Fifth Edition Large Size adds 5 to the primary melee attack."
+    },
+    {
+      "id": "winds-of-magic:creatures:library-disc-of-tzeentch",
+      "name": "Library Disc of Tzeentch",
+      "page": 213,
+      "source": {
+        "book": "winds-of-magic",
+        "page": 213
+      },
+      "category": "Monsters",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 1,
+        "WS": 30,
+        "BS": null,
+        "S": 45,
+        "T": 45,
+        "I": 40,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 10,
+        "WP": 15,
+        "Fel": 5,
+        "W": 26
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Moderate"
+        },
+        {
+          "name": "Daemonic",
+          "value": "8"
+        },
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "1"
+        },
+        {
+          "name": "Fly",
+          "value": "60"
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Bite)",
+          "skill": 30,
+          "damage": 12,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 8,
+          "adaptation": "Fifth Edition Large Size adds 4 to the primary melee attack."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Grimoires and scrolls"
+      },
+      "notes": [
+        "This daemon’s carried texts use the printed random grimoire table, p. 166."
+      ],
+      "species": "Disc of Tzeentch",
+      "adaptation": "Fifth Edition Large Size adds 4 to the primary melee attack."
+    }
+  ],
+  "templates": [],
+  "training": []
+}

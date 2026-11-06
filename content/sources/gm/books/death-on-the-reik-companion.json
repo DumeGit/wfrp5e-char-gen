@@ -1,0 +1,2515 @@
+{
+  "schemaVersion": 1,
+  "id": "death-on-the-reik-companion",
+  "source": {
+    "file": "Death on the Reik Companion.pdf",
+    "sha256": "591865662057a72691234ecec33d2bf077523e2a3872594346fde29505bf5a97"
+  },
+  "summary": "20 profiles and 1 templates",
+  "profiles": [
+    {
+      "id": "death-on-the-reik-companion:creatures:amoebae",
+      "name": "Amoebae",
+      "page": 85,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 85
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": null,
+        "S": 30,
+        "T": 50,
+        "I": 30,
+        "Ag": 10,
+        "Dex": null,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 13
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Amphibious",
+          "value": ""
+        },
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Die Hard",
+          "value": ""
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Corrosive Blood",
+          "value": ""
+        },
+        {
+          "name": "Regeneration",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Tiny",
+          "adaptation": "Printed Little uses Fifth Edition Tiny Size. After a change, supply Wounds manually."
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        },
+        {
+          "name": "Size",
+          "value": "Average"
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        },
+        {
+          "name": "Wallcrawler",
+          "value": ""
+        }
+      ],
+      "attacks": [],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Creeping and Engulf are described in the chapter's new Traits section, p. 90.",
+        "Printed qualifier for Dark Vision: detects movement and body heat."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Creeping",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Engulf",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Swamp-strider",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Amoeba",
+      "adaptation": "Printed Little uses Fifth Edition Tiny Size. After a change, supply Wounds manually."
+    },
+    {
+      "id": "death-on-the-reik-companion:creatures:reik-eels",
+      "name": "Reik Eels",
+      "page": 86,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 86
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 6,
+        "WS": 55,
+        "BS": null,
+        "S": 65,
+        "T": 40,
+        "I": 30,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 5,
+        "WP": 45,
+        "Fel": null,
+        "W": 36
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Bite",
+          "value": "8"
+        },
+        {
+          "name": "Cold-blooded",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Constrictor",
+          "value": ""
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 55,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon (Razor Sharp Teeth)",
+          "skill": 55,
+          "damage": 16,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 10,
+          "adaptation": "Fifth Edition Large Size adds 6 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Aquatic is described in the chapter's new Traits section, p. 90.",
+        "Text says Enormous eels typically Constrict victims before dragging them underwater."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Aquatic",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Swamp-strider",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Eel",
+      "adaptation": "Fifth Edition Large Size adds 6 to the primary melee attack."
+    },
+    {
+      "id": "death-on-the-reik-companion:creatures:giant-leeches",
+      "name": "Giant Leeches",
+      "page": 86,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 86
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Tiny",
+      "stats": {
+        "M": 6,
+        "WS": 45,
+        "BS": null,
+        "S": 20,
+        "T": 20,
+        "I": 30,
+        "Ag": 10,
+        "Dex": null,
+        "Int": null,
+        "WP": 14,
+        "Fel": null,
+        "W": 2
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Afraid",
+          "value": "Salt"
+        },
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Bite",
+          "value": "4"
+        },
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Tiny",
+          "adaptation": "Printed Little uses Fifth Edition Tiny Size. After a change, supply Wounds manually."
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Die Hard",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        },
+        {
+          "name": "Size",
+          "value": "Average"
+        },
+        {
+          "name": "Stealthy",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 45,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon (Teeth)",
+          "skill": 45,
+          "damage": 3,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Optional Chameleoleeches have Hallucinogen glands affecting sentient mammals; optional Tree Leeches replace Aquatic with Amphibious and Arboreal.",
+        "The p. 86 stat block prints Size (Little), while its optional size range is Small-Average; retained as printed.",
+        "Printed Wounds apply to the baseline. Core Tiny Size requires manual Wounds after changes."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Analgesic Saliva",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Anticoagulant Saliva",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Aquatic",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Attach and Feed",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Creeping",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Hallucinogenic",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Leech",
+      "adaptation": "Printed Little uses Fifth Edition Tiny Size. After a change, supply Wounds manually."
+    },
+    {
+      "id": "death-on-the-reik-companion:creatures:naiads",
+      "name": "Naiads",
+      "page": 88,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 88
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 8,
+        "WS": 45,
+        "BS": 30,
+        "S": 40,
+        "T": 35,
+        "I": 40,
+        "Ag": 65,
+        "Dex": 40,
+        "Int": 60,
+        "WP": 45,
+        "Fel": 60,
+        "W": 14
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Amphibious",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Chill Grasp",
+          "value": ""
+        },
+        {
+          "name": "Magical",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 45,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "War-Form grants Fear 2 and Armour 2 and has four round-by-round aspects (Flood, Meandering, Rapids, Still Water), described on p. 88.",
+        "The source uses the general creature name Naiads; Lorlay is a named legend/location and has no separate profile."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Capricious",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Naiad War-Form",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Cunning",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Naiad"
+    },
+    {
+      "id": "death-on-the-reik-companion:creatures:stirpikes",
+      "name": "Stirpikes",
+      "page": 88,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 88
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 8,
+        "WS": 55,
+        "BS": null,
+        "S": 55,
+        "T": 50,
+        "I": 40,
+        "Ag": 40,
+        "Dex": null,
+        "Int": 10,
+        "WP": 50,
+        "Fel": null,
+        "W": 20
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Animosity",
+          "value": "Everything"
+        },
+        {
+          "name": "Belligerent",
+          "value": ""
+        },
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Bite",
+          "value": "8"
+        },
+        {
+          "name": "Cold-blooded",
+          "value": ""
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Frenzy",
+          "value": ""
+        },
+        {
+          "name": "Hatred",
+          "value": "Everything"
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        },
+        {
+          "name": "Size",
+          "value": "Monstrous"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 55,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Old Three Eyes is presented only as an adventure hook/rumor and has no distinct profile; do not create a separate profile."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Aquatic",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Tough",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Fish",
+      "optionalTalents": [
+        {
+          "name": "Hardy",
+          "ranks": 1
+        }
+      ],
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+    },
+    {
+      "id": "death-on-the-reik-companion:creatures:river-trolls",
+      "name": "River Trolls",
+      "page": 89,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 89
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 6,
+        "WS": 30,
+        "BS": 15,
+        "S": 55,
+        "T": 45,
+        "I": 10,
+        "Ag": 15,
+        "Dex": 15,
+        "Int": 10,
+        "WP": 20,
+        "Fel": 5,
+        "W": 30
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Amphibious",
+          "value": ""
+        },
+        {
+          "name": "Bite",
+          "value": "8"
+        },
+        {
+          "name": "Die Hard",
+          "value": ""
+        },
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Regeneration",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Stupid",
+          "value": ""
+        },
+        {
+          "name": "Vomit",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Belligerent",
+          "value": ""
+        },
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Frenzy",
+          "value": ""
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Infestation",
+          "value": ""
+        },
+        {
+          "name": "Magic Resistance",
+          "value": ""
+        },
+        {
+          "name": "Mutation",
+          "value": ""
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 30,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 30,
+          "damage": 14,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 9,
+          "adaptation": "Fifth Edition Large Size adds 5 to the primary melee attack."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Tough appears both as a printed trait and in Optional; preserve the source duplication for review.",
+        "Printed qualifier for Distracting: Smell."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Swamp-strider",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Tough",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Big",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Brute",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Stealth",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Tough",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Troll",
+      "optionalTalents": [
+        {
+          "name": "Hardy",
+          "ranks": 1
+        }
+      ],
+      "adaptation": "Fifth Edition Large Size adds 5 to the primary melee attack."
+    },
+    {
+      "id": "death-on-the-reik-companion:creatures:carrion",
+      "name": "Carrion",
+      "page": 118,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 118
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 4,
+        "WS": 43,
+        "BS": null,
+        "S": 30,
+        "T": 30,
+        "I": 40,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 10,
+        "WP": 30,
+        "Fel": null,
+        "W": 24
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Fear",
+          "value": "3"
+        },
+        {
+          "name": "Fly",
+          "value": "100"
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Fast uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "War"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 43,
+          "damage": 12,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 9,
+          "adaptation": "Fifth Edition Large Size adds 3 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Illustrated on p. 114. The source says Carrion are not Unstable while under Harald Gräber's control; this conditional is noted but not encoded as a trait variant."
+      ],
+      "species": "Undead bird",
+      "adaptation": "Fifth Edition Large Size adds 3 to the primary melee attack. Printed Fast uses the core Fifth Edition Sprinter effect."
+    },
+    {
+      "id": "death-on-the-reik-companion:creatures:sailing-crew",
+      "name": "Sailing Crew",
+      "page": 106,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 106
+      },
+      "category": "Riverfolk",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 34,
+        "BS": 25,
+        "S": 38,
+        "T": 31,
+        "I": 37,
+        "Ag": 31,
+        "Dex": 37,
+        "Int": 29,
+        "WP": 24,
+        "Fel": 34,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 36
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 41
+        },
+        {
+          "name": "Dodge",
+          "total": 41
+        },
+        {
+          "name": "Endurance",
+          "total": 41
+        },
+        {
+          "name": "Entertain (Storytelling)",
+          "total": 39
+        },
+        {
+          "name": "Gossip",
+          "total": 44
+        },
+        {
+          "name": "Haggle",
+          "total": 39
+        },
+        {
+          "name": "Intuition",
+          "total": 41
+        },
+        {
+          "name": "Lore (Riverways)",
+          "total": 34
+        },
+        {
+          "name": "Melee (Brawling)",
+          "total": 44
+        },
+        {
+          "name": "Perception",
+          "total": 32
+        },
+        {
+          "name": "Row",
+          "total": 48
+        },
+        {
+          "name": "Sail",
+          "total": 41
+        },
+        {
+          "name": "Swim",
+          "total": 41
+        }
+      ],
+      "talents": [
+        {
+          "name": "Very Strong",
+          "ranks": 1
+        },
+        {
+          "name": "Waterman",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Boat Hook)",
+          "skill": 34,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        },
+        {
+          "name": "Weapon (Dagger)",
+          "skill": 34,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Various, often Hand Weapon (Boat Hook or Dagger), Uniform"
+      },
+      "notes": [
+        "Printed Talent for manual review: Various.",
+        "Printed Talent for manual review: but commonly Seasoned Traveller."
+      ],
+      "species": "Human",
+      "unavailableTraits": [
+        {
+          "name": "Prejudice (various)",
+          "reason": "Apply this printed prejudice manually. The existing Thin People entry has a different target.",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "id": "death-on-the-reik-companion:creatures:oarsman",
+      "name": "Oarsman",
+      "page": 106,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 106
+      },
+      "category": "Riverfolk",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 31,
+        "BS": 39,
+        "S": 31,
+        "T": 29,
+        "I": 31,
+        "Ag": 30,
+        "Dex": 36,
+        "Int": 32,
+        "WP": 29,
+        "Fel": 31,
+        "W": 9
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Heal",
+          "total": 35
+        },
+        {
+          "name": "Lore (Torture)",
+          "total": 37
+        },
+        {
+          "name": "Ranged (Bow)",
+          "total": 44
+        },
+        {
+          "name": "Sleight of Hand",
+          "total": 40
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 40
+        }
+      ],
+      "talents": [
+        {
+          "name": "Flee!",
+          "ranks": 1
+        },
+        {
+          "name": "Read/Write",
+          "ranks": 1
+        },
+        {
+          "name": "Numismatics",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Improvised)",
+          "skill": 31,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Soap, Oarsman’s Uniform, Weighty Debt"
+      },
+      "notes": [
+        "Printed Skill entry for manual review: Oarsmen may have pertinent Skills from their former Careers.",
+        "Printed Skill without an established Fifth Edition equivalent: such as: Haggle 36.",
+        "Printed Talent for manual review: Oarsmen may have Talents from their former Careers.",
+        "Printed Talent for manual review: such as: Embezzle.",
+        "Printed Talent for manual review: Public-Speaking."
+      ],
+      "species": "Human",
+      "unavailableTraits": [
+        {
+          "name": "Prejudice (Various)",
+          "reason": "Apply this printed prejudice manually. The existing Thin People entry has a different target.",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "id": "death-on-the-reik-companion:creatures:galley-staff",
+      "name": "Galley Staff",
+      "page": 107,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 107
+      },
+      "category": "Riverfolk",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 26,
+        "BS": 32,
+        "S": 30,
+        "T": 24,
+        "I": 32,
+        "Ag": 30,
+        "Dex": 28,
+        "Int": 36,
+        "WP": 33,
+        "Fel": 24,
+        "W": 10
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 35
+        },
+        {
+          "name": "Climb",
+          "total": 40
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 30
+        },
+        {
+          "name": "Dodge",
+          "total": 35
+        },
+        {
+          "name": "Drive",
+          "total": 35
+        },
+        {
+          "name": "Endurance",
+          "total": 35
+        },
+        {
+          "name": "Gossip",
+          "total": 30
+        },
+        {
+          "name": "Intuition",
+          "total": 37
+        },
+        {
+          "name": "Perception",
+          "total": 37
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 35
+        },
+        {
+          "name": "Trade (Cook)",
+          "total": 42
+        }
+      ],
+      "talents": [
+        {
+          "name": "Beneath Notice",
+          "ranks": 1
+        },
+        {
+          "name": "Etiquette (Servants)",
+          "ranks": 1
+        },
+        {
+          "name": "Read/Write",
+          "ranks": 1
+        },
+        {
+          "name": "Strong Back",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Dagger)",
+          "skill": 26,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Dagger, Kitchen Tools, Uniform, 1d10 Cleaning Rags"
+      },
+      "notes": [],
+      "species": "Human"
+    },
+    {
+      "id": "death-on-the-reik-companion:creatures:steward",
+      "name": "Steward",
+      "page": 107,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 107
+      },
+      "category": "Riverfolk",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 31,
+        "BS": 37,
+        "S": 38,
+        "T": 34,
+        "I": 34,
+        "Ag": 42,
+        "Dex": 28,
+        "Int": 23,
+        "WP": 34,
+        "Fel": 27,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 47
+        },
+        {
+          "name": "Climb",
+          "total": 47
+        },
+        {
+          "name": "Drive",
+          "total": 47
+        },
+        {
+          "name": "Dodge",
+          "total": 48
+        },
+        {
+          "name": "Endurance",
+          "total": 50
+        },
+        {
+          "name": "Intuition",
+          "total": 40
+        },
+        {
+          "name": "Perception",
+          "total": 39
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 48
+        }
+      ],
+      "talents": [
+        {
+          "name": "Read/Write",
+          "ranks": 1
+        },
+        {
+          "name": "Etiquette (Servants)",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Dagger)",
+          "skill": 31,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Dagger, Notebook and Pencil"
+      },
+      "notes": [],
+      "species": "Human",
+      "unavailableTraits": [
+        {
+          "name": "Prejudice (Penny-Pinchers)",
+          "reason": "Apply this printed prejudice manually. The existing Thin People entry has a different target.",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "id": "death-on-the-reik-companion:creatures:ships-attendant",
+      "name": "Ship’s Attendant",
+      "page": 108,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 108
+      },
+      "category": "Riverfolk",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 26,
+        "BS": 32,
+        "S": 30,
+        "T": 24,
+        "I": 32,
+        "Ag": 30,
+        "Dex": 28,
+        "Int": 36,
+        "WP": 33,
+        "Fel": 24,
+        "W": 10
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 43
+        },
+        {
+          "name": "Charm",
+          "total": 35
+        },
+        {
+          "name": "Climb",
+          "total": 45
+        },
+        {
+          "name": "Cool",
+          "total": 51
+        },
+        {
+          "name": "Drive",
+          "total": 35
+        },
+        {
+          "name": "Dodge",
+          "total": 42
+        },
+        {
+          "name": "Evaluate",
+          "total": 54
+        },
+        {
+          "name": "Endurance",
+          "total": 42
+        },
+        {
+          "name": "Intimidate",
+          "total": 50
+        },
+        {
+          "name": "Intuition",
+          "total": 66
+        },
+        {
+          "name": "Perception",
+          "total": 56
+        },
+        {
+          "name": "Stealth (The Emperor Luitpold)",
+          "total": 57
+        }
+      ],
+      "talents": [
+        {
+          "name": "Embezzle",
+          "ranks": 1
+        },
+        {
+          "name": "Etiquette (Nobility)",
+          "ranks": 1
+        },
+        {
+          "name": "Etiquette (Servants)",
+          "ranks": 1
+        },
+        {
+          "name": "Read/Write",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Dagger)",
+          "skill": 26,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Dagger, Fine Clothes, Quality Livery, Accounts Books, 1d10 Gold Crowns"
+      },
+      "notes": [
+        "Printed Talent for manual review: Resistance (Poison)."
+      ],
+      "species": "Human",
+      "unavailableTraits": [
+        {
+          "name": "Prejudice (The Unkempt)",
+          "reason": "Apply this printed prejudice manually. The existing Thin People entry has a different target.",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "id": "death-on-the-reik-companion:creatures:self-made-trader",
+      "name": "Self-Made Trader",
+      "page": 108,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 108
+      },
+      "category": "Merchants",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 38,
+        "BS": 30,
+        "S": 31,
+        "T": 32,
+        "I": 38,
+        "Ag": 35,
+        "Dex": 26,
+        "Int": 30,
+        "WP": 32,
+        "Fel": 42,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Animal Care",
+          "total": 40
+        },
+        {
+          "name": "Bribery",
+          "total": 60
+        },
+        {
+          "name": "Charm",
+          "total": 47
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 37
+        },
+        {
+          "name": "Drive",
+          "total": 40
+        },
+        {
+          "name": "Evaluate",
+          "total": 50
+        },
+        {
+          "name": "Gamble",
+          "total": 40
+        },
+        {
+          "name": "Gossip",
+          "total": 47
+        },
+        {
+          "name": "Haggle",
+          "total": 55
+        },
+        {
+          "name": "Language (Wastelander)",
+          "total": 40
+        },
+        {
+          "name": "Lore (Reikland)",
+          "total": 35
+        }
+      ],
+      "talents": [
+        {
+          "name": "Blather",
+          "ranks": 1
+        },
+        {
+          "name": "Briber",
+          "ranks": 1
+        },
+        {
+          "name": "Embezzle",
+          "ranks": 1
+        },
+        {
+          "name": "Read/Write",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 38,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Hand Weapon (Sword), Ostentatious Clothing, 2d10 Gold Coins"
+      },
+      "notes": [],
+      "species": "Human",
+      "unavailableTraits": [
+        {
+          "name": "Prejudice (The Poor)",
+          "reason": "Apply this printed prejudice manually. The existing Thin People entry has a different target.",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "id": "death-on-the-reik-companion:creatures:quick-witted-dealmaker",
+      "name": "Quick-Witted Dealmaker",
+      "page": 109,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 109
+      },
+      "category": "Merchants",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 38,
+        "BS": 33,
+        "S": 32,
+        "T": 36,
+        "I": 39,
+        "Ag": 40,
+        "Dex": 39,
+        "Int": 35,
+        "WP": 34,
+        "Fel": 37,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Animal Care",
+          "total": 40
+        },
+        {
+          "name": "Bribery",
+          "total": 46
+        },
+        {
+          "name": "Charm",
+          "total": 45
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 50
+        },
+        {
+          "name": "Drive",
+          "total": 45
+        },
+        {
+          "name": "Evaluate",
+          "total": 60
+        },
+        {
+          "name": "Gamble",
+          "total": 45
+        },
+        {
+          "name": "Gossip",
+          "total": 47
+        },
+        {
+          "name": "Haggle",
+          "total": 60
+        },
+        {
+          "name": "Language (Tilean)",
+          "total": 50
+        },
+        {
+          "name": "Melee",
+          "total": 48
+        },
+        {
+          "name": "Perception",
+          "total": 49
+        }
+      ],
+      "talents": [
+        {
+          "name": "Dealmaker",
+          "ranks": 1
+        },
+        {
+          "name": "Etiquette (Guilder)",
+          "ranks": 1
+        },
+        {
+          "name": "Read/Write",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 38,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Discerning Gaze, Hand Weapon (Sword), Respectable Clothing"
+      },
+      "notes": [],
+      "species": "Human",
+      "unavailableTraits": [
+        {
+          "name": "Prejudice (Halflings)",
+          "reason": "Apply this printed prejudice manually. The existing Thin People entry has a different target.",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "id": "death-on-the-reik-companion:creatures:experienced-broker",
+      "name": "Experienced Broker",
+      "page": 109,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 109
+      },
+      "category": "Merchants",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 24,
+        "BS": 29,
+        "S": 35,
+        "T": 25,
+        "I": 47,
+        "Ag": 39,
+        "Dex": 38,
+        "Int": 46,
+        "WP": 39,
+        "Fel": 43,
+        "W": 10
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Animal Care",
+          "total": 56
+        },
+        {
+          "name": "Bribery",
+          "total": 63
+        },
+        {
+          "name": "Charm",
+          "total": 63
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 35
+        },
+        {
+          "name": "Drive",
+          "total": 44
+        },
+        {
+          "name": "Evaluate",
+          "total": 73
+        },
+        {
+          "name": "Gamble",
+          "total": 65
+        },
+        {
+          "name": "Gossip",
+          "total": 63
+        },
+        {
+          "name": "Haggle",
+          "total": 71
+        },
+        {
+          "name": "Intimidate",
+          "total": 45
+        },
+        {
+          "name": "Language (Brettonian)",
+          "total": 60
+        },
+        {
+          "name": "Language (Estalian)",
+          "total": 56
+        },
+        {
+          "name": "Language (Guilder)",
+          "total": 60
+        }
+      ],
+      "talents": [
+        {
+          "name": "Dealmaker",
+          "ranks": 1
+        },
+        {
+          "name": "Etiquette (Nobility)",
+          "ranks": 1
+        },
+        {
+          "name": "Numismatics",
+          "ranks": 1
+        },
+        {
+          "name": "Schemer",
+          "ranks": 1
+        },
+        {
+          "name": "Wealthy",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Entourage of Clerks, Exquisite Clothing, d10 × 30 Gold Crown"
+      },
+      "notes": [],
+      "species": "Human"
+    },
+    {
+      "id": "death-on-the-reik-companion:creatures:elderly-duchess",
+      "name": "Elderly Duchess",
+      "page": 109,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 109
+      },
+      "category": "Nobles",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 24,
+        "BS": 26,
+        "S": 34,
+        "T": 22,
+        "I": 49,
+        "Ag": 27,
+        "Dex": 25,
+        "Int": 43,
+        "WP": 25,
+        "Fel": 28,
+        "W": 9
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Bribery",
+          "total": 38
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 35
+        },
+        {
+          "name": "Intimidate",
+          "total": 40
+        },
+        {
+          "name": "Language (Classical)",
+          "total": 50
+        },
+        {
+          "name": "Leadership",
+          "total": 45
+        },
+        {
+          "name": "Lore (Heraldry)",
+          "total": 71
+        },
+        {
+          "name": "Lore (Politics)",
+          "total": 62
+        },
+        {
+          "name": "Melee (Fencing)",
+          "total": 29
+        },
+        {
+          "name": "Play (Harpsichord)",
+          "total": 38
+        },
+        {
+          "name": "Ride (Horse)",
+          "total": 44
+        }
+      ],
+      "talents": [
+        {
+          "name": "Etiquette (Nobles)",
+          "ranks": 1
+        },
+        {
+          "name": "Noble Blood",
+          "ranks": 1
+        },
+        {
+          "name": "Read/Write",
+          "ranks": 1
+        },
+        {
+          "name": "Schemer",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Foil)",
+          "skill": 29,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Fencing)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Courtly Garb, Foil, Jewellery worth 3d10 Gold Crowns, Signet Ring"
+      },
+      "notes": [],
+      "species": "Human",
+      "unavailableTraits": [
+        {
+          "name": "Prejudice (Everyone of Brass or Silver Status)",
+          "reason": "Apply this printed prejudice manually. The existing Thin People entry has a different target.",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "id": "death-on-the-reik-companion:creatures:dwarf-gambler",
+      "name": "Dwarf Gambler",
+      "page": 110,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 110
+      },
+      "category": "Passengers",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 3,
+        "WS": 34,
+        "BS": 25,
+        "S": 35,
+        "T": 52,
+        "I": 33,
+        "Ag": 28,
+        "Dex": 34,
+        "Int": 46,
+        "WP": 49,
+        "Fel": 36,
+        "W": 17
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Bribery",
+          "total": 60
+        },
+        {
+          "name": "Charm",
+          "total": 53
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 70
+        },
+        {
+          "name": "Cool",
+          "total": 54
+        },
+        {
+          "name": "Entertain (Storytelling)",
+          "total": 50
+        },
+        {
+          "name": "Gamble",
+          "total": 71
+        },
+        {
+          "name": "Gossip",
+          "total": 41
+        },
+        {
+          "name": "Haggle",
+          "total": 50
+        },
+        {
+          "name": "Language (Thief)",
+          "total": 51
+        },
+        {
+          "name": "Pick Lock",
+          "total": 55
+        },
+        {
+          "name": "Sleight of Hand",
+          "total": 54
+        }
+      ],
+      "talents": [
+        {
+          "name": "Blather",
+          "ranks": 1
+        },
+        {
+          "name": "Cardsharp",
+          "ranks": 1
+        },
+        {
+          "name": "Dealmaker",
+          "ranks": 1
+        },
+        {
+          "name": "Read/Write",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Dagger)",
+          "skill": 34,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Dagger, Disguise Kit, Lock Picks, Marked Cards, Multiple Forged Documents, Weighted Dice, An Alibi, 2d10 Silver Shillings"
+      },
+      "notes": [
+        "Printed Talent for manual review: Diceman."
+      ],
+      "species": "Dwarf"
+    },
+    {
+      "id": "death-on-the-reik-companion:creatures:young-blood",
+      "name": "Young Blood",
+      "page": 110,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 110
+      },
+      "category": "Nobles",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 40,
+        "BS": 33,
+        "S": 29,
+        "T": 34,
+        "I": 36,
+        "Ag": 39,
+        "Dex": 27,
+        "Int": 26,
+        "WP": 33,
+        "Fel": 38,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Bribery",
+          "total": 43
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 44
+        },
+        {
+          "name": "Gamble",
+          "total": 36
+        },
+        {
+          "name": "Intimidate",
+          "total": 34
+        },
+        {
+          "name": "Leadership",
+          "total": 43
+        },
+        {
+          "name": "Lore (Heraldry)",
+          "total": 35
+        },
+        {
+          "name": "Melee (Fencing)",
+          "total": 51
+        },
+        {
+          "name": "Play (Violin)",
+          "total": 50
+        }
+      ],
+      "talents": [
+        {
+          "name": "Etiquette (Nobles)",
+          "ranks": 1
+        },
+        {
+          "name": "Luck",
+          "ranks": 1
+        },
+        {
+          "name": "Noble Blood",
+          "ranks": 1
+        },
+        {
+          "name": "Read/Write",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Foil)",
+          "skill": 51,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Fencing)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Beautiful Clothing, Foil, Hand Mirror, Personal Servant"
+      },
+      "notes": [],
+      "species": "Human"
+    },
+    {
+      "id": "death-on-the-reik-companion:creatures:armchair-general",
+      "name": "Armchair General",
+      "page": 111,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 111
+      },
+      "category": "Passengers",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 57,
+        "BS": 51,
+        "S": 35,
+        "T": 56,
+        "I": 51,
+        "Ag": 52,
+        "Dex": 34,
+        "Int": 42,
+        "WP": 53,
+        "Fel": 50,
+        "W": 18
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 72
+        },
+        {
+          "name": "Bribery",
+          "total": 70
+        },
+        {
+          "name": "Charm",
+          "total": 70
+        },
+        {
+          "name": "Climb",
+          "total": 55
+        }
+      ],
+      "talents": [
+        {
+          "name": "Blather",
+          "ranks": 1
+        },
+        {
+          "name": "Drilled",
+          "ranks": 1
+        },
+        {
+          "name": "Etiquette (Nobles)",
+          "ranks": 1
+        },
+        {
+          "name": "Read/Write",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Array of Fine Uniforms, Endless Stories, Livery, Writing Kit, 2d10 Gold Crowns"
+      },
+      "notes": [
+        "Printed Talent for manual review: Diceman."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "death-on-the-reik-companion:creatures:frontier-commander",
+      "name": "Frontier Commander",
+      "page": 111,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 111
+      },
+      "category": "Passengers",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 44,
+        "BS": 38,
+        "S": 38,
+        "T": 34,
+        "I": 27,
+        "Ag": 40,
+        "Dex": 38,
+        "Int": 25,
+        "WP": 53,
+        "Fel": 30,
+        "W": 14
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Animal Care",
+          "total": 40
+        },
+        {
+          "name": "Charm Animal",
+          "total": 41
+        },
+        {
+          "name": "Endurance",
+          "total": 44
+        },
+        {
+          "name": "Language (Battle)",
+          "total": 45
+        },
+        {
+          "name": "Lore (Heraldry)",
+          "total": 85
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 56
+        },
+        {
+          "name": "Melee (Cavalry)",
+          "total": 61
+        },
+        {
+          "name": "Outdoor Survival",
+          "total": 39
+        },
+        {
+          "name": "Perception",
+          "total": 41
+        },
+        {
+          "name": "Ride (Horse)",
+          "total": 64
+        }
+      ],
+      "talents": [
+        {
+          "name": "Combat Aware",
+          "ranks": 1
+        },
+        {
+          "name": "Etiquette (Soldiers)",
+          "ranks": 1
+        },
+        {
+          "name": "Hatred (Greenskins)",
+          "ranks": 1
+        },
+        {
+          "name": "Roughrider",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Cavalry Hammer)",
+          "skill": 44,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        },
+        {
+          "name": "Weapon (Sword)",
+          "skill": 56,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Breastplate and Helm",
+          "ap": 2,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Breastplate, Cavalry Hammer (Stowed in Room), Helmet, Hand Weapon (Sword), Uncomfortable Dress Uniform, 4d10 Silver Shillings"
+      },
+      "notes": [
+        "Printed Armour (Breastplate and Helm) 2; check hit-location coverage before play."
+      ],
+      "species": "Human",
+      "unavailableTraits": [
+        {
+          "name": "Prejudice (Deserters)",
+          "reason": "Apply this printed prejudice manually. The existing Thin People entry has a different target.",
+          "optional": false
+        }
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "id": "death-on-the-reik-companion:templates:chaos-spawn",
+      "name": "Chaos Spawn",
+      "page": 97,
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 97
+      },
+      "eligibility": "any",
+      "profileIds": [
+        "core:creatures:mutant",
+        "core:creatures:gor"
+      ],
+      "foundationLabel": "Mutant or Gor",
+      "adjustments": {},
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Corruption",
+          "value": "Major"
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Frenzy",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": [
+        "Roll 2d10 for the number of mutations. Determine each mutation from the Tzeentch column in Enemy in Shadows Companion p. 66. Record the results and apply their effects manually."
+      ]
+    }
+  ],
+  "training": []
+}

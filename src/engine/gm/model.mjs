@@ -157,9 +157,14 @@ export function freshGM(data, profile = "", books = ["core"]) {
 export function validateGMDraft(data, R, s) {
   const empty = freshGM(data),
     plain = (v) => v && typeof v === "object" && !Array.isArray(v);
-  // The pre-Zoo catalogue has the same existing profile/option identities.
-  // Upgrade only that known version; all saved references still validate below.
-  if (plain(s) && s.dataVersion === "051f38d3891a3ddb")
+  // Both catalogues add profiles without changing existing identities.
+  // Saved references from these versions still validate against the combined catalogue.
+  if (
+    plain(s) &&
+    ["051f38d3891a3ddb", "c6f6618ac5c246a8", "6b8d4e5c791571ce"].includes(
+      s.dataVersion,
+    )
+  )
     s = { ...s, dataVersion: data.version };
   // Additive schema-2 fields default only when absent from a legacy draft.
   // Clone only legacy input; never repair malformed or explicitly supplied data.
@@ -1724,7 +1729,9 @@ export function calculateGM(data, R, s) {
   ) {
     for (const loc of Object.keys(ap)) ap[loc] += template.armour;
     armour.push({
-      name: template.replaceArmour ? "Troll protection" : "Skeletal protection",
+      name:
+        template.armourName ||
+        (template.replaceArmour ? "Troll protection" : "Skeletal protection"),
       ap: template.armour,
       locations: Object.keys(ap).join(", "),
       key: templateRowKey(template, "armour", 0),

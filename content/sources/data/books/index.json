@@ -115,6 +115,66 @@
       "path": "salzenmund/manifest.json"
     },
     {
+      "id": "empire-in-ruins",
+      "path": "empire-in-ruins/manifest.json"
+    },
+    {
+      "id": "empire-in-ruins-companion",
+      "path": "empire-in-ruins-companion/manifest.json"
+    },
+    {
+      "id": "death-on-the-reik",
+      "path": "death-on-the-reik/manifest.json"
+    },
+    {
+      "id": "death-on-the-reik-companion",
+      "path": "death-on-the-reik-companion/manifest.json"
+    },
+    {
+      "id": "power-behind-the-throne",
+      "path": "power-behind-the-throne/manifest.json"
+    },
+    {
+      "id": "enemy-in-shadows",
+      "path": "enemy-in-shadows/manifest.json"
+    },
+    {
+      "id": "enemy-in-shadows-companion",
+      "path": "enemy-in-shadows-companion/manifest.json"
+    },
+    {
+      "id": "ubersreik-adventures-iii",
+      "path": "ubersreik-adventures-iii/manifest.json"
+    },
+    {
+      "id": "altdorf",
+      "path": "altdorf/manifest.json"
+    },
+    {
+      "id": "ubersreik-adventures-i",
+      "path": "ubersreik-adventures-i/manifest.json"
+    },
+    {
+      "id": "the-horned-rat",
+      "path": "the-horned-rat/manifest.json"
+    },
+    {
+      "id": "the-horned-rat-companion",
+      "path": "the-horned-rat-companion/manifest.json"
+    },
+    {
+      "id": "hell-rides-to-hallt",
+      "path": "hell-rides-to-hallt/manifest.json"
+    },
+    {
+      "id": "skeleton-crew",
+      "path": "skeleton-crew/manifest.json"
+    },
+    {
+      "id": "emperors-wrath",
+      "path": "emperors-wrath/manifest.json"
+    },
+    {
       "id": "imperial-zoo",
       "path": "imperial-zoo/manifest.json"
     }

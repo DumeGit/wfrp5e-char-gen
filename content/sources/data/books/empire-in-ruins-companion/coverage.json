@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "empire-in-ruins-companion:feature:bestiary-expansion",
+      "name": "Bestiary profiles and templates",
+      "status": "adapted",
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 21
+      },
+      "reason": "26 reusable profiles and 3 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+    },
+    {
+      "id": "empire-in-ruins-companion:feature:bestiary-expansion-animated-sign-or-statue",
+      "name": "Animated Sign or Statue",
+      "status": "implemented",
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 23
+      },
+      "reason": "Published in the Bestiary with the printed equipment, traits or foundation instructions."
+    }
+  ]
+}

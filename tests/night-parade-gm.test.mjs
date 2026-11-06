@@ -68,7 +68,11 @@ test("one opt-in foundation, seven templates, shared Ride choices and no named c
     ["Corpse Cart"],
   );
   assert.ok(
-    !data.profiles.some((p) => /Jasper|Mheava|Charnel|Herald/.test(p.name)),
+    !data.profiles.some(
+      (p) =>
+        p.source?.book === "night-parade" &&
+        /Jasper|Mheava|Charnel|Herald/.test(p.name),
+    ),
   );
   const R = rulesFor(draft());
   for (const name of ["Rotting Mount", "Skeletal Steed", "Corpse Cart"])

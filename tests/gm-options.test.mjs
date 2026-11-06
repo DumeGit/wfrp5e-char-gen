@@ -9,6 +9,7 @@ import {
 } from "../src/engine/gm/books.mjs";
 import {
   freshGM,
+  applyTemplate,
   calculateGM,
   validateGMDraft,
   magicChoices,
@@ -72,6 +73,8 @@ test("GM reuses all registered base-book options once, while books gate only fou
       "core",
       "up-in-arms",
       "archives-ii",
+      "winds-of-magic",
+      "deft-steps",
       "night-parade",
       "bayl-many-eyes",
       "cluster-eye-tribe",
@@ -81,6 +84,21 @@ test("GM reuses all registered base-book options once, while books gate only fou
       "corsairs-flariel",
       "lustria",
       "salzenmund",
+      "empire-in-ruins",
+      "empire-in-ruins-companion",
+      "death-on-the-reik",
+      "death-on-the-reik-companion",
+      "power-behind-the-throne",
+      "enemy-in-shadows",
+      "enemy-in-shadows-companion",
+      "ubersreik-adventures-iii",
+      "altdorf",
+      "ubersreik-adventures-i",
+      "the-horned-rat",
+      "the-horned-rat-companion",
+      "hell-rides-to-hallt",
+      "skeleton-crew",
+      "emperors-wrath",
       "imperial-zoo",
     ],
   );
@@ -115,6 +133,32 @@ test("source-only books never appear as selectable GM books", () => {
       b.id,
     );
   assert.match(html, /Profile &amp; template books|Profile & template books/);
+});
+
+test("animated statues add their printed protection and clear it on template removal", () => {
+  const s = draft();
+  s.books.push("empire-in-ruins-companion");
+  const baseline = result(s).ap;
+  for (const [material, ap] of [
+    ["metal", 3],
+    ["stone", 4],
+  ]) {
+    applyTemplate(
+      s,
+      `empire-in-ruins-companion:templates:animated-${material}-statue`,
+    );
+    validateGMDraft(data, rulesFor(s), JSON.parse(JSON.stringify(s)));
+    const built = result(s);
+    assert.equal(built.ap.Body, baseline.Body + ap);
+    assert.ok(
+      built.armour.some(
+        (row) =>
+          row.name.toLowerCase() === `${material} statue` && row.ap === ap,
+      ),
+    );
+  }
+  applyTemplate(s, "");
+  assert.deepEqual(result(s).ap, baseline);
 });
 
 test("book contributions remain constant while profile filters combine book, category and name", () => {
