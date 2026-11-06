@@ -143,7 +143,12 @@ test("GM browser downloads compact PDF and flexible A4 cards @exports @gm", asyn
   await page.getByRole("textbox", { name: "GM Notes" }).fill("Watch the gate.");
   await gmStep(page, "Review & export");
   await page.getByRole("textbox", { name: "GM Info" }).fill("Ask for the key.");
-  await page.getByRole("checkbox", { name: "Include GM Notes" }).check();
+  await expect(
+    page.getByRole("checkbox", { name: "Include GM Notes" }),
+  ).not.toBeChecked();
+  await expect(
+    page.getByRole("checkbox", { name: "Include GM Info" }),
+  ).not.toBeChecked();
   const sheet = await downloadBytes(
     page,
     page.getByRole("button", { name: "Export PDF", exact: true }),
@@ -163,6 +168,7 @@ test("GM browser downloads compact PDF and flexible A4 cards @exports @gm", asyn
     .getByLabel("Cards per A4 page", { exact: true })
     .selectOption("6");
   const other = await gmDraft("Halfling");
+  other.notes = "Wait by the bridge.";
   await fileUpload(
     page,
     print.getByRole("button", { name: "Add saved drafts…", exact: true }),
@@ -170,12 +176,18 @@ test("GM browser downloads compact PDF and flexible A4 cards @exports @gm", asyn
     "halfling.json",
   );
   await expect(print.locator(".gm-print-list > li")).toHaveCount(2);
+  const first = print.locator(".gm-print-list > li").first();
   await expect(
-    print.getByRole("checkbox", { name: "Include GM Notes" }),
+    first.getByRole("checkbox", { name: "Include GM Notes" }),
   ).toBeChecked();
-  const includeInfo = print.getByRole("checkbox", { name: "Include GM Info" });
-  await expect(includeInfo).not.toBeChecked();
-  await includeInfo.check();
+  const includeInfo = first.getByRole("checkbox", { name: "Include GM Info" });
+  await expect(includeInfo).toBeChecked();
+  await expect(
+    print
+      .locator(".gm-print-list > li")
+      .last()
+      .getByRole("checkbox", { name: "Include GM Info" }),
+  ).toBeChecked();
   await print
     .locator(".gm-print-list")
     .screenshot({ path: info.outputPath("a4-note-options.png") });
@@ -203,6 +215,7 @@ test("GM browser downloads compact PDF and flexible A4 cards @exports @gm", asyn
     "Watch the gate.",
     "GM Info",
     "Ask for the key.",
+    "Wait by the bridge.",
   ])
     expect(printedText).toContain(value);
   const { width, height } = doc.getPages()[0].getSize();
@@ -214,6 +227,7 @@ test("GM browser downloads compact PDF and flexible A4 cards @exports @gm", asyn
   await expect(print.locator("#gm-print-status")).toContainText(
     "flexible heights",
   );
+  await includeInfo.uncheck();
   await noOverflow(page);
   const flexible = await downloadBytes(
     page,
@@ -231,7 +245,5 @@ test("GM browser downloads compact PDF and flexible A4 cards @exports @gm", asyn
   await expect(
     print.getByLabel("Cards per A4 page", { exact: true }),
   ).toHaveValue("flexible");
-  await expect(
-    print.getByRole("checkbox", { name: "Include GM Info" }),
-  ).toBeChecked();
+  await expect(includeInfo).not.toBeChecked();
 });

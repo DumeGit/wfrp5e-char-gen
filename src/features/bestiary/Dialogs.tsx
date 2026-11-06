@@ -619,11 +619,12 @@ function SinglePickerDialog() {
 }
 function PrintDialog() {
   const { store, draft: s, setModal, session, busy: perform } = useBestiary();
+  const snapshot = (draft: any) => ({
+    s: { ...structuredClone(draft), includeBriefing: true, includeNotes: true },
+    r: store.calculate(draft),
+  });
   const [entries, setEntries] = useState<any[]>(() => {
-      if (!session.printEntries.length)
-        session.printEntries = [
-          { s: structuredClone(s), r: store.calculate(s) },
-        ];
+      if (!session.printEntries.length) session.printEntries = [snapshot(s)];
       return session.printEntries;
     }),
     [layout, setLayout] = useState<string>("flexible"),
@@ -671,10 +672,6 @@ function PrintDialog() {
       active = false;
     };
   }, [entries, layout, revision]);
-  const snapshot = (draft: any) => ({
-    s: structuredClone(draft),
-    r: store.calculate(draft),
-  });
   return (
     <Modal
       title="Print table cards"
@@ -748,7 +745,10 @@ function PrintDialog() {
                 disabled={entries.length >= 48}
                 onClick={() => {
                   const next = [...entries];
-                  next.splice(i + 1, 0, snapshot(entry.s));
+                  next.splice(i + 1, 0, {
+                    s: structuredClone(entry.s),
+                    r: entry.r,
+                  });
                   update(next);
                 }}
               >
