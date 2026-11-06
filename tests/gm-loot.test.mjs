@@ -204,15 +204,13 @@ test("loot and coin quantities appear under Gear in preview, full sheets and mea
   const full = Object.fromEntries(sheetSections(r, s));
   const card = Object.fromEntries(cardSections(r, s));
   const html = statBlock(r, s);
-  for (const text of [
-    "Loot: 7 brass pennies",
-    "Loot: 3 × Rations, 1 day",
-    "Loot: 1 × Pouch",
-  ]) {
+  for (const text of ["7 brass pennies", "3 × Rations, 1 day", "1 × Pouch"]) {
     assert.ok(full.Gear.includes(text));
     assert.ok(card.Gear.includes(text));
-    assert.ok(html.includes(text));
+    assert.ok(html.includes(`Loot: ${text}`));
   }
+  assert.ok(full.Gear.every((line) => !line.startsWith("Loot:")));
+  assert.doesNotMatch(card.Gear, /Loot:/);
   assert.ok(gearLines(r).includes("Hand Weapon"));
   assert.ok(!full.Attacks.some((line) => line.includes("Pouch")));
   assert.ok(

@@ -1,6 +1,6 @@
 // Derived export presentation only; ability wording comes from the shared result.
 import { abilityName } from "./ability-presentation.mjs";
-import { lootLines } from "./loot.mjs";
+import { lootText } from "./loot.mjs";
 export const talentLabel = (talent) => abilityName("talent", talent);
 
 // Printed weapon attacks are belongings too. Use only explicitly physical names
@@ -14,7 +14,7 @@ export function gearLines(r) {
   return [
     r.trappings ?? r.profile.sections.Trappings,
     ...gear.map((g) => `${g.quantity} × ${g.entry.name}`),
-    ...lootLines(r.loot),
+    ...(r.loot || []).map(lootText),
     ...(r.armour || [])
       .filter(
         (a) =>
