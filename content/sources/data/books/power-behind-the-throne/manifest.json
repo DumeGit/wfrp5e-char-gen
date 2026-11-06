@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "power-behind-the-throne",
+  "title": "Power Behind the Throne",
+  "shortTitle": "Power Behind the Throne",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "Enemy Within Campaign Volume 3 Power Behind the Throne.pdf",
+    "sha256": "9e87c1a55d37dfd05fa24398ee66459dd51b56faefc6918ffd55672fc68deb6b"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Reusable profiles and supported templates for the Bestiary Workshop. Named NPCs remain outside the catalogue.",
+      "Core Fifth Edition rules govern. Selective Legacy notes identify mechanical adaptations. Unsupported printed entries remain for manual review."
+    ]
+  },
+  "files": {
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "death-on-the-reik",
+  "title": "Death on the Reik",
+  "shortTitle": "Death on the Reik",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "Enemy Within Campaign Volume 2 Death on the Reik.pdf",
+    "sha256": "56bab75cfbe76c1f0ec6e6a7a535da482fdc3286b57620e1d402103b0df17aa6"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Reusable profiles and supported templates for the Bestiary Workshop. Named NPCs remain outside the catalogue.",
+      "Core Fifth Edition rules govern. Selective Legacy notes identify mechanical adaptations. Unsupported printed entries remain for manual review."
+    ]
+  },
+  "files": {
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "enemy-in-shadows:feature:bestiary-expansion",
+      "name": "Bestiary profiles and templates",
+      "status": "adapted",
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 42
+      },
+      "reason": "18 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+    }
+  ]
+}

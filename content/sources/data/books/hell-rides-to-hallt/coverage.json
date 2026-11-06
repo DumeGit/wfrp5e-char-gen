@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "hell-rides-to-hallt:feature:bestiary-expansion",
+      "name": "Bestiary profiles and templates",
+      "status": "implemented",
+      "source": {
+        "book": "hell-rides-to-hallt",
+        "page": 22
+      },
+      "reason": "1 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+    }
+  ]
+}

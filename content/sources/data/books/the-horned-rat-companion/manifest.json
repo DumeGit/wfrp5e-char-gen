@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "the-horned-rat-companion",
+  "title": "The Horned Rat Companion",
+  "shortTitle": "The Horned Rat Companion",
+  "edition": 4,
+  "version": "1.0.1",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "The Horned Rat Companion.pdf",
+    "sha256": "c08750a75bb9a66712c60db2989fd761606880856b738d44f37e310abbd5d56c"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Reusable profiles and supported templates for the Bestiary Workshop. Named NPCs remain outside the catalogue.",
+      "Core Fifth Edition rules govern. Selective Legacy notes identify mechanical adaptations. Unsupported printed entries remain for manual review."
+    ]
+  },
+  "files": {
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  }
+}

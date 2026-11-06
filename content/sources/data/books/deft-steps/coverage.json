@@ -41,6 +41,16 @@
         "page": "34–134"
       },
       "reason": "Supplement NPC integration is deferred: the fresh GM workshop supports the Fifth Edition core only. Animal shop entries remain PC acquisitions; earlier NPC decisions are not active."
+    },
+    {
+      "id": "deft-steps:feature:bestiary-expansion",
+      "name": "Bestiary profiles and templates",
+      "status": "adapted",
+      "source": {
+        "book": "deft-steps",
+        "page": 34
+      },
+      "reason": "17 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
     }
   ]
 }

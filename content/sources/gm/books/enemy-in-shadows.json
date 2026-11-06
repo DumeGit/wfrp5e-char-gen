@@ -1,0 +1,1520 @@
+{
+  "schemaVersion": 1,
+  "id": "enemy-in-shadows",
+  "source": {
+    "file": "Enemy Within Campaign Volume 1 Enemy in Shadows.pdf",
+    "sha256": "685ab8d803c014f6989927f2cc2ece7d3f470530202e224dc2102ee7efa27880"
+  },
+  "summary": "18 profiles and 0 templates",
+  "profiles": [
+    {
+      "id": "enemy-in-shadows:creatures:boar-vorbergland-hog",
+      "name": "Boar (Vorbergland Hog)",
+      "page": 69,
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 69
+      },
+      "category": "animal",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 6,
+        "WS": 30,
+        "BS": null,
+        "S": 35,
+        "T": 40,
+        "I": 30,
+        "Ag": 15,
+        "Dex": null,
+        "Int": 15,
+        "WP": 10,
+        "Fel": null,
+        "W": 12
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Horns",
+          "value": "Tusks"
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Belligerent",
+          "value": ""
+        },
+        {
+          "name": "Frenzy",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Infestation",
+          "value": ""
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Entertain"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 30,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Generic Schaffenfest creature profile."
+      ],
+      "species": "Boar",
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+    },
+    {
+      "id": "enemy-in-shadows:creatures:cow-stimmigen-dairy-cattle",
+      "name": "Cow (Stimmigen Dairy Cattle)",
+      "page": 69,
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 69
+      },
+      "category": "animal",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 5,
+        "WS": 30,
+        "BS": null,
+        "S": 35,
+        "T": 35,
+        "I": 20,
+        "Ag": 20,
+        "Dex": null,
+        "Int": 10,
+        "WP": 10,
+        "Fel": null,
+        "W": 20
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Horns",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Belligerent",
+          "value": ""
+        },
+        {
+          "name": "Disease",
+          "value": "Packer’s Pox"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Infestation",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Broken"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 30,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 5,
+          "adaptation": "Fifth Edition Large Size adds 3 to the primary melee attack."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "species": "Cow",
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect. Fifth Edition Large Size adds 3 to the primary melee attack."
+    },
+    {
+      "id": "enemy-in-shadows:creatures:goat-booted-rottgeist",
+      "name": "Goat (Booted Rottgeist)",
+      "page": 69,
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 69
+      },
+      "category": "animal",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 6,
+        "WS": 30,
+        "BS": null,
+        "S": 25,
+        "T": 30,
+        "I": 25,
+        "Ag": 50,
+        "Dex": null,
+        "Int": 15,
+        "WP": 15,
+        "Fel": null,
+        "W": 9
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Horns",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Belligerent",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Infestation",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Entertain, Guard, War"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 30,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "species": "Goat",
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+    },
+    {
+      "id": "enemy-in-shadows:creatures:sheep-hugeltal-longwool",
+      "name": "Sheep (Hugeltal Longwool)",
+      "page": 69,
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 69
+      },
+      "category": "animal",
+      "example": false,
+      "size": "Small",
+      "stats": {
+        "M": 5,
+        "WS": 25,
+        "BS": null,
+        "S": 25,
+        "T": 35,
+        "I": 20,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 5,
+        "WP": 10,
+        "Fel": null,
+        "W": 6
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Disease",
+          "value": "Packer’s Pox"
+        },
+        {
+          "name": "Horns",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Infestation",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Broken"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 25,
+          "damage": 2,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Hide",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "species": "Sheep",
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect. Printed Wounds 7 use the core Small formula (6 Wounds)."
+    },
+    {
+      "id": "enemy-in-shadows:creatures:rogues",
+      "name": "Rogues",
+      "page": 69,
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 69
+      },
+      "category": "NPC",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 40,
+        "S": 30,
+        "T": 30,
+        "I": 40,
+        "Ag": 40,
+        "Dex": 45,
+        "Int": 35,
+        "WP": 30,
+        "Fel": 40,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [
+        {
+          "name": "Disease",
+          "value": "any one"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Infestation",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 30,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        },
+        {
+          "name": "Ranged",
+          "skill": 40,
+          "damage": 5,
+          "optional": true,
+          "ranged": true,
+          "free": false,
+          "text": "Range 10 yards."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Generic Schaffenfest Character Profile."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Stealth",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "enemy-in-shadows:creatures:warriors",
+      "name": "Warriors",
+      "page": 69,
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 69
+      },
+      "category": "NPC",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 45,
+        "BS": 40,
+        "S": 40,
+        "T": 40,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 40,
+        "Fel": 30,
+        "W": 16
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [
+        {
+          "name": "Belligerent",
+          "value": ""
+        },
+        {
+          "name": "Champion",
+          "value": ""
+        },
+        {
+          "name": "Disease",
+          "value": "any one"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 45,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        },
+        {
+          "name": "Ranged",
+          "skill": 40,
+          "damage": 9,
+          "optional": true,
+          "ranged": true,
+          "free": false,
+          "text": "Range 60 yards."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Generic Schaffenfest Character Profile."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "enemy-in-shadows:creatures:burghers",
+      "name": "Burghers",
+      "page": 69,
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 69
+      },
+      "category": "NPC",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 30,
+        "T": 35,
+        "I": 40,
+        "Ag": 40,
+        "Dex": 40,
+        "Int": 40,
+        "WP": 35,
+        "Fel": 45,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [
+        {
+          "name": "Disease",
+          "value": "any one"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 30,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Generic Schaffenfest Character Profile."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "enemy-in-shadows:creatures:peasants",
+      "name": "Peasants",
+      "page": 69,
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 69
+      },
+      "category": "NPC",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 40,
+        "S": 40,
+        "T": 45,
+        "I": 30,
+        "Ag": 40,
+        "Dex": 40,
+        "Int": 30,
+        "WP": 35,
+        "Fel": 30,
+        "W": 15
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [
+        {
+          "name": "Disease",
+          "value": "any one"
+        },
+        {
+          "name": "Infestation",
+          "value": ""
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 30,
+          "damage": 3,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        },
+        {
+          "name": "Ranged",
+          "skill": 40,
+          "damage": 8,
+          "optional": true,
+          "ranged": true,
+          "free": false,
+          "text": "Range 50 yards."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Generic Schaffenfest Character Profile."
+      ],
+      "species": "Human",
+      "optionalTalents": [
+        {
+          "name": "Hardy",
+          "ranks": 1
+        }
+      ]
+    },
+    {
+      "id": "enemy-in-shadows:creatures:dockland-drinker",
+      "name": "Dockland Drinker",
+      "page": 42,
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 42
+      },
+      "category": "Townsfolk",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 41,
+        "BS": 30,
+        "S": 40,
+        "T": 44,
+        "I": 42,
+        "Ag": 31,
+        "Dex": 36,
+        "Int": 29,
+        "WP": 27,
+        "Fel": 32,
+        "W": 14
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (varies)",
+          "skill": 41,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        },
+        {
+          "name": "Weapon (Fists)",
+          "skill": 41,
+          "damage": 3,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Brawling)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leathers",
+          "ap": 1,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Boat Hook, Gang Colours, Hand Weapon, Leather Jack"
+      },
+      "notes": [
+        "Printed Armour (Leathers) 1; check hit-location coverage before play."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "enemy-in-shadows:creatures:mutant-goblin",
+      "name": "Mutant Goblin",
+      "page": 67,
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 67
+      },
+      "category": "Mutants",
+      "example": false,
+      "size": "Small",
+      "stats": {
+        "M": 6,
+        "WS": 25,
+        "BS": 35,
+        "S": 25,
+        "T": 25,
+        "I": 30,
+        "Ag": 50,
+        "Dex": 35,
+        "Int": 20,
+        "WP": 10,
+        "Fel": 20,
+        "W": 4
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Afraid",
+          "value": "Dwarfs, Elves"
+        },
+        {
+          "name": "Animosity",
+          "value": "Everyone"
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Fast uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Mutation",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Teeth and Claws)",
+          "skill": 25,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed mutation: Extra Leg, Profane Urgency."
+      ],
+      "species": "Goblin",
+      "adaptation": "Printed Fast uses the core Fifth Edition Sprinter effect. Printed Wounds 5 use the core Small formula (4 Wounds)."
+    },
+    {
+      "id": "enemy-in-shadows:creatures:amoeba",
+      "name": "Amoeba",
+      "page": 78,
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 78
+      },
+      "category": "Monsters",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": null,
+        "S": 40,
+        "T": 40,
+        "I": null,
+        "Ag": 20,
+        "Dex": 10,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 16
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Amphibious",
+          "value": ""
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Tentacles",
+          "value": "2"
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        },
+        {
+          "name": "Venom",
+          "value": "Average–Hard"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Tentacles",
+          "skill": 30,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 30,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed attack multiplicity: 2 Tentacles +6.",
+        "Printed optional entry for manual review: 3+ Tentacles."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Absorb",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Amorphous",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Mindless",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Swamp-Strider",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Amoeba",
+      "adaptation": "Core Venom applies the Difficulty to recovery from Poisoned."
+    },
+    {
+      "id": "enemy-in-shadows:creatures:bogenhafen-thug",
+      "name": "Bögenhafen Thug",
+      "page": 96,
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 96
+      },
+      "category": "Criminals",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 45,
+        "BS": 30,
+        "S": 40,
+        "T": 40,
+        "I": 25,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 25,
+        "WP": 30,
+        "Fel": 25,
+        "W": 15
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Animosity",
+          "value": "Those in their way"
+        },
+        {
+          "name": "Belligerent",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Basic)",
+          "skill": 45,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Basic Weapon, Dagger"
+      },
+      "notes": [],
+      "species": "Human"
+    },
+    {
+      "id": "enemy-in-shadows:creatures:bogenhafen-thug-boss",
+      "name": "Bögenhafen Thug Boss",
+      "page": 97,
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 97
+      },
+      "category": "Criminals",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 55,
+        "BS": 30,
+        "S": 50,
+        "T": 50,
+        "I": 35,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 35,
+        "WP": 40,
+        "Fel": 45,
+        "W": 24
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [
+        {
+          "name": "Hardy",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Animosity",
+          "value": "Weaklings"
+        },
+        {
+          "name": "Belligerent",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Basic)",
+          "skill": 55,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Basic Weapon, Dagger"
+      },
+      "notes": [],
+      "species": "Human",
+      "unavailableTraits": [
+        {
+          "name": "Prejudice (the Middle and Upper Classes)",
+          "reason": "Apply this printed prejudice manually. The existing Thin People entry has a different target.",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "id": "enemy-in-shadows:creatures:bogenhafen-watch-recruit",
+      "name": "Bögenhafen Watch Recruit",
+      "page": 112,
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 112
+      },
+      "category": "Guards",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 40,
+        "BS": 30,
+        "S": 35,
+        "T": 30,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 35,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 40,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed Armour 1 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "enemy-in-shadows:creatures:bogenhafen-watchman",
+      "name": "Bögenhafen Watchman",
+      "page": 112,
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 112
+      },
+      "category": "Guards",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 50,
+        "BS": 40,
+        "S": 40,
+        "T": 30,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 35,
+        "Fel": 45,
+        "W": 16
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [
+        {
+          "name": "Hardy",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 50,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed Armour 2 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Human",
+      "unavailableTraits": [
+        {
+          "name": "Prejudice (Criminals)",
+          "reason": "Apply this printed prejudice manually. The existing Thin People entry has a different target.",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "id": "enemy-in-shadows:creatures:bogenhafen-watch-sergeant",
+      "name": "Bögenhafen Watch Sergeant",
+      "page": 112,
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 112
+      },
+      "category": "Guards",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 60,
+        "BS": 30,
+        "S": 45,
+        "T": 35,
+        "I": 40,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 35,
+        "WP": 45,
+        "Fel": 55,
+        "W": 20
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [
+        {
+          "name": "Hardy",
+          "ranks": 1,
+          "adaptation": "Printed Hardy 2 uses Fifth Edition Hardy, capped at 1 rank(s)."
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 60,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 3,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed Armour 3 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Human",
+      "adaptation": "Printed Hardy 2 uses Fifth Edition Hardy, capped at 1 rank(s).",
+      "unavailableTraits": [
+        {
+          "name": "Prejudice (Those who disobey)",
+          "reason": "Apply this printed prejudice manually. The existing Thin People entry has a different target.",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "id": "enemy-in-shadows:creatures:bogenhafen-pink-horror",
+      "name": "Bögenhafen Pink Horror",
+      "page": 114,
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 114
+      },
+      "category": "Daemons",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 49,
+        "BS": 39,
+        "S": 49,
+        "T": 39,
+        "I": 69,
+        "Ag": 59,
+        "Dex": 49,
+        "Int": 49,
+        "WP": 69,
+        "Fel": 19,
+        "W": 16
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Moderate"
+        },
+        {
+          "name": "Daemonic",
+          "value": "8"
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Claws)",
+          "skill": 49,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Brawling)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "unavailableTraits": [
+        {
+          "name": "Split",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Daemon"
+    },
+    {
+      "id": "enemy-in-shadows:creatures:bogenhafen-blue-horror",
+      "name": "Bögenhafen Blue Horror",
+      "page": 114,
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 114
+      },
+      "category": "Daemons",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 29,
+        "BS": 39,
+        "S": 39,
+        "T": 29,
+        "I": 29,
+        "Ag": 29,
+        "Dex": 29,
+        "Int": 29,
+        "WP": 29,
+        "Fel": 9,
+        "W": 9
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Moderate"
+        },
+        {
+          "name": "Daemonic",
+          "value": "9"
+        },
+        {
+          "name": "Fear",
+          "value": "1"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Claws)",
+          "skill": 29,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Brawling)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "species": "Daemon"
+    }
+  ],
+  "templates": [],
+  "training": []
+}

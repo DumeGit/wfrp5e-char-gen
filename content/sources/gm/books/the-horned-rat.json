@@ -1,0 +1,3544 @@
+{
+  "schemaVersion": 1,
+  "id": "the-horned-rat",
+  "source": {
+    "file": "Enemy Within Campaign Volume 4 The Horned Rat.pdf",
+    "sha256": "24eebc29a7145f65f984f07eead2bf29da53501c722a8cfce358727d0f7b357c"
+  },
+  "summary": "31 profiles and 0 templates",
+  "profiles": [
+    {
+      "id": "the-horned-rat:creatures:skavenslave",
+      "name": "Skavenslave",
+      "page": 7,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 7
+      },
+      "category": "npc",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 20,
+        "BS": 20,
+        "S": 30,
+        "T": 30,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 10,
+        "Fel": 10,
+        "W": 10
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Melee (Basic)",
+          "total": 25
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 25,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "The source applies Tunnel Rat and Enclosed Fighter to its Skaven on p. 6. Review any missing Fifth Edition equivalent manually.",
+        "Printed Talent for manual review: H.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: d.",
+        "Printed Talent for manual review: W.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: p.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: R.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: g.",
+        "Printed Talent for manual review: s."
+      ],
+      "species": "Skaven"
+    },
+    {
+      "id": "the-horned-rat:creatures:clanrat",
+      "name": "Clanrat",
+      "page": 7,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 7
+      },
+      "category": "npc",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 30,
+        "BS": 30,
+        "S": 30,
+        "T": 30,
+        "I": 40,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 20,
+        "Fel": 20,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 45
+        },
+        {
+          "name": "Dodge",
+          "total": 40
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 35
+        },
+        {
+          "name": "Melee (Polearm)",
+          "total": 35
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 45
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword or Spear)",
+          "skill": 30,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "The source applies Tunnel Rat and Enclosed Fighter to its Skaven on p. 6. Review any missing Fifth Edition equivalent manually.",
+        "Printed Talent for manual review: H.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: d.",
+        "Printed Talent for manual review: W.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: p.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: S.",
+        "Printed Talent for manual review: p.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: L.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: h.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: A.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: m.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: u.",
+        "Printed Talent for manual review: r.",
+        "Printed Armour 1 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Skaven"
+    },
+    {
+      "id": "the-horned-rat:creatures:stormvermin",
+      "name": "Stormvermin",
+      "page": 7,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 7
+      },
+      "category": "npc",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 45,
+        "BS": 35,
+        "S": 35,
+        "T": 35,
+        "I": 55,
+        "Ag": 50,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 25,
+        "Fel": 20,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 60
+        },
+        {
+          "name": "Intimidate",
+          "total": 50
+        },
+        {
+          "name": "Melee (Polearm)",
+          "total": 55
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Halberd)",
+          "skill": 45,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 3,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "The source applies Tunnel Rat and Enclosed Fighter to its Skaven on p. 6. Review any missing Fifth Edition equivalent manually.",
+        "Printed Talent for manual review: B.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: s.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: p.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: H.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: b.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: d.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: M.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: i.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: C.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: t.",
+        "Printed Armour 3 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Skaven"
+    },
+    {
+      "id": "the-horned-rat:creatures:stormvermin-fangleader",
+      "name": "Stormvermin Fangleader",
+      "page": 7,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 7
+      },
+      "category": "npc",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 45,
+        "BS": 35,
+        "S": 35,
+        "T": 35,
+        "I": 55,
+        "Ag": 50,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 35,
+        "Fel": 20,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 60
+        },
+        {
+          "name": "Intimidate",
+          "total": 50
+        },
+        {
+          "name": "Leadership",
+          "total": 45
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 65
+        },
+        {
+          "name": "Ranged (Skaven Ranged Weapons)",
+          "total": 45
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 65,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        },
+        {
+          "name": "Ranged (Warplock Pistol)",
+          "skill": 35,
+          "damage": 8,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "Range 30 yards."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 3,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "The source applies Tunnel Rat and Enclosed Fighter to its Skaven on p. 6. Review any missing Fifth Edition equivalent manually.",
+        "Printed Talent for manual review: P.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: d.",
+        "Printed Talent for manual review: M.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: i.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: S.",
+        "Printed Talent for manual review: w.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: d.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: W.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: p.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: c.",
+        "Printed Talent for manual review: k.",
+        "Printed Talent for manual review: P.",
+        "Printed Talent for manual review: i.",
+        "Printed Talent for manual review: s.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: l.",
+        "Printed Armour 3 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Skaven"
+    },
+    {
+      "id": "the-horned-rat:creatures:chieftain",
+      "name": "Chieftain",
+      "page": 7,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 7
+      },
+      "category": "npc",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 50,
+        "BS": 45,
+        "S": 45,
+        "T": 45,
+        "I": 60,
+        "Ag": 55,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 40,
+        "Fel": 25,
+        "W": 16
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 65
+        },
+        {
+          "name": "Intimidate",
+          "total": 60
+        },
+        {
+          "name": "Leadership",
+          "total": 55
+        },
+        {
+          "name": "Lore (Warfare)",
+          "total": 45
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 75
+        },
+        {
+          "name": "Ranged (Skaven Ranged Weapons)",
+          "total": 60
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 75,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        },
+        {
+          "name": "Ranged (Warplock Pistol)",
+          "skill": 45,
+          "damage": 8,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "Range 30 yards."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 3,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "The source applies Tunnel Rat and Enclosed Fighter to its Skaven on p. 6. Review any missing Fifth Edition equivalent manually.",
+        "Printed Talent for manual review: B.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: s.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: p.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: S.",
+        "Printed Talent for manual review: w.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: d.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: H.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: m.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: M.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: i.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: C.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: W.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: p.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: c.",
+        "Printed Talent for manual review: k.",
+        "Printed Talent for manual review: P.",
+        "Printed Talent for manual review: i.",
+        "Printed Talent for manual review: s.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: l.",
+        "Printed Armour 3 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Skaven"
+    },
+    {
+      "id": "the-horned-rat:creatures:warlock-engineer",
+      "name": "Warlock-Engineer",
+      "page": 7,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 7
+      },
+      "category": "npc",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 30,
+        "BS": 45,
+        "S": 30,
+        "T": 30,
+        "I": 45,
+        "Ag": 35,
+        "Dex": 45,
+        "Int": 40,
+        "WP": 30,
+        "Fel": 20,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 45
+        },
+        {
+          "name": "Dodge",
+          "total": 40
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 35
+        },
+        {
+          "name": "Ranged (Skaven Ranged Weapons)",
+          "total": 50
+        },
+        {
+          "name": "Stealth",
+          "total": 45
+        },
+        {
+          "name": "Trade (Engineering)",
+          "total": 60
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 3,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "The source applies Tunnel Rat and Enclosed Fighter to its Skaven on p. 6. Review any missing Fifth Edition equivalent manually.",
+        "Printed Talent for manual review: E.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: g.",
+        "Printed Talent for manual review: i.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: ’.",
+        "Printed Talent for manual review: s.",
+        "Printed Talent for manual review: T.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: k.",
+        "Printed Talent for manual review: i.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: H.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: d.",
+        "Printed Talent for manual review: W.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: p.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: H.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: m.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: H.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: v.",
+        "Printed Talent for manual review: y.",
+        "Printed Talent for manual review: A.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: m.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: u.",
+        "Printed Talent for manual review: r.",
+        "Printed Armour 3 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Skaven"
+    },
+    {
+      "id": "the-horned-rat:creatures:clan-skryre-weapon-crew",
+      "name": "Clan Skryre Weapon Crew",
+      "page": 8,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 8
+      },
+      "category": "npc",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 30,
+        "BS": 30,
+        "S": 30,
+        "T": 30,
+        "I": 40,
+        "Ag": 35,
+        "Dex": 35,
+        "Int": 30,
+        "WP": 20,
+        "Fel": 20,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 45
+        },
+        {
+          "name": "Dodge",
+          "total": 40
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 35
+        },
+        {
+          "name": "Melee (Warp-grinder)",
+          "total": 35
+        },
+        {
+          "name": "Ranged (Skaven Ranged Weapons)",
+          "total": 40
+        },
+        {
+          "name": "Stealth",
+          "total": 45
+        },
+        {
+          "name": "Trade (Engineering)",
+          "total": 40
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Large Shield",
+          "ap": 3,
+          "locations": "Shield",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Crew may be equipped with Poison Wind Globes or teams of two with Warplock Jezzail and Large Shield."
+      },
+      "notes": [
+        "The source applies Tunnel Rat and Enclosed Fighter to its Skaven on p. 6. Review any missing Fifth Edition equivalent manually.",
+        "Printed Talent for manual review: H.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: d.",
+        "Printed Talent for manual review: W.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: p.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: H.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: m.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: H.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: v.",
+        "Printed Talent for manual review: y.",
+        "Printed Talent for manual review: A.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: m.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: u.",
+        "Printed Talent for manual review: r."
+      ],
+      "species": "Skaven"
+    },
+    {
+      "id": "the-horned-rat:creatures:thug",
+      "name": "Thug",
+      "page": 9,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 9
+      },
+      "category": "npc",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 30,
+        "S": 40,
+        "T": 35,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 35,
+        "Int": 25,
+        "WP": 35,
+        "Fel": 30,
+        "W": 13
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 32
+        },
+        {
+          "name": "Dodge",
+          "total": 37
+        },
+        {
+          "name": "Intimidate",
+          "total": 49
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 40
+        },
+        {
+          "name": "Melee (Brawling)",
+          "total": 35
+        },
+        {
+          "name": "Ranged (Crossbow)",
+          "total": 33
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 31
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Crossbow)",
+          "skill": 33,
+          "damage": 9,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "Range 60 yards.",
+          "skillName": "Ranged (Crossbow)"
+        },
+        {
+          "name": "Weapon",
+          "skill": 35,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "May also have Crossbows with 12 Bolts."
+      },
+      "notes": [
+        "Printed Talent for manual review: D.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: g.",
+        "Printed Talent for manual review: g.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: K.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: u.",
+        "Printed Talent for manual review: c.",
+        "Printed Talent for manual review: k.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: d.",
+        "Printed Talent for manual review: u.",
+        "Printed Talent for manual review: s.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: s.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: L.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: h.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: J.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: c.",
+        "Printed Talent for manual review: k.",
+        "Printed Armour 1 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "the-horned-rat:creatures:purple-hand-cultist",
+      "name": "Purple Hand Cultist",
+      "page": 9,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 9
+      },
+      "category": "npc",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 40,
+        "BS": 45,
+        "S": 35,
+        "T": 35,
+        "I": 35,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 40,
+        "WP": 40,
+        "Fel": 30,
+        "W": 13
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 45
+        },
+        {
+          "name": "Dodge",
+          "total": 45
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 54
+        },
+        {
+          "name": "Ranged (Crossbow)",
+          "total": 54
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Crossbow)",
+          "skill": 54,
+          "damage": 9,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "Range 60 yards.",
+          "skillName": "Ranged (Crossbow)"
+        },
+        {
+          "name": "Weapon",
+          "skill": 40,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "May also have Crossbows with 12 Bolts."
+      },
+      "notes": [
+        "Printed Talent for manual review: D.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: g.",
+        "Printed Talent for manual review: g.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: K.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: u.",
+        "Printed Talent for manual review: c.",
+        "Printed Talent for manual review: k.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: d.",
+        "Printed Talent for manual review: u.",
+        "Printed Talent for manual review: s.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: s.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: L.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: h.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: J.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: c.",
+        "Printed Talent for manual review: k.",
+        "Printed Armour 1 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "the-horned-rat:creatures:yellow-fang-cultist",
+      "name": "Yellow Fang Cultist",
+      "page": 9,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 9
+      },
+      "category": "npc",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 30,
+        "T": 30,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 30,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Dodge",
+          "total": 40
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 45
+        },
+        {
+          "name": "Lore (Skaven)",
+          "total": 40
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Dagger)",
+          "skill": 45,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed Talent for manual review: L.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: h.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: J.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: c.",
+        "Printed Talent for manual review: k.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: D.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: g.",
+        "Printed Talent for manual review: g.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: V.",
+        "Printed Talent for manual review: i.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: f.",
+        "Printed Talent for manual review: S.",
+        "Printed Talent for manual review: k.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: v.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: M.",
+        "Printed Talent for manual review: u.",
+        "Printed Talent for manual review: s.",
+        "Printed Talent for manual review: k.",
+        "Printed Armour 1 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "the-horned-rat:creatures:animated-flame",
+      "name": "Animated Flame",
+      "page": 42,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 42
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": null,
+        "S": 25,
+        "T": 25,
+        "I": 40,
+        "Ag": 40,
+        "Dex": null,
+        "Int": null,
+        "WP": 30,
+        "Fel": null,
+        "W": 6
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Afraid",
+          "value": "Water"
+        },
+        {
+          "name": "Distracting",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Fiery Attack)",
+          "skill": 35,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "species": "Animated Flame"
+    },
+    {
+      "id": "the-horned-rat:creatures:red-shield-mercenary",
+      "name": "Red Shield Mercenary",
+      "page": 43,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 43
+      },
+      "category": "npc",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 38,
+        "S": 38,
+        "T": 36,
+        "I": 34,
+        "Ag": 36,
+        "Dex": 35,
+        "Int": 25,
+        "WP": 33,
+        "Fel": 31,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 41
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 41
+        },
+        {
+          "name": "Cool",
+          "total": 38
+        },
+        {
+          "name": "Dodge",
+          "total": 41
+        },
+        {
+          "name": "Intimidate",
+          "total": 47
+        },
+        {
+          "name": "Ranged (Bow)",
+          "total": 47
+        },
+        {
+          "name": "Stealth (Rural)",
+          "total": 39
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 38
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Bow)",
+          "skill": 47,
+          "damage": 6,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "",
+          "skillName": "Ranged (Bow)"
+        },
+        {
+          "name": "Weapon (Sword)",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour (Body)",
+          "ap": 1,
+          "locations": "Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed Talent for manual review: S.",
+        "Printed Talent for manual review: w.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: d.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: L.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: h.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: J.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: c.",
+        "Printed Talent for manual review: k.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: O.",
+        "Printed Talent for manual review: p.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: H.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: m.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: B.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: w.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: d.",
+        "Printed Talent for manual review: 1.",
+        "Printed Talent for manual review: 2.",
+        "Printed Talent for manual review: A.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: w.",
+        "Printed Talent for manual review: s.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: g.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: y.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: d.",
+        "Printed Talent for manual review: b.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: c.",
+        "Printed Talent for manual review: k.",
+        "Printed Talent for manual review: c.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: h.",
+        "Printed Talent for manual review: i.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: g.",
+        "Printed Talent for manual review: w.",
+        "Printed Talent for manual review: i.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: h.",
+        "Printed Talent for manual review: R.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: d.",
+        "Printed Talent for manual review: S.",
+        "Printed Talent for manual review: h.",
+        "Printed Talent for manual review: i.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: d.",
+        "Printed Talent for manual review: b.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: d.",
+        "Printed Talent for manual review: g.",
+        "Printed Talent for manual review: e.",
+        "Printed Armour (Body) 1; check hit-location coverage before play."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "the-horned-rat:creatures:daemonic-wolf",
+      "name": "Daemonic Wolf",
+      "page": 52,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 52
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 4,
+        "WS": 55,
+        "BS": 50,
+        "S": 45,
+        "T": 35,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 65,
+        "Fel": 45,
+        "W": 16
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Daemonic",
+          "value": "8"
+        },
+        {
+          "name": "Bite",
+          "value": "6"
+        },
+        {
+          "name": "Breath",
+          "value": "Blue Fire"
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Fast uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Ghostly Howl",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Stealthy",
+          "value": ""
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Breath",
+          "skill": 50,
+          "damage": 9,
+          "optional": false,
+          "ranged": true,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon (Bite)",
+          "skill": 55,
+          "damage": 10,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 6,
+          "adaptation": "Fifth Edition Large Size adds 4 to the primary melee attack."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "unavailableTraits": [
+        {
+          "name": "Tough",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Wolf",
+      "adaptation": "Printed Fast uses the core Fifth Edition Sprinter effect. Printed Stride uses the core Fifth Edition Sprinter effect. Fifth Edition Large Size adds 4 to the primary melee attack."
+    },
+    {
+      "id": "the-horned-rat:creatures:acolyte",
+      "name": "Acolyte",
+      "page": 58,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 58
+      },
+      "category": "npc",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 30,
+        "T": 30,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 30,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 35
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 38
+        },
+        {
+          "name": "Lore (Chaos)",
+          "total": 34
+        },
+        {
+          "name": "Secret Signs (Jade Sceptre)",
+          "total": 38
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 30,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed Talent for manual review: L.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: h.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: J.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: k.",
+        "Printed Talent for manual review: i.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: H.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: d.",
+        "Printed Talent for manual review: W.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: p.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: (.",
+        "Printed Talent for manual review: S.",
+        "Printed Talent for manual review: w.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: d.",
+        "Printed Talent for manual review: ).",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: J.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: d.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: S.",
+        "Printed Talent for manual review: c.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: p.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: r.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: m.",
+        "Printed Talent for manual review: u.",
+        "Printed Talent for manual review: l.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: ,.",
+        "Printed Talent for manual review: p.",
+        "Printed Talent for manual review: o.",
+        "Printed Talent for manual review: s.",
+        "Printed Talent for manual review: h.",
+        "Printed Talent for manual review: a.",
+        "Printed Talent for manual review: c.",
+        "Printed Talent for manual review: c.",
+        "Printed Talent for manual review: e.",
+        "Printed Talent for manual review: n.",
+        "Printed Talent for manual review: t.",
+        "Printed Talent for manual review: s.",
+        "Printed Armour 1 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "the-horned-rat:creatures:scourge-rider",
+      "name": "Scourge Rider",
+      "page": 89,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 89
+      },
+      "category": "npc",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 50,
+        "BS": 40,
+        "S": 45,
+        "T": 30,
+        "I": 30,
+        "Ag": 45,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 30,
+        "W": 14
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Animal Care",
+          "total": 40
+        },
+        {
+          "name": "Charm Animal",
+          "total": 40
+        },
+        {
+          "name": "Cool",
+          "total": 40
+        },
+        {
+          "name": "Endurance",
+          "total": 45
+        },
+        {
+          "name": "Language (Battle)",
+          "total": 40
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 65
+        },
+        {
+          "name": "Outdoor Survival",
+          "total": 40
+        },
+        {
+          "name": "Perception",
+          "total": 45
+        },
+        {
+          "name": "Ranged (Blackpowder)",
+          "total": 45
+        },
+        {
+          "name": "Ride (Horse)",
+          "total": 60
+        }
+      ],
+      "talents": [
+        {
+          "name": "Roughrider",
+          "ranks": 1
+        },
+        {
+          "name": "Warrior Born",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 50,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        },
+        {
+          "name": "Ranged (Pistol)",
+          "skill": 45,
+          "damage": 9,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "Range 20 yards.",
+          "skillName": "Ranged (Blackpowder)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Hand Weapon, Chainmail Coat, Pistol with Powder and Ammunition for 10 shots, Riding Horse with Saddle and Tack"
+      },
+      "notes": [
+        "Printed Armour 2 does not specify exact hit locations. Review Armour coverage from the source and trappings."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "the-horned-rat:creatures:clan-mange-slave-master",
+      "name": "Clan Mange Slave Master",
+      "page": 90,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 90
+      },
+      "category": "npc",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 45,
+        "BS": 40,
+        "S": 30,
+        "T": 40,
+        "I": 40,
+        "Ag": 45,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 20,
+        "W": 14
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 65
+        },
+        {
+          "name": "Endurance",
+          "total": 50
+        },
+        {
+          "name": "Intimidate",
+          "total": 45
+        },
+        {
+          "name": "Intuition",
+          "total": 50
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 65
+        },
+        {
+          "name": "Outdoor Survival",
+          "total": 45
+        },
+        {
+          "name": "Perception",
+          "total": 60
+        },
+        {
+          "name": "Ranged (Sling)",
+          "total": 50
+        },
+        {
+          "name": "Set Trap",
+          "total": 45
+        },
+        {
+          "name": "Track",
+          "total": 55
+        }
+      ],
+      "talents": [
+        {
+          "name": "Marksman",
+          "ranks": 1
+        },
+        {
+          "name": "Shadow",
+          "ranks": 1
+        },
+        {
+          "name": "Strike to Stun",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 45,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leather Jerkin",
+          "ap": 1,
+          "locations": "Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Hand Weapon, Leather Jerkin, Mantrap, Sling with 10 Lead Bullets, Rope"
+      },
+      "notes": [],
+      "unavailableTraits": [
+        {
+          "name": "Ranged Weapon (Sling) +7 (50)",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Skaven"
+    },
+    {
+      "id": "the-horned-rat:creatures:starved-clanrat",
+      "name": "Starved Clanrat",
+      "page": 94,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 94
+      },
+      "category": "npc",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 30,
+        "BS": 30,
+        "S": 21,
+        "T": 23,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 15,
+        "WP": 10,
+        "Fel": 10,
+        "W": 7
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Frenzy",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 30,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "species": "Skaven"
+    },
+    {
+      "id": "the-horned-rat:creatures:clanrat-clawleader",
+      "name": "Clanrat Clawleader",
+      "page": 7,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 7
+      },
+      "category": "Skaven",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 30,
+        "BS": 30,
+        "S": 30,
+        "T": 30,
+        "I": 40,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 20,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 45
+        },
+        {
+          "name": "Dodge",
+          "total": 40
+        },
+        {
+          "name": "Leadership",
+          "total": 30
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 45
+        },
+        {
+          "name": "Stealth",
+          "total": 45
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 45,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Hand Weapon, Helmet, Leather Armour"
+      },
+      "notes": [
+        "The source applies Tunnel Rat and Enclosed Fighter to its Skaven on p. 6. Review any missing Fifth Edition equivalent manually."
+      ],
+      "species": "Skaven"
+    },
+    {
+      "id": "the-horned-rat:creatures:middenheim-sewer-jack",
+      "name": "Middenheim Sewer Jack",
+      "page": 19,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 19
+      },
+      "category": "Guards",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 40,
+        "BS": 30,
+        "S": 40,
+        "T": 35,
+        "I": 35,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 35,
+        "Fel": 30,
+        "W": 13
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 40
+        },
+        {
+          "name": "Climb",
+          "total": 50
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 40
+        },
+        {
+          "name": "Dodge",
+          "total": 40
+        },
+        {
+          "name": "Endurance",
+          "total": 40
+        },
+        {
+          "name": "Gamble",
+          "total": 40
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 50
+        },
+        {
+          "name": "Perception",
+          "total": 40
+        },
+        {
+          "name": "Stealth (Underground)",
+          "total": 40
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 50,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Mail Coat",
+          "ap": 2,
+          "locations": "Arms, Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Sword, Mail Coat, Lantern"
+      },
+      "notes": [],
+      "species": "Human"
+    },
+    {
+      "id": "the-horned-rat:creatures:akoustikk-ratty",
+      "name": "Akoustikk Ratty",
+      "page": 31,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 31
+      },
+      "category": "Skaven creatures",
+      "example": false,
+      "size": "Small",
+      "stats": {
+        "M": 5,
+        "WS": 25,
+        "BS": null,
+        "S": 20,
+        "T": 30,
+        "I": 25,
+        "Ag": 35,
+        "Dex": null,
+        "Int": 15,
+        "WP": 15,
+        "Fel": null,
+        "W": 6
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 25,
+          "damage": 3,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "species": "Rat"
+    },
+    {
+      "id": "the-horned-rat:creatures:enhanced-zombie",
+      "name": "Enhanced Zombie",
+      "page": 53,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 53
+      },
+      "category": "Undead",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 3,
+        "WS": 40,
+        "BS": null,
+        "S": 40,
+        "T": 40,
+        "I": 5,
+        "Ag": 10,
+        "Dex": 15,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 12
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Club)",
+          "skill": 40,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed qualifier for Territorial: Yard."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Brute",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Zombie"
+    },
+    {
+      "id": "the-horned-rat:creatures:yellow-fang-spy",
+      "name": "Yellow Fang Spy",
+      "page": 87,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 87
+      },
+      "category": "Chaos cultists",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 44,
+        "BS": 34,
+        "S": 33,
+        "T": 32,
+        "I": 31,
+        "Ag": 42,
+        "Dex": 42,
+        "Int": 31,
+        "WP": 41,
+        "Fel": 41,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Bribery",
+          "total": 56
+        },
+        {
+          "name": "Charm",
+          "total": 56
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 42
+        },
+        {
+          "name": "Cool",
+          "total": 51
+        },
+        {
+          "name": "Dodge",
+          "total": 52
+        },
+        {
+          "name": "Drive",
+          "total": 52
+        },
+        {
+          "name": "Gamble",
+          "total": 41
+        },
+        {
+          "name": "Gossip",
+          "total": 51
+        },
+        {
+          "name": "Haggle",
+          "total": 51
+        },
+        {
+          "name": "Intuition",
+          "total": 41
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 54
+        },
+        {
+          "name": "Perception",
+          "total": 46
+        },
+        {
+          "name": "Secret Signs (Yellow Fang)",
+          "total": 41
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 57
+        }
+      ],
+      "talents": [
+        {
+          "name": "Beneath Notice",
+          "ranks": 1
+        },
+        {
+          "name": "Blather",
+          "ranks": 1
+        },
+        {
+          "name": "Dealmaker",
+          "ranks": 1
+        },
+        {
+          "name": "Gregarious",
+          "ranks": 1
+        },
+        {
+          "name": "Night Vision",
+          "ranks": 1
+        },
+        {
+          "name": "Read/Write",
+          "ranks": 1
+        },
+        {
+          "name": "Shadow",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Hand Weapon)",
+          "skill": 54,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Drab clothing, Hand Weapon"
+      },
+      "notes": [],
+      "species": "Human"
+    },
+    {
+      "id": "the-horned-rat:creatures:garrison-soldier",
+      "name": "Garrison Soldier",
+      "page": 123,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 123
+      },
+      "category": "Soldiers",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 50,
+        "BS": 40,
+        "S": 35,
+        "T": 40,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 40,
+        "Fel": 25,
+        "W": 15
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 40
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 50
+        },
+        {
+          "name": "Cool",
+          "total": 50
+        },
+        {
+          "name": "Gamble",
+          "total": 40
+        },
+        {
+          "name": "Gossip",
+          "total": 30
+        },
+        {
+          "name": "Melee (Basic, Polearm)",
+          "total": 60
+        },
+        {
+          "name": "Perception",
+          "total": 40
+        },
+        {
+          "name": "Ranged (Crossbow)",
+          "total": 50
+        }
+      ],
+      "talents": [
+        {
+          "name": "Drilled",
+          "ranks": 1
+        },
+        {
+          "name": "Rapid Reload",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Crossbow)",
+          "skill": 50,
+          "damage": 9,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "Range 60 yards.",
+          "skillName": "Ranged (Crossbow)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leather and Breastplate",
+          "ap": 3,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Crossbow or Halberd, Leather and Breastplate, Sword, Uniform"
+      },
+      "notes": [
+        "Printed Armour (Leather and Breastplate) 3; check hit-location coverage before play."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Weapon (Hand Weapon) +7 or Weapon (Halberd) +7 (Defensive, Hack, Impale)",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "the-horned-rat:creatures:ungol-horse-archer",
+      "name": "Ungol Horse Archer",
+      "page": 123,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 123
+      },
+      "category": "Soldiers",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 50,
+        "BS": 45,
+        "S": 40,
+        "T": 35,
+        "I": 30,
+        "Ag": 45,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 35,
+        "Fel": 30,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Animal Care",
+          "total": 40
+        },
+        {
+          "name": "Endurance",
+          "total": 45
+        },
+        {
+          "name": "Melee (Basic, Cavalry)",
+          "total": 60
+        },
+        {
+          "name": "Outdoor Survival",
+          "total": 40
+        },
+        {
+          "name": "Perception",
+          "total": 40
+        },
+        {
+          "name": "Ranged (Bow)",
+          "total": 55
+        },
+        {
+          "name": "Ride (Horse)",
+          "total": 60
+        }
+      ],
+      "talents": [
+        {
+          "name": "Roughrider",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Bow)",
+          "skill": 55,
+          "damage": 8,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "",
+          "skillName": "Ranged (Bow)"
+        },
+        {
+          "name": "Weapon (Sword)",
+          "skill": 50,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        },
+        {
+          "name": "Weapon (Lance)",
+          "skill": 50,
+          "damage": 10,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Cavalry)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leather",
+          "ap": 1,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Bow with 20 Arrows, Dagger, Leather Jack and Breastplate, Lance, Light Warhorse, Saddle and Tack, Sword"
+      },
+      "notes": [
+        "Printed Talent for manual review: Trick Riding.",
+        "Printed Armour (Leather) 1; check hit-location coverage before play."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "the-horned-rat:creatures:snake",
+      "name": "Snake",
+      "page": 132,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 132
+      },
+      "category": "Beasts",
+      "example": false,
+      "size": "Small",
+      "stats": {
+        "M": 3,
+        "WS": 40,
+        "BS": null,
+        "S": 30,
+        "T": 25,
+        "I": 25,
+        "Ag": 40,
+        "Dex": null,
+        "Int": 5,
+        "WP": 45,
+        "Fel": null,
+        "W": 4
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Cold-blooded",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Fast uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        },
+        {
+          "name": "Venom",
+          "value": "Challenging"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 40,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "species": "Snake",
+      "adaptation": "Printed Fast uses the core Fifth Edition Sprinter effect. Core Venom applies the Difficulty to recovery from Poisoned. Printed Wounds 6 use the core Small formula (4 Wounds)."
+    },
+    {
+      "id": "the-horned-rat:creatures:vengeful-ghost",
+      "name": "Vengeful Ghost",
+      "page": 132,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 132
+      },
+      "category": "Undead",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 6,
+        "WS": 30,
+        "BS": null,
+        "S": 30,
+        "T": 30,
+        "I": 10,
+        "Ag": 30,
+        "Dex": 20,
+        "Int": 15,
+        "WP": 15,
+        "Fel": null,
+        "W": 10
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Ethereal",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Frenzy",
+          "value": "",
+          "adaptation": "Printed Fury uses the core Fifth Edition Frenzy effect."
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 30,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed qualifier for Territorial: place of death."
+      ],
+      "species": "Ghost",
+      "adaptation": "Printed Fury uses the core Fifth Edition Frenzy effect."
+    },
+    {
+      "id": "the-horned-rat:creatures:young-wyvern",
+      "name": "Young Wyvern",
+      "page": 133,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 133
+      },
+      "category": "Monsters",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 4,
+        "WS": 50,
+        "BS": null,
+        "S": 55,
+        "T": 50,
+        "I": 15,
+        "Ag": 45,
+        "Dex": null,
+        "Int": 10,
+        "WP": 40,
+        "Fel": null,
+        "W": 38
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Fly",
+          "value": "90"
+        },
+        {
+          "name": "Horns",
+          "value": ""
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Tail",
+          "value": "9"
+        },
+        {
+          "name": "Venom",
+          "value": "Difficult"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Tail",
+          "skill": 50,
+          "damage": 9,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 50,
+          "damage": 15,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 10,
+          "adaptation": "Fifth Edition Large Size adds 5 to the primary melee attack."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "species": "Wyvern",
+      "adaptation": "Core Venom applies the Difficulty to recovery from Poisoned. Fifth Edition Large Size adds 5 to the primary melee attack."
+    },
+    {
+      "id": "the-horned-rat:creatures:clan-mange-straggler",
+      "name": "Clan Mange Straggler",
+      "page": 133,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 133
+      },
+      "category": "Skaven",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 30,
+        "BS": 30,
+        "S": 30,
+        "T": 30,
+        "I": 40,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 20,
+        "Fel": 20,
+        "W": null
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Disease",
+          "value": "Ratte Fever"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 30,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Sword, Leather Armour, Shield"
+      },
+      "notes": [
+        "The source rolls 1d10 remaining Wounds. Enter the rolled value manually."
+      ],
+      "species": "Skaven"
+    },
+    {
+      "id": "the-horned-rat:creatures:malnourished-night-goblin",
+      "name": "Malnourished Night Goblin",
+      "page": 135,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 135
+      },
+      "category": "Greenskins",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 25,
+        "BS": 35,
+        "S": 30,
+        "T": 30,
+        "I": 20,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 20,
+        "Fel": 20,
+        "W": null
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Dodge",
+          "total": 45
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 35
+        },
+        {
+          "name": "Stealth (Underground)",
+          "total": 45
+        }
+      ],
+      "talents": [
+        {
+          "name": "Enclosed Fighter",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Animosity",
+          "value": "Everything"
+        },
+        {
+          "name": "Afraid",
+          "value": "Elves"
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Sword, Shield."
+      },
+      "notes": [
+        "The source rolls 1d10 remaining Wounds. Enter the rolled value manually.",
+        "Printed Talent for manual review: Tunnel Rat."
+      ],
+      "species": "Goblin"
+    },
+    {
+      "id": "the-horned-rat:creatures:long-haired-white-fancy-rat",
+      "name": "Long-Haired White Fancy Rat",
+      "page": 150,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 150
+      },
+      "category": "Beasts",
+      "example": false,
+      "size": "Small",
+      "stats": {
+        "M": 6,
+        "WS": 35,
+        "BS": null,
+        "S": 24,
+        "T": 30,
+        "I": 52,
+        "Ag": 48,
+        "Dex": null,
+        "Int": 15,
+        "WP": 15,
+        "Fel": null,
+        "W": 6
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Entertain, War"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 35,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "unavailableTraits": [
+        {
+          "name": "Fancy",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Rat"
+    },
+    {
+      "id": "the-horned-rat:creatures:mutated-griffon",
+      "name": "Mutated Griffon",
+      "page": 106,
+      "source": {
+        "book": "the-horned-rat",
+        "page": 106
+      },
+      "category": "Monsters",
+      "example": false,
+      "size": "Enormous",
+      "stats": {
+        "M": 6,
+        "WS": 55,
+        "BS": 45,
+        "S": 50,
+        "T": 50,
+        "I": 45,
+        "Ag": 60,
+        "Dex": null,
+        "Int": 20,
+        "WP": 40,
+        "Fel": null,
+        "W": 66
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bite",
+          "value": "9"
+        },
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Frenzy",
+          "value": "",
+          "adaptation": "Printed Fury uses the core Fifth Edition Frenzy effect."
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Bite (Hooked Beak)",
+          "skill": 55,
+          "damage": 9,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon (Talons)",
+          "skill": 55,
+          "damage": 14,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 9,
+          "adaptation": "Fifth Edition Enormous Size adds 5 to the primary melee attack."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed 66 Wounds already reflect the creature’s severe injury. Razor-tooth tongue has +8 Damage and 10-yard reach. Resolve the ensnaring tongue separately.",
+        "Printed qualifier for Distracting: Horrible Cries."
+      ],
+      "species": "Griffon",
+      "adaptation": "Printed Fury uses the core Fifth Edition Frenzy effect. Fifth Edition Enormous Size adds 5 to the primary melee attack."
+    }
+  ],
+  "templates": [],
+  "training": []
+}

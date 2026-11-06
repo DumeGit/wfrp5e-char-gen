@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "skeleton-crew",
+  "title": "Skeleton Crew",
+  "shortTitle": "Skeleton Crew",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "Skeleton Crew.pdf",
+    "sha256": "eae2822acd0acae8640d74f0e88a9c97eae464cab613a387ad864b7ab6da6e9b"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Reusable profiles and supported templates for the Bestiary Workshop. Named NPCs remain outside the catalogue.",
+      "Core Fifth Edition rules govern. Selective Legacy notes identify mechanical adaptations. Unsupported printed entries remain for manual review."
+    ]
+  },
+  "files": {
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  }
+}

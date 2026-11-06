@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "enemy-in-shadows-companion:feature:bestiary-expansion",
+      "name": "Bestiary profiles and templates",
+      "status": "adapted",
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 22
+      },
+      "reason": "17 reusable profiles and 1 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+    },
+    {
+      "id": "enemy-in-shadows-companion:feature:bestiary-expansion-creature-shapeshifter-template",
+      "name": "Creature shapeshifter template",
+      "status": "deferred",
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 87
+      },
+      "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+    },
+    {
+      "id": "enemy-in-shadows-companion:feature:bestiary-expansion-tzeentchs-fire-group-casting",
+      "name": "Tzeentch’s Fire group casting",
+      "status": "deferred",
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 84
+      },
+      "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+    },
+    {
+      "id": "enemy-in-shadows-companion:feature:bestiary-expansion-purple-hand-cultist",
+      "name": "Purple Hand Cultist",
+      "status": "adapted",
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 76
+      },
+      "reason": "Selectable on core Cultist with the named Skills and Talent. Enter the background and resolve the printed mutation chance manually."
+    }
+  ]
+}

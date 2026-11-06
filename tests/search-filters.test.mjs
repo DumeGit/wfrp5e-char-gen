@@ -75,6 +75,7 @@ test("category filters combine with the book and text query; browsing stays alph
       .filter(
         (p) =>
           p.manifest.kind !== "variant" &&
+          p.data.referenceEntries?.length &&
           !["bayl-many-eyes", "night-parade"].includes(p.manifest.id),
       )
       .map((p) => p.manifest.id)

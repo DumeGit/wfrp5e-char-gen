@@ -8,7 +8,7 @@
     "deferred"
   ],
   "activeCounts": {
-    "books": 20,
+    "books": 35,
     "careers": 140,
     "magicProfiles": 596,
     "rituals": 17,
@@ -25600,7 +25600,7 @@
     {
       "id": "winds-of-magic",
       "title": "Winds of Magic",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 120,
@@ -25611,7 +25611,7 @@
       },
       "featureCounts": {
         "implemented": 1,
-        "adapted": 2,
+        "adapted": 3,
         "reference-only": 1,
         "unavailable": 1,
         "deferred": 3
@@ -30611,6 +30611,16 @@
             "page": 39
           },
           "reason": "Approved min(acquisition WP Bonus, 4) distinct free spells."
+        },
+        {
+          "id": "winds-of-magic:feature:bestiary-expansion",
+          "name": "Bestiary profiles and templates",
+          "status": "adapted",
+          "source": {
+            "book": "winds-of-magic",
+            "page": 174
+          },
+          "reason": "5 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
         },
         {
           "id": "winds-of-magic:feature:campaign",
@@ -38536,7 +38546,7 @@
     {
       "id": "deft-steps",
       "title": "Deft Steps, Light Fingers",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "kind": "supplement",
       "recordCounts": {
         "implemented": 39,
@@ -38547,7 +38557,7 @@
       },
       "featureCounts": {
         "implemented": 1,
-        "adapted": 1,
+        "adapted": 2,
         "reference-only": 0,
         "unavailable": 0,
         "deferred": 2
@@ -41067,6 +41077,16 @@
         }
       ],
       "features": [
+        {
+          "id": "deft-steps:feature:bestiary-expansion",
+          "name": "Bestiary profiles and templates",
+          "status": "adapted",
+          "source": {
+            "book": "deft-steps",
+            "page": 34
+          },
+          "reason": "17 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+        },
         {
           "id": "deft-steps:feature:campaign",
           "name": "Campaign procedures and ongoing play",
@@ -46336,6 +46356,756 @@
             "page": 115
           },
           "reason": "Approved core Size, Sprinter, Frenzy, Die Hard, Tunnel Fighter and Trained conversions; explicit Stealth/Melee/Wind/Venom/Ward choices. No named NPCs."
+        }
+      ]
+    },
+    {
+      "id": "empire-in-ruins",
+      "title": "Empire in Ruins",
+      "version": "1.0.1",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 4,
+        "adapted": 1,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "kinds": {},
+      "records": [],
+      "features": [
+        {
+          "id": "empire-in-ruins:feature:bestiary-expansion",
+          "name": "Bestiary profiles and templates",
+          "status": "adapted",
+          "source": {
+            "book": "empire-in-ruins",
+            "page": 18
+          },
+          "reason": "36 reusable profiles and 5 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+        },
+        {
+          "id": "empire-in-ruins:feature:bestiary-expansion-knight-of-the-fiery-heart",
+          "name": "Knight of the Fiery Heart",
+          "status": "implemented",
+          "source": {
+            "book": "empire-in-ruins",
+            "page": 19
+          },
+          "reason": "Uses the core Sigmar Miracle definitions and the three printed prayers."
+        },
+        {
+          "id": "empire-in-ruins:feature:bestiary-expansion-knight-of-the-white-wolf",
+          "name": "Knight of the White Wolf",
+          "status": "implemented",
+          "source": {
+            "book": "empire-in-ruins",
+            "page": 19
+          },
+          "reason": "Published in the Bestiary with the printed equipment, traits or foundation instructions."
+        },
+        {
+          "id": "empire-in-ruins:feature:bestiary-expansion-minor-noble",
+          "name": "Minor Noble",
+          "status": "implemented",
+          "source": {
+            "book": "empire-in-ruins",
+            "page": 19
+          },
+          "reason": "Published in the Bestiary with the printed equipment, traits or foundation instructions."
+        },
+        {
+          "id": "empire-in-ruins:feature:bestiary-expansion-sigmarite-flagellant",
+          "name": "Sigmarite Flagellant",
+          "status": "implemented",
+          "source": {
+            "book": "empire-in-ruins",
+            "page": 18
+          },
+          "reason": "Published in the Bestiary with the printed equipment, traits or foundation instructions."
+        }
+      ]
+    },
+    {
+      "id": "empire-in-ruins-companion",
+      "title": "Empire in Ruins Companion",
+      "version": "1.0.1",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 1,
+        "adapted": 1,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "kinds": {},
+      "records": [],
+      "features": [
+        {
+          "id": "empire-in-ruins-companion:feature:bestiary-expansion",
+          "name": "Bestiary profiles and templates",
+          "status": "adapted",
+          "source": {
+            "book": "empire-in-ruins-companion",
+            "page": 21
+          },
+          "reason": "26 reusable profiles and 3 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+        },
+        {
+          "id": "empire-in-ruins-companion:feature:bestiary-expansion-animated-sign-or-statue",
+          "name": "Animated Sign or Statue",
+          "status": "implemented",
+          "source": {
+            "book": "empire-in-ruins-companion",
+            "page": 23
+          },
+          "reason": "Published in the Bestiary with the printed equipment, traits or foundation instructions."
+        }
+      ]
+    },
+    {
+      "id": "death-on-the-reik",
+      "title": "Death on the Reik",
+      "version": "1.0.0",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 2,
+        "adapted": 2,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "kinds": {},
+      "records": [],
+      "features": [
+        {
+          "id": "death-on-the-reik:feature:bestiary-expansion",
+          "name": "Bestiary profiles and templates",
+          "status": "adapted",
+          "source": {
+            "book": "death-on-the-reik",
+            "page": 21
+          },
+          "reason": "51 reusable profiles and 1 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+        },
+        {
+          "id": "death-on-the-reik:feature:bestiary-expansion-beaked-mutant",
+          "name": "Beaked Mutant",
+          "status": "implemented",
+          "source": {
+            "book": "death-on-the-reik",
+            "page": 21
+          },
+          "reason": "Published as a fixed variant of River Mutant with its own attacks, Armour, Skills and trappings."
+        },
+        {
+          "id": "death-on-the-reik:feature:bestiary-expansion-furry-mutant",
+          "name": "Furry Mutant",
+          "status": "implemented",
+          "source": {
+            "book": "death-on-the-reik",
+            "page": 21
+          },
+          "reason": "Published as a fixed variant of River Mutant with its own attacks, Armour, Skills and trappings."
+        },
+        {
+          "id": "death-on-the-reik:feature:bestiary-expansion-winged-mutant",
+          "name": "Winged Mutant",
+          "status": "adapted",
+          "source": {
+            "book": "death-on-the-reik",
+            "page": 21
+          },
+          "reason": "Published as a fixed variant of River Mutant with its own attacks, Armour, Skills and trappings."
+        }
+      ]
+    },
+    {
+      "id": "death-on-the-reik-companion",
+      "title": "Death on the Reik Companion",
+      "version": "1.0.1",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 0,
+        "adapted": 2,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 1
+      },
+      "kinds": {},
+      "records": [],
+      "features": [
+        {
+          "id": "death-on-the-reik-companion:feature:bestiary-expansion",
+          "name": "Bestiary profiles and templates",
+          "status": "adapted",
+          "source": {
+            "book": "death-on-the-reik-companion",
+            "page": 85
+          },
+          "reason": "20 reusable profiles and 1 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+        },
+        {
+          "id": "death-on-the-reik-companion:feature:bestiary-expansion-chaos-spawn",
+          "name": "Chaos Spawn",
+          "status": "adapted",
+          "source": {
+            "book": "death-on-the-reik-companion",
+            "page": 97
+          },
+          "reason": "Selectable on Mutant or Gor with the four printed Traits. Roll 2d10 for mutations and resolve the Tzeentch table results manually."
+        },
+        {
+          "id": "death-on-the-reik-companion:feature:bestiary-expansion-transformation-of-the-beast-gor-form",
+          "name": "Transformation of the Beast (Gor form)",
+          "status": "deferred",
+          "source": {
+            "book": "death-on-the-reik-companion",
+            "page": 99
+          },
+          "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+        }
+      ]
+    },
+    {
+      "id": "power-behind-the-throne",
+      "title": "Power Behind the Throne",
+      "version": "1.0.0",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 0,
+        "adapted": 1,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "kinds": {},
+      "records": [],
+      "features": [
+        {
+          "id": "power-behind-the-throne:feature:bestiary-expansion",
+          "name": "Bestiary profiles and templates",
+          "status": "adapted",
+          "source": {
+            "book": "power-behind-the-throne",
+            "page": 28
+          },
+          "reason": "5 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+        }
+      ]
+    },
+    {
+      "id": "enemy-in-shadows",
+      "title": "Enemy in Shadows",
+      "version": "1.0.0",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 0,
+        "adapted": 1,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "kinds": {},
+      "records": [],
+      "features": [
+        {
+          "id": "enemy-in-shadows:feature:bestiary-expansion",
+          "name": "Bestiary profiles and templates",
+          "status": "adapted",
+          "source": {
+            "book": "enemy-in-shadows",
+            "page": 42
+          },
+          "reason": "18 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+        }
+      ]
+    },
+    {
+      "id": "enemy-in-shadows-companion",
+      "title": "Enemy in Shadows Companion",
+      "version": "1.0.1",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 0,
+        "adapted": 2,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 2
+      },
+      "kinds": {},
+      "records": [],
+      "features": [
+        {
+          "id": "enemy-in-shadows-companion:feature:bestiary-expansion",
+          "name": "Bestiary profiles and templates",
+          "status": "adapted",
+          "source": {
+            "book": "enemy-in-shadows-companion",
+            "page": 22
+          },
+          "reason": "17 reusable profiles and 1 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+        },
+        {
+          "id": "enemy-in-shadows-companion:feature:bestiary-expansion-creature-shapeshifter-template",
+          "name": "Creature shapeshifter template",
+          "status": "deferred",
+          "source": {
+            "book": "enemy-in-shadows-companion",
+            "page": 87
+          },
+          "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+        },
+        {
+          "id": "enemy-in-shadows-companion:feature:bestiary-expansion-purple-hand-cultist",
+          "name": "Purple Hand Cultist",
+          "status": "adapted",
+          "source": {
+            "book": "enemy-in-shadows-companion",
+            "page": 76
+          },
+          "reason": "Selectable on core Cultist with the named Skills and Talent. Enter the background and resolve the printed mutation chance manually."
+        },
+        {
+          "id": "enemy-in-shadows-companion:feature:bestiary-expansion-tzeentchs-fire-group-casting",
+          "name": "Tzeentch’s Fire group casting",
+          "status": "deferred",
+          "source": {
+            "book": "enemy-in-shadows-companion",
+            "page": 84
+          },
+          "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+        }
+      ]
+    },
+    {
+      "id": "ubersreik-adventures-iii",
+      "title": "Ubersreik Adventures III",
+      "version": "1.0.0",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 0,
+        "adapted": 1,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 2
+      },
+      "kinds": {},
+      "records": [],
+      "features": [
+        {
+          "id": "ubersreik-adventures-iii:feature:bestiary-expansion",
+          "name": "Bestiary profiles and templates",
+          "status": "adapted",
+          "source": {
+            "book": "ubersreik-adventures-iii",
+            "page": 29
+          },
+          "reason": "10 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+        },
+        {
+          "id": "ubersreik-adventures-iii:feature:bestiary-expansion-acrobat-entertainer-variant",
+          "name": "Acrobat entertainer variant",
+          "status": "deferred",
+          "source": {
+            "book": "ubersreik-adventures-iii",
+            "page": 94
+          },
+          "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+        },
+        {
+          "id": "ubersreik-adventures-iii:feature:bestiary-expansion-forest-goblin-chief",
+          "name": "Forest Goblin Chief",
+          "status": "deferred",
+          "source": {
+            "book": "ubersreik-adventures-iii",
+            "page": 42
+          },
+          "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+        }
+      ]
+    },
+    {
+      "id": "altdorf",
+      "title": "Altdorf: Crown of the Empire",
+      "version": "1.0.0",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 0,
+        "adapted": 1,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "kinds": {},
+      "records": [],
+      "features": [
+        {
+          "id": "altdorf:feature:bestiary-expansion",
+          "name": "Bestiary profiles and templates",
+          "status": "adapted",
+          "source": {
+            "book": "altdorf",
+            "page": 104
+          },
+          "reason": "3 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+        }
+      ]
+    },
+    {
+      "id": "ubersreik-adventures-i",
+      "title": "Ubersreik Adventures",
+      "version": "1.0.0",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 0,
+        "adapted": 1,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "kinds": {},
+      "records": [],
+      "features": [
+        {
+          "id": "ubersreik-adventures-i:feature:bestiary-expansion",
+          "name": "Bestiary profiles and templates",
+          "status": "adapted",
+          "source": {
+            "book": "ubersreik-adventures-i",
+            "page": 34
+          },
+          "reason": "12 reusable profiles and 1 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+        }
+      ]
+    },
+    {
+      "id": "the-horned-rat",
+      "title": "The Horned Rat",
+      "version": "1.0.0",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 0,
+        "adapted": 1,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "kinds": {},
+      "records": [],
+      "features": [
+        {
+          "id": "the-horned-rat:feature:bestiary-expansion",
+          "name": "Bestiary profiles and templates",
+          "status": "adapted",
+          "source": {
+            "book": "the-horned-rat",
+            "page": 7
+          },
+          "reason": "31 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+        }
+      ]
+    },
+    {
+      "id": "the-horned-rat-companion",
+      "title": "The Horned Rat Companion",
+      "version": "1.0.1",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 1,
+        "adapted": 1,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 8
+      },
+      "kinds": {},
+      "records": [],
+      "features": [
+        {
+          "id": "the-horned-rat-companion:feature:bestiary-expansion",
+          "name": "Bestiary profiles and templates",
+          "status": "adapted",
+          "source": {
+            "book": "the-horned-rat-companion",
+            "page": 14
+          },
+          "reason": "20 reusable profiles and 1 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+        },
+        {
+          "id": "the-horned-rat-companion:feature:bestiary-expansion-brood-horror-variants",
+          "name": "Brood Horror variants",
+          "status": "deferred",
+          "source": {
+            "book": "the-horned-rat-companion",
+            "page": 51
+          },
+          "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+        },
+        {
+          "id": "the-horned-rat-companion:feature:bestiary-expansion-carrion-variant",
+          "name": "Carrion variant",
+          "status": "deferred",
+          "source": {
+            "book": "the-horned-rat-companion",
+            "page": 120
+          },
+          "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+        },
+        {
+          "id": "the-horned-rat-companion:feature:bestiary-expansion-cliff-spider-variants",
+          "name": "Cliff Spider variants",
+          "status": "deferred",
+          "source": {
+            "book": "the-horned-rat-companion",
+            "page": 73
+          },
+          "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+        },
+        {
+          "id": "the-horned-rat-companion:feature:bestiary-expansion-great-eagle-variants",
+          "name": "Great Eagle variants",
+          "status": "deferred",
+          "source": {
+            "book": "the-horned-rat-companion",
+            "page": 73
+          },
+          "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+        },
+        {
+          "id": "the-horned-rat-companion:feature:bestiary-expansion-mountain-cat-variants",
+          "name": "Mountain Cat variants",
+          "status": "deferred",
+          "source": {
+            "book": "the-horned-rat-companion",
+            "page": 73
+          },
+          "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+        },
+        {
+          "id": "the-horned-rat-companion:feature:bestiary-expansion-plague-rat-variants",
+          "name": "Plague Rat variants",
+          "status": "deferred",
+          "source": {
+            "book": "the-horned-rat-companion",
+            "page": 50
+          },
+          "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+        },
+        {
+          "id": "the-horned-rat-companion:feature:bestiary-expansion-wolf-rat-variants",
+          "name": "Wolf Rat variants",
+          "status": "deferred",
+          "source": {
+            "book": "the-horned-rat-companion",
+            "page": 50
+          },
+          "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+        },
+        {
+          "id": "the-horned-rat-companion:feature:bestiary-expansion-yellow-fang-junior-cultist",
+          "name": "Yellow Fang junior cultist",
+          "status": "implemented",
+          "source": {
+            "book": "the-horned-rat-companion",
+            "page": 62
+          },
+          "reason": "Published in the Bestiary with the printed equipment, traits or foundation instructions."
+        },
+        {
+          "id": "the-horned-rat-companion:feature:bestiary-expansion-yellow-fang-senior-cultist",
+          "name": "Yellow Fang senior cultist",
+          "status": "deferred",
+          "source": {
+            "book": "the-horned-rat-companion",
+            "page": 63
+          },
+          "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+        }
+      ]
+    },
+    {
+      "id": "hell-rides-to-hallt",
+      "title": "Hell Rides to Hallt",
+      "version": "1.0.0",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 1,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "kinds": {},
+      "records": [],
+      "features": [
+        {
+          "id": "hell-rides-to-hallt:feature:bestiary-expansion",
+          "name": "Bestiary profiles and templates",
+          "status": "implemented",
+          "source": {
+            "book": "hell-rides-to-hallt",
+            "page": 22
+          },
+          "reason": "1 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+        }
+      ]
+    },
+    {
+      "id": "skeleton-crew",
+      "title": "Skeleton Crew",
+      "version": "1.0.0",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 0,
+        "adapted": 1,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "kinds": {},
+      "records": [],
+      "features": [
+        {
+          "id": "skeleton-crew:feature:bestiary-expansion",
+          "name": "Bestiary profiles and templates",
+          "status": "adapted",
+          "source": {
+            "book": "skeleton-crew",
+            "page": 16
+          },
+          "reason": "1 reusable profiles and 0 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+        }
+      ]
+    },
+    {
+      "id": "emperors-wrath",
+      "title": "The Emperor’s Wrath",
+      "version": "1.0.0",
+      "kind": "supplement",
+      "recordCounts": {
+        "implemented": 0,
+        "adapted": 0,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "featureCounts": {
+        "implemented": 0,
+        "adapted": 1,
+        "reference-only": 0,
+        "unavailable": 0,
+        "deferred": 0
+      },
+      "kinds": {},
+      "records": [],
+      "features": [
+        {
+          "id": "emperors-wrath:feature:bestiary-expansion",
+          "name": "Bestiary profiles and templates",
+          "status": "adapted",
+          "source": {
+            "book": "emperors-wrath",
+            "page": 15
+          },
+          "reason": "3 reusable profiles and 1 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
         }
       ]
     }

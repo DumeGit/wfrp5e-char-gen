@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "records": [],
+  "features": [
+    {
+      "id": "death-on-the-reik-companion:feature:bestiary-expansion",
+      "name": "Bestiary profiles and templates",
+      "status": "adapted",
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 85
+      },
+      "reason": "20 reusable profiles and 1 supported templates. Named campaign characters are excluded. Printed entries requiring conversion remain documented for manual review."
+    },
+    {
+      "id": "death-on-the-reik-companion:feature:bestiary-expansion-chaos-spawn",
+      "name": "Chaos Spawn",
+      "status": "adapted",
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 97
+      },
+      "reason": "Selectable on Mutant or Gor with the four printed Traits. Roll 2d10 for mutations and resolve the Tzeentch table results manually."
+    },
+    {
+      "id": "death-on-the-reik-companion:feature:bestiary-expansion-transformation-of-the-beast-gor-form",
+      "name": "Transformation of the Beast (Gor form)",
+      "status": "deferred",
+      "source": {
+        "book": "death-on-the-reik-companion",
+        "page": 99
+      },
+      "reason": "Printed package needs an explicit compatibility decision, equipment/attack handling, or foundation eligibility before it can be applied automatically."
+    }
+  ]
+}

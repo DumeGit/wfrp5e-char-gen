@@ -1702,7 +1702,9 @@ export function calculateGM(data, R, s) {
   ) {
     for (const loc of Object.keys(ap)) ap[loc] += template.armour;
     armour.push({
-      name: template.replaceArmour ? "Troll protection" : "Skeletal protection",
+      name:
+        template.armourName ||
+        (template.replaceArmour ? "Troll protection" : "Skeletal protection"),
       ap: template.armour,
       locations: Object.keys(ap).join(", "),
       key: templateRowKey(template, "armour", 0),

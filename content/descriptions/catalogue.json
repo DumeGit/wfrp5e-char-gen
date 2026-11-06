@@ -20601,6 +20601,266 @@
       },
       "status": "reviewed",
       "text": "Roll twice more. Further Legendary results can produce at most 5 distinct abilities; duplicate abilities are not cumulative."
+    },
+    "description:60dff8c5267943117743bc8d": {
+      "name": "Ranged (Bow)",
+      "source": {
+        "book": "empire-in-ruins-companion",
+        "page": 84
+      },
+      "status": "reviewed",
+      "text": "Range 50 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:5791e6d594498126d60b7d5e": {
+      "name": "Ranged (Crossbow)",
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 18
+      },
+      "status": "reviewed",
+      "text": "Range 60 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:6e2942b5267963796952d755": {
+      "name": "Ranged (Crossbow)",
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 19
+      },
+      "status": "reviewed",
+      "text": "Range 60 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:2b8a4b2e0a886ecd27e33576": {
+      "name": "Ranged (Pistol)",
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 19
+      },
+      "status": "reviewed",
+      "text": "Range 20 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:cdeb29d01d54e757acca62c9": {
+      "name": "Ranged (Shortbow)",
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 143
+      },
+      "status": "reviewed",
+      "text": "Range 20 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:696a070ea0e4930bb8631e56": {
+      "name": "Ranged (Bow or Sling)",
+      "source": {
+        "book": "empire-in-ruins",
+        "page": 175
+      },
+      "status": "reviewed",
+      "text": "Range 25 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:5ed9870079c71ac94ec50813": {
+      "name": "Ranged (Bow)",
+      "source": {
+        "book": "deft-steps",
+        "page": 103
+      },
+      "status": "reviewed",
+      "text": "Range 50 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:d0a46653ed22ad235a27ef0c": {
+      "name": "Ranged (Bow)",
+      "source": {
+        "book": "deft-steps",
+        "page": 103
+      },
+      "status": "reviewed",
+      "text": "Range 50 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:3b15cdc106bb63a4fd1cb49b": {
+      "name": "Ranged (Crossbow)",
+      "source": {
+        "book": "deft-steps",
+        "page": 108
+      },
+      "status": "reviewed",
+      "text": "Range 60 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:2762e97fc34cff650ad46932": {
+      "name": "Ranged (Pistol)",
+      "source": {
+        "book": "emperors-wrath",
+        "page": 19
+      },
+      "status": "reviewed",
+      "text": "Range 20 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:fe72c6a538b95c9fd20b9d08": {
+      "name": "Ranged (Crossbow)",
+      "source": {
+        "book": "emperors-wrath",
+        "page": 19
+      },
+      "status": "reviewed",
+      "text": "Range 60 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:8123662e892a00b2e321acfd": {
+      "name": "Ranged (Bow)",
+      "source": {
+        "book": "enemy-in-shadows-companion",
+        "page": 99
+      },
+      "status": "reviewed",
+      "text": "Range 60 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:355871d8128350cb4c026947": {
+      "name": "Ranged",
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 69
+      },
+      "status": "reviewed",
+      "text": "Range 10 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:9db85f3cb661bf693b52d8d6": {
+      "name": "Ranged",
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 69
+      },
+      "status": "reviewed",
+      "text": "Range 60 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:d31cc58d890bd7a9651ca3bc": {
+      "name": "Ranged",
+      "source": {
+        "book": "enemy-in-shadows",
+        "page": 69
+      },
+      "status": "reviewed",
+      "text": "Range 50 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:0a344fc5cb9ea5edd9cde834": {
+      "name": "Ranged (Warpstone Star)",
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 18
+      },
+      "status": "reviewed",
+      "text": "Range 8 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:0fed753c7adc527d178e2347": {
+      "name": "Ranged (Death Globe)",
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 18
+      },
+      "status": "reviewed",
+      "text": "Range 8 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:fcb81298f39f313a732955df": {
+      "name": "Ranged (Warplock Pistol)",
+      "source": {
+        "book": "the-horned-rat",
+        "page": 7
+      },
+      "status": "reviewed",
+      "text": "Range 30 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:228859f159de779092cb19f4": {
+      "name": "Ranged (Warplock Pistol)",
+      "source": {
+        "book": "the-horned-rat",
+        "page": 7
+      },
+      "status": "reviewed",
+      "text": "Range 30 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:16d0da8867a3386e438b907c": {
+      "name": "Ranged (Crossbow)",
+      "source": {
+        "book": "the-horned-rat",
+        "page": 9
+      },
+      "status": "reviewed",
+      "text": "Range 60 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:7fbf2a26573aef16b62969f9": {
+      "name": "Ranged (Crossbow)",
+      "source": {
+        "book": "the-horned-rat",
+        "page": 9
+      },
+      "status": "reviewed",
+      "text": "Range 60 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:7a7609eb5d7e859ed5296afd": {
+      "name": "Ranged (Pistol)",
+      "source": {
+        "book": "the-horned-rat",
+        "page": 89
+      },
+      "status": "reviewed",
+      "text": "Range 20 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:adac85f67d911f2c98995cdf": {
+      "name": "Ranged (Crossbow)",
+      "source": {
+        "book": "the-horned-rat",
+        "page": 123
+      },
+      "status": "reviewed",
+      "text": "Range 60 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:495c324c5b2b7e422dca3ad7": {
+      "name": "Ranged (Bow)",
+      "source": {
+        "book": "ubersreik-adventures-i",
+        "page": 77
+      },
+      "status": "reviewed",
+      "text": "Range 50 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:bdb0c14ada32d3d25b4fb408": {
+      "name": "Ranged",
+      "source": {
+        "book": "ubersreik-adventures-i",
+        "page": 78
+      },
+      "status": "reviewed",
+      "text": "Range 50 yards.",
+      "reviewType": "structured-data"
+    },
+    "description:d77e6e0d30b97d1afc2e872f": {
+      "name": "Ranged",
+      "source": {
+        "book": "ubersreik-adventures-i",
+        "page": 121
+      },
+      "status": "reviewed",
+      "text": "Range 25 yards.",
+      "reviewType": "structured-data"
     }
   },
   "bindings": {
@@ -29979,6 +30239,110 @@
     "data/books/archives-ii/weapon-effects.json#/effects/archives-ii%3Aweapon-effect%3Alegendary-weapon": {
       "id": "description:906804e39acf3f1c7d89dd1e",
       "sourceHash": "044a8372c9a950820afb86efa3fe5769a3046f4db3a07c0c6070b9ba5f36b9ea"
+    },
+    "gm/books/empire-in-ruins-companion.json#/profiles/empire-in-ruins-companion%3Acreatures%3Aungor-of-the-red-crown/attacks/Ranged%20(Bow)%7C%7C": {
+      "id": "description:60dff8c5267943117743bc8d",
+      "sourceHash": "c84151cef5c1e3ee6f9bbbf257715e3d4e76af6809f8ee7ab268e9537f60590d"
+    },
+    "gm/books/empire-in-ruins.json#/profiles/empire-in-ruins%3Acreatures%3Apurple-hand-cultist/attacks/Ranged%20(Crossbow)%7C%7C": {
+      "id": "description:5791e6d594498126d60b7d5e",
+      "sourceHash": "da707fba0bbabea982621f7f9b13bc470d05eed15aebf2ea4bff36130ef05499"
+    },
+    "gm/books/empire-in-ruins.json#/profiles/empire-in-ruins%3Acreatures%3Asoldier/attacks/Ranged%20(Crossbow)%7C%7C": {
+      "id": "description:6e2942b5267963796952d755",
+      "sourceHash": "da707fba0bbabea982621f7f9b13bc470d05eed15aebf2ea4bff36130ef05499"
+    },
+    "gm/books/empire-in-ruins.json#/profiles/empire-in-ruins%3Acreatures%3Asergeant/attacks/Ranged%20(Pistol)%7C%7C": {
+      "id": "description:2b8a4b2e0a886ecd27e33576",
+      "sourceHash": "32fbbadc6ed6723b2cc962aa897ff9a218cd3958f6aa2ec6f7acb67a5d611d37"
+    },
+    "gm/books/empire-in-ruins.json#/profiles/empire-in-ruins%3Acreatures%3Amadcraw-night-goblin/attacks/Ranged%20(Shortbow)%7C%7C": {
+      "id": "description:cdeb29d01d54e757acca62c9",
+      "sourceHash": "32fbbadc6ed6723b2cc962aa897ff9a218cd3958f6aa2ec6f7acb67a5d611d37"
+    },
+    "gm/books/empire-in-ruins.json#/profiles/empire-in-ruins%3Acreatures%3Adrexol-horde-ungor/attacks/Ranged%20(Bow%20or%20Sling)%7C%7C": {
+      "id": "description:696a070ea0e4930bb8631e56",
+      "sourceHash": "e08ca413f14aac93639b6dde45407f6d5888146aefdd0378fc18f5159ab5cfac"
+    },
+    "gm/books/deft-steps.json#/profiles/deft-steps%3Acreatures%3Aoutlaw/attacks/Ranged%20(Bow)%7C%7C": {
+      "id": "description:5ed9870079c71ac94ec50813",
+      "sourceHash": "c84151cef5c1e3ee6f9bbbf257715e3d4e76af6809f8ee7ab268e9537f60590d"
+    },
+    "gm/books/deft-steps.json#/profiles/deft-steps%3Acreatures%3Aoutlaw-chief/attacks/Ranged%20(Bow)%7C%7C": {
+      "id": "description:d0a46653ed22ad235a27ef0c",
+      "sourceHash": "c84151cef5c1e3ee6f9bbbf257715e3d4e76af6809f8ee7ab268e9537f60590d"
+    },
+    "gm/books/deft-steps.json#/profiles/deft-steps%3Acreatures%3Atypical-bounty-hunter/attacks/Ranged%20(Crossbow)%7C%7C": {
+      "id": "description:3b15cdc106bb63a4fd1cb49b",
+      "sourceHash": "da707fba0bbabea982621f7f9b13bc470d05eed15aebf2ea4bff36130ef05499"
+    },
+    "gm/books/emperors-wrath.json#/profiles/emperors-wrath%3Acreatures%3Amercenaries-silver-3/attacks/Ranged%20(Pistol)%7C%7C": {
+      "id": "description:2762e97fc34cff650ad46932",
+      "sourceHash": "32fbbadc6ed6723b2cc962aa897ff9a218cd3958f6aa2ec6f7acb67a5d611d37"
+    },
+    "gm/books/emperors-wrath.json#/profiles/emperors-wrath%3Acreatures%3Amercenaries-silver-3/attacks/Ranged%20(Crossbow)%7C%7C": {
+      "id": "description:fe72c6a538b95c9fd20b9d08",
+      "sourceHash": "da707fba0bbabea982621f7f9b13bc470d05eed15aebf2ea4bff36130ef05499"
+    },
+    "gm/books/enemy-in-shadows-companion.json#/profiles/enemy-in-shadows-companion%3Acreatures%3Ablack-arrow-outlaw/attacks/Ranged%20(Bow)%7C%7C": {
+      "id": "description:8123662e892a00b2e321acfd",
+      "sourceHash": "da707fba0bbabea982621f7f9b13bc470d05eed15aebf2ea4bff36130ef05499"
+    },
+    "gm/books/enemy-in-shadows.json#/profiles/enemy-in-shadows%3Acreatures%3Arogues/attacks/Ranged%7C%7C": {
+      "id": "description:355871d8128350cb4c026947",
+      "sourceHash": "4815507080a7437cadcbf6dc45d9cb2725e5c3df64e0ae38158acc8b7c445a20"
+    },
+    "gm/books/enemy-in-shadows.json#/profiles/enemy-in-shadows%3Acreatures%3Awarriors/attacks/Ranged%7C%7C": {
+      "id": "description:9db85f3cb661bf693b52d8d6",
+      "sourceHash": "da707fba0bbabea982621f7f9b13bc470d05eed15aebf2ea4bff36130ef05499"
+    },
+    "gm/books/enemy-in-shadows.json#/profiles/enemy-in-shadows%3Acreatures%3Apeasants/attacks/Ranged%7C%7C": {
+      "id": "description:d31cc58d890bd7a9651ca3bc",
+      "sourceHash": "c84151cef5c1e3ee6f9bbbf257715e3d4e76af6809f8ee7ab268e9537f60590d"
+    },
+    "gm/books/the-horned-rat-companion.json#/profiles/the-horned-rat-companion%3Acreatures%3Aclan-eshin-infiltrator/attacks/Ranged%20(Warpstone%20Star)%7C%7C": {
+      "id": "description:0a344fc5cb9ea5edd9cde834",
+      "sourceHash": "4acf9e742167f1dada0d105c94d30d61d68a3307e08efe05100fdf000648bd2b"
+    },
+    "gm/books/the-horned-rat-companion.json#/profiles/the-horned-rat-companion%3Acreatures%3Aclan-eshin-infiltrator/attacks/Ranged%20(Death%20Globe)%7C%7C": {
+      "id": "description:0fed753c7adc527d178e2347",
+      "sourceHash": "4acf9e742167f1dada0d105c94d30d61d68a3307e08efe05100fdf000648bd2b"
+    },
+    "gm/books/the-horned-rat.json#/profiles/the-horned-rat%3Acreatures%3Astormvermin-fangleader/attacks/Ranged%20(Warplock%20Pistol)%7C%7C": {
+      "id": "description:fcb81298f39f313a732955df",
+      "sourceHash": "92faa16fd55131e8b4769882a2b0c7fe3d862d9a182421ff309cd01c35c861bf"
+    },
+    "gm/books/the-horned-rat.json#/profiles/the-horned-rat%3Acreatures%3Achieftain/attacks/Ranged%20(Warplock%20Pistol)%7C%7C": {
+      "id": "description:228859f159de779092cb19f4",
+      "sourceHash": "92faa16fd55131e8b4769882a2b0c7fe3d862d9a182421ff309cd01c35c861bf"
+    },
+    "gm/books/the-horned-rat.json#/profiles/the-horned-rat%3Acreatures%3Athug/attacks/Ranged%20(Crossbow)%7C%7C": {
+      "id": "description:16d0da8867a3386e438b907c",
+      "sourceHash": "da707fba0bbabea982621f7f9b13bc470d05eed15aebf2ea4bff36130ef05499"
+    },
+    "gm/books/the-horned-rat.json#/profiles/the-horned-rat%3Acreatures%3Apurple-hand-cultist/attacks/Ranged%20(Crossbow)%7C%7C": {
+      "id": "description:7fbf2a26573aef16b62969f9",
+      "sourceHash": "da707fba0bbabea982621f7f9b13bc470d05eed15aebf2ea4bff36130ef05499"
+    },
+    "gm/books/the-horned-rat.json#/profiles/the-horned-rat%3Acreatures%3Ascourge-rider/attacks/Ranged%20(Pistol)%7C%7C": {
+      "id": "description:7a7609eb5d7e859ed5296afd",
+      "sourceHash": "32fbbadc6ed6723b2cc962aa897ff9a218cd3958f6aa2ec6f7acb67a5d611d37"
+    },
+    "gm/books/the-horned-rat.json#/profiles/the-horned-rat%3Acreatures%3Agarrison-soldier/attacks/Ranged%20(Crossbow)%7C%7C": {
+      "id": "description:adac85f67d911f2c98995cdf",
+      "sourceHash": "da707fba0bbabea982621f7f9b13bc470d05eed15aebf2ea4bff36130ef05499"
+    },
+    "gm/books/ubersreik-adventures-i.json#/profiles/ubersreik-adventures-i%3Acreatures%3Aunmarred-flesh-cultists-pugilists/attacks/Ranged%20(Bow)%7C%7C": {
+      "id": "description:495c324c5b2b7e422dca3ad7",
+      "sourceHash": "c84151cef5c1e3ee6f9bbbf257715e3d4e76af6809f8ee7ab268e9537f60590d"
+    },
+    "gm/books/ubersreik-adventures-i.json#/profiles/ubersreik-adventures-i%3Acreatures%3Aundead-orc/attacks/Ranged%7C%7C": {
+      "id": "description:bdb0c14ada32d3d25b4fb408",
+      "sourceHash": "c84151cef5c1e3ee6f9bbbf257715e3d4e76af6809f8ee7ab268e9537f60590d"
+    },
+    "gm/books/ubersreik-adventures-i.json#/profiles/ubersreik-adventures-i%3Acreatures%3Aungor-raiders/attacks/Ranged%7C%7C": {
+      "id": "description:d77e6e0d30b97d1afc2e872f",
+      "sourceHash": "e08ca413f14aac93639b6dde45407f6d5888146aefdd0378fc18f5159ab5cfac"
     }
   },
   "excludedReferences": {

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "ubersreik-adventures-i",
+  "title": "Ubersreik Adventures",
+  "shortTitle": "Ubersreik Adventures",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "Ubersreik Adventures.pdf",
+    "sha256": "98eb45b7fde1c63989753b09a339e52c9bbafc079d8dc4597cbd0d425d26d6af"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Reusable profiles and supported templates for the Bestiary Workshop. Named NPCs remain outside the catalogue.",
+      "Core Fifth Edition rules govern. Selective Legacy notes identify mechanical adaptations. Unsupported printed entries remain for manual review."
+    ]
+  },
+  "files": {
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  }
+}

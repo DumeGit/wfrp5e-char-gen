@@ -29514,6 +29514,2092 @@
           "reason": "No flavour-only rules results or named NPCs."
         }
       ]
+    },
+    "empire-in-ruins": {
+      "sourceHash": "69cd659ecfd1406e395ee17eb8e0ee6fc0804cb86c5d0f13b3c4d9d7503955fa",
+      "publishedSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entries": 0,
+      "areas": [
+        {
+          "first": 18,
+          "last": 192,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "records": [
+        {
+          "id": "empire-in-ruins:creatures:purple-hand-cultist",
+          "name": "Purple Hand Cultist",
+          "page": 18,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:religious-fanatic",
+          "name": "Religious Fanatic",
+          "page": 18,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:peasant",
+          "name": "Peasant",
+          "page": 18,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:servant",
+          "name": "Servant",
+          "page": 18,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:senior-servant",
+          "name": "Senior Servant",
+          "page": 18,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:knight",
+          "name": "Knight",
+          "page": 19,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:knight-preceptor",
+          "name": "Knight Preceptor",
+          "page": 19,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:soldier",
+          "name": "Soldier",
+          "page": 19,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:sergeant",
+          "name": "Sergeant",
+          "page": 19,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:great-eagle",
+          "name": "Great Eagle",
+          "page": 41,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:drunken-heraldic-pig",
+          "name": "Drunken Heraldic Pig",
+          "page": 81,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:madcraw-shaman",
+          "name": "Madcraw Shaman",
+          "page": 143,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:madcraw-skargobbo",
+          "name": "Madcraw Skargobbo",
+          "page": 143,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:madcraw-night-goblin",
+          "name": "Madcraw Night Goblin",
+          "page": 143,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:madcraw-loonie",
+          "name": "Madcraw Loonie",
+          "page": 144,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:madcraw-runt",
+          "name": "Madcraw Runt",
+          "page": 144,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:madcraw-snotling",
+          "name": "Madcraw Snotling",
+          "page": 144,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:three-headed-chaos-hound",
+          "name": "Three-Headed Chaos Hound",
+          "page": 149,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:caves-of-chaos-ghost",
+          "name": "Caves of Chaos Ghost",
+          "page": 151,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:treacherous-herald",
+          "name": "Treacherous Herald",
+          "page": 152,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:swarm-of-rainbow-snakes",
+          "name": "Swarm of Rainbow Snakes",
+          "page": 153,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:caves-of-chaos-zombie",
+          "name": "Caves of Chaos Zombie",
+          "page": 155,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:pink-horror",
+          "name": "Pink Horror",
+          "page": 156,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:blue-horror",
+          "name": "Blue Horror",
+          "page": 156,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:chaos-minotaur-lord",
+          "name": "Chaos Minotaur Lord",
+          "page": 157,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:fox-head-beastman",
+          "name": "Fox-Head Beastman",
+          "page": 170,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:drexol-horde-gor",
+          "name": "Drexol Horde Gor",
+          "page": 175,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:drexol-horde-ungor",
+          "name": "Drexol Horde Ungor",
+          "page": 175,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:drexol-horde-mutant",
+          "name": "Drexol Horde Mutant",
+          "page": 175,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:spionwerber-agent",
+          "name": "Spionwerber Agent",
+          "page": 180,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:false-honor-guard",
+          "name": "False Honor Guard",
+          "page": 187,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:loyal-cultist",
+          "name": "Loyal Cultist",
+          "page": 192,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:templates:son-of-ulric",
+          "name": "Son of Ulric",
+          "page": 18,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:templates:knight-panther",
+          "name": "Knight Panther",
+          "page": 19,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:templates:reiksguard-knight",
+          "name": "Reiksguard Knight",
+          "page": 19,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:templates:guard-or-watchman",
+          "name": "Guard or Watchman",
+          "page": 19,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:templates:knight-of-the-fiery-heart",
+          "name": "Knight of the Fiery Heart",
+          "page": 19,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:sigmarite-flagellant",
+          "name": "Sigmarite Flagellant",
+          "page": 18,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:knight-of-the-white-wolf",
+          "name": "Knight of the White Wolf",
+          "page": 19,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:minor-noble",
+          "name": "Minor Noble",
+          "page": 19,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins:creatures:harpy",
+          "name": "Harpy",
+          "page": 158,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        }
+      ]
+    },
+    "empire-in-ruins-companion": {
+      "sourceHash": "895bc9031060772e97598cbf30ca75e92f2762eaf77eef26e10ff567522fd841",
+      "publishedSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entries": 0,
+      "areas": [
+        {
+          "first": 21,
+          "last": 118,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "records": [
+        {
+          "id": "empire-in-ruins-companion:creatures:flamer-of-tzeentch",
+          "name": "Flamer of Tzeentch",
+          "page": 21,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:agitator",
+          "name": "Agitator",
+          "page": 22,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:murderous-altdorfer",
+          "name": "Murderous Altdorfer",
+          "page": 22,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:animated-coach",
+          "name": "Animated Coach",
+          "page": 24,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:animated-furniture-large",
+          "name": "Animated Furniture, Large",
+          "page": 24,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:animated-furniture-medium",
+          "name": "Animated Furniture, Medium",
+          "page": 24,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:animated-furniture-small",
+          "name": "Animated Furniture, Small",
+          "page": 24,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:cow-carcass",
+          "name": "Cow Carcass",
+          "page": 25,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:pig-carcass",
+          "name": "Pig Carcass",
+          "page": 25,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:sheep-carcass",
+          "name": "Sheep Carcass",
+          "page": 25,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:the-green-racket",
+          "name": "The Green Racket",
+          "page": 32,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:doom-diver",
+          "name": "Doom Diver",
+          "page": 32,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:imperial-ostlander-soldier",
+          "name": "Imperial Ostlander Soldier",
+          "page": 42,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:vanguard-soldier",
+          "name": "Vanguard Soldier",
+          "page": 42,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:mourngul",
+          "name": "Mourngul",
+          "page": 61,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:curs-d-ettin",
+          "name": "Curs'd Ettin",
+          "page": 62,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:colossal-squig",
+          "name": "Colossal Squig",
+          "page": 63,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:necrofex-colossus",
+          "name": "Necrofex Colossus",
+          "page": 64,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:kenselheim-guard",
+          "name": "Kenselheim Guard",
+          "page": 79,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:kenselheim-guard-sergeant",
+          "name": "Kenselheim Guard Sergeant",
+          "page": 79,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:gor-of-the-red-crown",
+          "name": "Gor of the Red Crown",
+          "page": 84,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:ungor-of-the-red-crown",
+          "name": "Ungor of the Red Crown",
+          "page": 84,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:flying-death-skull",
+          "name": "Flying Death Skull",
+          "page": 118,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:hexwraith",
+          "name": "Hexwraith",
+          "page": 118,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:winged-nightmare",
+          "name": "Winged Nightmare",
+          "page": 118,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:creatures:the-gravelord-s-zombie",
+          "name": "The Gravelord's Zombie",
+          "page": 118,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:templates:animated-sign",
+          "name": "Animated Sign",
+          "page": 23,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:templates:animated-metal-statue",
+          "name": "Animated Metal Statue",
+          "page": 23,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "empire-in-ruins-companion:templates:animated-stone-statue",
+          "name": "Animated Stone Statue",
+          "page": 23,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        }
+      ]
+    },
+    "death-on-the-reik": {
+      "sourceHash": "56bab75cfbe76c1f0ec6e6a7a535da482fdc3286b57620e1d402103b0df17aa6",
+      "publishedSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entries": 0,
+      "areas": [
+        {
+          "first": 21,
+          "last": 123,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "records": [
+        {
+          "id": "death-on-the-reik:creatures:tentacled-mutant",
+          "name": "Tentacled Mutant",
+          "page": 21,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:river-mutant",
+          "name": "River Mutant",
+          "page": 21,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:kidnapper",
+          "name": "Kidnapper",
+          "page": 22,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:river-patrol-captain",
+          "name": "River Patrol Captain",
+          "page": 23,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:river-patrol-crew",
+          "name": "River Patrol Crew",
+          "page": 23,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:purple-hand-cultist",
+          "name": "Purple Hand Cultist",
+          "page": 23,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:dwarf-engineer",
+          "name": "Dwarf Engineer",
+          "page": 37,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:signal-tower-zombie",
+          "name": "Signal Tower Zombie",
+          "page": 37,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:ghoul-champion",
+          "name": "Ghoul Champion",
+          "page": 37,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:twisted-maw-goblin",
+          "name": "Twisted Maw Goblin",
+          "page": 47,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:great-wolf",
+          "name": "Great Wolf",
+          "page": 47,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:watch-sergeant",
+          "name": "Watch Sergeant",
+          "page": 52,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:watch-recruit",
+          "name": "Watch Recruit",
+          "page": 52,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:grissenwald-villager",
+          "name": "Grissenwald Villager",
+          "page": 52,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:dwarf-miner",
+          "name": "Dwarf Miner",
+          "page": 53,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:clanrat-warrior",
+          "name": "Clanrat Warrior",
+          "page": 60,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:barren-hills-skeleton",
+          "name": "Barren Hills Skeleton",
+          "page": 63,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:chaotic-corpse",
+          "name": "Chaotic Corpse",
+          "page": 75,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:bestial-horde-gor",
+          "name": "Bestial Horde Gor",
+          "page": 80,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:pig-headed-mutant",
+          "name": "Pig-Headed Mutant",
+          "page": 80,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:goat-mutant",
+          "name": "Goat Mutant",
+          "page": 80,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:emaciated-mutant",
+          "name": "Emaciated Mutant",
+          "page": 80,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:big-eared-mutant",
+          "name": "Big-Eared Mutant",
+          "page": 80,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:green-furred-mutant",
+          "name": "Green-Furred Mutant",
+          "page": 80,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:three-eyed-mutant",
+          "name": "Three-Eyed Mutant",
+          "page": 80,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:wittgendorf-beggar",
+          "name": "Wittgendorf Beggar",
+          "page": 81,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:wittgendorf-outlaw",
+          "name": "Wittgendorf Outlaw",
+          "page": 83,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:lashworm",
+          "name": "Lashworm",
+          "page": 88,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:monstrous-leech",
+          "name": "Monstrous Leech",
+          "page": 89,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:corrosive-giant-rat",
+          "name": "Corrosive Giant Rat",
+          "page": 89,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:warpstone-giant-bat",
+          "name": "Warpstone Giant Bat",
+          "page": 89,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:wittgenstein-castle-servant",
+          "name": "Wittgenstein Castle Servant",
+          "page": 96,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:wittgenstein-rat-swarm",
+          "name": "Wittgenstein Rat Swarm",
+          "page": 96,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:wittgenstein-tower-skeleton",
+          "name": "Wittgenstein Tower Skeleton",
+          "page": 98,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:birdfolk",
+          "name": "Birdfolk",
+          "page": 100,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:grasping-vine",
+          "name": "Grasping Vine",
+          "page": 101,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:grasping-vine-maw",
+          "name": "Grasping Vine Maw",
+          "page": 101,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:thing-in-the-pit",
+          "name": "Thing in the Pit",
+          "page": 102,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:lesser-daemon-of-slaanesh",
+          "name": "Lesser Daemon of Slaanesh",
+          "page": 106,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:chaotic-organ-tentacle",
+          "name": "Chaotic Organ Tentacle",
+          "page": 107,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:chaotic-organ",
+          "name": "Chaotic Organ",
+          "page": 107,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:mutant-bee-swarm",
+          "name": "Mutant Bee Swarm",
+          "page": 108,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:mutant-cat-swarm",
+          "name": "Mutant Cat Swarm",
+          "page": 113,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:unseen-ghost",
+          "name": "Unseen Ghost",
+          "page": 113,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:wittgenstein-monster",
+          "name": "Wittgenstein Monster",
+          "page": 116,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:wittgenstein-skaven-warrior",
+          "name": "Wittgenstein Skaven Warrior",
+          "page": 120,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:wittgenstein-guard-sergeant",
+          "name": "Wittgenstein Guard Sergeant",
+          "page": 123,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:wittgenstein-guard",
+          "name": "Wittgenstein Guard",
+          "page": 123,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:winged-mutant",
+          "name": "Winged Mutant",
+          "page": 21,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:beaked-mutant",
+          "name": "Beaked Mutant",
+          "page": 21,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:creatures:furry-mutant",
+          "name": "Furry Mutant",
+          "page": 21,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik:templates:birdfolk-with-regrown-flight-feathers",
+          "name": "Birdfolk with Regrown Flight Feathers",
+          "page": 100,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        }
+      ]
+    },
+    "death-on-the-reik-companion": {
+      "sourceHash": "591865662057a72691234ecec33d2bf077523e2a3872594346fde29505bf5a97",
+      "publishedSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entries": 0,
+      "areas": [
+        {
+          "first": 85,
+          "last": 118,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "records": [
+        {
+          "id": "death-on-the-reik-companion:creatures:amoebae",
+          "name": "Amoebae",
+          "page": 85,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik-companion:creatures:reik-eels",
+          "name": "Reik Eels",
+          "page": 86,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik-companion:creatures:giant-leeches",
+          "name": "Giant Leeches",
+          "page": 86,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik-companion:creatures:naiads",
+          "name": "Naiads",
+          "page": 88,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik-companion:creatures:stirpikes",
+          "name": "Stirpikes",
+          "page": 88,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik-companion:creatures:river-trolls",
+          "name": "River Trolls",
+          "page": 89,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik-companion:creatures:carrion",
+          "name": "Carrion",
+          "page": 118,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik-companion:creatures:sailing-crew",
+          "name": "Sailing Crew",
+          "page": 106,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik-companion:creatures:oarsman",
+          "name": "Oarsman",
+          "page": 106,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik-companion:creatures:galley-staff",
+          "name": "Galley Staff",
+          "page": 107,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik-companion:creatures:steward",
+          "name": "Steward",
+          "page": 107,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik-companion:creatures:ships-attendant",
+          "name": "Ship’s Attendant",
+          "page": 108,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik-companion:creatures:self-made-trader",
+          "name": "Self-Made Trader",
+          "page": 108,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik-companion:creatures:quick-witted-dealmaker",
+          "name": "Quick-Witted Dealmaker",
+          "page": 109,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik-companion:creatures:experienced-broker",
+          "name": "Experienced Broker",
+          "page": 109,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik-companion:creatures:elderly-duchess",
+          "name": "Elderly Duchess",
+          "page": 109,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik-companion:creatures:dwarf-gambler",
+          "name": "Dwarf Gambler",
+          "page": 110,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik-companion:creatures:young-blood",
+          "name": "Young Blood",
+          "page": 110,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik-companion:creatures:armchair-general",
+          "name": "Armchair General",
+          "page": 111,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik-companion:creatures:frontier-commander",
+          "name": "Frontier Commander",
+          "page": 111,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "death-on-the-reik-companion:templates:chaos-spawn",
+          "name": "Chaos Spawn",
+          "page": 97,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        }
+      ]
+    },
+    "power-behind-the-throne": {
+      "sourceHash": "9e87c1a55d37dfd05fa24398ee66459dd51b56faefc6918ffd55672fc68deb6b",
+      "publishedSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entries": 0,
+      "areas": [
+        {
+          "first": 28,
+          "last": 148,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "records": [
+        {
+          "id": "power-behind-the-throne:creatures:minotaur-pit-fighter",
+          "name": "Minotaur Pit Fighter",
+          "page": 67,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "power-behind-the-throne:creatures:middenheim-purple-hand-cultist",
+          "name": "Middenheim Purple Hand Cultist",
+          "page": 28,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "power-behind-the-throne:creatures:skaven-warriors",
+          "name": "Skaven Warriors",
+          "page": 91,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "power-behind-the-throne:creatures:wasmeiers-warhorse",
+          "name": "Wasmeier’s Warhorse",
+          "page": 110,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "power-behind-the-throne:creatures:doppelganger",
+          "name": "Doppelgänger",
+          "page": 148,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        }
+      ]
+    },
+    "enemy-in-shadows": {
+      "sourceHash": "685ab8d803c014f6989927f2cc2ece7d3f470530202e224dc2102ee7efa27880",
+      "publishedSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entries": 0,
+      "areas": [
+        {
+          "first": 42,
+          "last": 114,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "records": [
+        {
+          "id": "enemy-in-shadows:creatures:boar-vorbergland-hog",
+          "name": "Boar (Vorbergland Hog)",
+          "page": 69,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows:creatures:cow-stimmigen-dairy-cattle",
+          "name": "Cow (Stimmigen Dairy Cattle)",
+          "page": 69,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows:creatures:goat-booted-rottgeist",
+          "name": "Goat (Booted Rottgeist)",
+          "page": 69,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows:creatures:sheep-hugeltal-longwool",
+          "name": "Sheep (Hugeltal Longwool)",
+          "page": 69,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows:creatures:rogues",
+          "name": "Rogues",
+          "page": 69,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows:creatures:warriors",
+          "name": "Warriors",
+          "page": 69,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows:creatures:burghers",
+          "name": "Burghers",
+          "page": 69,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows:creatures:peasants",
+          "name": "Peasants",
+          "page": 69,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows:creatures:dockland-drinker",
+          "name": "Dockland Drinker",
+          "page": 42,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows:creatures:mutant-goblin",
+          "name": "Mutant Goblin",
+          "page": 67,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows:creatures:amoeba",
+          "name": "Amoeba",
+          "page": 78,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows:creatures:bogenhafen-thug",
+          "name": "Bögenhafen Thug",
+          "page": 96,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows:creatures:bogenhafen-thug-boss",
+          "name": "Bögenhafen Thug Boss",
+          "page": 97,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows:creatures:bogenhafen-watch-recruit",
+          "name": "Bögenhafen Watch Recruit",
+          "page": 112,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows:creatures:bogenhafen-watchman",
+          "name": "Bögenhafen Watchman",
+          "page": 112,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows:creatures:bogenhafen-watch-sergeant",
+          "name": "Bögenhafen Watch Sergeant",
+          "page": 112,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows:creatures:bogenhafen-pink-horror",
+          "name": "Bögenhafen Pink Horror",
+          "page": 114,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows:creatures:bogenhafen-blue-horror",
+          "name": "Bögenhafen Blue Horror",
+          "page": 114,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        }
+      ]
+    },
+    "enemy-in-shadows-companion": {
+      "sourceHash": "c45fa2152196d3ad951fa369eea8465e1149c3537ace60ae92c481c51cdbaf79",
+      "publishedSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entries": 0,
+      "areas": [
+        {
+          "first": 22,
+          "last": 106,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "records": [
+        {
+          "id": "enemy-in-shadows-companion:creatures:pony-donkey-or-mule",
+          "name": "Pony, Donkey, or Mule",
+          "page": 22,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows-companion:creatures:draught-dog",
+          "name": "Draught Dog",
+          "page": 22,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows-companion:creatures:draught-horse",
+          "name": "Draught Horse",
+          "page": 23,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows-companion:creatures:ox",
+          "name": "Ox",
+          "page": 23,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows-companion:creatures:heavy-draught-horse",
+          "name": "Heavy Draught Horse",
+          "page": 23,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows-companion:creatures:riding-horse",
+          "name": "Riding Horse",
+          "page": 23,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows-companion:creatures:light-warhorse",
+          "name": "Light Warhorse",
+          "page": 24,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows-companion:creatures:heavy-warhorse",
+          "name": "Heavy Warhorse",
+          "page": 24,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows-companion:creatures:great-cats",
+          "name": "Great Cats",
+          "page": 87,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows-companion:creatures:chaos-fury",
+          "name": "Chaos Fury",
+          "page": 84,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows-companion:creatures:pink-horror",
+          "name": "Pink Horror",
+          "page": 85,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows-companion:creatures:blue-horror",
+          "name": "Blue Horror",
+          "page": 85,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows-companion:creatures:sentry-bodyguard",
+          "name": "Sentry Bodyguard",
+          "page": 96,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows-companion:creatures:carnivorous-snapper",
+          "name": "Carnivorous Snapper",
+          "page": 99,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows-companion:creatures:black-arrow-outlaw",
+          "name": "Black Arrow Outlaw",
+          "page": 99,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows-companion:creatures:khornate-beastman",
+          "name": "Khornate Beastman",
+          "page": 105,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows-companion:creatures:mutated-farmyard-beast",
+          "name": "Mutated Farmyard Beast",
+          "page": 106,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "enemy-in-shadows-companion:templates:purple-hand-cultist",
+          "name": "Purple Hand Cultist",
+          "page": 76,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        }
+      ]
+    },
+    "ubersreik-adventures-iii": {
+      "sourceHash": "23f39fae43b5a6c240521440eb07ce919823e93a573e648a746205a4ace63439",
+      "publishedSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entries": 0,
+      "areas": [
+        {
+          "first": 29,
+          "last": 99,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "records": [
+        {
+          "id": "ubersreik-adventures-iii:creatures:forest-goblin",
+          "name": "Forest Goblin",
+          "page": 43,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-iii:creatures:snotling",
+          "name": "Snotling",
+          "page": 64,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-iii:creatures:bandit",
+          "name": "Bandit",
+          "page": 73,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-iii:creatures:jungfreud-manor-guard",
+          "name": "Jungfreud Manor Guard",
+          "page": 80,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-iii:creatures:nurglings",
+          "name": "Nurglings",
+          "page": 96,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-iii:creatures:pestigor",
+          "name": "Pestigor",
+          "page": 99,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-iii:creatures:weakened-daemonette",
+          "name": "Weakened Daemonette",
+          "page": 36,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-iii:creatures:grunewald-guard",
+          "name": "Grunewald Guard",
+          "page": 29,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-iii:creatures:geissbach-villager",
+          "name": "Geissbach Villager",
+          "page": 47,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-iii:creatures:hugeldal-watchman",
+          "name": "Hugeldal Watchman",
+          "page": 90,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        }
+      ]
+    },
+    "altdorf": {
+      "sourceHash": "9a3d9606ecd58163d460bfcd8e2c41aba6957232b802f5dbfc2f353a1286f1ec",
+      "publishedSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entries": 0,
+      "areas": [
+        {
+          "first": 104,
+          "last": 132,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "records": [
+        {
+          "id": "altdorf:creatures:stirland-abomination",
+          "name": "Stirland Abomination",
+          "page": 104,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "altdorf:creatures:drakwald-gibberbeast",
+          "name": "Drakwald Gibberbeast",
+          "page": 105,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "altdorf:creatures:reikerbahn-pike",
+          "name": "Reikerbahn Pike",
+          "page": 132,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        }
+      ]
+    },
+    "ubersreik-adventures-i": {
+      "sourceHash": "98eb45b7fde1c63989753b09a339e52c9bbafc079d8dc4597cbd0d425d26d6af",
+      "publishedSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entries": 0,
+      "areas": [
+        {
+          "first": 34,
+          "last": 123,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "records": [
+        {
+          "id": "ubersreik-adventures-i:creatures:maddened-villagers",
+          "name": "Maddened Villagers",
+          "page": 34,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-i:creatures:unmarred-flesh-cultists-pugilists",
+          "name": "Unmarred Flesh Cultists – Pugilists",
+          "page": 77,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-i:creatures:jungfreud-loyalists-watchmen-silver-1",
+          "name": "Jungfreud Loyalists – Watchmen (Silver 1)",
+          "page": 77,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-i:creatures:concerned-citizens-townsfolk-silver-2",
+          "name": "Concerned Citizens – Townsfolk (Silver 2)",
+          "page": 77,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-i:creatures:undead-orc",
+          "name": "Undead Orc",
+          "page": 78,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-i:creatures:undead-rat-swarm",
+          "name": "Undead Rat Swarm",
+          "page": 94,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-i:creatures:ubersreik-watchman-silver-1",
+          "name": "Ubersreik Watchman (Silver 1)",
+          "page": 101,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-i:creatures:thug",
+          "name": "Thug",
+          "page": 109,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-i:creatures:dwarf-travellers",
+          "name": "Dwarf Travellers",
+          "page": 117,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-i:creatures:ungor-raiders",
+          "name": "Ungor Raiders",
+          "page": 121,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-i:creatures:twisted-maw-goblin",
+          "name": "Twisted Maw Goblin",
+          "page": 123,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-i:creatures:giant-wolf",
+          "name": "Giant Wolf",
+          "page": 123,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "ubersreik-adventures-i:templates:unmarred-flesh-cultist-after-witch-hunt",
+          "name": "Unmarred Flesh Cultist after Witch Hunt",
+          "page": 77,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        }
+      ]
+    },
+    "the-horned-rat": {
+      "sourceHash": "24eebc29a7145f65f984f07eead2bf29da53501c722a8cfce358727d0f7b357c",
+      "publishedSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entries": 0,
+      "areas": [
+        {
+          "first": 7,
+          "last": 150,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "records": [
+        {
+          "id": "the-horned-rat:creatures:skavenslave",
+          "name": "Skavenslave",
+          "page": 7,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:clanrat",
+          "name": "Clanrat",
+          "page": 7,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:stormvermin",
+          "name": "Stormvermin",
+          "page": 7,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:stormvermin-fangleader",
+          "name": "Stormvermin Fangleader",
+          "page": 7,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:chieftain",
+          "name": "Chieftain",
+          "page": 7,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:warlock-engineer",
+          "name": "Warlock-Engineer",
+          "page": 7,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:clan-skryre-weapon-crew",
+          "name": "Clan Skryre Weapon Crew",
+          "page": 8,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:thug",
+          "name": "Thug",
+          "page": 9,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:purple-hand-cultist",
+          "name": "Purple Hand Cultist",
+          "page": 9,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:yellow-fang-cultist",
+          "name": "Yellow Fang Cultist",
+          "page": 9,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:animated-flame",
+          "name": "Animated Flame",
+          "page": 42,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:red-shield-mercenary",
+          "name": "Red Shield Mercenary",
+          "page": 43,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:daemonic-wolf",
+          "name": "Daemonic Wolf",
+          "page": 52,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:acolyte",
+          "name": "Acolyte",
+          "page": 58,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:scourge-rider",
+          "name": "Scourge Rider",
+          "page": 89,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:clan-mange-slave-master",
+          "name": "Clan Mange Slave Master",
+          "page": 90,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:starved-clanrat",
+          "name": "Starved Clanrat",
+          "page": 94,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:clanrat-clawleader",
+          "name": "Clanrat Clawleader",
+          "page": 7,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:middenheim-sewer-jack",
+          "name": "Middenheim Sewer Jack",
+          "page": 19,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:akoustikk-ratty",
+          "name": "Akoustikk Ratty",
+          "page": 31,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:enhanced-zombie",
+          "name": "Enhanced Zombie",
+          "page": 53,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:yellow-fang-spy",
+          "name": "Yellow Fang Spy",
+          "page": 87,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:garrison-soldier",
+          "name": "Garrison Soldier",
+          "page": 123,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:ungol-horse-archer",
+          "name": "Ungol Horse Archer",
+          "page": 123,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:snake",
+          "name": "Snake",
+          "page": 132,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:vengeful-ghost",
+          "name": "Vengeful Ghost",
+          "page": 132,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:young-wyvern",
+          "name": "Young Wyvern",
+          "page": 133,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:clan-mange-straggler",
+          "name": "Clan Mange Straggler",
+          "page": 133,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:malnourished-night-goblin",
+          "name": "Malnourished Night Goblin",
+          "page": 135,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:long-haired-white-fancy-rat",
+          "name": "Long-Haired White Fancy Rat",
+          "page": 150,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat:creatures:mutated-griffon",
+          "name": "Mutated Griffon",
+          "page": 106,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        }
+      ]
+    },
+    "the-horned-rat-companion": {
+      "sourceHash": "c08750a75bb9a66712c60db2989fd761606880856b738d44f37e310abbd5d56c",
+      "publishedSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entries": 0,
+      "areas": [
+        {
+          "first": 14,
+          "last": 120,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "records": [
+        {
+          "id": "the-horned-rat-companion:creatures:palanquin-guards",
+          "name": "Palanquin Guards",
+          "page": 14,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat-companion:creatures:treecherik-clanrat",
+          "name": "Treecherik Clanrat",
+          "page": 18,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat-companion:creatures:clan-eshin-infiltrator",
+          "name": "Clan Eshin Infiltrator",
+          "page": 18,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat-companion:creatures:deathvermin-stormvermin",
+          "name": "Deathvermin Stormvermin",
+          "page": 22,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat-companion:creatures:diseased-clanrat",
+          "name": "Diseased Clanrat",
+          "page": 25,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat-companion:creatures:packmaster",
+          "name": "Packmaster",
+          "page": 28,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat-companion:creatures:turntail-poisoned-wind-globadier",
+          "name": "Turntail Poisoned Wind Globadier",
+          "page": 31,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat-companion:creatures:great-pox-rat",
+          "name": "Great Pox Rat",
+          "page": 50,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat-companion:creatures:plague-rat",
+          "name": "Plague Rat",
+          "page": 50,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat-companion:creatures:brood-horror",
+          "name": "Brood Horror",
+          "page": 51,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat-companion:creatures:rat-ogre-bonebreaker",
+          "name": "Rat Ogre Bonebreaker",
+          "page": 52,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat-companion:creatures:great-eagle",
+          "name": "Great Eagle",
+          "page": 73,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat-companion:creatures:mountain-cat",
+          "name": "Mountain Cat",
+          "page": 73,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat-companion:creatures:cliff-spider",
+          "name": "Cliff Spider",
+          "page": 73,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat-companion:creatures:blightking",
+          "name": "Blightking",
+          "page": 77,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat-companion:creatures:carrion",
+          "name": "Carrion",
+          "page": 120,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat-companion:creatures:wolf-rat",
+          "name": "Wolf Rat",
+          "page": 50,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat-companion:creatures:clan-mors-clanrat",
+          "name": "Clan Mors Clanrat",
+          "page": 20,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat-companion:creatures:turntail-clanrat",
+          "name": "Turntail Clanrat",
+          "page": 31,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat-companion:creatures:abyssal-terror",
+          "name": "Abyssal Terror",
+          "page": 120,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "the-horned-rat-companion:templates:yellow-fang-junior-cultist",
+          "name": "Yellow Fang Junior Cultist",
+          "page": 62,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        }
+      ]
+    },
+    "hell-rides-to-hallt": {
+      "sourceHash": "a4b2aba458f2b4357a7fba82ffcadbe1a0cc221ea0adeb1190814b5688a43c63",
+      "publishedSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entries": 0,
+      "areas": [
+        {
+          "first": 22,
+          "last": 22,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "records": [
+        {
+          "id": "hell-rides-to-hallt:creatures:chaos-spawn",
+          "name": "Chaos Spawn",
+          "page": 22,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        }
+      ]
+    },
+    "skeleton-crew": {
+      "sourceHash": "eae2822acd0acae8640d74f0e88a9c97eae464cab613a387ad864b7ab6da6e9b",
+      "publishedSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entries": 0,
+      "areas": [
+        {
+          "first": 16,
+          "last": 16,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "records": [
+        {
+          "id": "skeleton-crew:creatures:grey-barbed-shark",
+          "name": "Grey-Barbed Shark",
+          "page": 16,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        }
+      ]
+    },
+    "emperors-wrath": {
+      "sourceHash": "e09246e892f11fec38003ae82003a29cc0f3d57a1dc28a8fb614a8a274ef28ad",
+      "publishedSHA256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "entries": 0,
+      "areas": [
+        {
+          "first": 14,
+          "last": 19,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "records": [
+        {
+          "id": "emperors-wrath:creatures:bog-liche",
+          "name": "Bog Liche",
+          "page": 15,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "emperors-wrath:creatures:bog-mummy",
+          "name": "Bog Mummy",
+          "page": 16,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "emperors-wrath:creatures:mercenaries-silver-3",
+          "name": "Mercenaries (Silver 3)",
+          "page": 19,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        },
+        {
+          "id": "emperors-wrath:templates:bog-zombie",
+          "name": "Bog Zombie",
+          "page": 14,
+          "disposition": "included",
+          "reason": "Bestiary Workshop catalogue only."
+        }
+      ]
     }
   }
 }

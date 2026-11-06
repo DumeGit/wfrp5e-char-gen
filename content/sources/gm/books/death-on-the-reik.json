@@ -1,0 +1,4827 @@
+{
+  "schemaVersion": 1,
+  "id": "death-on-the-reik",
+  "source": {
+    "file": "Enemy Within Campaign Volume 2 Death on the Reik.pdf",
+    "sha256": "56bab75cfbe76c1f0ec6e6a7a535da482fdc3286b57620e1d402103b0df17aa6"
+  },
+  "summary": "51 profiles and 1 templates",
+  "profiles": [
+    {
+      "id": "death-on-the-reik:creatures:tentacled-mutant",
+      "name": "Tentacled Mutant",
+      "page": 21,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 21
+      },
+      "category": "Cultists and Mutants",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 55,
+        "BS": 30,
+        "S": 35,
+        "T": 55,
+        "I": 40,
+        "Ag": 45,
+        "Dex": 25,
+        "Int": 25,
+        "WP": 30,
+        "Fel": 25,
+        "W": 16
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Dodge",
+          "total": 55
+        },
+        {
+          "name": "Melee (Brawling)",
+          "total": 65
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Amphibious",
+          "value": ""
+        },
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Mutation",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Tentacles",
+          "value": "2"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Tentacles",
+          "skill": 55,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Brass 0. Enormous Eye is the printed mutation. Preserve two tentacle attacks and printed damage.",
+        "Printed mutation: Enormous Eye.",
+        "Printed attack multiplicity: 2 Tentacles +7."
+      ],
+      "species": "Mutant"
+    },
+    {
+      "id": "death-on-the-reik:creatures:river-mutant",
+      "name": "River Mutant",
+      "page": 21,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 21
+      },
+      "category": "Cultists and Mutants",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 45,
+        "BS": 35,
+        "S": 41,
+        "T": 31,
+        "I": 44,
+        "Ag": 31,
+        "Dex": 32,
+        "Int": 33,
+        "WP": 40,
+        "Fel": 27,
+        "W": 14
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Dodge",
+          "total": 41
+        },
+        {
+          "name": "Swim",
+          "total": 53
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 55
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Mutation",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 45,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Brass 0. The book prints one shared Mutant baseline and three variant packages, captured under templates.",
+        "Printed mutation: see below."
+      ],
+      "species": "Mutant"
+    },
+    {
+      "id": "death-on-the-reik:creatures:kidnapper",
+      "name": "Kidnapper",
+      "page": 22,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 22
+      },
+      "category": "Townsfolk",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 40,
+        "BS": 30,
+        "S": 40,
+        "T": 35,
+        "I": 35,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 25,
+        "WP": 30,
+        "Fel": 25,
+        "W": 13
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Consume Alcohol",
+          "total": 40
+        },
+        {
+          "name": "Cool",
+          "total": 35
+        },
+        {
+          "name": "Dodge",
+          "total": 40
+        },
+        {
+          "name": "Evaluate",
+          "total": 30
+        },
+        {
+          "name": "Intimidate",
+          "total": 45
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 45
+        },
+        {
+          "name": "Melee (Brawling)",
+          "total": 45
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 40
+        }
+      ],
+      "talents": [
+        {
+          "name": "Criminal",
+          "ranks": 1
+        },
+        {
+          "name": "Menacing",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Club)",
+          "skill": 45,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        },
+        {
+          "name": "Weapon (Dagger)",
+          "skill": 45,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leather Jack",
+          "ap": 1,
+          "locations": "Arms, Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Club, Dagger, Leather Jack"
+      },
+      "notes": [
+        "Brass 3. Human Thug."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "death-on-the-reik:creatures:river-patrol-captain",
+      "name": "River Patrol Captain",
+      "page": 23,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 23
+      },
+      "category": "Townsfolk",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 45,
+        "BS": 43,
+        "S": 51,
+        "T": 30,
+        "I": 40,
+        "Ag": 28,
+        "Dex": 27,
+        "Int": 30,
+        "WP": 31,
+        "Fel": 43,
+        "W": 14
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 35
+        },
+        {
+          "name": "Charm",
+          "total": 46
+        },
+        {
+          "name": "Cool",
+          "total": 40
+        },
+        {
+          "name": "Dodge",
+          "total": 39
+        },
+        {
+          "name": "Endurance",
+          "total": 35
+        },
+        {
+          "name": "Haggle",
+          "total": 48
+        },
+        {
+          "name": "Intimidate",
+          "total": 61
+        },
+        {
+          "name": "Intuition",
+          "total": 48
+        },
+        {
+          "name": "Leadership",
+          "total": 55
+        },
+        {
+          "name": "Lore (Reikland)",
+          "total": 35
+        },
+        {
+          "name": "Lore (Riverways)",
+          "total": 41
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 57
+        },
+        {
+          "name": "Perception",
+          "total": 48
+        },
+        {
+          "name": "Ranged (Blackpowder)",
+          "total": 55
+        },
+        {
+          "name": "Row",
+          "total": 61
+        },
+        {
+          "name": "Sail",
+          "total": 42
+        },
+        {
+          "name": "Swim",
+          "total": 64
+        }
+      ],
+      "talents": [
+        {
+          "name": "Fearless (Wreckers)",
+          "ranks": 1,
+          "adaptation": "Printed Fearless (Wreckers) 2 uses Fifth Edition Fearless (Wreckers), capped at 1 rank(s)."
+        },
+        {
+          "name": "Hatred (Wreckers)",
+          "ranks": 1
+        },
+        {
+          "name": "Pilot",
+          "ranks": 1
+        },
+        {
+          "name": "Sea Legs",
+          "ranks": 1
+        },
+        {
+          "name": "Strong Swimmer",
+          "ranks": 1,
+          "adaptation": "Printed Strong Swimmer 2 uses Fifth Edition Strong Swimmer, capped at 1 rank(s)."
+        },
+        {
+          "name": "Waterman",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 57,
+          "damage": 9,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        },
+        {
+          "name": "Ranged (Pistol)",
+          "skill": 55,
+          "damage": 8,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "",
+          "skillName": "Ranged (Blackpowder)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Mail Shirt and Helmet",
+          "ap": 2,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Grappling Hook, Helmet, Lantern & Oil, Mail Shirt, Pistol (with 10 shots), Uniform, Shield, Sword"
+      },
+      "notes": [
+        "Silver 4. Human Shipsword. Pilot, Sea Legs, Strong Swimmer and Waterman require individual Fifth Edition equivalence review.",
+        "Printed Armour (Mail Shirt and Helmet) 2; check hit-location coverage before play."
+      ],
+      "species": "Human",
+      "adaptation": "Printed Fearless (Wreckers) 2 uses Fifth Edition Fearless (Wreckers), capped at 1 rank(s). Printed Strong Swimmer 2 uses Fifth Edition Strong Swimmer, capped at 1 rank(s)."
+    },
+    {
+      "id": "death-on-the-reik:creatures:river-patrol-crew",
+      "name": "River Patrol Crew",
+      "page": 23,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 23
+      },
+      "category": "Townsfolk",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 30,
+        "S": 40,
+        "T": 30,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 35,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 25,
+        "W": 13
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Dodge",
+          "total": 35
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 40
+        },
+        {
+          "name": "Perception",
+          "total": 35
+        },
+        {
+          "name": "Row",
+          "total": 45
+        },
+        {
+          "name": "Sail",
+          "total": 35
+        },
+        {
+          "name": "Swim",
+          "total": 45
+        }
+      ],
+      "talents": [
+        {
+          "name": "Very Strong",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 40,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leather Jack",
+          "ap": 1,
+          "locations": "Arms, Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Leather Jack, Uniform, Sword"
+      },
+      "notes": [
+        "Silver 1. Human River Recruit. Strength 40 already includes any printed Talent benefit."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "death-on-the-reik:creatures:purple-hand-cultist",
+      "name": "Purple Hand Cultist",
+      "page": 23,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 23
+      },
+      "category": "Cultists and Mutants",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 30,
+        "T": 30,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 25,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 30,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Purple Hand Tattoo, Some Purple Item of Clothing, others at GM’s discretion"
+      },
+      "notes": [
+        "Status unspecified. Secret Signs (Purple Hand) has no printed total. Additional skills and equipment are left to the GM.",
+        "Printed Skill entry for manual review: Secret Signs (Purple Hand)."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "death-on-the-reik:creatures:dwarf-engineer",
+      "name": "Dwarf Engineer",
+      "page": 37,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 37
+      },
+      "category": "Townsfolk",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 3,
+        "WS": 40,
+        "BS": 35,
+        "S": 30,
+        "T": 40,
+        "I": 30,
+        "Ag": 20,
+        "Dex": 45,
+        "Int": 40,
+        "WP": 50,
+        "Fel": 20,
+        "W": 16
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Consume Alcohol",
+          "total": 45
+        },
+        {
+          "name": "Cool",
+          "total": 55
+        },
+        {
+          "name": "Dodge",
+          "total": 25
+        },
+        {
+          "name": "Drive",
+          "total": 25
+        },
+        {
+          "name": "Endurance",
+          "total": 45
+        },
+        {
+          "name": "Evaluate",
+          "total": 43
+        },
+        {
+          "name": "Language (Classical)",
+          "total": 45
+        },
+        {
+          "name": "Language (Guilder)",
+          "total": 45
+        },
+        {
+          "name": "Language (Khazali)",
+          "total": 43
+        },
+        {
+          "name": "Lore (Dwarfs)",
+          "total": 43
+        },
+        {
+          "name": "Lore (Engineer)",
+          "total": 45
+        },
+        {
+          "name": "Lore (Geology)",
+          "total": 45
+        },
+        {
+          "name": "Lore (Metallurgy)",
+          "total": 45
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 45
+        },
+        {
+          "name": "Perception",
+          "total": 35
+        },
+        {
+          "name": "Ranged (Blackpowder)",
+          "total": 40
+        },
+        {
+          "name": "Research",
+          "total": 45
+        },
+        {
+          "name": "Trade (Engineer)",
+          "total": 50
+        }
+      ],
+      "talents": [
+        {
+          "name": "Craftsman (Engineer)",
+          "ranks": 1
+        },
+        {
+          "name": "Etiquette (Guilder)",
+          "ranks": 1
+        },
+        {
+          "name": "Magic Resistance",
+          "ranks": 1
+        },
+        {
+          "name": "Night Vision",
+          "ranks": 1
+        },
+        {
+          "name": "Orientation",
+          "ranks": 1
+        },
+        {
+          "name": "Read/Write",
+          "ranks": 1,
+          "adaptation": "Printed Read/Write 2 uses Fifth Edition Read/Write, capped at 1 rank(s)."
+        },
+        {
+          "name": "Resolute",
+          "ranks": 1
+        },
+        {
+          "name": "Sturdy",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Hand Axe)",
+          "skill": 40,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leather Jack",
+          "ap": 1,
+          "locations": "Arms, Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Carpenter’s Tools or Stonemason’s Tools, Hand Axe, Leather Jack"
+      },
+      "notes": [
+        "Silver 2. Printed Khazali and Lore (Engineer) may require canonical naming review. Carpenter’s Tools or Stonemason’s Tools is a choice."
+      ],
+      "species": "Dwarf",
+      "adaptation": "Printed Read/Write 2 uses Fifth Edition Read/Write, capped at 1 rank(s)."
+    },
+    {
+      "id": "death-on-the-reik:creatures:signal-tower-zombie",
+      "name": "Signal Tower Zombie",
+      "page": 37,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 37
+      },
+      "category": "Undead",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": null,
+        "S": 40,
+        "T": 40,
+        "I": 5,
+        "Ag": 10,
+        "Dex": 15,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 16
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Six-inch star-section iron key on a leather thong"
+      },
+      "notes": [
+        "Regenerate applies only inside the tower, and Unstable applies only outside. The printed list runs Corrupted (Minor) and Dark Vision together. The keys are scenario trappings.",
+        "Printed qualifier for Territorial: Tower."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Regenerate (inside tower only)",
+          "optional": true,
+          "reason": "Conditional printed effect requires manual adjudication."
+        },
+        {
+          "name": "Unstable (outside tower only)",
+          "optional": true,
+          "reason": "Conditional printed effect requires manual adjudication."
+        }
+      ],
+      "species": "Zombie"
+    },
+    {
+      "id": "death-on-the-reik:creatures:ghoul-champion",
+      "name": "Ghoul Champion",
+      "page": 37,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 37
+      },
+      "category": "Undead",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 60,
+        "BS": null,
+        "S": 45,
+        "T": 40,
+        "I": 40,
+        "Ag": 35,
+        "Dex": 25,
+        "Int": 20,
+        "WP": 40,
+        "Fel": 5,
+        "W": 16
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bite",
+          "value": "5"
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Venom",
+          "value": "Difficult -10, paralysing"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 60,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 60,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Five-point star-section iron key on a leather thong, Hand Weapon (Sharpened Tibia)"
+      },
+      "notes": [
+        "Paralysing Venom replaces Poisoned with Unconscious for 1d10 hours minus Toughness Bonus, minimum 1 hour. The victim remains aware while immobile. Difficult −10 converts to −1 SL if mapped under Appendix I. Preserve as a special rule.",
+        "Printed Venom variant requires manual adjudication: Venom (Difficult -10, paralysing)."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Elite",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Ghoul",
+      "adaptation": "Core Venom applies the Difficulty to recovery from Poisoned."
+    },
+    {
+      "id": "death-on-the-reik:creatures:twisted-maw-goblin",
+      "name": "Twisted Maw Goblin",
+      "page": 47,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 47
+      },
+      "category": "Greenskins",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 25,
+        "BS": 40,
+        "S": 35,
+        "T": 35,
+        "I": 20,
+        "Ag": 35,
+        "Dex": 40,
+        "Int": 30,
+        "WP": 20,
+        "Fel": 20,
+        "W": 14
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Melee (Basic)",
+          "total": 35
+        },
+        {
+          "name": "Perception",
+          "total": 30
+        },
+        {
+          "name": "Ranged (Bow)",
+          "total": 50
+        },
+        {
+          "name": "Ride (Wolf)",
+          "total": 45
+        }
+      ],
+      "talents": [
+        {
+          "name": "Accurate Shot",
+          "ranks": 1,
+          "adaptation": "Printed Accurate Shot 2 uses Fifth Edition Accurate Shot, capped at 1 rank(s)."
+        },
+        {
+          "name": "Hardy",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Afraid",
+          "value": "Elves"
+        },
+        {
+          "name": "Hatred",
+          "value": "Dwarfs"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Shortbow)",
+          "skill": 50,
+          "damage": 7,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "",
+          "skillName": "Ranged (Bow)"
+        },
+        {
+          "name": "Weapon (Sword)",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        },
+        {
+          "name": "Shield",
+          "ap": 2,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": true
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Leather Jerkin, Shield, Shortbow, Sword"
+      },
+      "notes": [
+        "Armour 3 includes the shield. Preserve as 1 armour and a separate shield. Afraid (Elves) requires individual Psychology mapping."
+      ],
+      "species": "Goblin",
+      "adaptation": "Printed Accurate Shot 2 uses Fifth Edition Accurate Shot, capped at 1 rank(s)."
+    },
+    {
+      "id": "death-on-the-reik:creatures:great-wolf",
+      "name": "Great Wolf",
+      "page": 47,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 47
+      },
+      "category": "Mounts",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 55,
+        "BS": null,
+        "S": 35,
+        "T": 40,
+        "I": 30,
+        "Ag": 55,
+        "Dex": null,
+        "Int": 15,
+        "WP": 15,
+        "Fel": null,
+        "W": 12
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Mount"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 55,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "M 4 is printed. Stride needs Fifth Edition review. Trained (Mount) gives a reusable trained variant."
+      ],
+      "species": "Wolf",
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+    },
+    {
+      "id": "death-on-the-reik:creatures:watch-sergeant",
+      "name": "Watch Sergeant",
+      "page": 52,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 52
+      },
+      "category": "Townsfolk",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 50,
+        "BS": 30,
+        "S": 45,
+        "T": 30,
+        "I": 45,
+        "Ag": 30,
+        "Dex": 25,
+        "Int": 30,
+        "WP": 40,
+        "Fel": 45,
+        "W": 17
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Charm",
+          "total": 50
+        },
+        {
+          "name": "Climb",
+          "total": 50
+        },
+        {
+          "name": "Cool",
+          "total": 55
+        },
+        {
+          "name": "Dodge",
+          "total": 40
+        },
+        {
+          "name": "Endurance",
+          "total": 35
+        },
+        {
+          "name": "Entertain (Storytelling)",
+          "total": 50
+        },
+        {
+          "name": "Gamble",
+          "total": 35
+        },
+        {
+          "name": "Intimidate",
+          "total": 60
+        },
+        {
+          "name": "Intuition",
+          "total": 55
+        },
+        {
+          "name": "Leadership",
+          "total": 60
+        },
+        {
+          "name": "Lore (Law)",
+          "total": 45
+        },
+        {
+          "name": "Lore (Local)",
+          "total": 45
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 65
+        },
+        {
+          "name": "Perception",
+          "total": 55
+        }
+      ],
+      "talents": [
+        {
+          "name": "Etiquette (Soldiers)",
+          "ranks": 1
+        },
+        {
+          "name": "Fearless (Criminals)",
+          "ranks": 1
+        },
+        {
+          "name": "Hardy",
+          "ranks": 1
+        },
+        {
+          "name": "Nose for Trouble",
+          "ranks": 1
+        },
+        {
+          "name": "Strike to Stun",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 65,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Breastplate",
+          "ap": 2,
+          "locations": "Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Breastplate, Helm, Sword"
+      },
+      "notes": [
+        "Silver 3. Grissenwald. Check printed Wounds 17 against current Hardy."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "death-on-the-reik:creatures:watch-recruit",
+      "name": "Watch Recruit",
+      "page": 52,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 52
+      },
+      "category": "Townsfolk",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 40,
+        "BS": 30,
+        "S": 35,
+        "T": 30,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 25,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 35,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 35
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 35
+        },
+        {
+          "name": "Dodge",
+          "total": 35
+        },
+        {
+          "name": "Gamble",
+          "total": 35
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 45
+        },
+        {
+          "name": "Perception",
+          "total": 35
+        }
+      ],
+      "talents": [
+        {
+          "name": "Drilled",
+          "ranks": 1
+        },
+        {
+          "name": "Strike to Stun",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Club)",
+          "skill": 45,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leather Jack",
+          "ap": 1,
+          "locations": "Arms, Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Club, Leather Jack, Uniform"
+      },
+      "notes": [
+        "Brass 3. Grissenwald."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "death-on-the-reik:creatures:grissenwald-villager",
+      "name": "Grissenwald Villager",
+      "page": 52,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 52
+      },
+      "category": "Townsfolk",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 30,
+        "S": 35,
+        "T": 35,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 30,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Animal Care",
+          "total": 35
+        },
+        {
+          "name": "Athletics",
+          "total": 40
+        },
+        {
+          "name": "Drive",
+          "total": 40
+        },
+        {
+          "name": "Endurance",
+          "total": 45
+        },
+        {
+          "name": "Entertain (Storytelling)",
+          "total": 35
+        },
+        {
+          "name": "Gossip",
+          "total": 35
+        },
+        {
+          "name": "Haggle",
+          "total": 35
+        },
+        {
+          "name": "Lore (Local)",
+          "total": 40
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 40
+        },
+        {
+          "name": "Melee (Brawling)",
+          "total": 40
+        },
+        {
+          "name": "Outdoor Survival",
+          "total": 35
+        }
+      ],
+      "talents": [
+        {
+          "name": "Stone Soup",
+          "ranks": 1
+        },
+        {
+          "name": "Strong Back",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Pitchfork)",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Pitchfork, Shovel"
+      },
+      "notes": [
+        "Brass 3. Shared baseline for farmers and farm labourers."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "death-on-the-reik:creatures:dwarf-miner",
+      "name": "Dwarf Miner",
+      "page": 53,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 53
+      },
+      "category": "Townsfolk",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 3,
+        "WS": 45,
+        "BS": 30,
+        "S": 40,
+        "T": 45,
+        "I": 30,
+        "Ag": 20,
+        "Dex": 40,
+        "Int": 30,
+        "WP": 55,
+        "Fel": 20,
+        "W": 17
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Language (Khazalid)",
+          "total": 33
+        },
+        {
+          "name": "Lore (Dwarfs)",
+          "total": 33
+        },
+        {
+          "name": "Lore (Geology)",
+          "total": 35
+        },
+        {
+          "name": "Lore (Local)",
+          "total": 37
+        },
+        {
+          "name": "Lore (Metallurgy)",
+          "total": 35
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 53
+        },
+        {
+          "name": "Melee (Two-handed)",
+          "total": 55
+        },
+        {
+          "name": "Ranged (Crossbow)",
+          "total": 35
+        },
+        {
+          "name": "Trade (Carpentry)",
+          "total": 45
+        },
+        {
+          "name": "Trade (Explosives)",
+          "total": 46
+        }
+      ],
+      "talents": [
+        {
+          "name": "Magic Resistance",
+          "ranks": 1
+        },
+        {
+          "name": "Night Vision",
+          "ranks": 1
+        },
+        {
+          "name": "Read/Write",
+          "ranks": 1
+        },
+        {
+          "name": "Resolute",
+          "ranks": 1
+        },
+        {
+          "name": "Robust",
+          "ranks": 1
+        },
+        {
+          "name": "Striding Gait (Rocky)",
+          "ranks": 1,
+          "adaptation": "Printed Strider (Rocky) uses Fifth Edition Striding Gait (Rocky)."
+        },
+        {
+          "name": "Sturdy",
+          "ranks": 1
+        },
+        {
+          "name": "Very Strong",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Pick)",
+          "skill": 45,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Axe, Crossbow, Pick, Shovel"
+      },
+      "notes": [
+        "Brass 4. Distinct from Salzenmund’s Human Miner. Crossbow appears among trappings but has no printed attack damage or bolt quantity. Proposed Strider (Rocky) → Striding Gait (Rocky), consistent with the Salzenmund conversion."
+      ],
+      "species": "Dwarf",
+      "adaptation": "Printed Strider (Rocky) uses Fifth Edition Striding Gait (Rocky).",
+      "unavailableTraits": [
+        {
+          "name": "Prejudice (Elves)",
+          "reason": "Apply this printed prejudice manually. The existing Thin People entry has a different target.",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "id": "death-on-the-reik:creatures:clanrat-warrior",
+      "name": "Clanrat Warrior",
+      "page": 60,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 60
+      },
+      "category": "Skaven",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 30,
+        "BS": 30,
+        "S": 30,
+        "T": 30,
+        "I": 40,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 20,
+        "Fel": 20,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Dodge",
+          "total": 55
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 50
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 30,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Helmet, Mail Coat, Shield, Sword"
+      },
+      "notes": [
+        "Barren Hills Clanrat. Distinct from the castle variant on p. 120.",
+        "Printed Talent for manual review: Shieldman 2."
+      ],
+      "species": "Skaven"
+    },
+    {
+      "id": "death-on-the-reik:creatures:barren-hills-skeleton",
+      "name": "Barren Hills Skeleton",
+      "page": 63,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 63
+      },
+      "category": "Undead",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 25,
+        "S": 40,
+        "T": 30,
+        "I": 30,
+        "Ag": 20,
+        "Dex": 25,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 14
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Dodge",
+          "total": 30
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 45
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 35,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Hand Weapons, Tattered Chainmail Shirt"
+      },
+      "notes": [
+        "The source explicitly omits Unstable. Distinct from the castle tower skeleton."
+      ],
+      "species": "Skeleton"
+    },
+    {
+      "id": "death-on-the-reik:creatures:chaotic-corpse",
+      "name": "Chaotic Corpse",
+      "page": 75,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 75
+      },
+      "category": "Undead",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 60,
+        "BS": null,
+        "S": 50,
+        "T": 50,
+        "I": 5,
+        "Ag": 10,
+        "Dex": 15,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 20
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Tentacles",
+          "value": "4"
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Tentacles",
+          "skill": 60,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "An anonymous mutated corpse with four tentacle attacks. Attacks targets within 2 yards.",
+        "Printed attack multiplicity: 4 Tentacles +7."
+      ],
+      "species": "Zombie"
+    },
+    {
+      "id": "death-on-the-reik:creatures:bestial-horde-gor",
+      "name": "Bestial Horde Gor",
+      "page": 80,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 80
+      },
+      "category": "Beastmen",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 55,
+        "BS": 40,
+        "S": 45,
+        "T": 55,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 25,
+        "Int": 25,
+        "WP": 30,
+        "Fel": 25,
+        "W": 17
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [
+        {
+          "name": "Berserk Charge",
+          "ranks": 1,
+          "adaptation": "Printed Berserk Charge 2 uses Fifth Edition Berserk Charge, capped at 1 rank(s)."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Arboreal",
+          "value": ""
+        },
+        {
+          "name": "Frenzy",
+          "value": "",
+          "adaptation": "Printed Fury uses the core Fifth Edition Frenzy effect."
+        },
+        {
+          "name": "Horns",
+          "value": "7"
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Horns",
+          "skill": 55,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 55,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Other Beastmen in the encounter are an external Fourth Edition core cross-reference."
+      ],
+      "species": "Gor",
+      "adaptation": "Printed Berserk Charge 2 uses Fifth Edition Berserk Charge, capped at 1 rank(s). Printed Fury uses the core Fifth Edition Frenzy effect."
+    },
+    {
+      "id": "death-on-the-reik:creatures:pig-headed-mutant",
+      "name": "Pig-Headed Mutant",
+      "page": 80,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 80
+      },
+      "category": "Cultists and Mutants",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 54,
+        "BS": 28,
+        "S": 43,
+        "T": 42,
+        "I": 29,
+        "Ag": 27,
+        "Dex": 33,
+        "Int": 25,
+        "WP": 36,
+        "Fel": 36,
+        "W": 15
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Spear)",
+          "skill": 54,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Polearm)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Thorny Scales",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Spear"
+      },
+      "notes": [
+        "Brass 0. Bestial Face is cosmetic. Thorny Scales grant intrinsic armour."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Bestial Face (Cosmetic)",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Mutant"
+    },
+    {
+      "id": "death-on-the-reik:creatures:goat-mutant",
+      "name": "Goat Mutant",
+      "page": 80,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 80
+      },
+      "category": "Cultists and Mutants",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 53,
+        "BS": 24,
+        "S": 39,
+        "T": 35,
+        "I": 32,
+        "Ag": 33,
+        "Dex": 28,
+        "Int": 29,
+        "WP": 31,
+        "Fel": 26,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Horns",
+          "value": "6"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Horns",
+          "skill": 53,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 53,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Fur",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Spear"
+      },
+      "notes": [
+        "Brass 0. Animalistic Legs is reflected in printed Movement 5. Bestial Face is cosmetic."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Animalistic Legs",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Bestial Face (Cosmetic)",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Mutant"
+    },
+    {
+      "id": "death-on-the-reik:creatures:emaciated-mutant",
+      "name": "Emaciated Mutant",
+      "page": 80,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 80
+      },
+      "category": "Cultists and Mutants",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 49,
+        "BS": 42,
+        "S": 20,
+        "T": 37,
+        "I": 25,
+        "Ag": 52,
+        "Dex": 27,
+        "Int": 38,
+        "WP": 35,
+        "Fel": 35,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Spear)",
+          "skill": 49,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Polearm)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Spear"
+      },
+      "notes": [
+        "Brass 0."
+      ],
+      "species": "Mutant"
+    },
+    {
+      "id": "death-on-the-reik:creatures:big-eared-mutant",
+      "name": "Big-Eared Mutant",
+      "page": 80,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 80
+      },
+      "category": "Cultists and Mutants",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 51,
+        "BS": 39,
+        "S": 37,
+        "T": 42,
+        "I": 38,
+        "Ag": 28,
+        "Dex": 35,
+        "Int": 28,
+        "WP": 27,
+        "Fel": 25,
+        "W": 13
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [
+        {
+          "name": "Acute Sense (Hearing)",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Club)",
+          "skill": 51,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Hand Weapon (Club)"
+      },
+      "notes": [
+        "Brass 0."
+      ],
+      "species": "Mutant"
+    },
+    {
+      "id": "death-on-the-reik:creatures:green-furred-mutant",
+      "name": "Green-Furred Mutant",
+      "page": 80,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 80
+      },
+      "category": "Cultists and Mutants",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 50,
+        "BS": 26,
+        "S": 44,
+        "T": 34,
+        "I": 29,
+        "Ag": 30,
+        "Dex": 25,
+        "Int": 33,
+        "WP": 31,
+        "Fel": 36,
+        "W": 13
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Club)",
+          "skill": 50,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Fur",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Hand Weapon (Club)"
+      },
+      "notes": [
+        "Brass 0. Fur grants intrinsic Armour 1."
+      ],
+      "species": "Mutant"
+    },
+    {
+      "id": "death-on-the-reik:creatures:three-eyed-mutant",
+      "name": "Three-Eyed Mutant",
+      "page": 80,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 80
+      },
+      "category": "Cultists and Mutants",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 47,
+        "BS": 42,
+        "S": 44,
+        "T": 40,
+        "I": 43,
+        "Ag": 29,
+        "Dex": 33,
+        "Int": 27,
+        "WP": 28,
+        "Fel": 32,
+        "W": 14
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [
+        {
+          "name": "Acute Sense (Sight)",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Sword)",
+          "skill": 47,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Hand Weapon (Sword)"
+      },
+      "notes": [
+        "Brass 0."
+      ],
+      "species": "Mutant"
+    },
+    {
+      "id": "death-on-the-reik:creatures:wittgendorf-beggar",
+      "name": "Wittgendorf Beggar",
+      "page": 81,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 81
+      },
+      "category": "Townsfolk",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 30,
+        "T": 30,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 30,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Consume Alcohol",
+          "total": 35
+        }
+      ],
+      "talents": [
+        {
+          "name": "Panhandle",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Infestation",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Assorted Crutches, Hand Carts, Rags, Lice"
+      },
+      "notes": [
+        "Brass 0. Infestation is printed without a parameter."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "death-on-the-reik:creatures:wittgendorf-outlaw",
+      "name": "Wittgendorf Outlaw",
+      "page": 83,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 83
+      },
+      "category": "Townsfolk",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 30,
+        "S": 35,
+        "T": 35,
+        "I": 30,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 30,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 35
+        },
+        {
+          "name": "Endurance",
+          "total": 40
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 40
+        },
+        {
+          "name": "Outdoor Survival",
+          "total": 35
+        },
+        {
+          "name": "Ranged (Bow)",
+          "total": 35
+        }
+      ],
+      "talents": [],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Bow)",
+          "skill": 35,
+          "damage": 6,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "",
+          "skillName": "Ranged (Bow)"
+        },
+        {
+          "name": "Weapon (Hand Weapon)",
+          "skill": 40,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Leather Jerkin",
+          "ap": 1,
+          "locations": "Body",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Bow and 24 Arrows, Hand Weapon (Sword, Axe, Mace, or Club), Leather Jerkin"
+      },
+      "notes": [
+        "Brass 1. Human Brigand. Hand weapon is a choice of Sword, Axe, Mace or Club."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "death-on-the-reik:creatures:lashworm",
+      "name": "Lashworm",
+      "page": 88,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 88
+      },
+      "category": "Beasts",
+      "example": false,
+      "size": "Small",
+      "stats": {
+        "M": null,
+        "WS": 30,
+        "BS": null,
+        "S": 10,
+        "T": 30,
+        "I": 100,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 3,
+        "WP": null,
+        "Fel": null,
+        "W": 6
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 30,
+          "damage": 3,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "The PDF visually confirms Initiative 100 and the printed Small Size. Immobile while attacking from its burrow. Always strikes first. The attack triggers within 5 yards, with a Difficult (−10) Cool Test for Surprise. It feeds after a successful wound and rests for four hours."
+      ],
+      "species": "Lashworm"
+    },
+    {
+      "id": "death-on-the-reik:creatures:monstrous-leech",
+      "name": "Monstrous Leech",
+      "page": 89,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 89
+      },
+      "category": "Beasts",
+      "example": false,
+      "size": "Tiny",
+      "stats": {
+        "M": 3,
+        "WS": 30,
+        "BS": 0,
+        "S": 20,
+        "T": 20,
+        "I": 20,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 10,
+        "WP": 15,
+        "Fel": null,
+        "W": 2
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Bite",
+          "value": "3"
+        },
+        {
+          "name": "Cold-blooded",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 30,
+          "damage": 3,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed Little is Fourth Edition. Review conversion and retain printed Wounds 2 if converted to Tiny. On land Movement 1 and −2 SL to Tests. Relies on vibration, not sight. After a wound it attaches and applies Bleeding 1 until killed, repelled or a round’s d10 rolls 9–10. Pulling it off inflicts Bleeding 1. Fire, salt or acid can repel it. Aquatic and Blood Drain need source-specific review.",
+        "Printed Wounds apply to the baseline. Core Tiny Size requires manual Wounds after changes."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Aquatic",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Blood Drain",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Swamp-Strider",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Leech"
+    },
+    {
+      "id": "death-on-the-reik:creatures:corrosive-giant-rat",
+      "name": "Corrosive Giant Rat",
+      "page": 89,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 89
+      },
+      "category": "Beasts",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 25,
+        "BS": null,
+        "S": 30,
+        "T": 25,
+        "I": 25,
+        "Ag": 35,
+        "Dex": null,
+        "Int": 15,
+        "WP": 15,
+        "Fel": null,
+        "W": 5
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Corrosive Blood",
+          "value": ""
+        },
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 25,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "The printed heading is Giant Rats. Size Average and Wounds 5 are printed. Source-specific Corrosive Blood and Corruption distinguish it from a generic rat. Stride requires conversion review."
+      ],
+      "species": "Rat",
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+    },
+    {
+      "id": "death-on-the-reik:creatures:warpstone-giant-bat",
+      "name": "Warpstone Giant Bat",
+      "page": 89,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 89
+      },
+      "category": "Beasts",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 40,
+        "S": 30,
+        "T": 25,
+        "I": 45,
+        "Ag": 35,
+        "Dex": null,
+        "Int": 15,
+        "WP": 15,
+        "Fel": null,
+        "W": 8
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Bite",
+          "value": "5"
+        },
+        {
+          "name": "Breath",
+          "value": "Poison"
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Fly",
+          "value": "90"
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 30,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Breath",
+          "skill": 40,
+          "damage": 6,
+          "optional": false,
+          "ranged": true,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 30,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "The printed heading is Giant Bats. Relies on sound for Dark Vision. Poison Breath and Flight 90 need explicit Fifth Edition handling."
+      ],
+      "species": "Bat"
+    },
+    {
+      "id": "death-on-the-reik:creatures:wittgenstein-castle-servant",
+      "name": "Wittgenstein Castle Servant",
+      "page": 96,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 96
+      },
+      "category": "Townsfolk",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": 30,
+        "S": 35,
+        "T": 35,
+        "I": 35,
+        "Ag": 35,
+        "Dex": 20,
+        "Int": 15,
+        "WP": 15,
+        "Fel": null,
+        "W": 7
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Animal Care",
+          "total": 35
+        },
+        {
+          "name": "Athletics",
+          "total": 40
+        },
+        {
+          "name": "Dodge",
+          "total": 40
+        },
+        {
+          "name": "Drive",
+          "total": 40
+        },
+        {
+          "name": "Endurance",
+          "total": 40
+        },
+        {
+          "name": "Evaluate",
+          "total": 35
+        },
+        {
+          "name": "Gossip",
+          "total": 35
+        },
+        {
+          "name": "Intuition",
+          "total": 40
+        },
+        {
+          "name": "Perception",
+          "total": 40
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 40
+        }
+      ],
+      "talents": [
+        {
+          "name": "Beneath Notice",
+          "ranks": 1
+        },
+        {
+          "name": "Etiquette (Servants)",
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "attacks": [],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Silver 3. All servants have a minor unspecified mutation. Fellowship is a dash in the table even though Gossip 35 is listed. Preserve both."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "death-on-the-reik:creatures:wittgenstein-rat-swarm",
+      "name": "Wittgenstein Rat Swarm",
+      "page": 96,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 96
+      },
+      "category": "Beasts",
+      "example": false,
+      "size": "Tiny",
+      "stats": {
+        "M": 4,
+        "WS": 30,
+        "BS": null,
+        "S": 20,
+        "T": 30,
+        "I": 40,
+        "Ag": 20,
+        "Dex": null,
+        "Int": 10,
+        "WP": 20,
+        "Fel": null,
+        "W": 15
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Swarm",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Endless Gnashing Teeth)",
+          "skill": 30,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed Little is Fourth Edition. Preserve Wounds 15 as a printed swarm baseline.",
+        "Printed Wounds apply to the baseline. Core Tiny Size requires manual Wounds after changes."
+      ],
+      "species": "Rat"
+    },
+    {
+      "id": "death-on-the-reik:creatures:wittgenstein-tower-skeleton",
+      "name": "Wittgenstein Tower Skeleton",
+      "page": 98,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 98
+      },
+      "category": "Undead",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 25,
+        "BS": 25,
+        "S": 30,
+        "T": 30,
+        "I": 20,
+        "Ag": 20,
+        "Dex": 25,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 25,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Hand Weapon, Tattered Chainmail Shirt"
+      },
+      "notes": [
+        "Source says these skeletons are not Unstable while inside the tower. Distinct from p. 63."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Unstable (outside tower only)",
+          "optional": true,
+          "reason": "Conditional printed effect requires manual adjudication."
+        }
+      ],
+      "species": "Skeleton"
+    },
+    {
+      "id": "death-on-the-reik:creatures:birdfolk",
+      "name": "Birdfolk",
+      "page": 100,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 100
+      },
+      "category": "Cultists and Mutants",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 3,
+        "WS": 10,
+        "BS": 10,
+        "S": 20,
+        "T": 20,
+        "I": 40,
+        "Ag": 40,
+        "Dex": 10,
+        "Int": 10,
+        "WP": 10,
+        "Fel": 10,
+        "W": 7
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bite",
+          "value": "4"
+        },
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Fly",
+          "value": "10"
+        },
+        {
+          "name": "Mutation",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 10,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 10,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "The clipped wings give Flight 10. Source variant Flight 60 replaces it if the flight feathers grow back. No separate Size is printed."
+      ],
+      "species": "Birdfolk"
+    },
+    {
+      "id": "death-on-the-reik:creatures:grasping-vine",
+      "name": "Grasping Vine",
+      "page": 101,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 101
+      },
+      "category": "Plants",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": null,
+        "WS": 50,
+        "BS": null,
+        "S": 20,
+        "T": 20,
+        "I": 20,
+        "Ag": null,
+        "Dex": null,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 7
+      },
+      "toughnessBonus": 2,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Grapple",
+          "skill": 50,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Stationary component of one plant creature. The individual vine makes no-damage grapples, pulling the victim 2 yards per Entangled Condition toward the Maw and becoming Helpless while holding them. The Maw’s death inactivates all vines."
+      ],
+      "species": "Grasping Vines"
+    },
+    {
+      "id": "death-on-the-reik:creatures:grasping-vine-maw",
+      "name": "Grasping Vine Maw",
+      "page": 101,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 101
+      },
+      "category": "Plants",
+      "example": false,
+      "size": "Enormous",
+      "stats": {
+        "M": null,
+        "WS": 50,
+        "BS": null,
+        "S": 50,
+        "T": 30,
+        "I": 30,
+        "Ag": null,
+        "Dex": null,
+        "Int": 5,
+        "WP": null,
+        "Fel": null,
+        "W": 44
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Bite",
+          "value": "5"
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 50,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 50,
+          "damage": 10,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 5,
+          "adaptation": "Fifth Edition Enormous Size adds 5 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Stationary central component. A target dragged 6 yards is in range. A target reduced to 0 Wounds is swallowed the following round."
+      ],
+      "species": "Grasping Vines",
+      "adaptation": "Fifth Edition Enormous Size adds 5 to the primary melee attack."
+    },
+    {
+      "id": "death-on-the-reik:creatures:thing-in-the-pit",
+      "name": "Thing in the Pit",
+      "page": 102,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 102
+      },
+      "category": "Cultists and Mutants",
+      "example": false,
+      "size": "Enormous",
+      "stats": {
+        "M": null,
+        "WS": 45,
+        "BS": null,
+        "S": 20,
+        "T": 50,
+        "I": 20,
+        "Ag": null,
+        "Dex": null,
+        "Int": 10,
+        "WP": 10,
+        "Fel": null,
+        "W": 52
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        },
+        {
+          "name": "Tentacles",
+          "value": "5"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Tentacles",
+          "skill": 45,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Anonymous stationary creature. Each active arm has 5 separate Wounds and can be severed, releasing its victim. A severed arm is replaced the next round. Arm damage does not injure the body. Treat the encounter collapse as a manual effect.",
+        "Printed attack multiplicity: 5 Tentacles +5."
+      ],
+      "species": "Mutant"
+    },
+    {
+      "id": "death-on-the-reik:creatures:lesser-daemon-of-slaanesh",
+      "name": "Lesser Daemon of Slaanesh",
+      "page": 106,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 106
+      },
+      "category": "Daemons",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 60,
+        "BS": 50,
+        "S": 40,
+        "T": 30,
+        "I": 65,
+        "Ag": 60,
+        "Dex": 35,
+        "Int": 30,
+        "WP": 70,
+        "Fel": 45,
+        "W": 17
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Champion",
+          "value": ""
+        },
+        {
+          "name": "Corruption",
+          "value": "Moderate"
+        },
+        {
+          "name": "Daemonic",
+          "value": "8"
+        },
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Spellcaster",
+          "value": "Chaos"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 60,
+          "damage": 9,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "An anonymous Daemonette. It uses Acquiescence via printed Spellcaster (Chaos) and Unstable applies outside the temple only. Retain as source reference if the spell/legacy casting lacks a supported conversion."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Unstable (outside temple only)",
+          "optional": true,
+          "reason": "Conditional printed effect requires manual adjudication."
+        }
+      ],
+      "species": "Daemonette"
+    },
+    {
+      "id": "death-on-the-reik:creatures:chaotic-organ-tentacle",
+      "name": "Chaotic Organ Tentacle",
+      "page": 107,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 107
+      },
+      "category": "Constructs",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": null,
+        "WS": 35,
+        "BS": null,
+        "S": 20,
+        "T": 40,
+        "I": 55,
+        "Ag": null,
+        "Dex": null,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 4
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Constrictor",
+          "value": ""
+        },
+        {
+          "name": "Construct",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Grapple",
+          "skill": 35,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Stationary component. A tentacle can be severed only by one edged-weapon hit causing at least 6 Wounds, with all other damage regenerated immediately. It is Helpless while constricting."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Regenerate (special)",
+          "optional": false,
+          "reason": "Conditional printed effect requires manual adjudication."
+        }
+      ],
+      "species": "Chaotic Organ"
+    },
+    {
+      "id": "death-on-the-reik:creatures:chaotic-organ",
+      "name": "Chaotic Organ",
+      "page": 107,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 107
+      },
+      "category": "Constructs",
+      "example": false,
+      "size": "Enormous",
+      "stats": {
+        "M": null,
+        "WS": 35,
+        "BS": null,
+        "S": 20,
+        "T": 50,
+        "I": 55,
+        "Ag": null,
+        "Dex": null,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 56
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Distracting",
+          "value": ""
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Stationary construct. Main body is a Helpless target. Noise-based Distracting uses the encounter-specific effect and should remain manual.",
+        "Printed qualifier for Distracting: Noise."
+      ],
+      "species": "Chaotic Organ"
+    },
+    {
+      "id": "death-on-the-reik:creatures:mutant-bee-swarm",
+      "name": "Mutant Bee Swarm",
+      "page": 108,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 108
+      },
+      "category": "Beasts",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": null,
+        "S": 10,
+        "T": 10,
+        "I": 10,
+        "Ag": null,
+        "Dex": null,
+        "Int": 5,
+        "WP": null,
+        "Fel": null,
+        "W": 10
+      },
+      "toughnessBonus": 1,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Swarm",
+          "value": ""
+        },
+        {
+          "name": "Venom",
+          "value": "Very Easy"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 35,
+          "damage": 1,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "The swarm Fears fire and ignores all other psychology. The Very Easy Venom Test is a Fourth Edition difficulty. No Size is printed."
+      ],
+      "species": "Bee",
+      "adaptation": "Core Venom applies the Difficulty to recovery from Poisoned."
+    },
+    {
+      "id": "death-on-the-reik:creatures:mutant-cat-swarm",
+      "name": "Mutant Cat Swarm",
+      "page": 113,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 113
+      },
+      "category": "Beasts",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 40,
+        "BS": null,
+        "S": 20,
+        "T": 10,
+        "I": 60,
+        "Ag": 40,
+        "Dex": null,
+        "Int": 10,
+        "WP": 20,
+        "Fel": null,
+        "W": 30
+      },
+      "toughnessBonus": 1,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Mutation",
+          "value": ""
+        },
+        {
+          "name": "Swarm",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Mostly cosmetic mutations are assigned by the GM. No printed attack or Size.",
+        "Printed mutation: GM’s discretion – mostly cosmetic."
+      ],
+      "species": "Cat"
+    },
+    {
+      "id": "death-on-the-reik:creatures:unseen-ghost",
+      "name": "Unseen Ghost",
+      "page": 113,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 113
+      },
+      "category": "Undead",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 0,
+        "BS": 35,
+        "S": 20,
+        "T": null,
+        "I": 60,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 20,
+        "WP": 20,
+        "Fel": 20,
+        "W": 20
+      },
+      "toughnessBonus": null,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Ethereal",
+          "value": ""
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        },
+        {
+          "name": "Unstable",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Thrown Items)",
+          "skill": 35,
+          "damage": 0,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Fear 2 applies when an observer sees the ghost throw an object. Second Sight sees it and negates its invisibility penalty. Other attackers take −40 to hit, or −30 if guided by someone with Second Sight. Map to −4/−3 SL only after individual compatibility review. Printed Toughness is a dash.",
+        "Printed entry for manual review: Fear 2 (after seeing thrown object).",
+        "Printed qualifier for Territorial: one room."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Invisible",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Ghost"
+    },
+    {
+      "id": "death-on-the-reik:creatures:wittgenstein-monster",
+      "name": "Wittgenstein Monster",
+      "page": 116,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 116
+      },
+      "category": "Constructs",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 4,
+        "WS": 60,
+        "BS": null,
+        "S": 60,
+        "T": 60,
+        "I": 10,
+        "Ag": 10,
+        "Dex": 10,
+        "Int": null,
+        "WP": null,
+        "Fel": null,
+        "W": 24
+      },
+      "toughnessBonus": 6,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Melee (Brawling)",
+          "total": 80
+        }
+      ],
+      "talents": [
+        {
+          "name": "Battle Rage",
+          "ranks": 1,
+          "adaptation": "Printed Battle Rage 3 uses Fifth Edition Battle Rage, capped at 1 rank(s)."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Construct",
+          "value": ""
+        },
+        {
+          "name": "Fear",
+          "value": "3"
+        },
+        {
+          "name": "Frenzy",
+          "value": "",
+          "adaptation": "Printed Fury uses the core Fifth Edition Frenzy effect."
+        },
+        {
+          "name": "Immune to Psychology",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Fists)",
+          "skill": 80,
+          "damage": 16,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Brawling)",
+          "printedDamage": 10,
+          "adaptation": "Fifth Edition Large Size adds 6 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed Big suggests Large via Fifth Edition individual review. Unique anonymous constructed creature, not a named character profile. Battle Rage 3 requires rank review."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Big",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Construct",
+      "adaptation": "Printed Battle Rage 3 uses Fifth Edition Battle Rage, capped at 1 rank(s). Printed Fury uses the core Fifth Edition Frenzy effect. Fifth Edition Large Size adds 6 to the primary melee attack."
+    },
+    {
+      "id": "death-on-the-reik:creatures:wittgenstein-skaven-warrior",
+      "name": "Wittgenstein Skaven Warrior",
+      "page": 120,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 120
+      },
+      "category": "Skaven",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 40,
+        "BS": 40,
+        "S": 30,
+        "T": 40,
+        "I": 40,
+        "Ag": 45,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 20,
+        "Fel": 20,
+        "W": 13
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Dodge",
+          "total": 55
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 50
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 40,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        },
+        {
+          "name": "Shield",
+          "ap": 2,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": true
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Helmet, Mail Coat, Shield, Sword"
+      },
+      "notes": [
+        "Distinct castle Skaven baseline. Armour 4 includes the Shield.",
+        "Printed Talent for manual review: Shieldman 2."
+      ],
+      "species": "Skaven"
+    },
+    {
+      "id": "death-on-the-reik:creatures:wittgenstein-guard-sergeant",
+      "name": "Wittgenstein Guard Sergeant",
+      "page": 123,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 123
+      },
+      "category": "Townsfolk",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 40,
+        "BS": 30,
+        "S": 30,
+        "T": 40,
+        "I": 35,
+        "Ag": 40,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 30,
+        "W": 14
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 45
+        },
+        {
+          "name": "Consume Alcohol",
+          "total": 45
+        },
+        {
+          "name": "Cool",
+          "total": 35
+        },
+        {
+          "name": "Dodge",
+          "total": 50
+        },
+        {
+          "name": "Endurance",
+          "total": 45
+        },
+        {
+          "name": "Gamble",
+          "total": 35
+        },
+        {
+          "name": "Gossip",
+          "total": 35
+        },
+        {
+          "name": "Intimidate",
+          "total": 40
+        },
+        {
+          "name": "Intuition",
+          "total": 40
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 45
+        },
+        {
+          "name": "Melee (Flail)",
+          "total": 45
+        },
+        {
+          "name": "Perception",
+          "total": 45
+        }
+      ],
+      "talents": [
+        {
+          "name": "Drilled",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Mutation",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Flail)",
+          "skill": 45,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Flail)"
+        },
+        {
+          "name": "Weapon (Knuckledusters)",
+          "skill": 40,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Brawling)"
+        },
+        {
+          "name": "Weapon (Shield)",
+          "skill": 40,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Helmet, Sleeved Mail Shirt, Mail Chausses",
+          "ap": 2,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Flail, Full Face Helmet, Knuckledusters, Shield, Sleeved Mail Shirt & Mail Chausses"
+      },
+      "notes": [
+        "Silver 2. Rotting Flesh has a Fear effect when uncovered and a stench requiring a Challenging Endurance Test within 2 yards. Record as a source-specific mutation.",
+        "Printed Armour (Helmet, Sleeved Mail Shirt, Mail Chausses) 2; check hit-location coverage before play.",
+        "Printed mutation: Rotting Flesh."
+      ],
+      "species": "Human"
+    },
+    {
+      "id": "death-on-the-reik:creatures:wittgenstein-guard",
+      "name": "Wittgenstein Guard",
+      "page": 123,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 123
+      },
+      "category": "Townsfolk",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 35,
+        "BS": 30,
+        "S": 30,
+        "T": 35,
+        "I": 30,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 30,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Consume Alcohol",
+          "total": 40
+        },
+        {
+          "name": "Endurance",
+          "total": 40
+        },
+        {
+          "name": "Gamble",
+          "total": 35
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 40
+        },
+        {
+          "name": "Ranged (Crossbow)",
+          "total": 40
+        },
+        {
+          "name": "Perception",
+          "total": 35
+        }
+      ],
+      "talents": [
+        {
+          "name": "Drilled",
+          "ranks": 1,
+          "adaptation": "Printed Drilled 2 uses Fifth Edition Drilled, capped at 1 rank(s)."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Mutation",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Ranged (Crossbow)",
+          "skill": 40,
+          "damage": 9,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "",
+          "skillName": "Ranged (Crossbow)"
+        },
+        {
+          "name": "Weapon (Shield)",
+          "skill": 35,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        },
+        {
+          "name": "Weapon (Sword)",
+          "skill": 40,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Helmet, Sleeved Mail Shirt, Mail Chausses",
+          "ap": 2,
+          "locations": "",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Crossbow and 12 Bolts, Full Face Helmet, Shield, Sleeved Mail Shirt & Mail Chausses, Sword"
+      },
+      "notes": [
+        "Silver 1. Human Sentry. Rotting Flesh as for the Guard Sergeant.",
+        "Printed Armour (Helmet, Sleeved Mail Shirt, Mail Chausses) 2; check hit-location coverage before play.",
+        "Printed mutation: Rotting Flesh."
+      ],
+      "species": "Human",
+      "adaptation": "Printed Drilled 2 uses Fifth Edition Drilled, capped at 1 rank(s)."
+    },
+    {
+      "id": "death-on-the-reik:creatures:winged-mutant",
+      "name": "Winged Mutant",
+      "page": 21,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 21
+      },
+      "category": "Cultists and Mutants",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 45,
+        "BS": 35,
+        "S": 41,
+        "T": 31,
+        "I": 44,
+        "Ag": 31,
+        "Dex": 32,
+        "Int": 33,
+        "WP": 40,
+        "Fel": 27,
+        "W": 14
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Dodge",
+          "total": 41
+        },
+        {
+          "name": "Swim",
+          "total": 53
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 55
+        },
+        {
+          "name": "Ranged (Crossbow)",
+          "total": 45
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Mutation",
+          "value": ""
+        },
+        {
+          "name": "Fly",
+          "value": "60"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 45,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        },
+        {
+          "name": "Ranged (Crossbow)",
+          "skill": 45,
+          "damage": 9,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "",
+          "skillName": "Ranged (Crossbow)"
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Spear, Crossbow"
+      },
+      "notes": [
+        "Brass 0. The book prints one shared Mutant baseline and three variant packages, captured under templates.",
+        "One of three exclusive variations on the shared printed baseline.",
+        "Printed mutation: see below."
+      ],
+      "species": "Mutant"
+    },
+    {
+      "id": "death-on-the-reik:creatures:beaked-mutant",
+      "name": "Beaked Mutant",
+      "page": 21,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 21
+      },
+      "category": "Cultists and Mutants",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 45,
+        "BS": 35,
+        "S": 41,
+        "T": 31,
+        "I": 44,
+        "Ag": 31,
+        "Dex": 32,
+        "Int": 33,
+        "WP": 40,
+        "Fel": 27,
+        "W": 14
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Dodge",
+          "total": 41
+        },
+        {
+          "name": "Swim",
+          "total": 53
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 55
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Mutation",
+          "value": ""
+        },
+        {
+          "name": "Bite",
+          "value": "7"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 45,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        },
+        {
+          "name": "Bite",
+          "skill": 45,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Sword"
+      },
+      "notes": [
+        "Brass 0. The book prints one shared Mutant baseline and three variant packages, captured under templates.",
+        "Printed encounter label Beak-Face. Five Wounds remaining is current injury, not baseline maximum.",
+        "Printed mutation: see below."
+      ],
+      "species": "Mutant"
+    },
+    {
+      "id": "death-on-the-reik:creatures:furry-mutant",
+      "name": "Furry Mutant",
+      "page": 21,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 21
+      },
+      "category": "Cultists and Mutants",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 45,
+        "BS": 35,
+        "S": 41,
+        "T": 31,
+        "I": 44,
+        "Ag": 31,
+        "Dex": 32,
+        "Int": 33,
+        "WP": 40,
+        "Fel": 27,
+        "W": 14
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Dodge",
+          "total": 41
+        },
+        {
+          "name": "Swim",
+          "total": 53
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 55
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Mutation",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 45,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Fur",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Club"
+      },
+      "notes": [
+        "Brass 0. The book prints one shared Mutant baseline and three variant packages, captured under templates.",
+        "Six Wounds remaining is current injury, not baseline maximum.",
+        "Printed mutation: see below."
+      ],
+      "species": "Mutant"
+    }
+  ],
+  "templates": [
+    {
+      "id": "death-on-the-reik:templates:birdfolk-with-regrown-flight-feathers",
+      "name": "Birdfolk with Regrown Flight Feathers",
+      "page": 100,
+      "source": {
+        "book": "death-on-the-reik",
+        "page": 100
+      },
+      "eligibility": "any",
+      "profileIds": [
+        "death-on-the-reik:creatures:birdfolk"
+      ],
+      "foundationLabel": "Birdfolk",
+      "adjustments": {},
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Fly",
+          "value": "60"
+        }
+      ],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": [
+        "Direct alternative printed in the Birdfolk footnote."
+      ],
+      "removeTraits": [
+        "Fly"
+      ]
+    }
+  ],
+  "training": []
+}

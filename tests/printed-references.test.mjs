@@ -261,7 +261,9 @@ test("supplied books publish retained gameplay references, without enabling crea
   for (const pack of library.packs.filter(
     (p) => p.manifest.kind !== "variant",
   )) {
-    assert.ok(pack.data.referenceEntries.length);
+    assert.ok(Array.isArray(pack.data.referenceEntries));
+    if (!pack.data.referenceEntries.length)
+      assert.ok(!raw.some((r) => r.entry.source.book === pack.manifest.id));
     const stripped = structuredClone(library);
     stripped.packs.find(
       (p) => p.manifest.id === pack.manifest.id,

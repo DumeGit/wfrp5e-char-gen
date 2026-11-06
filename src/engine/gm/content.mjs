@@ -260,6 +260,7 @@ export function addGMSupplement(data, raw, R) {
       "removeTraits",
       "halveTraits",
       "armour",
+      "armourName",
       "trappings",
       "magicGroups",
       "matchWind",
@@ -300,6 +301,11 @@ export function addGMSupplement(data, raw, R) {
       throw Error("Invalid Shaman template operation.");
     if (t.armour !== undefined && (!Number.isInteger(t.armour) || t.armour < 1))
       throw Error("Invalid template armour.");
+    if (
+      t.armourName !== undefined &&
+      (!t.armour || typeof t.armourName !== "string" || !t.armourName.trim())
+    )
+      throw Error("Template armour name requires a printed Armour value.");
     if (
       !["any", "undead", "zombie", "mount", "troll", "goblin"].includes(
         t.eligibility,

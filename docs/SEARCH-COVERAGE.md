@@ -18,12 +18,12 @@ Standalone Rules are completely absent from published reference payloads. Histor
 | Archives of the Empire: Volume I | 1.0.3 | 39 | 8 | 47 | 21 |
 | Archives of the Empire: Volume II | 1.0.7 | 24 | 44 | 68 | 7 |
 | Archives of the Empire: Volume III | 1.0.5 | 59 | 35 | 94 | 14 |
-| Winds of Magic | 1.0.4 | 172 | 117 | 289 | 55 |
+| Winds of Magic | 1.0.5 | 172 | 117 | 289 | 55 |
 | Rough Nights & Hard Days | 1.0.2 | 2 | 4 | 6 | 2 |
 | Dwarf Player’s Guide | 1.0.3 | 221 | 21 | 242 | 103 |
 | High Elf Player’s Guide | 1.0.3 | 116 | 29 | 145 | 50 |
 | Blood and Bramble | 1.0.2 | 25 | 1 | 26 | 10 |
-| Deft Steps, Light Fingers | 1.0.4 | 56 | 76 | 132 | 17 |
+| Deft Steps, Light Fingers | 1.0.5 | 56 | 76 | 132 | 17 |
 | The Night Parade | 1.0.0 | 0 | 0 | 0 | 0 |
 | The Warband of Bayl of Many Eyes | 1.0.0 | 0 | 0 | 0 | 0 |
 | The Cluster-Eye Tribe | 1.0.0 | 1 | 0 | 1 | 0 |
@@ -33,6 +33,21 @@ Standalone Rules are completely absent from published reference payloads. Histor
 | The Corsairs of Captain Flariel | 1.1.0 | 6 | 3 | 9 | 3 |
 | Lustria | 1.0.0 | 17 | 19 | 36 | 5 |
 | Salzenmund: City of Salt and Silver | 1.0.0 | 5 | 13 | 18 | 5 |
+| Empire in Ruins | 1.0.1 | 0 | 0 | 0 | 0 |
+| Empire in Ruins Companion | 1.0.1 | 0 | 0 | 0 | 0 |
+| Death on the Reik | 1.0.0 | 0 | 0 | 0 | 0 |
+| Death on the Reik Companion | 1.0.1 | 0 | 0 | 0 | 0 |
+| Power Behind the Throne | 1.0.0 | 0 | 0 | 0 | 0 |
+| Enemy in Shadows | 1.0.0 | 0 | 0 | 0 | 0 |
+| Enemy in Shadows Companion | 1.0.1 | 0 | 0 | 0 | 0 |
+| Ubersreik Adventures III | 1.0.0 | 0 | 0 | 0 | 0 |
+| Altdorf: Crown of the Empire | 1.0.0 | 0 | 0 | 0 | 0 |
+| Ubersreik Adventures | 1.0.0 | 0 | 0 | 0 | 0 |
+| The Horned Rat | 1.0.0 | 0 | 0 | 0 | 0 |
+| The Horned Rat Companion | 1.0.1 | 0 | 0 | 0 | 0 |
+| Hell Rides to Hallt | 1.0.0 | 0 | 0 | 0 | 0 |
+| Skeleton Crew | 1.0.0 | 0 | 0 | 0 | 0 |
+| The Emperor’s Wrath | 1.0.0 | 0 | 0 | 0 | 0 |
 
 ## Source review
 
@@ -545,6 +560,201 @@ Candidate sections: included 35; excluded 3.
 
 Categories: career 1; species 4; table 11; trait 1; equipment 1.
 Reviewed printed records retained outside search: 11.
+
+No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
+
+### Empire in Ruins
+
+Source SHA-256: `69cd659ecfd1406e395ee17eb8e0ee6fc0804cb86c5d0f13b3c4d9d7503955fa`.
+
+- pp. 18–192: Reviewed Bestiary foundations and templates.
+
+Candidate sections: included 41.
+
+Categories: .
+Reviewed printed records retained outside search: 0.
+
+No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
+
+### Empire in Ruins Companion
+
+Source SHA-256: `895bc9031060772e97598cbf30ca75e92f2762eaf77eef26e10ff567522fd841`.
+
+- pp. 21–118: Reviewed Bestiary foundations and templates.
+
+Candidate sections: included 29.
+
+Categories: .
+Reviewed printed records retained outside search: 0.
+
+No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
+
+### Death on the Reik
+
+Source SHA-256: `56bab75cfbe76c1f0ec6e6a7a535da482fdc3286b57620e1d402103b0df17aa6`.
+
+- pp. 21–123: Reviewed Bestiary foundations and templates.
+
+Candidate sections: included 52.
+
+Categories: .
+Reviewed printed records retained outside search: 0.
+
+No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
+
+### Death on the Reik Companion
+
+Source SHA-256: `591865662057a72691234ecec33d2bf077523e2a3872594346fde29505bf5a97`.
+
+- pp. 85–118: Reviewed Bestiary foundations and templates.
+
+Candidate sections: included 21.
+
+Categories: .
+Reviewed printed records retained outside search: 0.
+
+No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
+
+### Power Behind the Throne
+
+Source SHA-256: `9e87c1a55d37dfd05fa24398ee66459dd51b56faefc6918ffd55672fc68deb6b`.
+
+- pp. 28–148: Reviewed Bestiary foundations and templates.
+
+Candidate sections: included 5.
+
+Categories: .
+Reviewed printed records retained outside search: 0.
+
+No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
+
+### Enemy in Shadows
+
+Source SHA-256: `685ab8d803c014f6989927f2cc2ece7d3f470530202e224dc2102ee7efa27880`.
+
+- pp. 42–114: Reviewed Bestiary foundations and templates.
+
+Candidate sections: included 18.
+
+Categories: .
+Reviewed printed records retained outside search: 0.
+
+No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
+
+### Enemy in Shadows Companion
+
+Source SHA-256: `c45fa2152196d3ad951fa369eea8465e1149c3537ace60ae92c481c51cdbaf79`.
+
+- pp. 22–106: Reviewed Bestiary foundations and templates.
+
+Candidate sections: included 18.
+
+Categories: .
+Reviewed printed records retained outside search: 0.
+
+No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
+
+### Ubersreik Adventures III
+
+Source SHA-256: `23f39fae43b5a6c240521440eb07ce919823e93a573e648a746205a4ace63439`.
+
+- pp. 29–99: Reviewed Bestiary foundations and templates.
+
+Candidate sections: included 10.
+
+Categories: .
+Reviewed printed records retained outside search: 0.
+
+No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
+
+### Altdorf: Crown of the Empire
+
+Source SHA-256: `9a3d9606ecd58163d460bfcd8e2c41aba6957232b802f5dbfc2f353a1286f1ec`.
+
+- pp. 104–132: Reviewed Bestiary foundations and templates.
+
+Candidate sections: included 3.
+
+Categories: .
+Reviewed printed records retained outside search: 0.
+
+No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
+
+### Ubersreik Adventures
+
+Source SHA-256: `98eb45b7fde1c63989753b09a339e52c9bbafc079d8dc4597cbd0d425d26d6af`.
+
+- pp. 34–123: Reviewed Bestiary foundations and templates.
+
+Candidate sections: included 13.
+
+Categories: .
+Reviewed printed records retained outside search: 0.
+
+No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
+
+### The Horned Rat
+
+Source SHA-256: `24eebc29a7145f65f984f07eead2bf29da53501c722a8cfce358727d0f7b357c`.
+
+- pp. 7–150: Reviewed Bestiary foundations and templates.
+
+Candidate sections: included 31.
+
+Categories: .
+Reviewed printed records retained outside search: 0.
+
+No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
+
+### The Horned Rat Companion
+
+Source SHA-256: `c08750a75bb9a66712c60db2989fd761606880856b738d44f37e310abbd5d56c`.
+
+- pp. 14–120: Reviewed Bestiary foundations and templates.
+
+Candidate sections: included 21.
+
+Categories: .
+Reviewed printed records retained outside search: 0.
+
+No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
+
+### Hell Rides to Hallt
+
+Source SHA-256: `a4b2aba458f2b4357a7fba82ffcadbe1a0cc221ea0adeb1190814b5688a43c63`.
+
+- pp. 22: Reviewed Bestiary foundations and templates.
+
+Candidate sections: included 1.
+
+Categories: .
+Reviewed printed records retained outside search: 0.
+
+No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
+
+### Skeleton Crew
+
+Source SHA-256: `eae2822acd0acae8640d74f0e88a9c97eae464cab613a387ad864b7ab6da6e9b`.
+
+- pp. 16: Reviewed Bestiary foundations and templates.
+
+Candidate sections: included 1.
+
+Categories: .
+Reviewed printed records retained outside search: 0.
+
+No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
+
+### The Emperor’s Wrath
+
+Source SHA-256: `e09246e892f11fec38003ae82003a29cc0f3d57a1dc28a8fb614a8a274ef28ad`.
+
+- pp. 14–19: Reviewed Bestiary foundations and templates.
+
+Candidate sections: included 4.
+
+Categories: .
+Reviewed printed records retained outside search: 0.
 
 No outstanding stat-block extraction checks in this inventory. This does not assert that every gameplay sentence in the PDF is indexed.
 

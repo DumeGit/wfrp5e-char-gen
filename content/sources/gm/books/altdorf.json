@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 1,
+  "id": "altdorf",
+  "source": {
+    "file": "Altdorf - Crown of the Empire.pdf",
+    "sha256": "9a3d9606ecd58163d460bfcd8e2c41aba6957232b802f5dbfc2f353a1286f1ec"
+  },
+  "summary": "3 profiles and 0 templates",
+  "profiles": [
+    {
+      "id": "altdorf:creatures:stirland-abomination",
+      "name": "Stirland Abomination",
+      "page": 104,
+      "source": {
+        "book": "altdorf",
+        "page": 104
+      },
+      "category": "Chaos beasts",
+      "example": false,
+      "size": "Enormous",
+      "stats": {
+        "M": 5,
+        "WS": 55,
+        "BS": null,
+        "S": 60,
+        "T": 51,
+        "I": 25,
+        "Ag": 23,
+        "Dex": null,
+        "Int": 10,
+        "WP": 35,
+        "Fel": null,
+        "W": 72
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Belligerent",
+          "value": ""
+        },
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Die Hard",
+          "value": ""
+        },
+        {
+          "name": "Frenzy",
+          "value": "",
+          "adaptation": "Printed Fury uses the core Fifth Edition Frenzy effect."
+        },
+        {
+          "name": "Horns",
+          "value": "8"
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Horns",
+          "skill": 55,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 55,
+          "damage": 15,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 9,
+          "adaptation": "Fifth Edition Enormous Size adds 6 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "species": "Mutant beast",
+      "adaptation": "Printed Fury uses the core Fifth Edition Frenzy effect. Fifth Edition Enormous Size adds 6 to the primary melee attack."
+    },
+    {
+      "id": "altdorf:creatures:drakwald-gibberbeast",
+      "name": "Drakwald Gibberbeast",
+      "page": 105,
+      "source": {
+        "book": "altdorf",
+        "page": 105
+      },
+      "category": "Chaos beasts",
+      "example": false,
+      "size": "Enormous",
+      "stats": {
+        "M": 6,
+        "WS": 42,
+        "BS": null,
+        "S": 52,
+        "T": 56,
+        "I": 17,
+        "Ag": 35,
+        "Dex": null,
+        "Int": 56,
+        "WP": 55,
+        "Fel": null,
+        "W": 80
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Corruption",
+          "value": "Minor"
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        },
+        {
+          "name": "Spellcaster",
+          "value": "Hedgecraft, Witchcraft"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 42,
+          "damage": 14,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 9,
+          "adaptation": "Fifth Edition Enormous Size adds 5 to the primary melee attack."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [
+        "core:spells:the-evil-eye",
+        "core:spells:goodwill"
+      ],
+      "sections": {},
+      "notes": [
+        "Printed spell requires source review: Curse of Ill-Fortune."
+      ],
+      "species": "Mutant beast",
+      "adaptation": "Fifth Edition Enormous Size adds 5 to the primary melee attack."
+    },
+    {
+      "id": "altdorf:creatures:reikerbahn-pike",
+      "name": "Reikerbahn Pike",
+      "page": 132,
+      "source": {
+        "book": "altdorf",
+        "page": 132
+      },
+      "category": "Mutant beasts",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 4,
+        "WS": 65,
+        "BS": 5,
+        "S": 62,
+        "T": 54,
+        "I": 35,
+        "Ag": 40,
+        "Dex": 5,
+        "Int": 18,
+        "WP": 45,
+        "Fel": 4,
+        "W": 40
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Melee (Brawling)",
+          "total": 68
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Amphibious",
+          "value": ""
+        },
+        {
+          "name": "Belligerent",
+          "value": ""
+        },
+        {
+          "name": "Bite",
+          "value": "8"
+        },
+        {
+          "name": "Cold-blooded",
+          "value": ""
+        },
+        {
+          "name": "Dark Vision",
+          "value": ""
+        },
+        {
+          "name": "Frenzy",
+          "value": ""
+        },
+        {
+          "name": "Hatred",
+          "value": "Fishermen"
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Tail",
+          "value": "7"
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 65,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Tail",
+          "skill": 65,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed mental corruptions are Unending Malice and Unholy Rage."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Big",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Fish"
+    }
+  ],
+  "templates": [],
+  "training": []
+}

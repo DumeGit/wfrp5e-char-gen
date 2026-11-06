@@ -730,7 +730,7 @@
     {
       "id": "winds-of-magic",
       "title": "Winds of Magic",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "edition": 4,
       "sourceHash": "28283188fa70d51b8f1efe3e8c3214da7be885d2a444321744ead66d1ea2a150",
       "references": 289,
@@ -1274,7 +1274,7 @@
     {
       "id": "deft-steps",
       "title": "Deft Steps, Light Fingers",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "edition": 4,
       "sourceHash": "2581d969680a019b7db3d083578e0759b9b96e2a0612e5e99088821690537eec",
       "references": 132,
@@ -1965,6 +1965,381 @@
           "first": 136,
           "last": 142,
           "topic": "Smuggling and creation"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "empire-in-ruins",
+      "title": "Empire in Ruins",
+      "version": "1.0.1",
+      "edition": 4,
+      "sourceHash": "69cd659ecfd1406e395ee17eb8e0ee6fc0804cb86c5d0f13b3c4d9d7503955fa",
+      "references": 0,
+      "newlyImported": 0,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 0,
+      "adaptedReferences": 0,
+      "categories": {},
+      "dispositions": {
+        "included": 41
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 18,
+          "last": 192,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "empire-in-ruins-companion",
+      "title": "Empire in Ruins Companion",
+      "version": "1.0.1",
+      "edition": 4,
+      "sourceHash": "895bc9031060772e97598cbf30ca75e92f2762eaf77eef26e10ff567522fd841",
+      "references": 0,
+      "newlyImported": 0,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 0,
+      "adaptedReferences": 0,
+      "categories": {},
+      "dispositions": {
+        "included": 29
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 21,
+          "last": 118,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "death-on-the-reik",
+      "title": "Death on the Reik",
+      "version": "1.0.0",
+      "edition": 4,
+      "sourceHash": "56bab75cfbe76c1f0ec6e6a7a535da482fdc3286b57620e1d402103b0df17aa6",
+      "references": 0,
+      "newlyImported": 0,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 0,
+      "adaptedReferences": 0,
+      "categories": {},
+      "dispositions": {
+        "included": 52
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 21,
+          "last": 123,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "death-on-the-reik-companion",
+      "title": "Death on the Reik Companion",
+      "version": "1.0.1",
+      "edition": 4,
+      "sourceHash": "591865662057a72691234ecec33d2bf077523e2a3872594346fde29505bf5a97",
+      "references": 0,
+      "newlyImported": 0,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 0,
+      "adaptedReferences": 0,
+      "categories": {},
+      "dispositions": {
+        "included": 21
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 85,
+          "last": 118,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "power-behind-the-throne",
+      "title": "Power Behind the Throne",
+      "version": "1.0.0",
+      "edition": 4,
+      "sourceHash": "9e87c1a55d37dfd05fa24398ee66459dd51b56faefc6918ffd55672fc68deb6b",
+      "references": 0,
+      "newlyImported": 0,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 0,
+      "adaptedReferences": 0,
+      "categories": {},
+      "dispositions": {
+        "included": 5
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 28,
+          "last": 148,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "enemy-in-shadows",
+      "title": "Enemy in Shadows",
+      "version": "1.0.0",
+      "edition": 4,
+      "sourceHash": "685ab8d803c014f6989927f2cc2ece7d3f470530202e224dc2102ee7efa27880",
+      "references": 0,
+      "newlyImported": 0,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 0,
+      "adaptedReferences": 0,
+      "categories": {},
+      "dispositions": {
+        "included": 18
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 42,
+          "last": 114,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "enemy-in-shadows-companion",
+      "title": "Enemy in Shadows Companion",
+      "version": "1.0.1",
+      "edition": 4,
+      "sourceHash": "c45fa2152196d3ad951fa369eea8465e1149c3537ace60ae92c481c51cdbaf79",
+      "references": 0,
+      "newlyImported": 0,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 0,
+      "adaptedReferences": 0,
+      "categories": {},
+      "dispositions": {
+        "included": 18
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 22,
+          "last": 106,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "ubersreik-adventures-iii",
+      "title": "Ubersreik Adventures III",
+      "version": "1.0.0",
+      "edition": 4,
+      "sourceHash": "23f39fae43b5a6c240521440eb07ce919823e93a573e648a746205a4ace63439",
+      "references": 0,
+      "newlyImported": 0,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 0,
+      "adaptedReferences": 0,
+      "categories": {},
+      "dispositions": {
+        "included": 10
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 29,
+          "last": 99,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "altdorf",
+      "title": "Altdorf: Crown of the Empire",
+      "version": "1.0.0",
+      "edition": 4,
+      "sourceHash": "9a3d9606ecd58163d460bfcd8e2c41aba6957232b802f5dbfc2f353a1286f1ec",
+      "references": 0,
+      "newlyImported": 0,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 0,
+      "adaptedReferences": 0,
+      "categories": {},
+      "dispositions": {
+        "included": 3
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 104,
+          "last": 132,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "ubersreik-adventures-i",
+      "title": "Ubersreik Adventures",
+      "version": "1.0.0",
+      "edition": 4,
+      "sourceHash": "98eb45b7fde1c63989753b09a339e52c9bbafc079d8dc4597cbd0d425d26d6af",
+      "references": 0,
+      "newlyImported": 0,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 0,
+      "adaptedReferences": 0,
+      "categories": {},
+      "dispositions": {
+        "included": 13
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 34,
+          "last": 123,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "the-horned-rat",
+      "title": "The Horned Rat",
+      "version": "1.0.0",
+      "edition": 4,
+      "sourceHash": "24eebc29a7145f65f984f07eead2bf29da53501c722a8cfce358727d0f7b357c",
+      "references": 0,
+      "newlyImported": 0,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 0,
+      "adaptedReferences": 0,
+      "categories": {},
+      "dispositions": {
+        "included": 31
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 7,
+          "last": 150,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "the-horned-rat-companion",
+      "title": "The Horned Rat Companion",
+      "version": "1.0.1",
+      "edition": 4,
+      "sourceHash": "c08750a75bb9a66712c60db2989fd761606880856b738d44f37e310abbd5d56c",
+      "references": 0,
+      "newlyImported": 0,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 0,
+      "adaptedReferences": 0,
+      "categories": {},
+      "dispositions": {
+        "included": 21
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 14,
+          "last": 120,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "hell-rides-to-hallt",
+      "title": "Hell Rides to Hallt",
+      "version": "1.0.0",
+      "edition": 4,
+      "sourceHash": "a4b2aba458f2b4357a7fba82ffcadbe1a0cc221ea0adeb1190814b5688a43c63",
+      "references": 0,
+      "newlyImported": 0,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 0,
+      "adaptedReferences": 0,
+      "categories": {},
+      "dispositions": {
+        "included": 1
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 22,
+          "last": 22,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "skeleton-crew",
+      "title": "Skeleton Crew",
+      "version": "1.0.0",
+      "edition": 4,
+      "sourceHash": "eae2822acd0acae8640d74f0e88a9c97eae464cab613a387ad864b7ab6da6e9b",
+      "references": 0,
+      "newlyImported": 0,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 0,
+      "adaptedReferences": 0,
+      "categories": {},
+      "dispositions": {
+        "included": 1
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 16,
+          "last": 16,
+          "topic": "Reviewed Bestiary foundations and templates"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "emperors-wrath",
+      "title": "The Emperor’s Wrath",
+      "version": "1.0.0",
+      "edition": 4,
+      "sourceHash": "e09246e892f11fec38003ae82003a29cc0f3d57a1dc28a8fb614a8a274ef28ad",
+      "references": 0,
+      "newlyImported": 0,
+      "retainedOutsideSearch": 0,
+      "existingReferences": 0,
+      "adaptedReferences": 0,
+      "categories": {},
+      "dispositions": {
+        "included": 4
+      },
+      "rulesAudit": null,
+      "areas": [
+        {
+          "first": 14,
+          "last": 19,
+          "topic": "Reviewed Bestiary foundations and templates"
         }
       ],
       "unresolved": []

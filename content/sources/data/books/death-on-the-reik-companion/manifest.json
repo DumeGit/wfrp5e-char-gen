@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "death-on-the-reik-companion",
+  "title": "Death on the Reik Companion",
+  "shortTitle": "Death on the Reik Companion",
+  "edition": 4,
+  "version": "1.0.1",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "Death on the Reik Companion.pdf",
+    "sha256": "591865662057a72691234ecec33d2bf077523e2a3872594346fde29505bf5a97"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Reusable profiles and supported templates for the Bestiary Workshop. Named NPCs remain outside the catalogue.",
+      "Core Fifth Edition rules govern. Selective Legacy notes identify mechanical adaptations. Unsupported printed entries remain for manual review."
+    ]
+  },
+  "files": {
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  }
+}

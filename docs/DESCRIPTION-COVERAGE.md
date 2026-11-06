@@ -2,8 +2,8 @@
 
 Generated from the canonical description catalogue.
 
-- 2277 canonical descriptions; 2344 source bindings.
-- 2277 explicitly reviewed entries: 2027 prose summaries and 250 structured-data exceptions.
+- 2303 canonical descriptions; 2370 source bindings.
+- 2303 explicitly reviewed entries: 2027 prose summaries and 276 structured-data exceptions.
 - 0 imported descriptions awaiting editorial review.
 - 7 explicit editorial reference exclusions, in addition to all standalone Rules and private NPC/template references.
 
@@ -261,6 +261,32 @@ Pure names, statistical labels and numerical lookup cells retain their printed v
 - description:50b953e5001605c373e7c730: Spear (tribes-tribulations).
 - description:3defffe28dc2909761707bf8: Sword (tribes-tribulations).
 - description:6fc9f19be171543da577d883: Fangs (tribes-tribulations).
+- description:60dff8c5267943117743bc8d: Ranged (Bow) (empire-in-ruins-companion p. 84).
+- description:5791e6d594498126d60b7d5e: Ranged (Crossbow) (empire-in-ruins p. 18).
+- description:6e2942b5267963796952d755: Ranged (Crossbow) (empire-in-ruins p. 19).
+- description:2b8a4b2e0a886ecd27e33576: Ranged (Pistol) (empire-in-ruins p. 19).
+- description:cdeb29d01d54e757acca62c9: Ranged (Shortbow) (empire-in-ruins p. 143).
+- description:696a070ea0e4930bb8631e56: Ranged (Bow or Sling) (empire-in-ruins p. 175).
+- description:5ed9870079c71ac94ec50813: Ranged (Bow) (deft-steps p. 103).
+- description:d0a46653ed22ad235a27ef0c: Ranged (Bow) (deft-steps p. 103).
+- description:3b15cdc106bb63a4fd1cb49b: Ranged (Crossbow) (deft-steps p. 108).
+- description:2762e97fc34cff650ad46932: Ranged (Pistol) (emperors-wrath p. 19).
+- description:fe72c6a538b95c9fd20b9d08: Ranged (Crossbow) (emperors-wrath p. 19).
+- description:8123662e892a00b2e321acfd: Ranged (Bow) (enemy-in-shadows-companion p. 99).
+- description:355871d8128350cb4c026947: Ranged (enemy-in-shadows p. 69).
+- description:9db85f3cb661bf693b52d8d6: Ranged (enemy-in-shadows p. 69).
+- description:d31cc58d890bd7a9651ca3bc: Ranged (enemy-in-shadows p. 69).
+- description:0a344fc5cb9ea5edd9cde834: Ranged (Warpstone Star) (the-horned-rat-companion p. 18).
+- description:0fed753c7adc527d178e2347: Ranged (Death Globe) (the-horned-rat-companion p. 18).
+- description:fcb81298f39f313a732955df: Ranged (Warplock Pistol) (the-horned-rat p. 7).
+- description:228859f159de779092cb19f4: Ranged (Warplock Pistol) (the-horned-rat p. 7).
+- description:16d0da8867a3386e438b907c: Ranged (Crossbow) (the-horned-rat p. 9).
+- description:7fbf2a26573aef16b62969f9: Ranged (Crossbow) (the-horned-rat p. 9).
+- description:7a7609eb5d7e859ed5296afd: Ranged (Pistol) (the-horned-rat p. 89).
+- description:adac85f67d911f2c98995cdf: Ranged (Crossbow) (the-horned-rat p. 123).
+- description:495c324c5b2b7e422dca3ad7: Ranged (Bow) (ubersreik-adventures-i p. 77).
+- description:bdb0c14ada32d3d25b4fb408: Ranged (ubersreik-adventures-i p. 78).
+- description:d77e6e0d30b97d1afc2e872f: Ranged (ubersreik-adventures-i p. 121).
 
 ## Explicit reference exclusions
 

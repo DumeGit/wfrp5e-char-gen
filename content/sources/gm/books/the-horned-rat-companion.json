@@ -1,0 +1,2157 @@
+{
+  "schemaVersion": 1,
+  "id": "the-horned-rat-companion",
+  "source": {
+    "file": "The Horned Rat Companion.pdf",
+    "sha256": "c08750a75bb9a66712c60db2989fd761606880856b738d44f37e310abbd5d56c"
+  },
+  "summary": "20 profiles and 1 templates",
+  "profiles": [
+    {
+      "id": "the-horned-rat-companion:creatures:palanquin-guards",
+      "name": "Palanquin Guards",
+      "page": 14,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 14
+      },
+      "category": "skaven guard",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 45,
+        "BS": 35,
+        "S": 45,
+        "T": 35,
+        "I": 55,
+        "Ag": 50,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 30,
+        "Fel": 20,
+        "W": 12
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Melee (Basic)",
+          "total": 60
+        }
+      ],
+      "talents": [
+        {
+          "name": "Drilled",
+          "ranks": 1
+        },
+        {
+          "name": "Enclosed Fighter",
+          "ranks": 1
+        },
+        {
+          "name": "Strike Mighty Blow",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Champion",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Warp-Cursed Blade)",
+          "skill": 45,
+          "damage": 9,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 4,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Heavy Armour, Warp-Cursed Blades"
+      },
+      "notes": [
+        "Stats are generic guards, but source text specifically frames them as Skrittar's palanquin guards; weapon has Damaging and Impale qualities.",
+        "Printed Skill entry for manual review: Dodge.",
+        "Printed Talent for manual review: Tunnel Rat."
+      ],
+      "species": "Skaven"
+    },
+    {
+      "id": "the-horned-rat-companion:creatures:treecherik-clanrat",
+      "name": "Treecherik Clanrat",
+      "page": 18,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 18
+      },
+      "category": "skaven infantry",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 30,
+        "BS": 30,
+        "S": 30,
+        "T": 30,
+        "I": 40,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 20,
+        "Fel": 20,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Melee (Basic)",
+          "total": 45
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 55
+        },
+        {
+          "name": "Stealth (Rural)",
+          "total": 55
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 30,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "*Shield worn on back grants 2 AP against attacks from behind instead of normal shield benefit."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Shield 2",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Skaven"
+    },
+    {
+      "id": "the-horned-rat-companion:creatures:clan-eshin-infiltrator",
+      "name": "Clan Eshin Infiltrator",
+      "page": 18,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 18
+      },
+      "category": "skaven infiltrator",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 6,
+        "WS": 55,
+        "BS": 55,
+        "S": 40,
+        "T": 40,
+        "I": 50,
+        "Ag": 60,
+        "Dex": 50,
+        "Int": 40,
+        "WP": 40,
+        "Fel": 35,
+        "W": 24
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 50
+        },
+        {
+          "name": "Dodge",
+          "total": 70
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 65
+        },
+        {
+          "name": "Ranged (Throwing)",
+          "total": 65
+        },
+        {
+          "name": "Stealth (Rural)",
+          "total": 70
+        },
+        {
+          "name": "Stealth (Urban)",
+          "total": 70
+        }
+      ],
+      "talents": [
+        {
+          "name": "Alley Cat",
+          "ranks": 1
+        },
+        {
+          "name": "Combat Master",
+          "ranks": 1,
+          "adaptation": "Printed Combat Master 2 uses Fifth Edition Combat Master, capped at 1 rank(s)."
+        },
+        {
+          "name": "Combat Reflexes",
+          "ranks": 1
+        },
+        {
+          "name": "Hardy",
+          "ranks": 1,
+          "adaptation": "Printed Hardy 2 uses Fifth Edition Hardy, capped at 1 rank(s)."
+        },
+        {
+          "name": "Step Aside",
+          "ranks": 1
+        },
+        {
+          "name": "Strike to Injure",
+          "ranks": 1
+        },
+        {
+          "name": "Strike Mighty Blow",
+          "ranks": 1,
+          "adaptation": "Printed Strike Mighty Blow 2 uses Fifth Edition Strike Mighty Blow, capped at 1 rank(s)."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Stealthy",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Fighting Claws)",
+          "skill": 55,
+          "damage": 10,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        },
+        {
+          "name": "Ranged (Warpstone Star)",
+          "skill": 55,
+          "damage": 7,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "Range 8 yards."
+        },
+        {
+          "name": "Ranged (Death Globe)",
+          "skill": 55,
+          "damage": 12,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": "Range 8 yards."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Hand Weapon (Fighting Claws), Smoke Bomb, 2 Warpstone Stars, Death Globe, 2 doses of Black Lotus poison, 1d10 Warptokens"
+      },
+      "notes": [
+        "Printed Talent for manual review: Tunnel Rat."
+      ],
+      "species": "Skaven",
+      "adaptation": "Printed Combat Master 2 uses Fifth Edition Combat Master, capped at 1 rank(s). Printed Hardy 2 uses Fifth Edition Hardy, capped at 1 rank(s). Printed Strike Mighty Blow 2 uses Fifth Edition Strike Mighty Blow, capped at 1 rank(s)."
+    },
+    {
+      "id": "the-horned-rat-companion:creatures:deathvermin-stormvermin",
+      "name": "Deathvermin Stormvermin",
+      "page": 22,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 22
+      },
+      "category": "skaven elite infantry",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 50,
+        "BS": 35,
+        "S": 40,
+        "T": 40,
+        "I": 55,
+        "Ag": 50,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 25,
+        "Fel": 20,
+        "W": 11
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Cool",
+          "total": 35
+        },
+        {
+          "name": "Dodge",
+          "total": 60
+        },
+        {
+          "name": "Melee (Polearm)",
+          "total": 60
+        }
+      ],
+      "talents": [
+        {
+          "name": "Combat Reflexes",
+          "ranks": 1
+        },
+        {
+          "name": "Combat Master",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Spear)",
+          "skill": 60,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Polearm)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 3,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "unavailableTraits": [
+        {
+          "name": "Shield 2",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Skaven"
+    },
+    {
+      "id": "the-horned-rat-companion:creatures:diseased-clanrat",
+      "name": "Diseased Clanrat",
+      "page": 25,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 25
+      },
+      "category": "skaven infantry",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 35,
+        "BS": 30,
+        "S": 30,
+        "T": 35,
+        "I": 45,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 20,
+        "Fel": 20,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Endurance",
+          "total": 45
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 45
+        }
+      ],
+      "talents": [
+        {
+          "name": "Combat Reflexes",
+          "ranks": 1
+        },
+        {
+          "name": "Resolute",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Disease",
+          "value": "Bleeding Eyerot"
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "species": "Skaven"
+    },
+    {
+      "id": "the-horned-rat-companion:creatures:packmaster",
+      "name": "Packmaster",
+      "page": 28,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 28
+      },
+      "category": "skaven handler",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 6,
+        "WS": 35,
+        "BS": 30,
+        "S": 35,
+        "T": 35,
+        "I": 40,
+        "Ag": 40,
+        "Dex": 35,
+        "Int": 35,
+        "WP": 25,
+        "Fel": 25,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Animal Care",
+          "total": 45
+        },
+        {
+          "name": "Charm Animal",
+          "total": 45
+        },
+        {
+          "name": "Lore (Torture)",
+          "total": 45
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 45
+        },
+        {
+          "name": "Melee (Entangling)",
+          "total": 50
+        }
+      ],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Leather Armour, Whip"
+      },
+      "notes": [],
+      "unavailableTraits": [
+        {
+          "name": "Weapon (Whip +5, Sword +7)",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Skaven"
+    },
+    {
+      "id": "the-horned-rat-companion:creatures:turntail-poisoned-wind-globadier",
+      "name": "Turntail Poisoned Wind Globadier",
+      "page": 31,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 31
+      },
+      "category": "skaven ranged infantry",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 30,
+        "BS": 40,
+        "S": 30,
+        "T": 30,
+        "I": 40,
+        "Ag": 45,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 15,
+        "Fel": 20,
+        "W": 10
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Dodge",
+          "total": 55
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 40
+        },
+        {
+          "name": "Ranged (Throwing)",
+          "total": 50
+        }
+      ],
+      "talents": [
+        {
+          "name": "Flee!",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Dagger)",
+          "skill": 40,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Leather Armour, Dagger, 3 Poisoned Wind Globes, Shield, Gas Mask"
+      },
+      "notes": [
+        "*Special references The Horned Rat p.8 for Poisoned Wind Globe rules."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Ranged (Poisoned Wind Globe) Special* (6)",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Skaven"
+    },
+    {
+      "id": "the-horned-rat-companion:creatures:great-pox-rat",
+      "name": "Great Pox Rat",
+      "page": 50,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 50
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 6,
+        "WS": 35,
+        "BS": null,
+        "S": 40,
+        "T": 40,
+        "I": 50,
+        "Ag": 35,
+        "Dex": null,
+        "Int": 15,
+        "WP": 15,
+        "Fel": null,
+        "W": 26
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bite",
+          "value": "8"
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Mount, War"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 35,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 35,
+          "damage": 14,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 10,
+          "adaptation": "Fifth Edition Large Size adds 4 to the primary melee attack."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "species": "rat",
+      "adaptation": "Fifth Edition Large Size adds 4 to the primary melee attack."
+    },
+    {
+      "id": "the-horned-rat-companion:creatures:plague-rat",
+      "name": "Plague Rat",
+      "page": 50,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 50
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Tiny",
+      "stats": {
+        "M": 6,
+        "WS": 28,
+        "BS": null,
+        "S": 35,
+        "T": 30,
+        "I": 25,
+        "Ag": 25,
+        "Dex": null,
+        "Int": 15,
+        "WP": 15,
+        "Fel": null,
+        "W": 5
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Bite",
+          "value": "4"
+        },
+        {
+          "name": "Disease",
+          "value": "Ratte Fever, Black Plague, or GM's choice"
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Tiny",
+          "adaptation": "Printed Little uses Fifth Edition Tiny Size. After a change, supply Wounds manually."
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Die Hard",
+          "value": ""
+        },
+        {
+          "name": "Frenzy",
+          "value": ""
+        },
+        {
+          "name": "Infestation",
+          "value": ""
+        },
+        {
+          "name": "Stealthy",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 28,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed Wounds apply to the baseline. Core Tiny Size requires manual Wounds after changes."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Big",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Brute",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Corrupted (Moderate)",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "rat",
+      "adaptation": "Printed Little uses Fifth Edition Tiny Size. After a change, supply Wounds manually. Printed Stride uses the core Fifth Edition Sprinter effect."
+    },
+    {
+      "id": "the-horned-rat-companion:creatures:brood-horror",
+      "name": "Brood Horror",
+      "page": 51,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 51
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Enormous",
+      "stats": {
+        "M": 8,
+        "WS": 45,
+        "BS": null,
+        "S": 50,
+        "T": 60,
+        "I": 45,
+        "Ag": 35,
+        "Dex": null,
+        "Int": 15,
+        "WP": 25,
+        "Fel": null,
+        "W": 72
+      },
+      "toughnessBonus": 6,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [
+        {
+          "name": "Enclosed Fighter",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Bite",
+          "value": "9"
+        },
+        {
+          "name": "Disease",
+          "value": "Ratte Fever"
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Regeneration",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        },
+        {
+          "name": "Tail",
+          "value": "8"
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Corrosive Blood",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Mount, War"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 45,
+          "damage": 9,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Tail",
+          "skill": 45,
+          "damage": 8,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon",
+          "skill": 45,
+          "damage": 15,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 10,
+          "adaptation": "Fifth Edition Enormous Size adds 5 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Special rules: Digger (tunnels through earth/solid rock at quarter movement); Foul Ichor (death explosion; 4-yard radius).",
+        "Printed Talent for manual review: Acute Senses (Smell, Hearing).",
+        "Printed Talent for manual review: Tunnel Rat."
+      ],
+      "species": "rat",
+      "adaptation": "Fifth Edition Enormous Size adds 5 to the primary melee attack."
+    },
+    {
+      "id": "the-horned-rat-companion:creatures:rat-ogre-bonebreaker",
+      "name": "Rat Ogre Bonebreaker",
+      "page": 52,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 52
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 6,
+        "WS": 45,
+        "BS": 10,
+        "S": 65,
+        "T": 55,
+        "I": 35,
+        "Ag": 45,
+        "Dex": 25,
+        "Int": 10,
+        "WP": 25,
+        "Fel": 15,
+        "W": 56
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 55
+        },
+        {
+          "name": "Dodge",
+          "total": 55
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 70
+        }
+      ],
+      "talents": [
+        {
+          "name": "Dual Wielder",
+          "ranks": 1
+        },
+        {
+          "name": "Ambidextrous",
+          "ranks": 1
+        },
+        {
+          "name": "Hardy",
+          "ranks": 1,
+          "adaptation": "Printed Hardy 2 uses Fifth Edition Hardy, capped at 1 rank(s)."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Fear",
+          "value": "1"
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Painless",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Stupid",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Mount, War"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "*Warpstone shard weapon has Warpstone and Penetrating qualities. Source spells talent as 'Dual Weleder' and 'Ambidexterous'; normalized obvious spellings."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Weapon (Razor-Sharp Claws +10, Warpstone Shard* +11)",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "rat ogre",
+      "adaptation": "Printed Hardy 2 uses Fifth Edition Hardy, capped at 1 rank(s)."
+    },
+    {
+      "id": "the-horned-rat-companion:creatures:great-eagle",
+      "name": "Great Eagle",
+      "page": 73,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 73
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 2,
+        "WS": 65,
+        "BS": null,
+        "S": 44,
+        "T": 43,
+        "I": 55,
+        "Ag": 52,
+        "Dex": null,
+        "Int": 38,
+        "WP": 43,
+        "Fel": 25,
+        "W": 32
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [
+        {
+          "name": "Acute Sense (Sight)",
+          "ranks": 1,
+          "adaptation": "Printed Acute Sense (Vision: as Character Talent) uses Fifth Edition Acute Sense (Sight)."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Fear",
+          "value": "1"
+        },
+        {
+          "name": "Fly",
+          "value": "100"
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Size",
+          "value": "Enormous"
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        }
+      ],
+      "attacks": [],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed entry for manual review: Beak +8.",
+        "Printed entry for manual review: 2 × Claws +6."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Clever",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Fearless",
+          "optional": true,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "bird",
+      "adaptation": "Printed Acute Sense (Vision: as Character Talent) uses Fifth Edition Acute Sense (Sight)."
+    },
+    {
+      "id": "the-horned-rat-companion:creatures:mountain-cat",
+      "name": "Mountain Cat",
+      "page": 73,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 73
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Small",
+      "stats": {
+        "M": 2,
+        "WS": 65,
+        "BS": null,
+        "S": 44,
+        "T": 43,
+        "I": 55,
+        "Ag": 52,
+        "Dex": null,
+        "Int": 38,
+        "WP": 43,
+        "Fel": 25,
+        "W": 8
+      },
+      "toughnessBonus": 4,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Bite",
+          "value": "5"
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Small"
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Stealthy",
+          "value": ""
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Arboreal",
+          "value": ""
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 65,
+          "damage": 5,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Claws",
+          "skill": 65,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Printed attack multiplicity: 2 Claws +6."
+      ],
+      "species": "cat",
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect. Printed Wounds 32 use the core Small formula (8 Wounds)."
+    },
+    {
+      "id": "the-horned-rat-companion:creatures:cliff-spider",
+      "name": "Cliff Spider",
+      "page": 73,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 73
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 5,
+        "WS": 35,
+        "BS": 55,
+        "S": 45,
+        "T": 35,
+        "I": 40,
+        "Ag": 55,
+        "Dex": 30,
+        "Int": 5,
+        "WP": 25,
+        "Fel": null,
+        "W": 24
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Bite",
+          "value": "4"
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Venom",
+          "value": "Challenging"
+        },
+        {
+          "name": "Wallcrawler",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Size",
+          "value": "Enormous"
+        },
+        {
+          "name": "Venom",
+          "value": "Difficult to Very Hard"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 35,
+          "damage": 4,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 1,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Additional narrative rules on page 73 cover its sticky silk lasso and lair behavior."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Ranged Special (40 yards)",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "spider",
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect. Core Venom applies the Difficulty to recovery from Poisoned."
+    },
+    {
+      "id": "the-horned-rat-companion:creatures:blightking",
+      "name": "Blightking",
+      "page": 77,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 77
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 4,
+        "WS": 60,
+        "BS": null,
+        "S": 45,
+        "T": 55,
+        "I": 50,
+        "Ag": 30,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 40,
+        "Fel": 25,
+        "W": 28
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Athletics",
+          "total": 40
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 80
+        },
+        {
+          "name": "Melee (Two-handed)",
+          "total": 80
+        },
+        {
+          "name": "Melee (Parry)",
+          "total": 80
+        },
+        {
+          "name": "Perception",
+          "total": 60
+        }
+      ],
+      "talents": [
+        {
+          "name": "Hardy",
+          "ranks": 1,
+          "adaptation": "Printed Hardy 2 uses Fifth Edition Hardy, capped at 1 rank(s)."
+        },
+        {
+          "name": "Strike Mighty Blow",
+          "ranks": 1,
+          "adaptation": "Printed Strike Mighty Blow 2 uses Fifth Edition Strike Mighty Blow, capped at 1 rank(s)."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Belligerent",
+          "value": ""
+        },
+        {
+          "name": "Champion",
+          "value": ""
+        },
+        {
+          "name": "Corruption",
+          "value": "Moderate"
+        },
+        {
+          "name": "Disease",
+          "value": "Nurgle's Rot"
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [],
+      "armour": [],
+      "spells": [],
+      "sections": {
+        "Trappings": "Putrid Great Axe, a pair of swords, shield bearing skulls, cursed plate bedecked with Nurgle tributes"
+      },
+      "notes": [
+        "*May switch once per turn among axe, sword and shield, or pair of swords; source trappings include narrative flourishes. This creature stat block is generic archetype, not named NPC."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Armoured 6",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Shield 2",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        },
+        {
+          "name": "Weapon (Sword +10, Great Axe +12)",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "human",
+      "adaptation": "Printed Hardy 2 uses Fifth Edition Hardy, capped at 1 rank(s). Printed Strike Mighty Blow 2 uses Fifth Edition Strike Mighty Blow, capped at 1 rank(s)."
+    },
+    {
+      "id": "the-horned-rat-companion:creatures:carrion",
+      "name": "Carrion",
+      "page": 120,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 120
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Large",
+      "stats": {
+        "M": 4,
+        "WS": 43,
+        "BS": null,
+        "S": 30,
+        "T": 30,
+        "I": 40,
+        "Ag": 30,
+        "Dex": null,
+        "Int": 10,
+        "WP": 30,
+        "Fel": null,
+        "W": 21
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Fear",
+          "value": "3"
+        },
+        {
+          "name": "Fly",
+          "value": "100"
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Size",
+          "value": "Large"
+        },
+        {
+          "name": "Trained",
+          "value": "War"
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Infected",
+          "value": ""
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Claws",
+          "skill": 43,
+          "damage": 10,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "printedDamage": 7,
+          "adaptation": "Fifth Edition Large Size adds 3 to the primary melee attack."
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [
+        "Generic undead bird profile printed in adventure bestiary; text extraction interleaves its row with Flying Death Skulls.",
+        "Printed entry for manual review: Beak +9.",
+        "Printed attack multiplicity: 2 Claws +7."
+      ],
+      "species": "bird",
+      "adaptation": "Fifth Edition Large Size adds 3 to the primary melee attack."
+    },
+    {
+      "id": "the-horned-rat-companion:creatures:wolf-rat",
+      "name": "Wolf Rat",
+      "page": 50,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 50
+      },
+      "category": "creature",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 6,
+        "WS": 45,
+        "BS": null,
+        "S": 35,
+        "T": 32,
+        "I": 35,
+        "Ag": 35,
+        "Dex": null,
+        "Int": 15,
+        "WP": 15,
+        "Fel": null,
+        "W": 10
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bite",
+          "value": "6"
+        },
+        {
+          "name": "Bestial",
+          "value": ""
+        },
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        },
+        {
+          "name": "Skittish",
+          "value": ""
+        },
+        {
+          "name": "Sprinter",
+          "value": "",
+          "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+        },
+        {
+          "name": "Tracker",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [
+        {
+          "name": "Disease",
+          "value": "Ratte Fever, Black Plague, or GM’s choice"
+        },
+        {
+          "name": "Frenzy",
+          "value": ""
+        },
+        {
+          "name": "Hungry",
+          "value": ""
+        },
+        {
+          "name": "Territorial",
+          "value": ""
+        },
+        {
+          "name": "Trained",
+          "value": "Guard, War"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 45,
+          "damage": 6,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        }
+      ],
+      "armour": [],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "species": "rat-wolf",
+      "adaptation": "Printed Stride uses the core Fifth Edition Sprinter effect."
+    },
+    {
+      "id": "the-horned-rat-companion:creatures:clan-mors-clanrat",
+      "name": "Clan Mors Clanrat",
+      "page": 20,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 20
+      },
+      "category": "skaven infantry",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 5,
+        "WS": 35,
+        "BS": 30,
+        "S": 35,
+        "T": 35,
+        "I": 50,
+        "Ag": 35,
+        "Dex": 30,
+        "Int": 30,
+        "WP": 25,
+        "Fel": 20,
+        "W": 11
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Cool",
+          "total": 35
+        },
+        {
+          "name": "Dodge",
+          "total": 45
+        },
+        {
+          "name": "Melee (Polearm)",
+          "total": 45
+        }
+      ],
+      "talents": [
+        {
+          "name": "Drilled",
+          "ranks": 1,
+          "adaptation": "Printed Drilled 2 uses Fifth Edition Drilled, capped at 1 rank(s)."
+        },
+        {
+          "name": "Combat Reflexes",
+          "ranks": 1
+        },
+        {
+          "name": "Resolute",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Infected",
+          "value": ""
+        },
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Spear)",
+          "skill": 45,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Polearm)"
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Leather Armour, Spear, Shield"
+      },
+      "notes": [
+        "Generic Fangsnapper Clawpack unit profile; removed pack-specific descriptive attribution."
+      ],
+      "species": "Skaven",
+      "adaptation": "Printed Drilled 2 uses Fifth Edition Drilled, capped at 1 rank(s)."
+    },
+    {
+      "id": "the-horned-rat-companion:creatures:turntail-clanrat",
+      "name": "Turntail Clanrat",
+      "page": 31,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 31
+      },
+      "category": "skaven infantry",
+      "example": false,
+      "size": "Average",
+      "stats": {
+        "M": 6,
+        "WS": 30,
+        "BS": 35,
+        "S": 30,
+        "T": 30,
+        "I": 45,
+        "Ag": 45,
+        "Dex": 30,
+        "Int": 45,
+        "WP": 15,
+        "Fel": 20,
+        "W": 10
+      },
+      "toughnessBonus": 3,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [
+        {
+          "name": "Dodge",
+          "total": 65
+        },
+        {
+          "name": "Melee (Basic)",
+          "total": 40
+        },
+        {
+          "name": "Ranged (Engineering)",
+          "total": 45
+        },
+        {
+          "name": "Ranged (Blackpowder)",
+          "total": 40
+        }
+      ],
+      "talents": [
+        {
+          "name": "Flee!",
+          "ranks": 1
+        }
+      ],
+      "traits": [
+        {
+          "name": "Night Vision",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Weapon (Hand Weapon)",
+          "skill": 40,
+          "damage": 7,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Basic)"
+        },
+        {
+          "name": "Ranged (Warpmusket)",
+          "skill": 35,
+          "damage": 7,
+          "optional": false,
+          "ranged": true,
+          "free": false,
+          "text": ""
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {
+        "Trappings": "Leather Armour, Hand Weapon, Shield; 50% chance of functioning Gas Mask"
+      },
+      "notes": [
+        "For every five Clanrats, there is one weapon crew with a Doomrocket or Warpfire Thrower."
+      ],
+      "unavailableTraits": [
+        {
+          "name": "Ranged (Doomrocket +12, Warpfire Thrower +12)",
+          "optional": false,
+          "reason": "Review the printed effect manually. No equivalent Bestiary effect is configured."
+        }
+      ],
+      "species": "Skaven"
+    },
+    {
+      "id": "the-horned-rat-companion:creatures:abyssal-terror",
+      "name": "Abyssal Terror",
+      "page": 120,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 120
+      },
+      "category": "Undead",
+      "example": false,
+      "size": "Enormous",
+      "stats": {
+        "M": 4,
+        "WS": 65,
+        "BS": null,
+        "S": 60,
+        "T": 55,
+        "I": 15,
+        "Ag": 45,
+        "Dex": null,
+        "Int": 10,
+        "WP": 50,
+        "Fel": null,
+        "W": 84
+      },
+      "toughnessBonus": 5,
+      "hitLocations": [
+        "Head",
+        "Arms",
+        "Body",
+        "Legs"
+      ],
+      "skills": [],
+      "talents": [],
+      "traits": [
+        {
+          "name": "Bite",
+          "value": "10"
+        },
+        {
+          "name": "Fear",
+          "value": "2"
+        },
+        {
+          "name": "Fly",
+          "value": "75"
+        },
+        {
+          "name": "Size",
+          "value": "Enormous"
+        },
+        {
+          "name": "Trained",
+          "value": "Broken, Mount, War"
+        },
+        {
+          "name": "Undead",
+          "value": ""
+        }
+      ],
+      "optionalTraits": [],
+      "attacks": [
+        {
+          "name": "Bite",
+          "skill": 65,
+          "damage": 10,
+          "optional": false,
+          "ranged": false,
+          "free": true,
+          "text": ""
+        },
+        {
+          "name": "Weapon (Claws)",
+          "skill": 65,
+          "damage": 18,
+          "optional": false,
+          "ranged": false,
+          "free": false,
+          "text": "",
+          "skillName": "Melee (Brawling)",
+          "printedDamage": 12,
+          "adaptation": "Fifth Edition Enormous Size adds 6 to the primary melee attack."
+        }
+      ],
+      "armour": [
+        {
+          "name": "Armour",
+          "ap": 2,
+          "locations": "Head, Arms, Body, Legs",
+          "optional": false,
+          "quick": false,
+          "shield": false
+        }
+      ],
+      "spells": [],
+      "sections": {},
+      "notes": [],
+      "species": "Undead beast",
+      "adaptation": "Fifth Edition Enormous Size adds 6 to the primary melee attack."
+    }
+  ],
+  "templates": [
+    {
+      "id": "the-horned-rat-companion:templates:yellow-fang-junior-cultist",
+      "name": "Yellow Fang Junior Cultist",
+      "page": 62,
+      "source": {
+        "book": "the-horned-rat-companion",
+        "page": 62
+      },
+      "eligibility": "any",
+      "profileIds": [
+        "core:creatures:cultist"
+      ],
+      "foundationLabel": "Cultist",
+      "adjustments": {},
+      "skills": [],
+      "talents": [
+        {
+          "options": [
+            "Secret Identity"
+          ],
+          "ranks": 1
+        }
+      ],
+      "traits": [],
+      "optionalTraits": [],
+      "gear": [],
+      "notes": [
+        "Record the cultist’s day-to-day Career separately. The source usually chooses a Burgher, Peasant or Rogue Career and allows exceptions."
+      ]
+    }
+  ],
+  "training": []
+}

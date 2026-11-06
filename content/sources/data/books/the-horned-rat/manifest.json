@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "the-horned-rat",
+  "title": "The Horned Rat",
+  "shortTitle": "The Horned Rat",
+  "edition": 4,
+  "version": "1.0.0",
+  "kind": "supplement",
+  "dependsOn": [
+    "core"
+  ],
+  "source": {
+    "file": "Enemy Within Campaign Volume 4 The Horned Rat.pdf",
+    "sha256": "24eebc29a7145f65f984f07eead2bf29da53501c722a8cfce358727d0f7b357c"
+  },
+  "compatibility": {
+    "reviewed": true,
+    "notes": [
+      "Reusable profiles and supported templates for the Bestiary Workshop. Named NPCs remain outside the catalogue.",
+      "Core Fifth Edition rules govern. Selective Legacy notes identify mechanical adaptations. Unsupported printed entries remain for manual review."
+    ]
+  },
+  "files": {
+    "coverage": "coverage.json",
+    "referenceEntries": "reference-entries.json"
+  }
+}
