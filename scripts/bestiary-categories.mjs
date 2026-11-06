@@ -1,7 +1,15 @@
 import { bookId } from "../src/engine/gm/books.mjs";
 
-const PEOPLE = "Peoples & Professions";
-const CHAOS = "Chaos Followers & Mutants";
+const CIVILIANS = "Peoples & Civilians";
+const SOLDIERS = "Soldiers & Watch";
+const CRIMINALS = "Criminals & Outlaws";
+const CREW = "Crew & Travellers";
+const WORKING = "Mounts & Working Animals";
+const AQUATIC = "Aquatic Beasts";
+const GREAT_BEASTS = "Great Beasts";
+const MONSTERS = "Monsters & Giants";
+const CULTS = "Chaos Cults & Warriors";
+const MUTANTS = "Mutants & Chaos Beasts";
 const CONSTRUCTS = "Constructs & Elementals";
 const NATURE = "Plants & Nature Spirits";
 const ZOO = "The Imperial Zoo";
@@ -9,42 +17,41 @@ const ZOO = "The Imperial Zoo";
 // These source headings describe a consistent family. Mixed headings are
 // resolved by source ID below so a new profile cannot silently inherit one.
 const sourceGroups = {
-  [PEOPLE]: [
-    "Bounty hunters",
-    "Criminals",
+  [CIVILIANS]: [
     "Elves",
-    "Guards",
-    "Humanoid NPC",
     "Humanoids",
     "Imperial civilians",
-    "Imperial soldiers",
     "Imperial spies",
-    "Knights",
     "Merchants",
     "NPC",
     "Nobles",
     "Ogres",
-    "Passengers",
     "Peoples of the Reikland",
-    "Riverfolk",
-    "Soldiers",
     "Tavern staff",
     "Townsfolk",
-    "dwarf",
     "human",
   ],
-  Beasts: [
+  [SOLDIERS]: [
+    "Bounty hunters",
+    "Guards",
+    "Humanoid NPC",
+    "Imperial soldiers",
+    "Knights",
+    "Soldiers",
+  ],
+  [CRIMINALS]: ["Criminals"],
+  [CREW]: ["Passengers", "Riverfolk", "dwarf"],
+  Wildlife: [
     "Animals",
     "Beasts",
     "Beasts of the Reikland",
-    "Mounts",
-    "River creatures",
-    "Sea creatures",
     "Lustrian beasts",
     "animal",
-    "mount",
   ],
-  Monsters: ["Monsters", "Monstrous Beasts", "Trolls"],
+  [WORKING]: ["Mounts", "mount"],
+  [AQUATIC]: ["River creatures", "Sea creatures"],
+  [GREAT_BEASTS]: ["Monstrous Beasts"],
+  [MONSTERS]: ["Monsters", "Trolls"],
   Greenskins: ["Greenskins", "Orcs and Goblins"],
   Skaven: [
     "Skaven",
@@ -58,9 +65,9 @@ const sourceGroups = {
   ],
   Beastmen: ["Beastmen"],
   Lizardmen: ["Lizardmen"],
-  [CHAOS]: [
+  [CULTS]: ["Chaos cultists"],
+  [MUTANTS]: [
     "Chaos beasts",
-    "Chaos cultists",
     "Cultists and Mutants",
     "Mutant beasts",
     "Mutants",
@@ -72,38 +79,74 @@ const sourceGroups = {
 };
 
 const profileGroups = {
-  [PEOPLE]: [
-    "the-horned-rat:thug",
+  [CIVILIANS]: ["empire-in-ruins:minor-noble"],
+  [SOLDIERS]: [
+    "core:human-watchman",
+    "deft-steps:watchman",
+    "deft-steps:watch-sergeant",
+    "enemy-in-shadows:warriors",
+    "death-on-the-reik:river-patrol-captain",
+    "death-on-the-reik:river-patrol-crew",
+    "death-on-the-reik:watch-sergeant",
+    "death-on-the-reik:watch-recruit",
+    "death-on-the-reik:wittgenstein-guard-sergeant",
+    "death-on-the-reik:wittgenstein-guard",
+    "empire-in-ruins-companion:imperial-ostlander-soldier",
+    "empire-in-ruins-companion:vanguard-soldier",
+    "empire-in-ruins-companion:kenselheim-guard",
+    "empire-in-ruins-companion:kenselheim-guard-sergeant",
+    "ubersreik-adventures-iii:jungfreud-manor-guard",
+    "ubersreik-adventures-i:jungfreud-loyalists-watchmen-silver-1",
+    "ubersreik-adventures-i:ubersreik-watchman-silver-1",
     "the-horned-rat:red-shield-mercenary",
     "the-horned-rat:scourge-rider",
   ],
-  Beasts: [
+  [CRIMINALS]: [
+    "core:human-thug",
+    "core:halfling-thief",
+    "deft-steps:outlaw",
+    "deft-steps:outlaw-chief",
+    "enemy-in-shadows:rogues",
+    "death-on-the-reik:kidnapper",
+    "death-on-the-reik:wittgendorf-outlaw",
+    "ubersreik-adventures-iii:bandit",
+    "ubersreik-adventures-i:thug",
+    "the-horned-rat:thug",
+  ],
+  [CREW]: ["corsairs-flariel:dark-elf-ship-s-crew"],
+  Wildlife: [
+    "enemy-in-shadows-companion:great-cats",
+    "the-horned-rat-companion:great-eagle",
+    "the-horned-rat-companion:mountain-cat",
+    "the-horned-rat-companion:cliff-spider",
+    "tribes-tribulations:purple-skullback-spider",
+  ],
+  [WORKING]: [
+    "core:horse",
     "deft-steps:hochland-lockhund",
     "deft-steps:nordlander-bamse",
     "deft-steps:grootscher-marsh-hound",
     "deft-steps:dove-hawk",
     "deft-steps:arabyan-redhawk",
+    "enemy-in-shadows:cow-stimmigen-dairy-cattle",
+    "enemy-in-shadows:goat-booted-rottgeist",
+    "enemy-in-shadows:sheep-hugeltal-longwool",
+    "ubersreik-adventures-i:giant-wolf",
+  ],
+  [AQUATIC]: [
     "death-on-the-reik-companion:reik-eels",
     "death-on-the-reik-companion:giant-leeches",
     "death-on-the-reik-companion:stirpikes",
-    "enemy-in-shadows-companion:great-cats",
-    "the-horned-rat-companion:great-eagle",
-    "the-horned-rat-companion:mountain-cat",
-    "the-horned-rat-companion:cliff-spider",
+    "death-on-the-reik:monstrous-leech",
     "skeleton-crew:grey-barbed-shark",
-    "tribes-tribulations:purple-skullback-spider",
   ],
-  Monsters: [
+  [GREAT_BEASTS]: [
     "up-in-arms:demigryph-mount",
     "archives-ii:rhinox",
     "tribes-tribulations:mournfang",
-    "core:cave-squig",
     "tribes-tribulations:hopping-squig",
     "tribes-tribulations:giant-squig",
     "empire-in-ruins-companion:colossal-squig",
-    "enemy-in-shadows:amoeba",
-    "death-on-the-reik-companion:amoebae",
-    "death-on-the-reik-companion:river-trolls",
     "the-horned-rat:young-wyvern",
     "sea-of-claws:gargantuan",
     "sea-of-claws:kharibdyss",
@@ -126,6 +169,13 @@ const profileGroups = {
     "lustria:carnosaur",
     "lustria:troglodon",
     "lustria:dread-saurian",
+  ],
+  [MONSTERS]: [
+    "core:giant",
+    "core:troll",
+    "enemy-in-shadows:amoeba",
+    "death-on-the-reik-companion:amoebae",
+    "death-on-the-reik-companion:river-trolls",
   ],
   Greenskins: [
     "ubersreik-adventures-iii:forest-goblin",
@@ -153,19 +203,25 @@ const profileGroups = {
     "ubersreik-adventures-iii:pestigor",
     "ubersreik-adventures-i:ungor-raiders",
   ],
-  [CHAOS]: [
+  [CULTS]: [
+    "core:cultist",
+    "core:chaos-warrior",
+    "bayl-many-eyes:chaos-warrior-of-nurgle",
+    "death-on-the-reik:purple-hand-cultist",
+    "ubersreik-adventures-i:unmarred-flesh-cultists-pugilists",
+    "the-horned-rat:purple-hand-cultist",
+    "the-horned-rat:yellow-fang-cultist",
+    "the-horned-rat:acolyte",
+    "the-horned-rat-companion:blightking",
+  ],
+  [MUTANTS]: [
     "bayl-many-eyes:chaos-steed",
     "death-on-the-reik:corrosive-giant-rat",
     "death-on-the-reik:warpstone-giant-bat",
     "death-on-the-reik:mutant-bee-swarm",
     "death-on-the-reik:mutant-cat-swarm",
     "the-horned-rat:mutated-griffon",
-    "ubersreik-adventures-i:unmarred-flesh-cultists-pugilists",
-    "the-horned-rat:purple-hand-cultist",
-    "the-horned-rat:yellow-fang-cultist",
-    "the-horned-rat:acolyte",
     "the-horned-rat:daemonic-wolf",
-    "the-horned-rat-companion:blightking",
     "hell-rides-to-hallt:chaos-spawn",
   ],
   Daemons: [
@@ -216,6 +272,10 @@ const headingTags = {
 };
 
 const profileTags = {
+  "death-on-the-reik:river-patrol-captain": ["Riverfolk", "River Patrol"],
+  "death-on-the-reik:river-patrol-crew": ["Riverfolk", "River Patrol"],
+  "corsairs-flariel:dark-elf-ship-s-crew": ["Crew", "Sailor"],
+  "death-on-the-reik:monstrous-leech": ["Aquatic"],
   "death-on-the-reik-companion:reik-eels": ["River", "Aquatic"],
   "death-on-the-reik-companion:giant-leeches": ["River", "Aquatic"],
   "death-on-the-reik-companion:naiads": ["River", "Aquatic"],

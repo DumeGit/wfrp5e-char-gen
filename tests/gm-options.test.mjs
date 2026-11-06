@@ -317,7 +317,7 @@ test("GM options reject stale or incomplete installed-book inventories", () => {
 });
 
 test("browse metadata keeps one category per profile and preserves earlier Zoo saves", () => {
-  assert.equal(new Set(data.profiles.map(profileCategory)).size, 13);
+  assert.equal(new Set(data.profiles.map(profileCategory)).size, 20);
   const zoo = data.profiles.filter((p) => p.source?.book === "imperial-zoo");
   assert.equal(zoo.length, 43);
   assert.deepEqual(
@@ -327,12 +327,14 @@ test("browse metadata keeps one category per profile and preserves earlier Zoo s
   const horse = data.profiles.find(
     (p) => p.id === "up-in-arms:creatures:riding-horse",
   );
-  assert.equal(profileCategory(horse), "Beasts");
+  assert.equal(profileCategory(horse), "Mounts & Working Animals");
   assert.ok(horse.tags.includes("Mount"));
   const knight = zoo.find((p) => p.name === "Undead Knight (Wight)");
   const saved = freshGM(data, knight.id, ["core", "imperial-zoo"]);
-  saved.dataVersion = "75b573daa74374c2";
-  const restored = validateGMDraft(data, rulesFor(saved), saved);
-  assert.equal(restored.profile, knight.id);
-  assert.equal(restored.dataVersion, data.version);
+  for (const version of ["75b573daa74374c2", "b9819e831d4940e8"]) {
+    saved.dataVersion = version;
+    const restored = validateGMDraft(data, rulesFor(saved), saved);
+    assert.equal(restored.profile, knight.id);
+    assert.equal(restored.dataVersion, data.version);
+  }
 });

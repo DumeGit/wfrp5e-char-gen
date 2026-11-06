@@ -166,6 +166,7 @@ export function validateGMDraft(data, R, s) {
       "c6f6618ac5c246a8",
       "6b8d4e5c791571ce",
       "75b573daa74374c2",
+      "b9819e831d4940e8",
     ].includes(s.dataVersion)
   )
     s = { ...s, dataVersion: data.version };

@@ -19,7 +19,7 @@ test("profile cards show compact identifying details and keep the full preview @
   await expect(human.locator(":scope > strong")).toHaveText("Human");
   await expect(human.locator(".gm-card-size")).toHaveText("Average");
   await expect(human.locator(".gm-card-category")).toHaveText(
-    "Peoples & Professions",
+    "Peoples & Civilians",
   );
   await expect(human.locator("small")).toHaveText("Core · p. 319");
   await expect(human.locator(".gm-card-stats, .legacy-tag")).toHaveCount(0);
@@ -107,7 +107,7 @@ test("Imperial Zoo is a source-specific category and Mount is searchable @gm @mo
       .locator(".gm-card-category")
       .filter({ hasText: /^The Imperial Zoo$/ }),
   ).toHaveCount(43);
-  await category.selectOption({ label: "Beasts" });
+  await category.selectOption({ label: "Mounts & Working Animals" });
   await page
     .getByRole("textbox", { name: "Find a profile", exact: true })
     .fill("Mount");
@@ -119,5 +119,28 @@ test("Imperial Zoo is a source-specific category and Mount is searchable @gm @mo
   await expect(
     category.getByRole("option", { name: "The Imperial Zoo", exact: true }),
   ).toHaveCount(0);
+  await noOverflow(page);
+});
+
+test("Riverfolk search finds river crews and patrols in their respective categories @gm @mobile", async ({
+  page,
+}) => {
+  await openGM(page);
+  await openGMBooks(page);
+  await page.locator("#gm-book-death-on-the-reik").check();
+  await page.locator("#gm-book-death-on-the-reik-companion").check();
+  await openProfileFilters(page);
+  await page
+    .getByRole("textbox", { name: "Find a profile", exact: true })
+    .fill("Riverfolk");
+  const category = page.locator("#gm-category");
+  const cards = page.locator(".gm-profile-card");
+  await category.selectOption({ label: "Crew & Travellers" });
+  await expect(cards).toHaveCount(5);
+  await expect(cards.filter({ hasText: "Oarsman" })).toHaveCount(1);
+  await expect(cards.filter({ hasText: "River Patrol" })).toHaveCount(0);
+  await category.selectOption({ label: "Soldiers & Watch" });
+  await expect(cards).toHaveCount(2);
+  await expect(cards.filter({ hasText: "River Patrol" })).toHaveCount(2);
   await noOverflow(page);
 });
