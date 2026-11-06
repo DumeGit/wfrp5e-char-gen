@@ -1,4 +1,11 @@
-import { test, expect, openGM, noOverflow } from "./helpers.mjs";
+import {
+  test,
+  expect,
+  openGM,
+  openGMBooks,
+  openProfileFilters,
+  noOverflow,
+} from "./helpers.mjs";
 
 test("profile cards show compact identifying details and keep the full preview @gm @mobile", async ({
   page,
@@ -12,7 +19,7 @@ test("profile cards show compact identifying details and keep the full preview @
   await expect(human.locator(":scope > strong")).toHaveText("Human");
   await expect(human.locator(".gm-card-size")).toHaveText("Average");
   await expect(human.locator(".gm-card-category")).toHaveText(
-    "Peoples of the Reikland",
+    "Peoples & Professions",
   );
   await expect(human.locator("small")).toHaveText("Core · p. 319");
   await expect(human.locator(".gm-card-stats, .legacy-tag")).toHaveCount(0);
@@ -76,4 +83,41 @@ test("profile cards show compact identifying details and keep the full preview @
     page.getByRole("textbox", { name: "Name", exact: true }),
   ).toHaveAttribute("placeholder", "Human");
   await expect(page.locator(".gm-foundation")).toContainText("Human");
+});
+
+test("Imperial Zoo is a source-specific category and Mount is searchable @gm @mobile", async ({
+  page,
+}) => {
+  await openGM(page);
+  await openProfileFilters(page);
+  const category = page.locator("#gm-category");
+  await expect(
+    category.getByRole("option", { name: "The Imperial Zoo", exact: true }),
+  ).toHaveCount(0);
+  await openGMBooks(page);
+  const zoo = page.locator("#gm-book-imperial-zoo");
+  await zoo.check();
+  await page.locator("#gm-book-up-in-arms").check();
+  await openProfileFilters(page);
+  const cards = page.locator(".gm-profile-card");
+  await category.selectOption({ label: "The Imperial Zoo" });
+  await expect(cards).toHaveCount(43);
+  await expect(
+    cards
+      .locator(".gm-card-category")
+      .filter({ hasText: /^The Imperial Zoo$/ }),
+  ).toHaveCount(43);
+  await category.selectOption({ label: "Beasts" });
+  await page
+    .getByRole("textbox", { name: "Find a profile", exact: true })
+    .fill("Mount");
+  await expect(cards.filter({ hasText: "Riding Horse" })).toHaveCount(1);
+  await expect(cards.filter({ hasText: "Demigryph Mount" })).toHaveCount(0);
+  await category.selectOption({ label: "The Imperial Zoo" });
+  await zoo.uncheck();
+  await expect(category).toHaveValue("");
+  await expect(
+    category.getByRole("option", { name: "The Imperial Zoo", exact: true }),
+  ).toHaveCount(0);
+  await noOverflow(page);
 });

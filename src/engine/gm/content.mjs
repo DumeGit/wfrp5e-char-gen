@@ -1,7 +1,12 @@
 // Compile reviewed PDF extraction into explicit, source-owned GM records.
 import { canon, base, options } from "../rules.mjs";
 import { templateEquipment } from "./templates.mjs";
-import { bookId, sourceLabel, registerGMSourceBooks } from "./books.mjs";
+import {
+  bookId,
+  profileCategory,
+  sourceLabel,
+  registerGMSourceBooks,
+} from "./books.mjs";
 
 // Named worked examples are retained in the reviewed extraction, but are not
 // selectable foundations. Keep exact source identities rather than name matching.
@@ -198,7 +203,7 @@ export function gmInventory(data) {
     .sort((a, b) => a.name.localeCompare(b.name, "en", { sensitivity: "base" }))
     .map(
       (p) =>
-        `| ${p.name} | ${sourceLabel(p)} | ${p.category} | ${p.adaptation ? "Yes" : ""} |`,
+        `| ${p.name} | ${sourceLabel(p)} | ${profileCategory(p)} | ${p.adaptation ? "Yes" : ""} |`,
     )
     .join("\n")}\n`;
 }

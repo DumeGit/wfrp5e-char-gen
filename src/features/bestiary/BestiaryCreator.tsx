@@ -1,4 +1,5 @@
 "use client";
+import { bookId, profileCategory } from "../../engine/gm/books.mjs";
 import { COMPACT_SHELL_QUERY } from "../../engine/responsive.mjs";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { HistoryControls } from "../../components/HistoryControls";
@@ -248,13 +249,26 @@ function Workshop({ verify }: { verify: boolean }) {
     }
   };
   useEffect(() => {
-    if (
-      state.ready &&
-      ui.profileBook &&
-      !state.draft.books.includes(ui.profileBook)
-    )
+    if (!state.ready) return;
+    const books = state.draft.books;
+    if (ui.profileBook && !books.includes(ui.profileBook))
       setUI({ profileBook: "" });
-  }, [state.ready, state.draft?.books, ui.profileBook]);
+    if (
+      ui.category &&
+      !state.data.profiles.some(
+        (profile: any) =>
+          books.includes(bookId(profile)) &&
+          profileCategory(profile) === ui.category,
+      )
+    )
+      setUI({ category: "" });
+  }, [
+    state.ready,
+    state.data,
+    state.draft?.books,
+    ui.profileBook,
+    ui.category,
+  ]);
   if (!state.ready)
     return (
       <section className="panel" id="creator-main">

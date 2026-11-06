@@ -26,6 +26,7 @@ import {
   templateSummary,
   templateMagicLabel,
 } from "../../engine/gm/templates.mjs";
+import { bookId, profileCategory } from "../../engine/gm/books.mjs";
 import { sacredMarks, LORE_WINDS } from "../../engine/gm/lustria.mjs";
 import { trollModifiers } from "../../engine/gm/tribes.mjs";
 import { appearanceSpecies } from "../../engine/gm/appearance.mjs";
@@ -113,7 +114,7 @@ export function StatBlock({
   return (
     <article className="gm-stat-block">
       <header>
-        <span className="eyebrow">{r.profile.category}</span>
+        <span className="eyebrow">{profileCategory(r.profile)}</span>
         <h2 className="gm-stat-name">{r.name}</h2>
         {s.includeBriefing && s.briefing?.trim() && (
           <p className="gm-prewrap">
@@ -296,17 +297,19 @@ export function Starting() {
     rollAppearance,
   } = useBestiary();
   const selected = data.profiles.filter((p: any) =>
-    s.books.includes(p.source?.book || p.id.split(":")[0]),
+    s.books.includes(bookId(p)),
   );
+  const query = ui.query.trim().toLowerCase();
   const rows = selected
     .filter(
       (p: any) =>
-        (!ui.category || p.category === ui.category) &&
-        (!ui.profileBook || (p.source?.book || "core") === ui.profileBook) &&
-        (!ui.query.trim() ||
-          `${p.name} ${p.category}`
+        (!ui.category || profileCategory(p) === ui.category) &&
+        (!ui.profileBook || bookId(p) === ui.profileBook) &&
+        (!query ||
+          [p.name, profileCategory(p), ...(p.tags || [])]
+            .join(" ")
             .toLowerCase()
-            .includes(ui.query.toLowerCase().trim())),
+            .includes(query)),
     )
     .sort((a: any, b: any) => a.name.localeCompare(b.name));
   const bind = (key: string, value: string) =>
@@ -510,7 +513,7 @@ export function Starting() {
               inputMode="search"
               value={ui.query}
               onChange={(query) => setUI({ query })}
-              placeholder="Human, Goblin, Dragon…"
+              placeholder="Human, Goblin, Mount…"
             />
             <details
               className="gm-profile-filter-disclosure"
@@ -532,7 +535,9 @@ export function Starting() {
                   value={ui.category}
                   options={[
                     ["", "All categories"],
-                    ...new Set(selected.map((p: any) => p.category)),
+                    ...Array.from(
+                      new Set(selected.map(profileCategory)),
+                    ).sort(),
                   ]}
                   onChange={(category) => setUI({ category })}
                 />
@@ -570,7 +575,7 @@ export function Starting() {
                   className="gm-profile-card"
                   key={p.id}
                   aria-haspopup="dialog"
-                  aria-label={`Preview ${p.name}, ${p.category}, ${p.size}, ${sourceLabel(R, p, { legacy: false })}`}
+                  aria-label={`Preview ${p.name}, ${profileCategory(p)}, ${p.size}, ${sourceLabel(R, p, { legacy: false })}`}
                   onClick={(event) => {
                     event.currentTarget.focus({ preventScroll: true });
                     setModal({
@@ -583,7 +588,9 @@ export function Starting() {
                   <strong>{p.name}</strong>
                   <span className="gm-card-size">{p.size}</span>
                   <span className="gm-card-meta">
-                    <span className="gm-card-category">{p.category}</span>
+                    <span className="gm-card-category">
+                      {profileCategory(p)}
+                    </span>
                     <small>{sourceLabel(R, p, { legacy: false })}</small>
                   </span>
                 </Button>

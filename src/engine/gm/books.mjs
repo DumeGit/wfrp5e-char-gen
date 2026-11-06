@@ -4,6 +4,8 @@ import { assembleBooks } from "../books.mjs";
 // GM availability is separate from PC book choices and the all-book reader.
 export const bookId = (entry) =>
   entry.source?.book || entry.id?.split(":")[0] || "core";
+export const profileCategory = (profile) =>
+  profile.browseCategory ?? profile.category;
 let sourceBooks = [];
 export const registerGMSourceBooks = (books) => {
   sourceBooks = books;

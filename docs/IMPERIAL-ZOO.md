@@ -1,6 +1,6 @@
 # The Imperial Zoo in Bestiary
 
-Enable **The Imperial Zoo** in **Profile & template books**. The Category filter groups the 43 generic foundations from the supplied Fourth Edition PDF, pp. 10–93. Same-name Core and supplement profiles are separate source choices.
+Enable **The Imperial Zoo** in **Profile & template books**. Choose **The Imperial Zoo** in the Category filter to browse the 43 generic foundations from the supplied Fourth Edition PDF, pp. 10–93. Same-name Core and supplement profiles are separate source choices.
 
 The source records retain printed Characteristics, Wounds, attack Damage, Skill totals and Armour ratings. The book's parenthesised protection is combined soak. Tregara prints Armour 3 and combined soak 6 on p. 76. The workshop uses Armour 3 and Toughness Bonus 4, giving soak 7.
 

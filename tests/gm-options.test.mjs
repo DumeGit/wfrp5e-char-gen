@@ -6,6 +6,7 @@ import {
   createGMRules,
   foundationBooks,
   gmCatalogue,
+  profileCategory,
 } from "../src/engine/gm/books.mjs";
 import {
   freshGM,
@@ -180,7 +181,7 @@ test("book contributions remain constant while profile filters combine book, cat
   assert.match(
     profileResults(all, {
       ...ui,
-      category: rhinox.category,
+      category: profileCategory(rhinox),
       profileQuery: "rhin",
     }),
     /1 printed profile/,
@@ -313,4 +314,25 @@ test("GM options reject stale or incomplete installed-book inventories", () => {
     () => createGMRules(library, missing),
     /inventory does not match/,
   );
+});
+
+test("browse metadata keeps one category per profile and preserves earlier Zoo saves", () => {
+  assert.equal(new Set(data.profiles.map(profileCategory)).size, 13);
+  const zoo = data.profiles.filter((p) => p.source?.book === "imperial-zoo");
+  assert.equal(zoo.length, 43);
+  assert.deepEqual(
+    data.profiles.filter((p) => profileCategory(p) === "The Imperial Zoo"),
+    zoo,
+  );
+  const horse = data.profiles.find(
+    (p) => p.id === "up-in-arms:creatures:riding-horse",
+  );
+  assert.equal(profileCategory(horse), "Beasts");
+  assert.ok(horse.tags.includes("Mount"));
+  const knight = zoo.find((p) => p.name === "Undead Knight (Wight)");
+  const saved = freshGM(data, knight.id, ["core", "imperial-zoo"]);
+  saved.dataVersion = "75b573daa74374c2";
+  const restored = validateGMDraft(data, rulesFor(saved), saved);
+  assert.equal(restored.profile, knight.id);
+  assert.equal(restored.dataVersion, data.version);
 });

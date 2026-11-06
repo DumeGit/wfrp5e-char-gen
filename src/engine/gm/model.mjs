@@ -157,13 +157,16 @@ export function freshGM(data, profile = "", books = ["core"]) {
 export function validateGMDraft(data, R, s) {
   const empty = freshGM(data),
     plain = (v) => v && typeof v === "object" && !Array.isArray(v);
-  // Both catalogues add profiles without changing existing identities.
-  // Saved references from these versions still validate against the combined catalogue.
+  // Earlier catalogues differ in profile coverage or browse metadata.
+  // Saved references still undergo full validation against the current catalogue.
   if (
     plain(s) &&
-    ["051f38d3891a3ddb", "c6f6618ac5c246a8", "6b8d4e5c791571ce"].includes(
-      s.dataVersion,
-    )
+    [
+      "051f38d3891a3ddb",
+      "c6f6618ac5c246a8",
+      "6b8d4e5c791571ce",
+      "75b573daa74374c2",
+    ].includes(s.dataVersion)
   )
     s = { ...s, dataVersion: data.version };
   // Additive schema-2 fields default only when absent from a legacy draft.

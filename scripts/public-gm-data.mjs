@@ -1,3 +1,4 @@
+import { profileBrowseMetadata } from "./bestiary-categories.mjs";
 import { describeTraits } from "../src/engine/gm/trait-descriptions.mjs";
 
 // Compile source conflicts before discarding unused full-text stat blocks.
@@ -6,6 +7,7 @@ export function publicGMData(source) {
   const data = structuredClone(source);
   const definitions = new Map(data.traits.map((entry) => [entry.name, entry]));
   for (const profile of data.profiles) {
+    Object.assign(profile, profileBrowseMetadata(profile));
     const traits = profile.traits.map((trait) => ({
       ...definitions.get(trait.name),
       ...trait,
